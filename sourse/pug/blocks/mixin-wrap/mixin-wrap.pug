@@ -50,3 +50,13 @@ mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
 	div(id=`${elem}Wrap`)
+
+mixin searchBlock()
+	+b.search-block 
+		// вешать класс .show-result
+		form
+			input(type="text" placeholder="Искать товары")
+			button
+				+icon("search")
+			+e.close
+				+icon("close")

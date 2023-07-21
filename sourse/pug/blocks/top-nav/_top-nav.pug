@@ -20,14 +20,38 @@ mixin mob-mnu()
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
-		.container
-			.row
-				.col.order-lg-0.order-last
-					.menu-mobile.menu-mobile--js
-						.menu-mobile__inner
-							+menu-toggle()
-							+mnu()
-					
-				.col-auto.d-lg-none
-					+menu-toggle()
+		+e.container.container
+			+e.row.row
+				.col-md-auto.d-none.d-lg-block
+					+e.logo(href='#'): +iconC('logo2')
+				.col-auto.d-none.d-lg-block
+					+b.catalog-toggle.catalog-toggle-js
+						//- +icon("menu-toggle")
+						+e.toggle-icon
+							span
+						+e.title Каталог
+
+				.col-lg
+					+b.searchBlock-wrap--js
+						//- +searchBlock()
+				.col-lg-auto
+					//- +top-btns()
+		+b.catalog-menu--js
+			.container 
+				.h3.fw-600 Каталог товаров
+				ul
+					mixin li(i,t, ...items)
+						li.menu-item-has-children
+							a(href="#")
+								//- img(src=`img/cat-${i}.svg`, alt="") 
+								= t
+							ul.sub-menu
+								each item in items
+									li: a(href="#")= item
+					+li(`1`,`Обои`,`Текстильные обои`,`Обои для спальни`,`Виниловые обои`,`Обои для кухни`,`Обои для детской`,`Флизелиновые обои`,`Бумажные обои`)
+					+li(`2`,`Краски`,`Интерьерные`,`Фасадные`,`Для влажных помещений`,`Для деревянных фасадов`,`Для обоев`,`Универсальные`)
+					+li(`3`,`Лепнина`,`Потолочный плинтус`,`Розетки потолочные`,`Молдинги`,`Архитектурный лепной декор`,`Стеновые панели`,`Дверной декор`)
+					+li(`4`,`Освещение`,`Люстры`,`Настенные, бра`,`Светильники`,`Споты`,`Настольные лампы`,`Торшеры`)
+					+li(`5`,`Клей`,`Клей для бумажных обоев`,`Клей для всех видов обоев`,`Клей монтажный`,`Стыковочный клей`,`Клей для легких обоев`)
+					+li(`6`,`Напольные покрытия`,`Ламинат`,`Паркетная доска`,`Ковролин`,`Каменно-полимерная плитка`,`Керамическая плитка`)
 	// end top-nav

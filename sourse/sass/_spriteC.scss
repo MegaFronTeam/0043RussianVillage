@@ -7,6 +7,16 @@
 	fill: currentColor;
 }
 
+.iconC-logo {
+	--h: 32;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(80 / var(--h) *1em );
+}
+.iconC-logo2 {
+	--h: 56;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(139 / var(--h) *1em );
+}
 .iconC-telegram {
 	--h: 16;
 	font-size:calc( var(--h) / 10 * 1rem);

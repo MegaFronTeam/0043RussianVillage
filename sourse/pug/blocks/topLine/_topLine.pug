@@ -1,9 +1,26 @@
 mixin topLine()
 	// start topLine
-	+b.topLine.section#topLine&attributes(attributes)
+	+b.topLine#topLine.section&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 topLine
-				
-			.row
+			+e.row.row
+				.col.col-md-auto.d-none.d-md-block
+					+e.location(href="#")
+						+icon('map-pin')
+						| Москва
+				.col.d-md-none
+					+e.logo(href='/'): +iconC('logo')
+				.col.d-none.d-md-block
+					+e.nav
+						ul
+							li: a(href="#") О компании 
+							li: a(href="#") Доставка и установка
+							li: a(href="#") Станьте нашим поставщиком
+							li: a(href="#") Вакансии
+							li: a(href="#") Контакты
+				.col-auto
+					+e.tel(href="tel:+74812268067") +7 (4812) 26-80-67
+				.col-auto
+					+soc()
+						+item-sos('whatsapp')
+						+item-sos('telegram')
 	// end topLine

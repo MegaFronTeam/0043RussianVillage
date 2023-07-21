@@ -27,6 +27,11 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
 }
+.icon-map-pin {
+	--h: 16;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(16 / var(--h) *1em );
+}
 .icon-telegram {
 	--h: 16;
 	font-size:calc( var(--h) / 10 * 1rem);
