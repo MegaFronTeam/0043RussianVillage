@@ -546,3 +546,10 @@ iframe {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.container {
+	--bs-gutter-x: #{rem(32)};
+	@include media-breakpoint-up(md) {
+		--bs-gutter-x: #{$container-padding-x};
+	}	
+}

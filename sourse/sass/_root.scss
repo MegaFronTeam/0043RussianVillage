@@ -9,7 +9,12 @@
 		--sPB: #{rem(90)};
 		--sTPB: #{rem(40)};
 	}
-
+	@media (min-width: 1200px) {
+		--bs-body-font-size: #{$em-base};
+	}
+	@include media-breakpoint-between(xl, xxl) {
+		--bs-body-font-size: calc(#{$em-base} - 0.175rem + .12vw + .12vh);
+	}
 	--sPT: #{rem(80 * .5)};
 	--sPB: #{rem(90 * .5)};
 	--sTPB: #{rem(40 * .5)};
@@ -28,9 +33,6 @@
 
 
 	--fancybox-bg: rgba(24, 24, 27, .77);
-
-
-
 	  //  --carousel-button-width: 48px;
 	  //  --carousel-button-height: 48px;
 
