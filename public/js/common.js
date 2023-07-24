@@ -61,6 +61,18 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	const defaultSwiper = new Swiper('.default-swiper-js', {
+		slidesPerView: 'auto',
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: ' .swiper-pagination',
+			type: 'bullets',
+			clickable: true,
+		},
+	});
 
 };
 if (document.readyState !== 'loading') {

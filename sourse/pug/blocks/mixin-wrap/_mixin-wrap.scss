@@ -1,7 +1,7 @@
  
 	  
 .soc{
-	@include roww(10px, m);
+	@include roww(16px, m);
 	display: flex;
 	&__item{
 		text-decoration: none !important; 
@@ -16,7 +16,8 @@
 		
 	}
 	.icon{
-		font-size: rem(30);
+		font-size: rem(24);
+		color: var(--color);
 	}
 
 
@@ -82,32 +83,169 @@
 .search-block{
 	position: relative;
 	input{
-		font-size: 14px;
+		font-size: rem(14);
 		width: 100%;
-		border: none !important;
 		outline: none !important;
-		padding-left: rem(30);
-		padding-top: rem(14);
-		padding-bottom: rem(14);
+		padding-left: rem(8);
+		padding-top: rem(8.5);
+		padding-bottom: rem(8.5);
+		padding-right: rem(40);
+		border-radius: 8px;
+		border: rem(1) solid $primary;
+		color: $body-color;
+		font-weight: 500;
+		&::placeholder {
+			color: $gray-700;
+		}
 	}
 	.icon{
 		font-size: rem(20);
-		border: none !important;
+		fill: none;
+		stroke: currentColor;
+		stroke-width: rem(2);
 	}
 	button{
+		--bs-btn-padding-x: #{rem(5)};
+    --bs-btn-padding-y: #{rem(5)};
+		--bs-btn-border-radius: #{rem(4)};
+
 		position: absolute;
-		left: 0;
-		top: 0;
-		height: 100%;
+		right: rem(4);
+		top: 50%;
+		transform: translateY(-50%);
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: none !important;
-		border: none !important;
 	}
 }
 
 .breadcrumb-item{
 	width: auto;
 	margin-right: rem(32);
+}
+
+.top-btns {
+	@include media-breakpoint-down(md) {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		background-color: #fff;
+		border-top: 1px solid $gray-300;
+		padding: rem(7.5) rem(8);
+		box-shadow: 0px -1px 6px 0px rgba(0, 0, 0, 0.12);
+	}
+	&__wrap {
+		@include roww('10px', '', 'm');
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(20)};
+		}
+	}
+	&__icon {
+		display: inline;
+		position: relative;
+	}
+	&__btn {
+		position: relative;
+		font-size: rem(13);
+		font-weight: 600;
+		line-height: 1.23;
+		color: $body-color;
+		@include media-breakpoint-down(md) {
+			width: calc(100% / 5);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			font-size: rem(10);
+			line-height: 1.6;
+			.ixon {
+				flex: 0 0 auto;
+			}
+		} 
+		&:hover {
+			color: $primary;
+		}
+		.icon {
+			font-size: rem(24);
+			fill: none;
+			stroke: currentColor;
+			stroke-width: rem(2);
+			@include media-breakpoint-up(md) {
+				font-size: rem(20);
+			}
+			&-menu,
+			&-catalog {
+				fill: currentColor;
+				stroke: none;
+				stroke-width: 0;
+			}
+		}
+		.iconC-shopping-cart {
+			--h: 24;
+			font-size: calc(var(--h)/15*1rem);
+			width: calc(24/var(--h)*1em);
+		}
+		span {
+			@include media-breakpoint-up(md) {
+				margin-left: rem(6);
+			}
+		}
+		.badge {
+			&-orange {
+				--bs-badge-padding-y: #{rem(3.5)};
+				--bs-badge-padding-x: #{rem(5.5)};
+				--bs-badge-font-size: #{rem(9)};
+
+				position: absolute;
+				top: rem(-4);
+				right: rem(-9);
+				@include media-breakpoint-up(md) {
+					top: rem(-8);
+				}
+			}
+		}
+		.catalog-toggle__toggle-icon {
+			@include media-breakpoint-down(md) {
+				margin-right: 0;
+			}
+			span {
+				background-color: $body-color;
+				&::before,
+				&:after {
+					background-color: $body-color;
+				}
+			}
+		}
+	}
+}
+
+.badge {
+	&-orange {
+		background-color: #FF8B49;
+	}
+}
+
+.main-page-nav {
+	padding: rem(17) 0;
+	display: none;
+	@include media-breakpoint-up(md) {
+		display: block;
+	}
+	.row {
+		justify-content: space-between;
+	}
+	a {
+		font-size: rem(13);
+		line-height: 1.23;
+		color: $body-color;
+		&:hover {
+			color: #6E9545;
+		}
+		span {
+			color: #FF8B49;
+			margin-right: rem(4);
+		}
+	}
 }

@@ -31,13 +31,6 @@ mixin addblock()
 
 
 
-mixin search()
-	+b.search-block
-		form
-			input(type="text" placeholder="Поиск по номеру или названию запчасти")
-			button 
-				+icon("search")
-
 mixin page-head(t,...items)
 	+b.page-head
 		- let l = items.length
@@ -56,7 +49,19 @@ mixin searchBlock()
 		// вешать класс .show-result
 		form
 			input(type="text" placeholder="Искать товары")
-			button
+			button.btn.btn-primary
 				+icon("search")
-			+e.close
-				+icon("close")
+
+mixin mainPageNav()
+	+b.main-page-nav
+		.container
+			.row
+				.col-auto: a(href="#") Как оформить заказ 
+				.col-auto: a(href="#") Оплата заказа
+				.col-auto: a(href="#") Получение заказа
+				.col-auto: a(href="#") География продаж
+				.col-auto
+					a(href="#")
+						span %
+						| Акции и Скидки
+				.col-auto: a(href="#") Остались вопросы?

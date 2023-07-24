@@ -12,6 +12,11 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(22 / var(--h) *1em );
 }
+.icon-catalog {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
 .icon-check {
 	--h: 27;
 	font-size:calc( var(--h) / 10 * 1rem);
@@ -22,15 +27,45 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
 }
+.icon-heart {
+	--h: 20;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(20 / var(--h) *1em );
+}
 .icon-instagram {
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
 }
+.icon-logoDesign {
+	--h: 16;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(28 / var(--h) *1em );
+}
 .icon-map-pin {
 	--h: 16;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(16 / var(--h) *1em );
+}
+.icon-menu {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-profile {
+	--h: 20;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(20 / var(--h) *1em );
+}
+.icon-search {
+	--h: 20;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(20 / var(--h) *1em );
+}
+.icon-shopping-cart {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(25 / var(--h) *1em );
 }
 .icon-telegram {
 	--h: 16;

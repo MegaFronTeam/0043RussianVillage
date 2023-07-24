@@ -1,9 +1,51 @@
 mixin footer()
 	+b.FOOTER.footer.section
 		.container
-			.row
-				.col
-					
-				.col Footer
-				.col
-				.col-auto
+			+e.row.row
+				.col-6.col-md
+					h5 Помощь
+					ul
+						li: a(href="#") Как сделать заказ 
+						li: a(href="#") Доставка
+						li: a(href="#") Оплата
+						li: a(href="#") Контакты
+						li: a(href="#") Безопасность
+						li: a(href="#") Условия обработки данных
+						li: a(href="#") Возврат товара
+				.col-6.col-md
+					+e.inner-row.row 
+						.col-12
+							h5 Контактная информация
+							ul
+								li: a(href="tel:+79959087878") +7 995 908-78-78
+								li: a(href="mailto:rbesedka@gmail.com") rbesedka@gmail.com
+								li Москва, ул. Рябиновая, 37, стр.1
+						.col-12
+							a(href="#").h5 О компании 
+							a(href="#").h5 Вакансии
+				.col-md-3
+					+e.inner-row.row 
+						.col-6.col-md-12
+							+e.wrap
+								h5 Обратная связь
+								ul
+									li: a(href="#") Для партнеров
+									li: a(href="#") Задать вопрос
+									li: a(href="#") Помогите нам стать лучше
+						.col-6.col-md-12
+							h5 Режим работы
+							ul
+								li Отдел продаж: 9:00 — 21:00
+								li Служба доставки: 9:00 — 21:00
+			+e.bottom-row
+				.row
+					.col-md-auto
+						+soc()
+					.col-md-auto
+						p &copy;&nbsp;2019&ndash;2022 &laquo;Русская деревня&raquo;&nbsp;&mdash; Московская область Все права защищены
+					.col-md
+						a(href="#") Политика конфиденциальности 
+					.col-md-auto
+						a(href="#")
+							+icon('logoDesign')
+							| Сделано в Coalla Agency 

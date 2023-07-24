@@ -36,12 +36,12 @@
 				</div>
 				<div class="col-auto">
 					<div class="soc">
-						<a class="soc__item" href="#" target="_blank">
+						<a class="soc__item" href="#" target="_blank" style="--color: undefined">
 							<svg class="icon icon-whatsapp ">
 								<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
 							</svg>
 						</a>
-						<a class="soc__item" href="#" target="_blank">
+						<a class="soc__item" href="#" target="_blank" style="--color: undefined">
 							<svg class="icon icon-telegram ">
 								<use xlink:href="img/svg/sprite.svg#telegram"></use>
 							</svg>
@@ -73,9 +73,59 @@
 				</div>
 				<div class="col-lg">
 					<div class="searchBlock-wrap searchBlock-wrap--js">
+						<div class="search-block"> 
+							<!-- вешать класс .show-result-->
+							<form>
+								<input type="text" placeholder="Искать товары"/>
+								<button class="btn btn-primary">
+									<svg class="icon icon-search ">
+										<use xlink:href="img/svg/sprite.svg#search"></use>
+									</svg>
+								</button>
+							</form>
+						</div>
 					</div>
 				</div>
-				<div class="col-lg-auto"></div>
+				<div class="col-lg-auto"> 
+					<div class="top-btns">
+						<div class="top-btns__wrap">
+							<a class="top-btns__btn d-md-none catalog-toggle-js order-1" href="#">
+								<div class="catalog-toggle__toggle-icon"><span></span></div><span>Каталог</span>
+							</a>
+							<a class="top-btns__btn order-4 order-md-1" href="#">
+								<svg class="icon icon-profile ">
+									<use xlink:href="img/svg/sprite.svg#profile"></use>
+								</svg><span class="d-md-none">Профиль</span><span class="d-none d-md-inline">Войти</span>
+							</a>
+							<a class="top-btns__btn d-none d-md-flex order-md-2" href="#">
+								<div class="top-btns__icon">
+									<svg class="icon icon-heart ">
+										<use xlink:href="img/svg/sprite.svg#heart"></use>
+									</svg>
+									<div class="badge badge-orange">3</div>
+								</div>
+							</a>
+							<a class="top-btns__btn order-3" href="#">
+								<div class="top-btns__icon">
+									<svg class="iconC iconC-shopping-cart ">
+										<use xlink:href="img/svg/spriteC.svg#shopping-cart"></use>
+									</svg>
+									<div class="badge badge-orange">2</div>
+								</div><span class="d-md-none">Корзина</span>
+							</a>
+							<a class="top-btns__btn order-2 d-md-none" href="#">
+								<svg class="icon icon-search ">
+									<use xlink:href="img/svg/sprite.svg#search"></use>
+								</svg><span class="d-md-none">Поиск</span>
+							</a>
+							<a class="top-btns__btn order-5 d-md-none" href="#">
+								<svg class="icon icon-menu ">
+									<use xlink:href="img/svg/sprite.svg#menu"></use>
+								</svg><span class="d-md-none">Меню</span>
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="catalog-menu catalog-menu--js">

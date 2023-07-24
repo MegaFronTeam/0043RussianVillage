@@ -99,6 +99,11 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
+	padding-top: rem(103);
+	padding-bottom: rem(56);
+	@include media-breakpoint-up(md) {
+		padding-bottom: 0;
+	}
 	// display: flex;
 	// flex-direction: row; 
 // /	overflow: scroll;
@@ -552,4 +557,19 @@ iframe {
 	@include media-breakpoint-up(md) {
 		--bs-gutter-x: #{$container-padding-x};
 	}	
+}
+
+.btn {
+	&-primary {
+		--bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #6E9545;
+    --bs-btn-hover-border-color: #6E9545;
+    --bs-btn-active-bg: #325013;
+    --bs-btn-active-border-color: #325013;
+	}
+	&.disabled {
+		--bs-btn-disabled-color: #{$gray-400};
+		--bs-btn-disabled-bg: #{$gray-200};
+    --bs-btn-disabled-border-color: #{$gray-200};
+	}
 }

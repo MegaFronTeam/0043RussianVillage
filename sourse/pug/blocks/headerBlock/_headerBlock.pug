@@ -2,10 +2,19 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-				+icon('telegram')
-				+iconC('telegram')
-			.row
-						
+			+e.wrap.bg-wrap
+				+img('img/headerBlock-bg-1.jpg', 'bg').picture-bg
+				+e.content
+					h1.h3 Всё для загородной жизни
+					p для отдыха, работы и обустройства участка
+			+e.swiper.swiper.default-swiper-js
+				.swiper-wrapper
+					+e.slide.swiper-slide
+						+e.text
+							.h6 Огромный ассортимент
+							p Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров
+					+e.slide.swiper-slide
+						+e.text
+							.h6 Огромный ассортимент
+							p Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров
 	// end headerBlock

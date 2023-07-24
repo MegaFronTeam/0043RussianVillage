@@ -12,7 +12,10 @@
 	@media (min-width: 1200px) {
 		--bs-body-font-size: #{$em-base};
 	}
-	@include media-breakpoint-between(xl, xxl) {
+	// @include media-breakpoint-between(xl, xxl) {
+	// 	--bs-body-font-size: calc(#{$em-base} - 0.175rem + .12vw + .12vh);
+	// }
+	@include media-breakpoint-up(xl) {
 		--bs-body-font-size: calc(#{$em-base} - 0.175rem + .12vw + .12vh);
 	}
 	--sPT: #{rem(80 * .5)};

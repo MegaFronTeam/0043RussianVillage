@@ -33,9 +33,32 @@ mixin top-nav()
 
 				.col-lg
 					+b.searchBlock-wrap--js
-						//- +searchBlock()
-				.col-lg-auto
-					//- +top-btns()
+						+searchBlock()
+				.col-lg-auto 
+					+b.top-btns
+						+e.wrap
+							+e.btn(href='#').d-md-none.catalog-toggle-js.order-1
+								.catalog-toggle__toggle-icon: span
+								span Каталог
+							+e.btn(href='#').order-4.order-md-1
+								+icon('profile')
+								span.d-md-none Профиль
+								span.d-none.d-md-inline Войти
+							+e.btn(href='#').d-none.d-md-flex.order-md-2
+								+e.icon
+									+icon('heart')
+									.badge.badge-orange 3
+							+e.btn(href='#').order-3
+								+e.icon
+									+iconC('shopping-cart')
+									.badge.badge-orange 2
+								span.d-md-none Корзина
+							+e.btn(href='#').order-2.d-md-none
+								+icon('search')
+								span.d-md-none Поиск
+							+e.btn(href='#').order-5.d-md-none
+								+icon('menu')
+								span.d-md-none Меню
 		+b.catalog-menu--js
 			.container 
 				.h3.fw-600 Каталог товаров
