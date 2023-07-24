@@ -7,14 +7,26 @@ mixin headerBlock()
 				+e.content
 					h1.h3 Всё для загородной жизни
 					p для отдыха, работы и обустройства участка
-			+e.swiper.swiper.default-swiper-js
-				.swiper-wrapper
-					+e.slide.swiper-slide
-						+e.text
-							.h6 Огромный ассортимент
-							p Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров
-					+e.slide.swiper-slide
-						+e.text
-							.h6 Огромный ассортимент
-							p Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров
+			+e.swiper-wrap
+				img(src='img/headerBlock-img-1.png').img.img-1
+				img(src='img/headerBlock-img-2.png').img.img-2
+				img(src='img/headerBlock-img-3.png').img.img-3
+				img(src='img/headerBlock-img-4.png').img.img-4
+				img(src='img/headerBlock-img-5.png').img.img-5
+				img(src='img/headerBlock-img-6.png').img.img-6
+				+e.swiper.swiper.default-swiper-js
+					.swiper-wrapper
+						+e.slide.swiper-slide
+							+e.text
+								.h6 Огромный ассортимент
+								p Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров
+						+e.slide.swiper-slide
+							+e.text
+								.h6 Огромный ассортимент
+								p Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров
+						+e.slide.swiper-slide
+							+e.text
+								.h6 Огромный ассортимент
+								p Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров
+					.swiper-pagination
 	// end headerBlock

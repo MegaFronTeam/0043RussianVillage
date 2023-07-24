@@ -1,0 +1,22 @@
+mixin sPopularCategories(data)
+	// start sPopularCategories
+	+b.SECTION.sPopularCategories.section#sPopularCategories&attributes(attributes)
+		.container
+			+e.wrap
+				+b.section-title 
+					.row
+						.col
+							h4 Популярные категории
+						.col-auto
+							a(href="#") 
+								| Смотреть все
+								+icon('chevron-right')
+				+e.row.row
+					mixin item()
+						+e.col.col-md-2
+							+e.item(href='#')
+								p Дачные постройки и конструкции
+								img(src='img/sPopularCategories-img-1.png')
+					+item
+
+	// end sPopularCategories

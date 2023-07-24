@@ -65,3 +65,18 @@ mixin mainPageNav()
 						span %
 						| Акции и Скидки
 				.col-auto: a(href="#") Остались вопросы?
+
+mixin card()
+  +b.card
+		+e.img-wrap
+			+img(img)
+		+e.content
+			+e.price!= price
+			p!=text 
+			+e.create Производство Италия
+			+e.rate
+			.row 
+				.col
+					+e.btn.btn.btn-sm.btn-primary(href="#") В корзину
+				.col-auto
+					+addblock

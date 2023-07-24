@@ -67,8 +67,65 @@
 			margin-bottom: 0;
 			font-size: rem(11);
 			line-height: 1.23;
+			margin-bottom: rem(14);
 			@include media-breakpoint-up(md) {
 				font-size: rem(13);
+			}
+		}
+	}
+	&__swiper-wrap {
+		position: relative;
+		overflow: hidden;
+		z-index: 1;
+		.img {
+			position: absolute;
+			z-index: 10;
+			width: 100%;
+			&-1 {
+				max-width: rem(153);
+				top: rem(-35);
+				right: calc(100% - rem(265));
+			}
+			&-2 {
+				max-width: rem(128);
+				top: rem(12);
+				right: calc(100% - rem(107));
+			}
+			&-3 {
+				max-width: rem(158);
+				top: rem(30);
+				right: calc(100% - rem(335));
+			}
+			&-4 {
+				max-width: rem(103);
+				top: rem(-35);
+				right: calc(100% - rem(265));
+			}
+			&-5 {
+				max-width: rem(189);
+				top: rem(-35);
+				right: calc(100% - rem(265));
+			}
+			&-6 {
+				max-width: rem(195);
+				top: rem(-35);
+				right: calc(100% - rem(265));
+			}
+		}
+	}
+	&__swiper {
+		.swiper-pagination {
+			position: static;
+			display: flex;
+			justify-content: center;
+			&-bullet {
+				--swiper-pagination-bullet-horizontal-gap: #{rem(9)};
+				border: 1px solid rgba($color: #161616, $alpha: 0.30000001192092896);
+				background-color: transparent;
+				&-active, &:hover {
+					background-color: rgba($color: #161616, $alpha: 0.30000001192092896);
+					border-color: transparent;
+				}
 			}
 		}
 	}

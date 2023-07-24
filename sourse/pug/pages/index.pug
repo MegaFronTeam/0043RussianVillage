@@ -6,7 +6,7 @@ include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
-include ../blocks/sForm/_sForm.pug
+include ../blocks/sPopularCategories/_sPopularCategories.pug
 include ../blocks/sCatalog/_sCatalog.pug
 
 block variables
@@ -24,6 +24,7 @@ block pagecontent
 	main
 		+mainPageNav
 		+headerBlock
+		+sPopularCategories
 		
 	+parts('footer')
       
