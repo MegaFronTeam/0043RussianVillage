@@ -66,17 +66,34 @@ mixin mainPageNav()
 						| Акции и Скидки
 				.col-auto: a(href="#") Остались вопросы?
 
-mixin card()
-  +b.card
+mixin card(img, price, text)
+	+b.card
 		+e.img-wrap
-			+img(img)
+			.img-wrap-center
+				+img(`img/${img}`, 'bg')
 		+e.content
 			+e.price!= price
 			p!=text 
 			+e.create Производство Италия
+			+e.review-wrap
+				+e.stars(data-rating=4)
+					+icon('rateStar')
+					+icon('rateStar')
+					+icon('rateStar')
+					+icon('rateStar')
+					+icon('rateStar')
+				span 07.11.2021
 			+e.rate
-			.row 
+			+e.footer-row.row 
 				.col
-					+e.btn.btn.btn-sm.btn-primary(href="#") В корзину
+					+e.btn.btn.btn-sm.btn-primary(href="#") 
+						+icon('shopping-cart', 'd-md-none')
+						span.d-none.d-md-block В корзину
 				.col-auto
 					+addblock
+
+mixin defSlider()
+	+b.default-swiper.default-swiper-js
+		.swiper
+			.swiper-wrapper
+				block

@@ -99,10 +99,11 @@ body {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	padding-top: rem(103);
+	padding-top: rem(109);
 	padding-bottom: rem(56);
 	@include media-breakpoint-up(md) {
 		padding-bottom: 0;
+		padding-top: rem(103);
 	}
 	// display: flex;
 	// flex-direction: row; 

@@ -1,0 +1,20 @@
+mixin sCardSlider(title, items=[])
+	// start sCardSlider
+	+b.SECTION.sCardSlider.section#sCardSlider&attributes(attributes)
+		.container
+			+e.wrapper
+				+b.section-title
+					h4!= title
+				+e.head-row.row
+					.col
+						+e.tag-slider.freemode-slider--js.swiper
+							.swiper-wrapper
+								each item in items
+									+e.tag-slide.swiper-slide: +e.tag(href='#')!= item
+					.col-auto
+						+e.show-more(href="#") 
+							| Смотреть все
+							+icon('chevron-right')
+				+defSlider()
+					block
+	// end sCardSlider

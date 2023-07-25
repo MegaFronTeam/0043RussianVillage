@@ -44,7 +44,7 @@ function eventHandler() {
 		},
 	}
 
-	new Swiper('.breadcrumb-slider--js', {
+	new Swiper('.freemode-slider--js', {
 		slidesPerView: 'auto',
 		freeMode: true,
 		watchOverflow: true
@@ -61,18 +61,24 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
-	const defaultSwiper = new Swiper('.default-swiper-js', {
-		slidesPerView: 'auto',
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-		},
-	});
+
+	let defSwipers = document.querySelectorAll('.default-swiper-js');
+	if (defSwipers.length > 0) {
+		for (const defSwiper of defSwipers) {
+			new Swiper(defSwiper.querySelector('.swiper'), {
+				slidesPerView: 'auto',
+				navigation: {
+					nextEl: defSwiper.querySelector('.swiper-button-next'),
+					prevEl: defSwiper.querySelector('.swiper-button-prev'),
+				},
+				pagination: {
+					el: defSwiper.querySelector(' .swiper-pagination'),
+					type: 'bullets',
+					clickable: true,
+				},
+			});
+		}
+	}
 
 };
 if (document.readyState !== 'loading') {

@@ -8,6 +8,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sForm/_sForm.pug
 include ../blocks/sPopularCategories/_sPopularCategories.pug
 include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCardSlider/_sCardSlider.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -25,6 +26,17 @@ block pagecontent
 		+mainPageNav
 		+headerBlock
 		+sPopularCategories
+		+sCardSlider('Обустройство участка', ['Постройки','Конструкции','Садовая мебель', 'Качели', 'Подвесные кресла', 'Постройки', 'Конструкции', 'Садовая мебель', 'Садовая мебель', 'Качели', 'Подвесные кресла'])
+			+e.slide.swiper-slide
+				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
+			+e.slide.swiper-slide
+				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
+			+e.slide.swiper-slide
+				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
+			+e.slide.swiper-slide
+				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
+			+e.slide.swiper-slide
+				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
 		
 	+parts('footer')
       

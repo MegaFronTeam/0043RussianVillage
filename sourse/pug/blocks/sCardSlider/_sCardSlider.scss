@@ -1,0 +1,110 @@
+// start .sCardSlider
+.sCardSlider {
+	--sPT: #{rem(32)};
+	--sPB: #{rem(12)};
+	--sTPB: #{rem(12)};
+	background-color: $gray-200;
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(54)};
+		--sPB: #{rem(47)};
+		--sTPB: #{rem(25)};
+	}
+	&__wrapper {
+		@include media-breakpoint-down(md) {
+			position: relative;
+			padding-bottom: rem(48);
+		}
+	}
+	&__show-more {
+		color: #352E26;
+		&:hover {
+			color: $primary;
+		}
+		@include media-breakpoint-down(md) { 
+			border-radius: rem(8);
+			position: absolute;
+			width: 100%;
+			left: 0;
+			bottom: 0;
+			background-color: #fff;
+			border: 1px solid $gray-300;
+			font-size: rem(12);
+			font-weight: 700;
+			padding: rem(8) rem(10);
+			text-align: center;
+			color: $primary;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			&:hover {
+				background-color: $gray-300;
+			}
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(13);
+		}
+		.icon {
+			font-size: rem(16);
+		}
+	}
+	.section-title {
+		h4 {
+			margin-bottom: 0;
+			@include media-breakpoint-down(md) {
+				font-size: rem(20);
+			}
+		}
+	}
+	&__head-row {
+		--bs-gutter-x: 0;
+
+		margin-bottom: rem(12);
+		@include media-breakpoint-up(md) {
+			--bs-gutter-x: #{rem(12)};
+			margin-bottom: rem(32);
+		}
+	}
+	&__tag-slider {
+		overflow: visible;
+		@include media-breakpoint-up(md) {
+			max-width: rem(960);
+			margin-left: 0;
+		}
+		.swiper-wrapper {
+			@include media-breakpoint-up(md) {
+				@include roww('4px', '8px', 'm');
+				transform: none !important;
+				flex-wrap: wrap;
+			}
+		}
+	}
+	&__tag-slide {
+		width: auto;
+	}
+	&__tag {
+		display: flex;
+		align-items: center;
+		background-color: #fff;
+		color: $gray-900;
+		border-radius: 36px;
+		padding: rem(5) rem(8);
+		line-height: 1.45;
+		font-size: rem(11);
+		color: $body-color;
+		&:hover {
+			color: $primary;
+		}
+		@include media-breakpoint-up(md) {
+			font-size: rem(13);
+			padding: rem(6) rem(13);
+			line-height: 1.23;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sCardSlider

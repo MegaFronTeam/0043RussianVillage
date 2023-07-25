@@ -62,6 +62,11 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(20 / var(--h) *1em );
 }
+.icon-rateStar {
+	--h: 16;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(16 / var(--h) *1em );
+}
 .icon-search {
 	--h: 20;
 	font-size:calc( var(--h) / 10 * 1rem);
