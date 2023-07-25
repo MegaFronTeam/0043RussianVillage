@@ -66,6 +66,9 @@
 	}
 	&__tag-slider {
 		overflow: visible;
+		@include media-breakpoint-down(md) {
+			margin-right: rem(-4);
+		}
 		@include media-breakpoint-up(md) {
 			max-width: rem(960);
 			margin-left: 0;
@@ -80,6 +83,9 @@
 	}
 	&__tag-slide {
 		width: auto;
+		@include media-breakpoint-down(md) {
+			margin-right: rem(4);
+		}
 	}
 	&__tag {
 		display: flex;

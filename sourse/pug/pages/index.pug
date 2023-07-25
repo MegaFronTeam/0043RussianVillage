@@ -9,6 +9,7 @@ include ../blocks/sForm/_sForm.pug
 include ../blocks/sPopularCategories/_sPopularCategories.pug
 include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sCardSlider/_sCardSlider.pug
+include ../blocks/sBanners/_sBanners.pug
 
 block variables
 	- let  mainPage= 'main-page' 
@@ -26,18 +27,40 @@ block pagecontent
 		+mainPageNav
 		+headerBlock
 		+sPopularCategories
-		+sCardSlider('Обустройство участка', ['Постройки','Конструкции','Садовая мебель', 'Качели', 'Подвесные кресла', 'Постройки', 'Конструкции', 'Садовая мебель', 'Садовая мебель', 'Качели', 'Подвесные кресла'])
+		+sCardSlider('Обустройство участка', ['Постройки','Конструкции','Садовая мебель', 'Качели', 'Подвесные кресла', 'Постройки', 'Конструкции', 'Садовая мебель', 'Садовая мебель', 'Качели', 'Подвесные кресла'], true)
 			+e.slide.swiper-slide
 				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
 			+e.slide.swiper-slide
-				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
+				+card('card-2.jpg', '36 700 ₽', 'Навес для двух автомобилей с хозблоком ЛА-МАНШ')
+			+e.slide.swiper-slide
+				+card('card-3.jpg', '21 400 ₽', 'Садовые качели Olsa Стандарт NOVA с904 231x126x147,8 см зеленый')
+			+e.slide.swiper-slide
+				+card('card-4.jpg', '4 900 ₽', 'Баня «Савушка»')
 			+e.slide.swiper-slide
 				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
+		+sBanners
+		+sCardSlider('Отдых и развлечения', ['Бассейны','Батуты','Детские комплексы', 'Детские домики', 'Игры'], true)
 			+e.slide.swiper-slide
-				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
+				+card('card-5.jpg', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ')
 			+e.slide.swiper-slide
-				+card('card-1.jpg', '12 890 ₽', 'Восьмигранная беседка СУДАРУШКА')
-		
+				+card('card-6.png', '19 690 ₽', 'Батут Start Line 10464S1M Fitness 10 футов диаметр 305 см')
+			+e.slide.swiper-slide
+				+card('card-7.png', '2 995 ₽', 'Детская деревянная площадка IgraGrad Крафт Pro 3')
+			+e.slide.swiper-slide
+				+card('card-8.png', '16 490 ₽', 'Теннисный стол Progress 3х2')
+			+e.slide.swiper-slide
+				+card('card-5.jpg', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ')
+		+sCardSlider('Садовая техника и инвентарь', ['Газонокосилки','Тримеры','Культиватор', 'Мотоблок', 'Лопаты', 'Топоры'], true)
+			+e.slide.swiper-slide
+				+card('card-5.jpg', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ')
+			+e.slide.swiper-slide
+				+card('card-6.png', '19 690 ₽', 'Батут Start Line 10464S1M Fitness 10 футов диаметр 305 см')
+			+e.slide.swiper-slide
+				+card('card-7.png', '2 995 ₽', 'Детская деревянная площадка IgraGrad Крафт Pro 3')
+			+e.slide.swiper-slide
+				+card('card-8.png', '16 490 ₽', 'Теннисный стол Progress 3х2')
+			+e.slide.swiper-slide
+				+card('card-5.jpg', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ')
 	+parts('footer')
       
 

@@ -1,0 +1,15 @@
+mixin sBanners(data)
+	// start sBanners
+	+b.SECTION.sBanners.section#sBanners&attributes(attributes)
+		.container
+			mixin item(img, title, text)
+				+e.item(href='#').bg-wrap
+					+img(`img/${img}`, 'bg').picture-bg
+					h5!=title
+					p!= text
+			+e.row.row
+				.col-6
+					+item('sBanners-img-1.jpg', 'Все для бани и сауны', 'Наслаждайтесь и получайте удовольствие вместе с нами')
+				.col-6
+					+item('sBanners-img-2.jpg', 'Садовый декор и освещение участка', 'Сделайте Ваш участок красивым!')
+	// end sBanners

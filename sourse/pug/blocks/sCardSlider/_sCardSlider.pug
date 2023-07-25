@@ -1,4 +1,4 @@
-mixin sCardSlider(title, items=[])
+mixin sCardSlider(title, items=[], arrow)
 	// start sCardSlider
 	+b.SECTION.sCardSlider.section#sCardSlider&attributes(attributes)
 		.container
@@ -15,6 +15,6 @@ mixin sCardSlider(title, items=[])
 						+e.show-more(href="#") 
 							| Смотреть все
 							+icon('chevron-right')
-				+defSlider()
+				+defSlider(arrow)
 					block
 	// end sCardSlider

@@ -68,12 +68,12 @@ mixin mainPageNav()
 
 mixin card(img, price, text)
 	+b.card
-		+e.img-wrap
+		+e.img-wrap(href='#')
 			.img-wrap-center
 				+img(`img/${img}`, 'bg')
 		+e.content
 			+e.price!= price
-			p!=text 
+			+e.text(href='#')!=text 
 			+e.create Производство Италия
 			+e.review-wrap
 				+e.stars(data-rating=4)
@@ -92,8 +92,11 @@ mixin card(img, price, text)
 				.col-auto
 					+addblock
 
-mixin defSlider()
+mixin defSlider(arrow)
 	+b.default-swiper.default-swiper-js
 		.swiper
 			.swiper-wrapper
 				block
+		if arrow
+			.d-none.d-md-block
+				+arrow
