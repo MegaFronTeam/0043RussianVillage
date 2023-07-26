@@ -22,6 +22,14 @@
 		}
 		&.fixed-show{
 			transform: translateY(0);
+			.topLine {
+				@include media-breakpoint-up(md) {
+					 display: none;
+				}
+			}
+			.top-nav {
+				box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.17);
+			}
 		}
 	}
 	@include media-breakpoint-up(xl) {}
