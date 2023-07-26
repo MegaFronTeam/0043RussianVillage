@@ -66,11 +66,11 @@ mixin mainPageNav()
 						| Акции и Скидки
 				.col-auto: a(href="#") Остались вопросы?
 
-mixin card(img, price, text)
+mixin card(img, price, text, bg='bg')
 	+b.card
 		+e.img-wrap(href='#')
 			.img-wrap-center
-				+img(`img/${img}`, 'bg')
+				+img(`img/${img}`, bg)
 		+e.content
 			+e.price!= price
 			+e.text(href='#')!=text 
@@ -93,10 +93,46 @@ mixin card(img, price, text)
 					+addblock
 
 mixin defSlider(arrow)
-	+b.default-swiper.default-swiper-js
+	+b.default-swiper.default-swiper-js&attributes(attributes)
 		.swiper
 			.swiper-wrapper
 				block
 		if arrow
 			.d-none.d-md-block
 				+arrow
+
+mixin textBlock()
+	+b.text-block
+		.container
+			+e.wrap
+				p С&nbsp;другой стороны, повышение уровня гражданского сознания предоставляет широкие возможности для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений. Разнообразный и&nbsp;богатый опыт говорит нам, что разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо экономической целесообразности принимаемых решений. С&nbsp;другой стороны, повышение уровня гражданского сознания предоставляет широкие возможности для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений. Разнообразный и&nbsp;богатый опыт говорит нам, что разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо экономической целесообразности принимаемых решений.
+			+e.show-more
+				span.show Показать все
+				span.hide Скрыть
+				+icon('chevron-down')
+
+mixin topBtns()
+	+b.top-btns&attributes(attributes)
+		+e.wrap
+			+e.btn(href='#').d-md-none.catalog-toggle-js.order-1
+				.catalog-toggle__toggle-icon: span
+				span Каталог
+			+e.btn(href='#').order-4.order-md-1
+				+icon('profile')
+				span.d-md-none Профиль
+				span.d-none.d-md-inline Войти
+			+e.btn(href='#').d-none.d-md-flex.order-md-2
+				+e.icon
+					+icon('heart')
+					.badge.badge-orange 3
+			+e.btn(href='#').order-3
+				+e.icon
+					+iconC('shopping-cart')
+					.badge.badge-orange 2
+				span.d-md-none Корзина
+			+e.btn(href='#').order-2.d-md-none
+				+icon('search')
+				span.d-md-none Поиск
+			+e.btn(href='#').order-5.d-md-none
+				+icon('menu')
+				span.d-md-none Меню

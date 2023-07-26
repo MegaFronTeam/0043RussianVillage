@@ -22,6 +22,11 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(27 / var(--h) *1em );
 }
+.icon-chevron-down {
+	--h: 16;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(16 / var(--h) *1em );
+}
 .icon-chevron-left {
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);

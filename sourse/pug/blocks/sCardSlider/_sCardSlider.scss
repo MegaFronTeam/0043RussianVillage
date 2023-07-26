@@ -106,6 +106,39 @@
 			line-height: 1.23;
 		}
 	}
+	&--encyclopedia {
+		background-color: #fff;
+		.default-swiper {
+			--swiperGutter: #{rem(8)};
+    	--sliderCount: 2;
+			@media screen and (min-width: 360px) {
+				--sliderCount: 3;
+			}
+			@include media-breakpoint-up(md) {
+				--sliderCount: 3;
+				--swiperGutter: #{rem(16)};
+			}
+		}
+		.sCardSlider__show-more {
+			@include media-breakpoint-down(md) {
+				display: none;
+			}
+		}
+		.sCardSlider__wrapper {
+			@include media-breakpoint-down(md) {
+				padding-bottom: 0;
+			}
+		}
+		.sCardSlider__tag {
+			background-color: $gray-200;
+			&:not(:hover) {
+				color: $body-color;
+			}
+		}
+		.swiper-button-hand {
+			--swiperBgDef: #EDEDED;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

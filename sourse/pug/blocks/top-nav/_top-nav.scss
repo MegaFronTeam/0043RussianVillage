@@ -5,6 +5,17 @@
 	border-bottom: 1px solid $gray-300;
 	padding-top: var(--sPT);
 	padding-bottom: var(--sPB);
+	@include mt;
+	@include media-breakpoint-down(md) {
+		// &.scroll-down {
+		// 	transform: translateY(-100vh);
+		// 	top: -100vh;
+		// }
+		// &.scroll-up {
+		// 	transform: translateY(0);
+		// 	top: 0;
+		// }
+	}
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(8)};
 		--sPB: #{rem(8)};

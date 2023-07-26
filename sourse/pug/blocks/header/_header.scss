@@ -6,7 +6,24 @@
 	left: 0;
 	width: 100%;
 	background-color: #fff;
-	z-index: 100;
+	z-index: 400;
+	@include mt;
+	&--js{
+			
+		&.fixed-animate{
+			transition: transform .4s;
+			position: fixed;
+		}
+		&.fixed{
+			transform: translateY(-100%);
+			.top-nav {
+				background-color: #fff;
+			}
+		}
+		&.fixed-show{
+			transform: translateY(0);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

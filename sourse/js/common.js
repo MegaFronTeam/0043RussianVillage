@@ -80,6 +80,53 @@ function eventHandler() {
 		}
 	}
 
+	new Swiper('.sOnOpenFire__swiper--js', {
+		slidesPerView: 2,
+		spaceBetween: 8,
+		grid: {
+			rows: 2,
+			fill: 'row'
+		},
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		breakpoints: {
+			768: {
+				slidesPerView: 4,
+				grid: {
+					rows: 1,
+				},
+			}
+		}
+	});
+
+	$('.text-block__show-more').on('click', function(){
+		$(this).toggleClass('active');
+		$('.text-block__wrap').toggleClass('active');
+	});
+
+	let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+	window.addEventListener(
+		'scroll',
+		function handleScroll() {
+			const scrollTopPosition =
+				window.pageYOffset || document.documentElement.scrollTop;
+
+			if (scrollTopPosition > lastScrollTop) {
+				$('.top-nav').addClass('scroll-down');
+				$('.top-nav').removeClass('scroll-up');
+			} else if (scrollTopPosition < lastScrollTop) {
+				$('.top-nav').addClass('scroll-up');
+				$('.top-nav').removeClass('scroll-down');
+			}
+			lastScrollTop =
+				scrollTopPosition <= 0 ? 0 : scrollTopPosition;
+		},
+		false,
+	);
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

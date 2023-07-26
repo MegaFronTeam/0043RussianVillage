@@ -1,0 +1,32 @@
+mixin sAlsoWatch(data)
+	// start sAlsoWatch
+	+b.SECTION.sAlsoWatch.section#sAlsoWatch&attributes(attributes)
+		.container
+			+b.section-title
+				h6 Вы смотрели
+			+defSlider(true)
+				+e.slide.swiper-slide
+					+b.seen-card(href='#')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/sAlsoWatch-img-1.png')
+						p Составная круговая скамейка "Диско 1/4 с подлокотниками"
+				+e.slide.swiper-slide
+					+b.seen-card(href='#')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/sAlsoWatch-img-2.png')
+						p Печь-мангал ММ-140 (5мм) с крышкой-гриль и решеткой
+				+e.slide.swiper-slide
+					+b.seen-card(href='#')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/sAlsoWatch-img-3.png')
+						p Стремянка двусторонняя 5 ступеней СИБРТЕХ 97935
+				+e.slide.swiper-slide
+					+b.seen-card(href='#')
+						+e.img-wrap
+							.img-wrap-center
+								+img('img/sAlsoWatch-img-4.png')
+						p Тачка садовая двухколёсная усиленная 320 кг 90 л
+	// end sAlsoWatch

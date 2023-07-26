@@ -46,6 +46,44 @@
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
+			<div class="top-btns d-md-none">
+				<div class="top-btns__wrap">
+					<a class="top-btns__btn d-md-none catalog-toggle-js order-1" href="#">
+						<div class="catalog-toggle__toggle-icon"><span></span></div><span>Каталог</span>
+					</a>
+					<a class="top-btns__btn order-4 order-md-1" href="#">
+						<svg class="icon icon-profile ">
+							<use xlink:href="img/svg/sprite.svg#profile"></use>
+						</svg><span class="d-md-none">Профиль</span><span class="d-none d-md-inline">Войти</span>
+					</a>
+					<a class="top-btns__btn d-none d-md-flex order-md-2" href="#">
+						<div class="top-btns__icon">
+							<svg class="icon icon-heart ">
+								<use xlink:href="img/svg/sprite.svg#heart"></use>
+							</svg>
+							<div class="badge badge-orange">3</div>
+						</div>
+					</a>
+					<a class="top-btns__btn order-3" href="#">
+						<div class="top-btns__icon">
+							<svg class="iconC iconC-shopping-cart ">
+								<use xlink:href="img/svg/spriteC.svg#shopping-cart"></use>
+							</svg>
+							<div class="badge badge-orange">2</div>
+						</div><span class="d-md-none">Корзина</span>
+					</a>
+					<a class="top-btns__btn order-2 d-md-none" href="#">
+						<svg class="icon icon-search ">
+							<use xlink:href="img/svg/sprite.svg#search"></use>
+						</svg><span class="d-md-none">Поиск</span>
+					</a>
+					<a class="top-btns__btn order-5 d-md-none" href="#">
+						<svg class="icon icon-menu ">
+							<use xlink:href="img/svg/sprite.svg#menu"></use>
+						</svg><span class="d-md-none">Меню</span>
+					</a>
+				</div>
+			</div>
 			<main>
 				<div class="main-page-nav">
 					<div class="container">
@@ -72,18 +110,27 @@
 							<div class="headerBlock__swiper swiper">
 								<div class="swiper-wrapper">
 									<div class="headerBlock__slide swiper-slide">
+										<picture>
+											<source media="(min-width: 768px)" srcset="img/headerBlock-img-1.png"/><img class="img" src="img/headerBlock-img-1-sm.png"/>
+										</picture>
 										<div class="headerBlock__text">
 											<div class="h6">Огромный ассортимент</div>
 											<p>Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров</p>
 										</div>
 									</div>
 									<div class="headerBlock__slide swiper-slide">
+										<picture>
+											<source media="(min-width: 768px)" srcset="img/headerBlock-img-1.png"/><img class="img" src="img/headerBlock-img-1-sm.png"/>
+										</picture>
 										<div class="headerBlock__text">
 											<div class="h6">Огромный ассортимент</div>
 											<p>Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров</p>
 										</div>
 									</div>
 									<div class="headerBlock__slide swiper-slide">
+										<picture>
+											<source media="(min-width: 768px)" srcset="img/headerBlock-img-1.png"/><img class="img" src="img/headerBlock-img-1-sm.png"/>
+										</picture>
 										<div class="headerBlock__text">
 											<div class="h6">Огромный ассортимент</div>
 											<p>Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров</p>
@@ -623,7 +670,7 @@
 										<div class="default-swiper__slide swiper-slide">
 											<div class="card">
 												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-5.jpg" alt="" loading="lazy"/>
+													<div class="img-wrap-center"><img src="img/card-5.jpg" alt="" loading="lazy"/>
 													</div>
 												</a>
 												<div class="card__content">
@@ -678,7 +725,7 @@
 										<div class="default-swiper__slide swiper-slide">
 											<div class="card">
 												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-6.png" alt="" loading="lazy"/>
+													<div class="img-wrap-center"><img src="img/card-6.png" alt="" loading="lazy"/>
 													</div>
 												</a>
 												<div class="card__content">
@@ -733,7 +780,7 @@
 										<div class="default-swiper__slide swiper-slide">
 											<div class="card">
 												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-7.png" alt="" loading="lazy"/>
+													<div class="img-wrap-center"><img src="img/card-7.png" alt="" loading="lazy"/>
 													</div>
 												</a>
 												<div class="card__content">
@@ -788,7 +835,7 @@
 										<div class="default-swiper__slide swiper-slide">
 											<div class="card">
 												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-8.png" alt="" loading="lazy"/>
+													<div class="img-wrap-center"><img src="img/card-8.png" alt="" loading="lazy"/>
 													</div>
 												</a>
 												<div class="card__content">
@@ -843,7 +890,465 @@
 										<div class="default-swiper__slide swiper-slide">
 											<div class="card">
 												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-5.jpg" alt="" loading="lazy"/>
+													<div class="img-wrap-center"><img src="img/card-5.jpg" alt="" loading="lazy"/>
+													</div>
+												</a>
+												<div class="card__content">
+													<div class="card__price">10 730 ₽
+													</div>
+													<a class="card__text" href="#">Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ
+													</a>
+													<div class="card__create">Производство Италия
+													</div>
+													<div class="card__review-wrap">
+														<div class="card__stars" data-rating="4">
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+														</div><span>07.11.2021</span>
+													</div>
+													<div class="card__rate">
+													</div>
+													<div class="card__footer-row row"> 
+														<div class="col">
+															<a class="card__btn btn btn-sm btn-primary" href="#"> 
+																<svg class="icon icon-shopping-cart d-md-none">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg><span class="d-none d-md-block">В корзину</span>
+															</a>
+														</div>
+														<div class="col-auto">
+															<div class="addBlock">
+																<button class="addBlock__btn addBlock__btn--minus" type="button">
+																</button>
+																<input type="text" value="1"/>
+																<button class="addBlock__btn addBlock__btn--plus" type="button">
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="d-none d-md-block">
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sCardSlider-->
+				<!-- start sOnOpenFire-->
+				<section class="sOnOpenFire section" id="sOnOpenFire">
+					<div class="container">
+						<div class="sOnOpenFire__recipe bg-wrap">
+							<h5>Рецепты блюд на открытом огне</h5>
+							<p>Коллекция горячих блюд для истинных ценителей дачной жизни</p>
+							<picture>
+								<source media="(min-width: 768px)" srcset="img/recipe-bg-1.png"/><img src="img/recipe-bg-1-sm.png"/>
+							</picture>
+						</div>
+						<div class="sOnOpenFire__wrap">
+							<h4>Приготовление пищи на открытом огне</h4>
+							<div class="sOnOpenFire__swiper-wrap">
+								<div class="sOnOpenFire__swiper sOnOpenFire__swiper--js swiper">
+									<div class="swiper-wrapper">
+											<div class="sOnOpenFire__slide swiper-slide">
+												<a class="sOnOpenFire__item" href="#">
+													<div class="sOnOpenFire__item-wrap">
+														<div class="sOnOpenFire__img-wrap">
+															<div class="img-wrap-center"><img src="img/sOnOpenFire-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div><span>Барбекю</span>
+													</div>
+												</a>
+											</div>
+											<div class="sOnOpenFire__slide swiper-slide">
+												<a class="sOnOpenFire__item" href="#">
+													<div class="sOnOpenFire__item-wrap">
+														<div class="sOnOpenFire__img-wrap">
+															<div class="img-wrap-center"><img src="img/sOnOpenFire-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div><span>Мангалы</span>
+													</div>
+												</a>
+											</div>
+											<div class="sOnOpenFire__slide swiper-slide">
+												<a class="sOnOpenFire__item" href="#">
+													<div class="sOnOpenFire__item-wrap">
+														<div class="sOnOpenFire__img-wrap">
+															<div class="img-wrap-center"><img src="img/sOnOpenFire-img-3.png" alt="" loading="lazy"/>
+															</div>
+														</div><span>Грили</span>
+													</div>
+												</a>
+											</div>
+											<div class="sOnOpenFire__slide swiper-slide">
+												<a class="sOnOpenFire__item" href="#">
+													<div class="sOnOpenFire__item-wrap">
+														<div class="sOnOpenFire__img-wrap">
+															<div class="img-wrap-center"><img src="img/sOnOpenFire-img-4.png" alt="" loading="lazy"/>
+															</div>
+														</div><span>Тандыры</span>
+													</div>
+												</a>
+											</div>
+											<div class="sOnOpenFire__slide swiper-slide">
+												<a class="sOnOpenFire__item" href="#">
+													<div class="sOnOpenFire__item-wrap">
+														<div class="sOnOpenFire__img-wrap">
+															<div class="img-wrap-center"><img src="img/sOnOpenFire-img-1.png" alt="" loading="lazy"/>
+															</div>
+														</div><span>Барбекю</span>
+													</div>
+												</a>
+											</div>
+											<div class="sOnOpenFire__slide swiper-slide">
+												<a class="sOnOpenFire__item" href="#">
+													<div class="sOnOpenFire__item-wrap">
+														<div class="sOnOpenFire__img-wrap">
+															<div class="img-wrap-center"><img src="img/sOnOpenFire-img-2.png" alt="" loading="lazy"/>
+															</div>
+														</div><span>Мангалы</span>
+													</div>
+												</a>
+											</div>
+											<div class="sOnOpenFire__slide swiper-slide">
+												<a class="sOnOpenFire__item" href="#">
+													<div class="sOnOpenFire__item-wrap">
+														<div class="sOnOpenFire__img-wrap">
+															<div class="img-wrap-center"><img src="img/sOnOpenFire-img-3.png" alt="" loading="lazy"/>
+															</div>
+														</div><span>Грили</span>
+													</div>
+												</a>
+											</div>
+											<div class="sOnOpenFire__slide swiper-slide">
+												<a class="sOnOpenFire__item" href="#">
+													<div class="sOnOpenFire__item-wrap">
+														<div class="sOnOpenFire__img-wrap">
+															<div class="img-wrap-center"><img src="img/sOnOpenFire-img-4.png" alt="" loading="lazy"/>
+															</div>
+														</div><span>Тандыры</span>
+													</div>
+												</a>
+											</div>
+									</div>
+								</div>
+								<div class="d-none d-md-block">
+									<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+										<svg class="icon icon-chevron-left ">
+											<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+										</svg>
+									</div>
+									<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sOnOpenFire-->
+				<!-- start sCardSlider-->
+				<section class="sCardSlider section" id="sCardSlider">
+					<div class="container">
+						<div class="sCardSlider__wrapper">
+							<div class="section-title">
+								<h4>Садовая техника и инвентарь</h4>
+							</div>
+							<div class="sCardSlider__head-row row">
+								<div class="col">
+									<div class="sCardSlider__tag-slider freemode-slider freemode-slider--js swiper">
+										<div class="swiper-wrapper">
+											<div class="sCardSlider__tag-slide swiper-slide">
+												<a class="sCardSlider__tag" href="#">Газонокосилки
+												</a>
+											</div>
+											<div class="sCardSlider__tag-slide swiper-slide">
+												<a class="sCardSlider__tag" href="#">Тримеры
+												</a>
+											</div>
+											<div class="sCardSlider__tag-slide swiper-slide">
+												<a class="sCardSlider__tag" href="#">Культиватор
+												</a>
+											</div>
+											<div class="sCardSlider__tag-slide swiper-slide">
+												<a class="sCardSlider__tag" href="#">Мотоблок
+												</a>
+											</div>
+											<div class="sCardSlider__tag-slide swiper-slide">
+												<a class="sCardSlider__tag" href="#">Лопаты
+												</a>
+											</div>
+											<div class="sCardSlider__tag-slide swiper-slide">
+												<a class="sCardSlider__tag" href="#">Топоры
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<a class="sCardSlider__show-more" href="#">
+										 Смотреть все
+										<svg class="icon icon-chevron-right ">
+											<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+										</svg>
+									</a>
+								</div>
+							</div>
+							<div class="default-swiper default-swiper-js">
+								<div class="swiper">
+									<div class="swiper-wrapper">
+										<div class="default-swiper__slide swiper-slide">
+											<div class="card">
+												<a class="card__img-wrap" href="#">
+													<div class="img-wrap-center"><img src="img/card-9.png" alt="" loading="lazy"/>
+													</div>
+												</a>
+												<div class="card__content">
+													<div class="card__price">10 730 ₽
+													</div>
+													<a class="card__text" href="#">Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ
+													</a>
+													<div class="card__create">Производство Италия
+													</div>
+													<div class="card__review-wrap">
+														<div class="card__stars" data-rating="4">
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+														</div><span>07.11.2021</span>
+													</div>
+													<div class="card__rate">
+													</div>
+													<div class="card__footer-row row"> 
+														<div class="col">
+															<a class="card__btn btn btn-sm btn-primary" href="#"> 
+																<svg class="icon icon-shopping-cart d-md-none">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg><span class="d-none d-md-block">В корзину</span>
+															</a>
+														</div>
+														<div class="col-auto">
+															<div class="addBlock">
+																<button class="addBlock__btn addBlock__btn--minus" type="button">
+																</button>
+																<input type="text" value="1"/>
+																<button class="addBlock__btn addBlock__btn--plus" type="button">
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="default-swiper__slide swiper-slide">
+											<div class="card">
+												<a class="card__img-wrap" href="#">
+													<div class="img-wrap-center"><img src="img/card-10.png" alt="" loading="lazy"/>
+													</div>
+												</a>
+												<div class="card__content">
+													<div class="card__price">19 690 ₽
+													</div>
+													<a class="card__text" href="#">Батут Start Line 10464S1M Fitness 10 футов диаметр 305 см
+													</a>
+													<div class="card__create">Производство Италия
+													</div>
+													<div class="card__review-wrap">
+														<div class="card__stars" data-rating="4">
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+														</div><span>07.11.2021</span>
+													</div>
+													<div class="card__rate">
+													</div>
+													<div class="card__footer-row row"> 
+														<div class="col">
+															<a class="card__btn btn btn-sm btn-primary" href="#"> 
+																<svg class="icon icon-shopping-cart d-md-none">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg><span class="d-none d-md-block">В корзину</span>
+															</a>
+														</div>
+														<div class="col-auto">
+															<div class="addBlock">
+																<button class="addBlock__btn addBlock__btn--minus" type="button">
+																</button>
+																<input type="text" value="1"/>
+																<button class="addBlock__btn addBlock__btn--plus" type="button">
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="default-swiper__slide swiper-slide">
+											<div class="card">
+												<a class="card__img-wrap" href="#">
+													<div class="img-wrap-center"><img src="img/card-11.png" alt="" loading="lazy"/>
+													</div>
+												</a>
+												<div class="card__content">
+													<div class="card__price">2 995 ₽
+													</div>
+													<a class="card__text" href="#">Детская деревянная площадка IgraGrad Крафт Pro 3
+													</a>
+													<div class="card__create">Производство Италия
+													</div>
+													<div class="card__review-wrap">
+														<div class="card__stars" data-rating="4">
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+														</div><span>07.11.2021</span>
+													</div>
+													<div class="card__rate">
+													</div>
+													<div class="card__footer-row row"> 
+														<div class="col">
+															<a class="card__btn btn btn-sm btn-primary" href="#"> 
+																<svg class="icon icon-shopping-cart d-md-none">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg><span class="d-none d-md-block">В корзину</span>
+															</a>
+														</div>
+														<div class="col-auto">
+															<div class="addBlock">
+																<button class="addBlock__btn addBlock__btn--minus" type="button">
+																</button>
+																<input type="text" value="1"/>
+																<button class="addBlock__btn addBlock__btn--plus" type="button">
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="default-swiper__slide swiper-slide">
+											<div class="card">
+												<a class="card__img-wrap" href="#">
+													<div class="img-wrap-center"><img src="img/card-12.png" alt="" loading="lazy"/>
+													</div>
+												</a>
+												<div class="card__content">
+													<div class="card__price">16 490 ₽
+													</div>
+													<a class="card__text" href="#">Теннисный стол Progress 3х2
+													</a>
+													<div class="card__create">Производство Италия
+													</div>
+													<div class="card__review-wrap">
+														<div class="card__stars" data-rating="4">
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+															<svg class="icon icon-rateStar ">
+																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
+															</svg>
+														</div><span>07.11.2021</span>
+													</div>
+													<div class="card__rate">
+													</div>
+													<div class="card__footer-row row"> 
+														<div class="col">
+															<a class="card__btn btn btn-sm btn-primary" href="#"> 
+																<svg class="icon icon-shopping-cart d-md-none">
+																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
+																</svg><span class="d-none d-md-block">В корзину</span>
+															</a>
+														</div>
+														<div class="col-auto">
+															<div class="addBlock">
+																<button class="addBlock__btn addBlock__btn--minus" type="button">
+																</button>
+																<input type="text" value="1"/>
+																<button class="addBlock__btn addBlock__btn--plus" type="button">
+																</button>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="default-swiper__slide swiper-slide">
+											<div class="card">
+												<a class="card__img-wrap" href="#">
+													<div class="img-wrap-center"><img src="img/card-13.png" alt="" loading="lazy"/>
 													</div>
 												</a>
 												<div class="card__content">
@@ -915,38 +1420,30 @@
 				</section>
 				<!-- end sCardSlider-->
 				<!-- start sCardSlider-->
-				<section class="sCardSlider section" id="sCardSlider">
+				<section class="sCardSlider section sCardSlider sCardSlider--encyclopedia" id="sCardSlider">
 					<div class="container">
 						<div class="sCardSlider__wrapper">
 							<div class="section-title">
-								<h4>Садовая техника и инвентарь</h4>
+								<h4>Энциклопедия дачника</h4>
 							</div>
 							<div class="sCardSlider__head-row row">
 								<div class="col">
 									<div class="sCardSlider__tag-slider freemode-slider freemode-slider--js swiper">
 										<div class="swiper-wrapper">
 											<div class="sCardSlider__tag-slide swiper-slide">
-												<a class="sCardSlider__tag" href="#">Газонокосилки
+												<a class="sCardSlider__tag" href="#">Посевной календарь
 												</a>
 											</div>
 											<div class="sCardSlider__tag-slide swiper-slide">
-												<a class="sCardSlider__tag" href="#">Тримеры
+												<a class="sCardSlider__tag" href="#">Уход за растениями
 												</a>
 											</div>
 											<div class="sCardSlider__tag-slide swiper-slide">
-												<a class="sCardSlider__tag" href="#">Культиватор
+												<a class="sCardSlider__tag" href="#">Про отдых
 												</a>
 											</div>
 											<div class="sCardSlider__tag-slide swiper-slide">
-												<a class="sCardSlider__tag" href="#">Мотоблок
-												</a>
-											</div>
-											<div class="sCardSlider__tag-slide swiper-slide">
-												<a class="sCardSlider__tag" href="#">Лопаты
-												</a>
-											</div>
-											<div class="sCardSlider__tag-slide swiper-slide">
-												<a class="sCardSlider__tag" href="#">Топоры
+												<a class="sCardSlider__tag" href="#">Благоустройство
 												</a>
 											</div>
 										</div>
@@ -965,279 +1462,34 @@
 								<div class="swiper">
 									<div class="swiper-wrapper">
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
-												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-5.jpg" alt="" loading="lazy"/>
-													</div>
-												</a>
-												<div class="card__content">
-													<div class="card__price">10 730 ₽
-													</div>
-													<a class="card__text" href="#">Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ
-													</a>
-													<div class="card__create">Производство Италия
-													</div>
-													<div class="card__review-wrap">
-														<div class="card__stars" data-rating="4">
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-														</div><span>07.11.2021</span>
-													</div>
-													<div class="card__rate">
-													</div>
-													<div class="card__footer-row row"> 
-														<div class="col">
-															<a class="card__btn btn btn-sm btn-primary" href="#"> 
-																<svg class="icon icon-shopping-cart d-md-none">
-																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-																</svg><span class="d-none d-md-block">В корзину</span>
-															</a>
-														</div>
-														<div class="col-auto">
-															<div class="addBlock">
-																<button class="addBlock__btn addBlock__btn--minus" type="button">
-																</button>
-																<input type="text" value="1"/>
-																<button class="addBlock__btn addBlock__btn--plus" type="button">
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+											<a class="encyclopedia-item bg-wrap" href="#"><img class="object-fit-js picture-bg" src="img/encyclopedia-img-1.jpg" alt="" loading="lazy"/>
+												<div class="h6">Про благоустройство</div>
+											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
-												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-6.png" alt="" loading="lazy"/>
-													</div>
-												</a>
-												<div class="card__content">
-													<div class="card__price">19 690 ₽
-													</div>
-													<a class="card__text" href="#">Батут Start Line 10464S1M Fitness 10 футов диаметр 305 см
-													</a>
-													<div class="card__create">Производство Италия
-													</div>
-													<div class="card__review-wrap">
-														<div class="card__stars" data-rating="4">
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-														</div><span>07.11.2021</span>
-													</div>
-													<div class="card__rate">
-													</div>
-													<div class="card__footer-row row"> 
-														<div class="col">
-															<a class="card__btn btn btn-sm btn-primary" href="#"> 
-																<svg class="icon icon-shopping-cart d-md-none">
-																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-																</svg><span class="d-none d-md-block">В корзину</span>
-															</a>
-														</div>
-														<div class="col-auto">
-															<div class="addBlock">
-																<button class="addBlock__btn addBlock__btn--minus" type="button">
-																</button>
-																<input type="text" value="1"/>
-																<button class="addBlock__btn addBlock__btn--plus" type="button">
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+											<a class="encyclopedia-item bg-wrap" href="#"><img class="object-fit-js picture-bg" src="img/encyclopedia-img-2.jpg" alt="" loading="lazy"/>
+												<div class="h6">Про уход за растениями</div>
+											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
-												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-7.png" alt="" loading="lazy"/>
-													</div>
-												</a>
-												<div class="card__content">
-													<div class="card__price">2 995 ₽
-													</div>
-													<a class="card__text" href="#">Детская деревянная площадка IgraGrad Крафт Pro 3
-													</a>
-													<div class="card__create">Производство Италия
-													</div>
-													<div class="card__review-wrap">
-														<div class="card__stars" data-rating="4">
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-														</div><span>07.11.2021</span>
-													</div>
-													<div class="card__rate">
-													</div>
-													<div class="card__footer-row row"> 
-														<div class="col">
-															<a class="card__btn btn btn-sm btn-primary" href="#"> 
-																<svg class="icon icon-shopping-cart d-md-none">
-																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-																</svg><span class="d-none d-md-block">В корзину</span>
-															</a>
-														</div>
-														<div class="col-auto">
-															<div class="addBlock">
-																<button class="addBlock__btn addBlock__btn--minus" type="button">
-																</button>
-																<input type="text" value="1"/>
-																<button class="addBlock__btn addBlock__btn--plus" type="button">
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+											<a class="encyclopedia-item bg-wrap" href="#"><img class="object-fit-js picture-bg" src="img/encyclopedia-img-3.jpg" alt="" loading="lazy"/>
+												<div class="h6">Домашние заготовки</div>
+											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
-												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-8.png" alt="" loading="lazy"/>
-													</div>
-												</a>
-												<div class="card__content">
-													<div class="card__price">16 490 ₽
-													</div>
-													<a class="card__text" href="#">Теннисный стол Progress 3х2
-													</a>
-													<div class="card__create">Производство Италия
-													</div>
-													<div class="card__review-wrap">
-														<div class="card__stars" data-rating="4">
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-														</div><span>07.11.2021</span>
-													</div>
-													<div class="card__rate">
-													</div>
-													<div class="card__footer-row row"> 
-														<div class="col">
-															<a class="card__btn btn btn-sm btn-primary" href="#"> 
-																<svg class="icon icon-shopping-cart d-md-none">
-																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-																</svg><span class="d-none d-md-block">В корзину</span>
-															</a>
-														</div>
-														<div class="col-auto">
-															<div class="addBlock">
-																<button class="addBlock__btn addBlock__btn--minus" type="button">
-																</button>
-																<input type="text" value="1"/>
-																<button class="addBlock__btn addBlock__btn--plus" type="button">
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+											<a class="encyclopedia-item bg-wrap" href="#"><img class="object-fit-js picture-bg" src="img/encyclopedia-img-1.jpg" alt="" loading="lazy"/>
+												<div class="h6">Про благоустройство</div>
+											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
-												<a class="card__img-wrap" href="#">
-													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-5.jpg" alt="" loading="lazy"/>
-													</div>
-												</a>
-												<div class="card__content">
-													<div class="card__price">10 730 ₽
-													</div>
-													<a class="card__text" href="#">Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ
-													</a>
-													<div class="card__create">Производство Италия
-													</div>
-													<div class="card__review-wrap">
-														<div class="card__stars" data-rating="4">
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-															<svg class="icon icon-rateStar ">
-																<use xlink:href="img/svg/sprite.svg#rateStar"></use>
-															</svg>
-														</div><span>07.11.2021</span>
-													</div>
-													<div class="card__rate">
-													</div>
-													<div class="card__footer-row row"> 
-														<div class="col">
-															<a class="card__btn btn btn-sm btn-primary" href="#"> 
-																<svg class="icon icon-shopping-cart d-md-none">
-																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-																</svg><span class="d-none d-md-block">В корзину</span>
-															</a>
-														</div>
-														<div class="col-auto">
-															<div class="addBlock">
-																<button class="addBlock__btn addBlock__btn--minus" type="button">
-																</button>
-																<input type="text" value="1"/>
-																<button class="addBlock__btn addBlock__btn--plus" type="button">
-																</button>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
+											<a class="encyclopedia-item bg-wrap" href="#"><img class="object-fit-js picture-bg" src="img/encyclopedia-img-2.jpg" alt="" loading="lazy"/>
+												<div class="h6">Про уход за растениями</div>
+											</a>
+										</div>
+										<div class="default-swiper__slide swiper-slide">
+											<a class="encyclopedia-item bg-wrap" href="#"><img class="object-fit-js picture-bg" src="img/encyclopedia-img-3.jpg" alt="" loading="lazy"/>
+												<div class="h6">Домашние заготовки</div>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -1258,6 +1510,81 @@
 					</div>
 				</section>
 				<!-- end sCardSlider-->
+				<div class="text-block">
+					<div class="container">
+						<div class="text-block__wrap">
+							<p>С&nbsp;другой стороны, повышение уровня гражданского сознания предоставляет широкие возможности для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений. Разнообразный и&nbsp;богатый опыт говорит нам, что разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо экономической целесообразности принимаемых решений. С&nbsp;другой стороны, повышение уровня гражданского сознания предоставляет широкие возможности для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений. Разнообразный и&nbsp;богатый опыт говорит нам, что разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо экономической целесообразности принимаемых решений.</p>
+						</div>
+						<div class="text-block__show-more"><span class="show">Показать все</span><span class="hide">Скрыть</span>
+							<svg class="icon icon-chevron-down ">
+								<use xlink:href="img/svg/sprite.svg#chevron-down"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<!-- start sAlsoWatch-->
+				<section class="sAlsoWatch section" id="sAlsoWatch">
+					<div class="container">
+						<div class="section-title">
+							<h6>Вы смотрели</h6>
+						</div>
+						<div class="default-swiper default-swiper-js">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="default-swiper__slide swiper-slide">
+										<a class="seen-card" href="#">
+											<div class="seen-card__img-wrap">
+												<div class="img-wrap-center"><img src="img/sAlsoWatch-img-1.png" alt="" loading="lazy"/>
+												</div>
+											</div>
+											<p>Составная круговая скамейка "Диско 1/4 с подлокотниками"</p>
+										</a>
+									</div>
+									<div class="default-swiper__slide swiper-slide">
+										<a class="seen-card" href="#">
+											<div class="seen-card__img-wrap">
+												<div class="img-wrap-center"><img src="img/sAlsoWatch-img-2.png" alt="" loading="lazy"/>
+												</div>
+											</div>
+											<p>Печь-мангал ММ-140 (5мм) с крышкой-гриль и решеткой</p>
+										</a>
+									</div>
+									<div class="default-swiper__slide swiper-slide">
+										<a class="seen-card" href="#">
+											<div class="seen-card__img-wrap">
+												<div class="img-wrap-center"><img src="img/sAlsoWatch-img-3.png" alt="" loading="lazy"/>
+												</div>
+											</div>
+											<p>Стремянка двусторонняя 5 ступеней СИБРТЕХ 97935</p>
+										</a>
+									</div>
+									<div class="default-swiper__slide swiper-slide">
+										<a class="seen-card" href="#">
+											<div class="seen-card__img-wrap">
+												<div class="img-wrap-center"><img src="img/sAlsoWatch-img-4.png" alt="" loading="lazy"/>
+												</div>
+											</div>
+											<p>Тачка садовая двухколёсная усиленная 320 кг 90 л</p>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="d-none d-md-block">
+								<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+									<svg class="icon icon-chevron-left ">
+										<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+									</svg>
+								</div>
+								<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+									<svg class="icon icon-chevron-right ">
+										<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end sAlsoWatch-->
 			</main>
 			<script>addBlock(`footer`)</script>
 			<div id="footerWrap"></div>
