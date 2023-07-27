@@ -147,7 +147,7 @@
 		display: flex;
 		align-items: center;
 		@include media-breakpoint-up(md) {
-			--bs-gutter-x: #{rem(20)};
+			--bs-gutter-x: #{rem(22)};
 		}
 	}
 	&__icon {
@@ -222,6 +222,28 @@
 				&::before,
 				&:after {
 					background-color: $body-color;
+				}
+			}
+		}
+		&.catalog-toggle-js {
+			&.active {
+				span {
+					color: #6E9545;
+				}
+				.catalog-toggle__toggle-icon {
+					span {
+						background-color: transparent;
+						&::before {
+							transform: rotate(45deg);
+							top: 0;
+							background-color: #6E9545;
+						}
+						&::after {
+							transform: rotate(-45deg);
+							bottom: 0;
+							background-color: #6E9545;
+						}
+					}
 				}
 			}
 		}

@@ -36,23 +36,43 @@ mixin top-nav()
 						+searchBlock()
 				.col-lg-auto.d-none.d-md-block
 					+topBtns()
-		+b.catalog-menu--js
-			.container 
-				.row 
-					+e.col.col
-						+e.all-products(href='#')
-							+icon('rus')
-							| Все товары
-							+e.icon-wrap: +icon('chevron-right')
-						+e.first-level-catalog
-							ul
-								li
-									a(href="#")
-										+iconC('catalog-icon-1')
-										| Дачные постройки и конструкции
-										+e.icon-wrap: +icon('chevron-right')
-					+e.content-col.col
-						.h5 Садовая мебель, качели и мебель для бани
-						ul
-
+	+b.catalog-menu--js
+		+e.container.container 
+			+e.col
+				+e.all-products(href='#')
+					+icon('rus')
+					| Все товары
+					+e.icon-wrap: +icon('chevron-right2')
+				+e.first-level-catalog
+					ul
+						each item in catalog
+							li.mobile-menu--js(class=(item.class ? 'hover' : ''))
+								+e.link(href=item.mainLink.href)
+									+img(`img/svg/${item.mainLink.icon}.svg`)
+									.text!= item.mainLink.text
+									+e.icon-wrap: +icon('chevron-right2')
+								+e.content
+									if item.title
+										.h5!= item.title
+									+e.all-products.d-md-none(href='#')
+										+icon('rus')
+										| Все товары
+										+e.icon-wrap: +icon('chevron-right2')
+									ul
+										each innerItem in item.innerLevel
+											li.menu-item-has-children
+												a(href=innerItem.headlink.href)
+													!= innerItem.headlink.text
+													if innerItem.links
+														+e.icon-wrap--js: +icon('chevron-right2')
+												if innerItem.links
+													.sub-menu 
+														.h5.d-md-none Качели
+														+e.all-products.d-md-none(href='#')
+															+icon('rus')
+															| Все товары
+															+e.icon-wrap: +icon('chevron-right2')
+														ul
+															each link in innerItem.links
+																li: a(href=link.href)!= link.text
 	// end top-nav

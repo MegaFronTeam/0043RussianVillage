@@ -6,6 +6,8 @@
 	line-height: calc(24 / 14);
 	background-color: $primary;
 	color: #fff;
+	position: relative;
+	z-index: 100;
 	@include media-breakpoint-up(lg) {
 		--sPT: #{rem(4)};
 		--sPB: #{rem(4)};

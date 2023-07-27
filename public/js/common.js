@@ -127,6 +127,128 @@ function eventHandler() {
 		false,
 	);
 
+	$('.catalog-menu__first-level-catalog > ul > li').on('mouseover', function() {
+		$('.catalog-menu__first-level-catalog > ul > li').removeClass('hover');
+	});
+
+	let catalog = document.querySelector(".catalog-menu--js");
+	let mobmnu = document.querySelector(" .menu-mobile--js");
+	
+	document.addEventListener("click", function (event) {
+		let toggleCatalog = document.querySelectorAll(".catalog-toggle-js");
+		
+		let menutoggle = document.querySelector(".toggle-menu-mobile");
+		let menutoggletarget =  event.target.closest(".toggle-menu-mobile.catalog-toggle-js");
+		let target = event.target.closest(".catalog-toggle-js");
+		
+		let targetcatalog = event.target.closest(".catalog-menu--js.active");
+		
+		
+		let col = $(".col-top-js");
+		// let targetMobile = event.target.closest(".top-btns__btn");
+		if (target) {
+			if (target.classList.contains("top-btns__btn")) {
+				event.preventDefault();
+				catalog.classList.toggle('mobile-active');
+					
+				menutoggle.classList.toggle('toggle-menu-mobile--js');
+				menutoggle.classList.toggle('on');
+				menutoggle.classList.toggle('catalog-toggle-js');
+			}
+			catalog.classList.toggle('active');
+			col.toggleClass('active');
+			target.classList.remove('on');
+			document.querySelector("body").classList.toggle('fixed-catalog');
+			toggleCatalog.forEach((el) => {
+				el.classList.toggle('active')
+				$('.catalog-menu__first-level-catalog>ul>li:first-child').addClass('hover');
+			})
+		}
+		if (menutoggletarget) {
+			catalog.classList.remove('mobile-active');
+			menutoggletarget.classList.add('toggle-menu-mobile--js');
+			menutoggletarget.classList.remove('on');
+			menutoggletarget.classList.remove('catalog-toggle-js');
+		}
+		// 	else if (!target && !targetcatalog && catalog.classList.contains("active")) {
+		// 	catalog.classList.remove('active');
+		// 	catalog.classList.remove('mobile-active');
+		// 	document.querySelector("body").classList.remove('fixed-catalog');
+		// 	toggleCatalog.forEach(el => el.classList.remove('active'))
+			
+		// }
+	})
+
+	function togglemobmenu(menu) {
+		if (menu) {
+			menu.addEventListener("click", function (event) {
+				if (!this.classList.contains("mobile-active")) return;
+				let link2 = event.target.closest(".mobile-menu--js>a")
+				if (!link2) return;
+				event.preventDefault();
+				console.log(link2);
+				let parent = link2.parentElement;
+				let subMenu = parent.querySelector(".catalog-menu__content");
+				
+				let btnBack = document.createElement("div");
+				btnBack.classList.add('catalog-menu-back');
+				btnBack.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+				<path d="M15.0723 6.00049L14.0711 4.92969L7.00007 12.0008L14.0711 19.0718L15.0723 18.0005L9.07227 12.0005L15.0723 6.00049Z" fill="#352E26"/>
+				</svg>`;
+				
+				subMenu.insertAdjacentElement('afterbegin', btnBack);
+				
+				btnBack.addEventListener("click", function () { 
+					subMenu.classList.remove('active');
+					document.querySelector(".overflowAll").classList.remove('overflowAll');
+					setTimeout(() => {
+						
+						this.remove();
+					}, 200);
+				})
+				// console.log(1);
+				catalog.classList.add('overflowAll');
+				subMenu.classList.add('active');
+			})
+		}
+	};
+
+	function toggleMobMenuSecondLevel(menu) {
+		if (menu) {
+			menu.addEventListener("click", function (event) {
+				let link = event.target.closest(".catalog-menu__icon-wrap--js");
+				if (!link) return;
+				event.preventDefault();
+				console.log(link);
+				let parent = link.closest('.menu-item-has-children');
+				let subMenu = parent.querySelector(".sub-menu");
+				
+				let btnBack = document.createElement("div");
+				btnBack.classList.add('catalog-menu-back');
+				btnBack.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+				<path d="M15.0723 6.00049L14.0711 4.92969L7.00007 12.0008L14.0711 19.0718L15.0723 18.0005L9.07227 12.0005L15.0723 6.00049Z" fill="#352E26"/>
+				</svg>`;
+				
+				subMenu.insertAdjacentElement('afterbegin', btnBack);
+				
+				btnBack.addEventListener("click", function () { 
+					subMenu.classList.remove('active');
+					document.querySelector(".overflowAll").classList.remove('overflowAll');
+					setTimeout(() => {
+						
+						this.remove();
+					}, 200);
+				})
+				// console.log(1);
+				catalog.classList.add('overflowAll');
+				subMenu.classList.add('active');
+			})
+		}
+	};
+
+	togglemobmenu(catalog);
+	toggleMobMenuSecondLevel(catalog);
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

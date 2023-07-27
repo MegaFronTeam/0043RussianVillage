@@ -5,7 +5,7 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #fff;
+	// background-color: #fff;
 	z-index: 400;
 	@include mt;
 	&--js{
@@ -19,16 +19,26 @@
 			.top-nav {
 				background-color: #fff;
 			}
+			.catalog-menu {
+				@include media-breakpoint-up(md) {
+					height: calc(100vh - 0px);
+				}
+			}
 		}
 		&.fixed-show{
 			transform: translateY(0);
 			.topLine {
 				@include media-breakpoint-up(md) {
-					 display: none;
+					display: none;
 				}
 			}
 			.top-nav {
 				box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.17);
+			}
+			.catalog-menu {
+				@include media-breakpoint-up(md) {
+					height: calc(100vh - 70px);
+				}
 			}
 		}
 	}
