@@ -140,7 +140,7 @@
 		border-top: 1px solid $gray-300;
 		padding: rem(7.5) rem(8);
 		box-shadow: 0px -1px 6px 0px rgba(0, 0, 0, 0.12);
-		z-index: 300;
+		z-index: 3000;
 	}
 	&__wrap {
 		@include roww('10px', '', 'm');
