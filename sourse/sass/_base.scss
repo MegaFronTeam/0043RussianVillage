@@ -92,6 +92,9 @@ body {
 			opacity: 0.76;
 		}
 	}
+	&.fixed {
+		overflow: hidden;
+	}
 	&.fixed-catalog,
 	&.fixed-profile-menu  {
 		position: absolute;

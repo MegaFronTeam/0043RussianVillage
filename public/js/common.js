@@ -260,6 +260,16 @@ function eventHandler() {
 		}
 	});
 
+	$('.show-more-js').on('click', function(event) {
+		$('.sPopularCategories__full-list').addClass('active');
+		$('body').addClass('fixed');
+		event.preventDefault();
+	})
+	$('.sPopularCategories__close').on('click', function() {
+		$('.sPopularCategories__full-list').removeClass('active');
+		$('body').removeClass('fixed');
+	})
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
