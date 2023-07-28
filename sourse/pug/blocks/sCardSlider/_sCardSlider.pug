@@ -3,18 +3,28 @@ mixin sCardSlider(title, items=[], arrow)
 	+b.SECTION.sCardSlider.section#sCardSlider&attributes(attributes)
 		.container
 			+e.wrapper
-				+b.section-title
-					h4!= title
-				+e.head-row.row
-					.col
-						+e.tag-slider.freemode-slider--js.swiper
-							.swiper-wrapper
-								each item in items
-									+e.tag-slide.swiper-slide: +e.tag(href='#')!= item
-					.col-auto
-						+e.show-more(href="#") 
-							| Смотреть все
-							+icon('chevron-right')
+				if items.length == 0
+					.section-title
+						.row.align-items-end
+							.col
+								h4!= title
+							.col-auto
+								+e.show-more(href="#") 
+									| Смотреть все
+									+icon('chevron-right')
+				else
+					+b.section-title
+						h4!= title
+					+e.head-row.row
+						.col
+							+e.tag-slider.freemode-slider--js.swiper
+								.swiper-wrapper
+									each item in items
+										+e.tag-slide.swiper-slide: +e.tag(href='#')!= item
+						.col-auto
+							+e.show-more(href="#") 
+								| Смотреть все
+								+icon('chevron-right')
 				+defSlider(arrow)
 					block
 	// end sCardSlider

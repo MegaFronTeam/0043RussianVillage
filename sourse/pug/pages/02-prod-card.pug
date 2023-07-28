@@ -1,0 +1,55 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sCardSlider/_sCardSlider.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sProdCard/_sProdCard.pug
+
+block variables
+	- let  mainPage= 'prod-card-page' 
+	- let  bg= ''
+
+block title
+	- let  title= 'Карточка товара'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		+sProdCard
+		+sCardSlider('С этим также берут', '', true)
+			+e.slide.swiper-slide
+				+card('card-9.png', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ', '')
+			+e.slide.swiper-slide
+				+card('card-10.png', '19 690 ₽', 'Батут Start Line 10464S1M Fitness 10 футов диаметр 305 см', '')
+			+e.slide.swiper-slide
+				+card('card-11.png', '2 995 ₽', 'Детская деревянная площадка IgraGrad Крафт Pro 3', '')
+			+e.slide.swiper-slide
+				+card('card-12.png', '16 490 ₽', 'Теннисный стол Progress 3х2', '')
+			+e.slide.swiper-slide
+				+card('card-13.png', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ', '')
+		+sCardSlider('Похожие товары', '', true)
+			+e.slide.swiper-slide
+				+card('card-9.png', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ', '')
+			+e.slide.swiper-slide
+				+card('card-10.png', '19 690 ₽', 'Батут Start Line 10464S1M Fitness 10 футов диаметр 305 см', '')
+			+e.slide.swiper-slide
+				+card('card-11.png', '2 995 ₽', 'Детская деревянная площадка IgraGrad Крафт Pro 3', '')
+			+e.slide.swiper-slide
+				+card('card-12.png', '16 490 ₽', 'Теннисный стол Progress 3х2', '')
+			+e.slide.swiper-slide
+				+card('card-13.png', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ', '')
+		+sAlsoWatch(false).sAlsoWatch--2
+	+parts('footer')
+      
+
+
+

@@ -589,3 +589,9 @@ iframe {
     --bs-btn-disabled-border-color: #{$gray-200};
 	}
 }
+
+.prod-card-page {
+	--bs-gutter-x: #{rem(8)};
+
+	background-color: $gray-200;
+}

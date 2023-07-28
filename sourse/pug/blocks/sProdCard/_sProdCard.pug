@@ -1,0 +1,29 @@
+mixin sProdCard(data)
+	// start sProdCard
+	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-md-auto
+					+e.full-slider-wrap
+						+e.swiper-wrap.order-md-2
+							+e.slider--js.swiper
+								.swiper-wrapper
+									-for(let i = 0; i < 10; i++)
+										+e.slide.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-1.png')
+							.d-none.d-md-block
+								+arrow()
+						+e.thumb-arrow-wrap.order-md-1
+							+e.thumb-slider--thumb-js.swiper
+								.swiper-wrapper
+									-for(let i = 0; i < 10; i++)
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-1.png')
+							.d-none.d-md-block
+								+arrow()
+				.col-md
+	// end sProdCard

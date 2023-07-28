@@ -14,7 +14,29 @@
 			line-height: 1.25;
 		}
 	}
-
+	&--2 {
+		background-color: $gray-200;
+		.default-swiper {
+			@include media-breakpoint-up(md) {
+				--sliderCount: 3;
+			}
+			&__slide {
+				@include media-breakpoint-down(md) {
+					max-width: rem(109);
+				}
+			}
+		}
+		.seen-card {
+			background-color: #fff;
+			border-color: #fff;
+			@include media-breakpoint-down(md) {
+				border-color: $gray-400;
+			}
+			p {
+				text-align: left;
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
