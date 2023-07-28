@@ -249,6 +249,17 @@ function eventHandler() {
 	togglemobmenu(catalog);
 	toggleMobMenuSecondLevel(catalog);
 
+	document.addEventListener('click', function(event) {
+		let progileTarget = event.target.closest('.top-btns__btn--profile-js');
+		if (progileTarget) {
+			let profileMenu = document.querySelector('.profile-menu');
+			event.preventDefault();
+			progileTarget.classList.toggle('active');
+			profileMenu.classList.toggle('active');
+			$('body').toggleClass('fixed-profile-menu');
+		}
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

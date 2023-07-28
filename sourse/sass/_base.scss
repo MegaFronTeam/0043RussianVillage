@@ -92,7 +92,8 @@ body {
 			opacity: 0.76;
 		}
 	}
-	&.fixed-catalog {
+	&.fixed-catalog,
+	&.fixed-profile-menu  {
 		position: absolute;
 		width: 100%;
 		left: 0;
@@ -370,7 +371,7 @@ ul {
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
-		background-color: #E6E6E6;
+		background-color: $gray-300;
 		outline: none !important;
 		@include mt;
 		margin-left: rem(8);

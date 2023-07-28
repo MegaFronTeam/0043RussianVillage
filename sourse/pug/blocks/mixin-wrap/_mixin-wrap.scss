@@ -183,7 +183,8 @@
 				font-size: rem(20);
 			}
 			&-menu,
-			&-catalog {
+			&-catalog,
+			&-close {
 				fill: currentColor;
 				stroke: none;
 				stroke-width: 0;
@@ -243,6 +244,23 @@
 							bottom: 0;
 							background-color: #6E9545;
 						}
+					}
+				}
+			}
+		}
+		&--profile-js {
+			.icon {
+				&-close {
+					display: none;
+				}
+			}
+			&.active {
+				.icon {
+					&-profile {
+						display: none;
+					}
+					&-close {
+						display: inline-block;
 					}
 				}
 			}

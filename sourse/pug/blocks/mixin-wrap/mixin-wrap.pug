@@ -117,8 +117,9 @@ mixin topBtns()
 			+e.btn(href='#').d-md-none.catalog-toggle-js.order-1
 				.catalog-toggle__toggle-icon.toggle-menu-mobile: span
 				span Каталог
-			+e.btn(href='#').order-4.order-md-1
+			+e.btn--profile-js(href='#').order-4.order-md-1
 				+icon('profile')
+				+icon('close')
 				span.d-md-none Профиль
 				span.d-none.d-md-inline Войти
 			+e.btn(href='#').d-none.d-md-flex.order-md-2
