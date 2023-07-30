@@ -118,7 +118,7 @@ body {
 	padding-bottom: rem(56);
 	@include media-breakpoint-up(md) {
 		padding-bottom: 0;
-		padding-top: rem(103);
+		padding-top: rem(100);
 	}
 	// display: flex;
 	// flex-direction: row; 
@@ -591,7 +591,20 @@ iframe {
 }
 
 .prod-card-page {
-	--bs-gutter-x: #{rem(8)};
+	.container {
+		--bs-gutter-x: #{rem(8)};
+	}
 
 	background-color: $gray-200;
+}
+
+.tooltip {
+	--bs-tooltip-max-width: #{rem(295)};
+	--bs-tooltip-opacity: 1;
+	--bs-tooltip-bg: #fff;
+	--bs-tooltip-color: #{$body-color};
+
+	box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.20);
+	font-size: rem(14);
+	border-radius: rem(8);
 }

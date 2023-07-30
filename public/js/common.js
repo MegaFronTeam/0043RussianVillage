@@ -272,7 +272,7 @@ function eventHandler() {
 
 	const sProdCardThumbSwiper = new Swiper('.sProdCard__thumb-slider--thumb-js', {
 		slidesPerView: 'auto',
-		spaceBetween: 8,
+		spaceBetween: 3,
 		// direction: 'vertical',
 		navigation: {
 			nextEl: '.sProdCard__thumb-arrow-wrap .swiper-button-next',
@@ -294,6 +294,11 @@ function eventHandler() {
 		thumbs: {
 			swiper: sProdCardThumbSwiper,
 		},
+	});
+
+	$('[data-bs-toggle="tooltip"]').tooltip({
+		animation: true,
+		placement: 'bottom',
 	});
 
 };

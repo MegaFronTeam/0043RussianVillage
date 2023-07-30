@@ -9,6 +9,7 @@ include ../blocks/sCatalog/_sCatalog.pug
 include ../blocks/sCardSlider/_sCardSlider.pug
 include ../blocks/sAlsoWatch/_sAlsoWatch.pug
 include ../blocks/sProdCard/_sProdCard.pug
+include ../blocks/sProdCardInfo/_sProdCardInfo.pug
 
 block variables
 	- let  mainPage= 'prod-card-page' 
@@ -24,7 +25,9 @@ block pagecontent
 	+parts('header')
 	+topBtns().d-md-none
 	main
+		+page-head('Парковые качели «Пагода_2»', '#83274058', 'Дачные постройки и конструкции', 'Летние кухни, гриль зоны, барбекю комплексы', 'Летние кухни, гриль зоны, барбекю комплексы', 'Парковые качели «Пагода_2» идеальный выбор для сада, загородного дома, коттеджа, дачи. Оно выполнено из качественного полипропилена')
 		+sProdCard
+		+sProdCardInfo
 		+sCardSlider('С этим также берут', '', true)
 			+e.slide.swiper-slide
 				+card('card-9.png', '10 730 ₽', 'Бассейн каркасный Avenli 230478 круглый 3.05х3.05 м ПВХ', '')

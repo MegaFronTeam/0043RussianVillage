@@ -31,13 +31,18 @@ mixin addblock()
 
 
 
-mixin page-head(t,...items)
+mixin page-head(t, span, ...items)
 	+b.page-head
 		- let l = items.length
+		+e.breadcrumb
+			.container
+				+breadcrumb('Главная',...items)
 		.container
-			+breadcrumb('Главная',...items)
 
-			h1= t
+			h1.h5
+				!= t
+				if span 
+					span!= span
 
 mixin parts(elem)
 	script.
@@ -66,6 +71,14 @@ mixin mainPageNav()
 						| Акции и Скидки
 				.col-auto: a(href="#") Остались вопросы?
 
+mixin stars(rate=4)
+	+b.stars(data-rating=rate)
+		+icon('rateStar')
+		+icon('rateStar')
+		+icon('rateStar')
+		+icon('rateStar')
+		+icon('rateStar')
+
 mixin card(img, price, text, bg='bg')
 	+b.card
 		+e.img-wrap(href='#')
@@ -76,12 +89,7 @@ mixin card(img, price, text, bg='bg')
 			+e.text(href='#')!=text 
 			+e.create Производство Италия
 			+e.review-wrap
-				+e.stars(data-rating=4)
-					+icon('rateStar')
-					+icon('rateStar')
-					+icon('rateStar')
-					+icon('rateStar')
-					+icon('rateStar')
+				+stars
 				span 07.11.2021
 			+e.rate
 			+e.footer-row.row 

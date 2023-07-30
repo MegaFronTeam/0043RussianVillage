@@ -1,0 +1,57 @@
+mixin sProdCardInfo(data)
+	// start sProdCardInfo
+	+b.SECTION.sProdCardInfo.section#sProdCardInfo&attributes(attributes)
+		.container
+			+e.wrap
+				.tabs.swiper.freemode-slider--js
+					.tabs__caption.swiper-wrapper
+						.tabs__btn.swiper-slide.active Описание и характеристики
+						.tabs__btn.swiper-slide Отзывы
+						.tabs__btn.swiper-slide Вопрос-ответ
+						.tabs__btn.swiper-slide Доставка
+						.tabs__btn.swiper-slide Получение товара
+					.tabs__content.active
+						+e.content
+							.h5 Описание
+							p Практичное, стильное, удобное кресло Престиж — идеальный выбор для сада, загородного дома, коттеджа, дачи. Оно выполнено из качественного полипропилена высокой прочности, способного выдерживать высокие нагрузки. Материал не требует особого ухода, чистится обычными моющими средствами, удобно в хранении и транспортировке. Кресло не боится повышенной влажности, резких перепадов температур, его можно ставить около бассейна, в бане, сауне, на улице. Дополнительное удобство обеспечивают удобные подлокотники.
+						+e.content
+							.h5 Характеристики
+							+e.table-row.row
+								mixin tr(key, value)
+									+e.tr-row.row
+										.col-md!= key
+										.col-md-auto.ms-md-auto.text-md-end!= value
+								.col-md
+									+tr('Производитель', 'Италия')
+									+tr('Гарантия', '18 мес.')
+									+tr('Срок службы', '2 года')
+									+tr('Материал', 'Полипропилен')
+									+tr('Цвет', 'Коричневый')
+									+tr('Размер (Ш×В×Г)', '33×79×92')
+								.col-md
+									+tr('Высота сиденья от пола', '40 см')
+									+tr('Maксимальная нагрузка на 1 посадочное место', '117 кг')
+									+tr('Мягкие элементы в комплекте', 'Нет')
+									+tr('Регулируемый наклон спинки', 'Нет')
+									+tr('Температурный режим', 'От -20 до +45 градусов')
+									+tr('Материал каркаса', 'Дерево')
+						+e.content
+							.h5 Преимущества
+							+e.advantage-row.row
+								mixin advantageCol(text)
+									+e.advantage-col.col-6.col-md-12
+										+e.item!= text
+								+advantageCol('Усиленные закаленные фрезы')
+								+advantageCol('Колеса с глубоким протектором')
+								+advantageCol('Шестеренчатый редуктор')
+								+advantageCol('Укрепленная рама')
+								+advantageCol('Шестеренчатый редуктор')
+								+advantageCol('Усиленные закаленные фрезы')
+								+advantageCol('Колеса с глубоким протектором')
+								+advantageCol('Усиленные закаленные фрезы')
+								+advantageCol('Колеса с глубоким протектором')
+					.tabs__content 2
+					.tabs__content 3
+					.tabs__content 4
+					.tabs__content 5
+	// end sProdCardInfo

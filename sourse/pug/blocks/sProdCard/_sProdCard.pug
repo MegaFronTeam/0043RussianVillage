@@ -6,6 +6,7 @@ mixin sProdCard(data)
 				+e.col.col-md-auto
 					+e.full-slider-wrap
 						+e.swiper-wrap.order-md-2
+							.badge.badge-orange Скидка -50%
 							+e.slider--js.swiper
 								.swiper-wrapper
 									-for(let i = 0; i < 10; i++)
@@ -26,4 +27,53 @@ mixin sProdCard(data)
 							.d-none.d-md-block
 								+arrow()
 				.col-md
+					+e.main-row.row
+						.col-12
+							+e.main-info
+								+e.head-row
+									.row
+										.col
+											+e.rate-wrap
+												span 4.5
+												+stars
+												+e.create-review(href='#') Оставить отзыв
+										.col-auto
+											+e.favorite(href='#')
+												span В избранное
+												+icon('heart')
+								h4 12 890 ₽
+								+e.btn-row.row
+									.col-12
+										+e.btn.btn.btn-primary(href='#') В корзину
+									.col-12
+										+e.btn.btn.btn-outline-dark(href='#') Получить консультацию
+								table
+									mixin tr(key, value)
+										tr
+											td!=key
+											td.text-end!=value
+									+tr('Размер (Ш×В×Г) см', '33×79×92')
+									+tr('Материал', 'Дерево')
+									+tr('Цвет', 'Коричневый')
+								+e.all(href='#') Все характеристики
+						.col-12
+							+e.delivery
+								+e.city
+									+icon('map-pin')
+									| Москва
+								table
+									mixin tr(key, value)
+										tr
+											td!=key
+											td.text-end!=value
+									+tr('Доставка', 'В пределеах МКАД от 150₽')
+									+tr('Самовывоз', 'Со склада в Москве')
+						.col-12
+							+e.see-all(href='#')
+								+e.see-all-img-wrap
+									+img("img/see-all-img-1.jpg")
+									+img("img/see-all-img-2.jpg")
+									+img("img/see-all-img-3.jpg")
+								p Посмотреть все 100550 товаров категории «Парковые качели»
+								+icon('chevron-right2')
 	// end sProdCard
