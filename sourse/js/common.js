@@ -301,6 +301,17 @@ function eventHandler() {
 		placement: 'bottom',
 	});
 
+	$('.review-block__show-more-btn').click(function(event) {
+		$(this).toggleClass('active');
+		event.preventDefault();
+		$('.review-block__review-item.active').slideUp(function() {
+			$(this).removeClass('active');
+		});
+		$('.review-block__review-item:hidden').slideDown(function() {
+			$(this).addClass('active');
+		});
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

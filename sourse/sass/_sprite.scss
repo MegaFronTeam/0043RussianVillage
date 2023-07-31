@@ -23,9 +23,9 @@
 	width: calc(27 / var(--h) *1em );
 }
 .icon-chevron-down {
-	--h: 16;
+	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
-	width: calc(16 / var(--h) *1em );
+	width: calc(25 / var(--h) *1em );
 }
 .icon-chevron-left {
 	--h: 24;
@@ -106,6 +106,16 @@
 	--h: 16;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(16 / var(--h) *1em );
+}
+.icon-thumbs-up {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-thumbs-up-active {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
 }
 .icon-viber {
 	--h: 16;
