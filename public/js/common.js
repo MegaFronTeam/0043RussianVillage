@@ -301,7 +301,7 @@ function eventHandler() {
 		placement: 'bottom',
 	});
 
-	$('.review-block__show-more-btn').click(function(event) {
+	$('.show-more-btn--js').click(function(event) {
 		$(this).toggleClass('active');
 		event.preventDefault();
 		$('.review-block__review-item.active').slideUp(function() {
@@ -310,7 +310,17 @@ function eventHandler() {
 		$('.review-block__review-item:hidden').slideDown(function() {
 			$(this).addClass('active');
 		});
+		$('.faq__item.active').slideUp(function() {
+			$(this).removeClass('active');
+		});
+		$('.faq__item:hidden').slideDown(function() {
+			$(this).addClass('active');
+		});
 	});
+
+	$('.form-wrap--js textarea').on('input', function(event) {
+		document.querySelector('.form-wrap--js p span').innerHTML = event.target.value.length;
+	})
 
 };
 if (document.readyState !== 'loading') {

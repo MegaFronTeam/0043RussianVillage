@@ -583,6 +583,11 @@ iframe {
     --bs-btn-active-bg: #325013;
     --bs-btn-active-border-color: #325013;
 	}
+	&-light {
+		--bs-btn-color: #{$body-color};
+		--bs-btn-bg: #{$gray-200};
+		--bs-btn-border-color: #{$gray-200};
+	}
 	&.disabled {
 		--bs-btn-disabled-color: #{$gray-400};
 		--bs-btn-disabled-bg: #{$gray-200};
@@ -591,8 +596,13 @@ iframe {
 }
 
 .prod-card-page {
-	.container {
-		--bs-gutter-x: #{rem(8)};
+	.sProdCard,
+	.sProdCardInfo {
+		.container {
+			@include media-breakpoint-down(md) {
+				--bs-gutter-x: #{rem(8)};
+			}
+		}
 	}
 
 	background-color: $gray-200;
