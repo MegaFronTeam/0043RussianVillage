@@ -89,8 +89,10 @@
 			font-size: rem(13);
 		}
 		&:hover {
-			box-shadow: 0 3px 18px 1px rgba(0, 0, 0, 0.35);
-			color: $primary;
+			// color: $primary;
+			@include media-breakpoint-up(md) {
+				box-shadow: 0px 2px 18px 0px rgba(119, 119, 119, 0.28);
+			}
 		}
 		img {
 			width: 100%;
@@ -101,8 +103,8 @@
 			z-index: -1;
 			@include media-breakpoint-up(md) {
 				max-width: rem(172);
-				right: rem(-26);
-				bottom: rem(-14);
+				// right: rem(-26);
+				// bottom: rem(-14);
 			}
 		}
 	}

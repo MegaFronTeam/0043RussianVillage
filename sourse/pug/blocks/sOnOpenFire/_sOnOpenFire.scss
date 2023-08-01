@@ -55,6 +55,9 @@
 			}
 		}
 		img {
+			@include media-breakpoint-down(md) {
+				width: 100%;
+			}
 			@include media-breakpoint-up(md) {
 				display: block;
 				height: 100%;
@@ -75,7 +78,7 @@
 			padding: rem(32) rem(48);
 			border-radius: rem(8);
 		}
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(sm) {
 			margin-left: calc(var(--bs-gutter-x) / -2);
 			margin-right: calc(var(--bs-gutter-x) / -2);
 		} 

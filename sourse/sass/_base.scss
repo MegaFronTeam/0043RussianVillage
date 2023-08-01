@@ -588,10 +588,15 @@ iframe {
 		--bs-btn-bg: #{$gray-200};
 		--bs-btn-border-color: #{$gray-200};
 	}
+	// &.disabled {
+	// 	--bs-btn-disabled-color: #{$gray-400};
+	// 	--bs-btn-disabled-bg: #{$gray-200};
+  //   --bs-btn-disabled-border-color: #{$gray-200};
+	// }
 	&.disabled {
-		--bs-btn-disabled-color: #{$gray-400};
-		--bs-btn-disabled-bg: #{$gray-200};
-    --bs-btn-disabled-border-color: #{$gray-200};
+		--bs-btn-disabled-color: #{$gray-700};
+		--bs-btn-disabled-bg: #fff;
+		--bs-btn-disabled-border-color: #{$gray-400};
 	}
 }
 

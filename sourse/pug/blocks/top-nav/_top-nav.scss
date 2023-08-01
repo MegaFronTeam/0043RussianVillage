@@ -228,20 +228,26 @@
 				stroke-width: rem(1.5);
 			}
 		}
+		.catalog-menu__icon-wrap {
+			background-color: #fff;
+			@include media-breakpoint-up(md) {
+				background-color: $gray-200;
+			}
+		}
 	}
 	&__icon-wrap {
 		@include mt;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background-color: $gray-200;
 		border-radius: rem(4);
 		width: rem(32);
 		height: rem(32);
 		margin-left: auto;
 		flex: 0 0 auto;
+		background-color: $gray-200;
 		.icon {
-			font-size: rem(14);
+			font-size: rem(16);
 			color: $primary;
 		}
 	}

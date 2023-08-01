@@ -12,8 +12,8 @@ mixin sProdCardInfo(data)
 						.tabs__btn.swiper-slide
 							| Вопрос-ответ
 							span 6
-						.tabs__btn.swiper-slide.active Доставка
-						.tabs__btn.swiper-slide Получение товара
+						.tabs__btn.swiper-slide Доставка
+						.tabs__btn.swiper-slide.active Получение товара
 					.tabs__content
 						+e.content
 							.h5 Описание
@@ -145,7 +145,7 @@ mixin sProdCardInfo(data)
 								.show-more Показать еще
 								.hide Скрыть
 								+icon('chevron-down')
-					.tabs__content.active
+					.tabs__content
 						+e.delivery-content
 							p Доставка включает в&nbsp;себя доставку товаров по&nbsp;указанному адресу, с&nbsp;размещением транспортного средства максимально приближенным к&nbsp;месту выгрузки, только на&nbsp;дорогах общественного пользования пригодных для движения грузового транспорта (без заезда транспортного средства на&nbsp;территорию частного домовладения). Водитель обязан припарковаться так, чтобы обеспечить безопасную выгрузку товара из&nbsp;машины (необходимо обратить внимание на&nbsp;пешеходов, на&nbsp;припаркованные машины).
 							p Доставка осуществляется в&nbsp;день согласованный при оформления заказа (дата зависит от&nbsp;наличия товара на&nbsp;складе или зависит от&nbsp;графика производства).
@@ -157,5 +157,11 @@ mixin sProdCardInfo(data)
 							+b.show-more-btn.btn.btn-light(href='#') 
 								.show-more Посмотреть подробнее о доставке
 								+icon('chevron-right')
-					.tabs__content 5
+					.tabs__content.active
+						.innerTabs
+							.innerTabs__caption
+								.innerTabs__btn.active 1
+								.innerTabs__btn 2
+							.innerTabs__content.active 1
+							.innerTabs__content 2
 	// end sProdCardInfo
