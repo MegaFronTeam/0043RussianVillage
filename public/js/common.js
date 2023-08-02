@@ -304,18 +304,17 @@ function eventHandler() {
 	$('.show-more-btn--js').click(function(event) {
 		$(this).toggleClass('active');
 		event.preventDefault();
-		$('.review-block__review-item.active').slideUp(function() {
-			$(this).removeClass('active');
-		});
-		$('.review-block__review-item:hidden').slideDown(function() {
-			$(this).addClass('active');
-		});
-		$('.faq__item.active').slideUp(function() {
-			$(this).removeClass('active');
-		});
-		$('.faq__item:hidden').slideDown(function() {
-			$(this).addClass('active');
-		});
+		let toggleContent = (elem) => {
+			$(`.` + `${elem}` + `.active`).slideUp(function() {
+				$(this).removeClass('active');
+			});
+			$(`.` + `${elem}` + `:hidden`).slideDown(function() {
+				$(this).addClass('active');
+			});
+		}
+		toggleContent('review-block__review-item');
+		toggleContent('faq__item');
+		toggleContent('receiptGoods__item ul li');
 	});
 
 	$('.form-wrap--js textarea').on('input', function(event) {
