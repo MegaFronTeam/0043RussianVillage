@@ -1,0 +1,33 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sOrder/_sOrder.pug
+
+block variables
+	- let  mainPage= 'prod-card-page' 
+	- let  bg= ''
+
+block title
+	- let  title= 'Карточка товара'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		+page-head('Корзина', '', 'h4')
+		+sOrder
+		+sAlsoWatch(false).sAlsoWatch--2
+	+parts('footer')
+      
+
+
+

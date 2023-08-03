@@ -1,0 +1,90 @@
+mixin sOrder(data)
+	// start sOrder
+	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+		.container
+			+e.row.row
+				.col-md
+					+e.wrap--left
+						+e.head-row.row
+							.col-auto
+								+in-c('checkbox', 'Выбрать все')
+							.col-auto
+								+e.delete-all(href='#')
+									+icon('delete')
+									| Удалить выбранные 
+						+e.item
+							+in-c('checkbox')
+							.row
+								.col-auto
+									+e.img-wrap(href='#')
+										.img-wrap-center
+											+img('img/cart-img-1.jpg', 'bg')
+								.col
+									+e.inner-row.row
+										.col-md
+											+e.link(href='#') Уличная кухня
+											+e.articul #83274058
+											+e.manipulation-row
+												+e.manipulation(href='#')
+													+icon('heart')
+													span В избранное
+												+e.manipulation(href='#')
+													+icon('delete')
+													span Удалить 
+										.col-md-auto
+											+e.wrapper
+												+e.price-wrap
+													h5 25 780 ₽
+													+e.full-price 12 890 ₽/ шт.
+												+addblock
+						+e.item
+							+in-c('checkbox')
+							.row
+								.col-auto
+									+e.img-wrap(href='#')
+										.img-wrap-center
+											+img('img/cart-img-2.jpg', 'bg')
+								.col
+									+e.inner-row.row
+										.col-md
+											+e.link(href='#') Печь-мангал ММ-140 (5мм) с крышкой-гриль и решеткой
+											+e.articul #83274058
+											+e.manipulation-row
+												+e.manipulation(href='#')
+													+icon('heart')
+													span В избранное
+												+e.manipulation(href='#')
+													+icon('delete')
+													span Удалить 
+										.col-md-auto
+											+e.wrapper
+												+e.price-wrap
+													h5 5 670 ₽
+												+addblock
+						+e.item
+							+in-c('checkbox')
+							.row
+								.col-auto
+									+e.img-wrap(href='#')
+										.img-wrap-center
+											+img('img/cart-img-3.jpg', 'bg')
+								.col
+									+e.inner-row.row
+										.col-md
+											+e.link(href='#') Тачка садовая одноколесная 70 кг 70 л полипропилен
+											+e.articul #83274058
+											+e.manipulation-row
+												+e.manipulation(href='#')
+													+icon('heart')
+													span В избранное
+												+e.manipulation(href='#')
+													+icon('delete')
+													span Удалить 
+										.col-md-auto
+											+e.wrapper
+												+e.price-wrap
+													h5 3 000 ₽
+												+addblock
+				+e.col.col-md
+					+e.wrap--right
+	// end sOrder

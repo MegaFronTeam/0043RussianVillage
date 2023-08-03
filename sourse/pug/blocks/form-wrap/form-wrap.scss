@@ -17,6 +17,13 @@
  	}
 }
 
+.custom-input {
+	&__input {
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
 
 .parsley-error{
 	border-image: none;

@@ -31,15 +31,16 @@ mixin addblock()
 
 
 
-mixin page-head(t, span, ...items)
+mixin page-head(t, span, customClass='h5', ...items)
 	+b.page-head
 		- let l = items.length
-		+e.breadcrumb
-			.container
-				+breadcrumb('Главная',...items)
+		if l > 0
+			+e.breadcrumb
+				.container
+					+breadcrumb('Главная',...items)
 		.container
 
-			h1.h5
+			h1(class=customClass)
 				!= t
 				if span 
 					span!= span

@@ -368,13 +368,13 @@
 						<div class="sProdCardInfo__wrap">
 							<div class="tabs swiper freemode-slider--js">
 								<div class="tabs__caption swiper-wrapper">
-									<div class="tabs__btn swiper-slide">Описание и характеристики</div>
+									<div class="tabs__btn swiper-slide active">Описание и характеристики</div>
 									<div class="tabs__btn swiper-slide">Отзывы<span>5</span></div>
 									<div class="tabs__btn swiper-slide">Вопрос-ответ<span>6</span></div>
 									<div class="tabs__btn swiper-slide">Доставка</div>
-									<div class="tabs__btn swiper-slide active">Получение товара</div>
+									<div class="tabs__btn swiper-slide">Получение товара</div>
 								</div>
-								<div class="tabs__content">
+								<div class="tabs__content active">
 									<div class="sProdCardInfo__content">
 										<div class="h5">Описание</div>
 										<p>Практичное, стильное, удобное кресло Престиж — идеальный выбор для сада, загородного дома, коттеджа, дачи. Оно выполнено из качественного полипропилена высокой прочности, способного выдерживать высокие нагрузки. Материал не требует особого ухода, чистится обычными моющими средствами, удобно в хранении и транспортировке. Кресло не боится повышенной влажности, резких перепадов температур, его можно ставить около бассейна, в бане, сауне, на улице. Дополнительное удобство обеспечивают удобные подлокотники.</p>
@@ -943,13 +943,13 @@
 										</a>
 									</div>
 								</div>
-								<div class="tabs__content active">
+								<div class="tabs__content">
 									<div class="innerTabs">
 										<div class="innerTabs__caption">
 											<div class="innerTabs__btn active">Доставка</div>
 											<div class="innerTabs__btn">Самовывоз</div>
 										</div>
-										<div class="innerTabs__content">
+										<div class="innerTabs__content active">
 											<div class="receiptGoods">
 												<div class="receiptGoods__info">Доставка включает в&nbsp;себя доставку товаров по&nbsp;указанному адресу, с&nbsp;размещением транспортного средства максимально приближенным к&nbsp;месту выгрузки, только на&nbsp;дорогах общественного пользования пригодных для движения грузового транспорта (без заезда транспортного средства на&nbsp;территорию частного домовладения). Водитель обязан припарковаться так, чтобы обеспечить безопасную выгрузку товара из&nbsp;машины (необходимо обратить внимание на&nbsp;пешеходов, на&nbsp;припаркованные машины). Доставка осуществляется в&nbsp;день согласованный при оформления заказа (дата зависит от&nbsp;наличия товара на&nbsp;складе или зависит от&nbsp;графика производства)
 												</div>
@@ -1278,45 +1278,58 @@
 												</div>
 											</div>
 										</div>
-										<div class="innerTabs__content active">
+										<div class="innerTabs__content">
 											<div class="delivery">
-												<div class="delivery__map">
-													<div id="map"></div>
-													<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
-													<script>
-														var myMap;
-														
-														// Дождёмся загрузки API и готовности DOM.
-														ymaps.ready(init);
-														
-														function init () {
-															// Создание экземпляра карты и его привязка к контейнеру с
-															// заданным id ("map").
-															myMap = new ymaps.Map('map', {
-																	// При инициализации карты обязательно нужно указать
-																	// её центр и коэффициент масштабирования.
-																	center:[55.74600650606794,37.6086175819092], // Москва
-																	zoom:14
-															}),
-															myPlacemark = new ymaps.Placemark([55.74498979811124,37.589906491821296], {
-																	hintContent: 'Собственный значок метки',
-																	balloonContent: 'Это красивая метка'
-															}, {
-																	// Опции.
-																	// Необходимо указать данный тип макета.
-																	iconLayout: 'default#image',
-																	// Своё изображение иконки метки.
-																	iconImageHref: 'img/map-pin.png',
-																	// Размеры метки.
-																	iconImageSize: [47, 73],
-																	// Смещение левого верхнего угла иконки относительно
-																	// её "ножки" (точки привязки).
-																	iconImageOffset: [-5, -38]
-															});
-															myMap.geoObjects
-																.add(myPlacemark)
-														}
-													</script>
+												<div class="delivery__map-wrap">
+													<div class="delivery__map">
+														<div id="map"></div>
+														<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c"></script>
+														<script>
+															var myMap;
+															
+															// Дождёмся загрузки API и готовности DOM.
+															ymaps.ready(init);
+															
+															function init () {
+																// Создание экземпляра карты и его привязка к контейнеру с
+																// заданным id ("map").
+																myMap = new ymaps.Map('map', {
+																		// При инициализации карты обязательно нужно указать
+																		// её центр и коэффициент масштабирования.
+																		center:[55.74600650606794,37.6086175819092], // Москва
+																		zoom:14
+																}),
+																myPlacemark = new ymaps.Placemark([55.74498979811124,37.589906491821296], {
+																		hintContent: 'Собственный значок метки',
+																		balloonContent: 'Это красивая метка'
+																}, {
+																		// Опции.
+																		// Необходимо указать данный тип макета.
+																		iconLayout: 'default#image',
+																		// Своё изображение иконки метки.
+																		iconImageHref: 'img/map-pin.png',
+																		// Размеры метки.
+																		iconImageSize: [47, 73],
+																		// Смещение левого верхнего угла иконки относительно
+																		// её "ножки" (точки привязки).
+																		iconImageOffset: [-5, -38]
+																});
+																myMap.geoObjects
+																	.add(myPlacemark)
+															}
+														</script>
+													</div>
+													<div class="delivery__map-content">
+														<div class="h6">Наш склад</div>
+														<div class="delivery__map-content-item"><span>Адрес</span>
+															<p>м. Черкизовская, Щёлковское шоссе, 5с1</p>
+														</div>
+														<div class="delivery__map-content-item"><span>Режим работы</span>
+															<p>Пн - Пт  9:00 - 20:00<br>Сб - Вс 9:00 - 18:00</p>
+														</div>
+														<div class="delivery__map-content-item"><span>Телефон</span><a href="tel:84956468218">8 (495) 646-82-18 </a>
+														</div>
+													</div>
 												</div>
 												<div class="delivery__inner-content">
 													<p>Самовывоз со склада организации.</p>

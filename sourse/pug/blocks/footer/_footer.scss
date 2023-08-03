@@ -5,6 +5,7 @@
 	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	background-color: $gray-200;
+	border-top: 2px solid $gray-300;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(40)};
 	}
