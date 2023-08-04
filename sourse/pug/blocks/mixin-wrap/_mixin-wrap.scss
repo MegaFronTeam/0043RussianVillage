@@ -598,6 +598,7 @@
 		max-width: rem(88);
 		// flex: 0 0 auto;
 		margin-bottom: rem(4);
+		flex: 0 0 auto;
 		@include media-breakpoint-up(md) {
 			margin-right: rem(8);
 			margin-bottom: 0;
@@ -650,7 +651,7 @@
 		margin-bottom: 0;
 		@include media-breakpoint-down(md) {
 			font-size: rem(19);
-			padding: rem(8) rem(8) rem(16) rem(8);
+			padding: rem(16) 0;
 		} 
 		span {
 			font-size: rem(15);

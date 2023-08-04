@@ -9,12 +9,15 @@
 .modal-win {
 	// display: block;
 	background-color: #fff;
-	max-width: 100%;
+	// max-width: 100%;
 	position: relative;
-	width: rem(1500);
+	width: 100%;
+	max-width: rem(434);
 	// min-height: 100%; 
-	padding: 40px;
-
+	padding: rem(48) rem(16) rem(40);
+	@include media-breakpoint-up(md) {
+		padding: rem(40) rem(67);
+	}
 	.modal-content {
 		// max-width: 485px;
 		// padding-right: 40px 15px;
@@ -24,6 +27,19 @@
 		color: $primary;
 		font-size: 40px;
 		font-weight: 100;
+	}
+	.form-wrap {
+		.h5 {
+			margin-bottom: rem(16);
+		}
+		&__input-wrap {
+			margin-bottom: rem(16);
+		}
+		&__btn {
+			width: 100%;
+			margin-top: rem(8);
+			margin-bottom: rem(8);
+		}
 	}
 }
 

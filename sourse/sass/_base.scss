@@ -613,6 +613,15 @@ iframe {
 	background-color: $gray-200;
 }
 
+.cart-page {
+	background-color: $gray-200;
+	.main-wrapper {
+		@include media-breakpoint-down(md) {
+			padding-bottom: calc(rem(56) + rem(64));
+		}
+	}
+}
+
 .tooltip {
 	--bs-tooltip-max-width: #{rem(295)};
 	--bs-tooltip-opacity: 1;

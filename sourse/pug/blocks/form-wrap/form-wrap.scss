@@ -1,13 +1,23 @@
 .form-wrap{
+	.row {
+		--bs-gutter-x: #{rem(12)};
+		--bs-gutter-y: #{rem(24)};
+	}
  	&__input-wrap{
-			// @extend .form-group;
-			
-		}
-		&__input{
-			// @extend .form-control;
-		//  outline: 0 !important;
-		 resize: none;
+		// @extend .form-group;
+		
+	}
+	&__input{
+		// @extend .form-control;
+	//  outline: 0 !important;
+		resize: none;
  	}
+	&__input-title {
+		display: block;	
+		font-size: rem(13);
+		line-height: 1.23;
+		margin-bottom: rem(8);
+	}
  	&__btn{
  		cursor: pointer;
  	}
@@ -15,6 +25,69 @@
  		width: 100%;
  		display: block;
  	}
+	select {
+		&::placeholder {
+			color: $input-placeholder-color;
+		}
+	}
+	&__policy {
+		font-size: rem(13);
+		line-height: 1.23;
+		text-align: center;
+		a {
+			color: $link-hover-color;
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+}
+
+.fancybox__content>.f-button.is-close-btn {
+	top: rem(16);
+	right: rem(16);
+	--f-button-width: #{rem(24)};
+	--f-button-height: #{rem(24)};
+	--fancybox-color: #{$body-color};
+	background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19 6.41L17.59 5L12 10.59L6.41 5L5 6.41L10.59 12L5 17.59L6.41 19L12 13.41L17.59 19L19 17.59L13.41 12L19 6.41Z' fill='%23292929'/%3E%3C/svg%3E%0A");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	opacity: 1;
+	svg {
+		display: none;
+	}
+}
+
+.is-compact .fancybox__content>.f-button.is-close-btn {
+	--f-button-outline-color: transparent;
+	--f-button-bg: transparent;
+	--f-button-active-bg: transparent;
+	--f-button-hover-bg: transparent;
+}
+
+.fancybox__container {
+	--fancybox-bg: rgba(41, 41, 41, 0.75);
+}
+
+.fancybox__slide {
+	@include media-breakpoint-down(md) {
+		padding: 0;
+		&:before, &:after {
+			content: unset;
+		}
+	}
+	#modal-call {
+		@include media-breakpoint-down(md) {
+			height: 100%;
+			.modal-win {
+				display: flex;
+				height: 100%;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+	}
 }
 
 .custom-input {

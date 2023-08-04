@@ -1,90 +1,204 @@
-mixin sOrder(data)
+mixin sOrder(empty)
+	// start sOrder
+	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
+		.container
+			if empty
+				+e.empty-wrap
+					+e.empty
+						h1.h4 В корзине пока ничего нет
+						p Добавьте товары в корзину. У нас вы найдете то, что вам понравится!
+						a.btn.btn-primary(href='#') В каталог
+			else
+				+e.row.row
+					.col-md
+						+e.wrap--left
+							+e.head-row.row
+								.col-auto
+									+in-c('checkbox', 'Выбрать все')
+								.col-auto
+									+e.delete-all(href='#')
+										+icon('delete')
+										| Удалить выбранные 
+							+e.item
+								+in-c('checkbox')
+								.row
+									.col-auto
+										+e.img-wrap(href='#')
+											.img-wrap-center
+												+img('img/cart-img-1.jpg', 'bg')
+									.col
+										+e.inner-row.row
+											.col-md
+												+e.link(href='#') Уличная кухня
+												+e.articul #83274058
+												+e.manipulation-row
+													+e.manipulation(href='#')
+														+icon('heart')
+														span В избранное
+													+e.manipulation(href='#')
+														+icon('delete')
+														span Удалить 
+											.col-md-auto
+												+e.wrapper
+													+e.price-wrap
+														h5 25 780 ₽
+														+e.full-price 12 890 ₽/ шт.
+													+addblock
+							+e.item
+								+in-c('checkbox')
+								.row
+									.col-auto
+										+e.img-wrap(href='#')
+											.img-wrap-center
+												+img('img/cart-img-2.jpg', 'bg')
+									.col
+										+e.inner-row.row
+											.col-md
+												+e.link(href='#') Печь-мангал ММ-140 (5мм) с крышкой-гриль и решеткой
+												+e.articul #83274058
+												+e.manipulation-row
+													+e.manipulation(href='#')
+														+icon('heart')
+														span В избранное
+													+e.manipulation(href='#')
+														+icon('delete')
+														span Удалить 
+											.col-md-auto
+												+e.wrapper
+													+e.price-wrap
+														h5 5 670 ₽
+													+addblock
+							+e.item
+								+in-c('checkbox')
+								.row
+									.col-auto
+										+e.img-wrap(href='#')
+											.img-wrap-center
+												+img('img/cart-img-3.jpg', 'bg')
+									.col
+										+e.inner-row.row
+											.col-md
+												+e.link(href='#') Тачка садовая одноколесная 70 кг 70 л полипропилен
+												+e.articul #83274058
+												+e.manipulation-row
+													+e.manipulation(href='#')
+														+icon('heart')
+														span В избранное
+													+e.manipulation(href='#')
+														+icon('delete')
+														span Удалить 
+											.col-md-auto
+												+e.wrapper
+													+e.price-wrap
+														h5 3 000 ₽
+													+addblock
+					+e.col.col-md
+						+e.wrap--right
+							+e.summary 
+								.row
+									.col-md
+										+e.end Итого
+									.col-md-auto
+										+e.end-price.h5 35 900 ₽
+								+e.btn.btn.btn-primary(href='#') Оформить заказ
+	// end sOrder
+
+mixin sOrder2()
 	// start sOrder
 	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
 		.container
 			+e.row.row
 				.col-md
 					+e.wrap--left
-						+e.head-row.row
-							.col-auto
-								+in-c('checkbox', 'Выбрать все')
-							.col-auto
-								+e.delete-all(href='#')
-									+icon('delete')
-									| Удалить выбранные 
-						+e.item
-							+in-c('checkbox')
-							.row
-								.col-auto
-									+e.img-wrap(href='#')
-										.img-wrap-center
-											+img('img/cart-img-1.jpg', 'bg')
-								.col
-									+e.inner-row.row
-										.col-md
-											+e.link(href='#') Уличная кухня
-											+e.articul #83274058
-											+e.manipulation-row
-												+e.manipulation(href='#')
-													+icon('heart')
-													span В избранное
-												+e.manipulation(href='#')
-													+icon('delete')
-													span Удалить 
-										.col-md-auto
-											+e.wrapper
-												+e.price-wrap
-													h5 25 780 ₽
-													+e.full-price 12 890 ₽/ шт.
-												+addblock
-						+e.item
-							+in-c('checkbox')
-							.row
-								.col-auto
-									+e.img-wrap(href='#')
-										.img-wrap-center
-											+img('img/cart-img-2.jpg', 'bg')
-								.col
-									+e.inner-row.row
-										.col-md
-											+e.link(href='#') Печь-мангал ММ-140 (5мм) с крышкой-гриль и решеткой
-											+e.articul #83274058
-											+e.manipulation-row
-												+e.manipulation(href='#')
-													+icon('heart')
-													span В избранное
-												+e.manipulation(href='#')
-													+icon('delete')
-													span Удалить 
-										.col-md-auto
-											+e.wrapper
-												+e.price-wrap
-													h5 5 670 ₽
-												+addblock
-						+e.item
-							+in-c('checkbox')
-							.row
-								.col-auto
-									+e.img-wrap(href='#')
-										.img-wrap-center
-											+img('img/cart-img-3.jpg', 'bg')
-								.col
-									+e.inner-row.row
-										.col-md
-											+e.link(href='#') Тачка садовая одноколесная 70 кг 70 л полипропилен
-											+e.articul #83274058
-											+e.manipulation-row
-												+e.manipulation(href='#')
-													+icon('heart')
-													span В избранное
-												+e.manipulation(href='#')
-													+icon('delete')
-													span Удалить 
-										.col-md-auto
-											+e.wrapper
-												+e.price-wrap
-													h5 3 000 ₽
-												+addblock
+						.tabs
+							.tabs__caption
+								.tabs__btn.active Доставка
+								.tabs__btn Самовывоз
+							.tabs__content.active
+								+form-wrap()
+									.row
+										.col-md-6
+											+input('Выберите регион', 'select', 'Регион*')(required)
+										.col-md-6.p-0.m-0
+										.col-md-12
+											+input('Укажите адрес', 'text', 'Адрес доставки*')
+										.col-md-6
+											+input('+7 (      )     -     -', 'tel', 'Телефон*')(required)
+										.col-md-6
+											+input('Введите свой e-mail', 'email', 'E-mail')
+										.col-md-12
+											+input('Введите свое имя', 'text', 'ФИО*')
+										.col-md-12
+											+input('Укажите дополнительные пожелания к заказу', 'textarea', 'Комментарий')
+							.tabs__content
+								+e.info-wrap
+									span Адрес
+									p м. Черкизовская, Щёлковское шоссе, 5с1
+								+e.info-wrap
+									span Режим работы
+									p Пн - Пт  9:00 - 20:00. Сб - Вс 9:00 - 18:00
+								+e.info-wrap
+									span Телефон
+									a(href="tel:84956468218") 8 (495) 646-82-18
+								+e.map
+									#map
+									script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+									script.
+										var myMap;
+
+										// Дождёмся загрузки API и готовности DOM.
+										ymaps.ready(init);
+
+										function init () {
+											// Создание экземпляра карты и его привязка к контейнеру с
+											// заданным id ("map").
+											myMap = new ymaps.Map('map', {
+												// При инициализации карты обязательно нужно указать
+												// её центр и коэффициент масштабирования.
+												center:[55.74498979811124,37.589906491821296], // Москва
+												zoom:14
+											}),
+											myPlacemark = new ymaps.Placemark([55.74498979811124,37.589906491821296], {
+												hintContent: 'Собственный значок метки',
+												balloonContent: 'Это красивая метка'
+											}, {
+												// Опции.
+												// Необходимо указать данный тип макета.
+												iconLayout: 'default#image',
+												// Своё изображение иконки метки.
+												iconImageHref: 'img/map-pin.png',
+												// Размеры метки.
+												iconImageSize: [47, 73],
+												// Смещение левого верхнего угла иконки относительно
+												// её "ножки" (точки привязки).
+												iconImageOffset: [-5, -38],
+											});
+											myMap.geoObjects
+												.add(myPlacemark)
+										};
+						+e.table-wrap.d-md-none
+							table
+								tr
+									td Сумма заказа
+									td 30 900 ₽
+								tr
+									td Доставка
+									td 5 000 ₽
 				+e.col.col-md
 					+e.wrap--right
+						+e.table-wrap.d-none.d-md-block
+							table
+								tr
+									td Сумма заказа
+									td 30 900 ₽
+								tr
+									td Доставка
+									td 5 000 ₽
+						+e.summary
+							.row
+								.col-md
+									+e.end Итого
+								.col-md-auto
+									+e.end-price.h5 35 900 ₽
+							+e.btn.btn.btn-primary(href='#') Оплатить
 	// end sOrder
