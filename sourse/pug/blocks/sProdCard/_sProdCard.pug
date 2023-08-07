@@ -1,6 +1,9 @@
 mixin sProdCard(data)
 	// start sProdCard
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
+		//- +e.fixed-menu--js
+		//- 	.container
+
 		.container
 			+e.row.row
 				+e.col.col-md-auto
@@ -78,11 +81,13 @@ mixin sProdCard(data)
 									.col-12
 										if data.addToCard
 											+e.btn.btn.btn-primary(href='#') В корзину
+										else if data.leaveRequest
+											+e.btn.btn.btn-primary(href='#' data-src='#modal-call-2' data-fancybox).btn-modal-js Оставить заявку на товар
 										else
 											+e.btn.btn.btn-primary.disabled(href='#') В корзине
 									if data.getConsultation
 										.col-12
-											+e.btn.btn.btn-outline-dark(href='#') Получить консультацию
+											+e.btn.btn.btn-outline-dark(href='#' data-src='#modal-call' data-fancybox).btn-modal-js Получить консультацию
 								table
 									mixin tr(key, value)
 										tr

@@ -301,6 +301,31 @@ function eventHandler() {
 		placement: 'bottom',
 	});
 
+	// $('[data-bs-toggle="tooltip2"]')
+	// 	.attr("tabindex", 0)
+	// 	.tooltip({ 
+	// 		trigger: "manual",
+	// 		placement: 'bottom',
+	// 	})
+	// 	.mouseover(event => {
+	// 		$(event.target).tooltip("show");
+	// 		$(".tooltip").on("mouseleave", function() {
+	// 			$(event.target).tooltip("hide");
+	// 		});
+	// 	})
+	// 	.mouseout(event => {
+	// 		setTimeout(() => {
+	// 			if (!$(".tooltip:hover").length) $(event.target).tooltip("hide");
+	// 		}, 100);
+	// 	})
+	// 	.focus(event => {
+	// 		$(event.target).tooltip("show");
+	// 	})
+	// 	.blur(event => {
+	// 		$(event.target).tooltip("hide");
+	// 	});
+
+
 	$('.show-more-btn--js').click(function(event) {
 		$(this).toggleClass('active');
 		event.preventDefault();

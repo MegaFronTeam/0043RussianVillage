@@ -633,5 +633,9 @@ iframe {
 	border-radius: rem(8);
 	&-custom {
 		--bs-tooltip-max-width: #{rem(570)};
+
+		span {
+			color: $btn-link-hover-color;
+		}
 	}
 }
