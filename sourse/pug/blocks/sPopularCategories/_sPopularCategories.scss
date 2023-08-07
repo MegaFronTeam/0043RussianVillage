@@ -96,13 +96,15 @@
 		}
 		img {
 			width: 100%;
-			max-width: rem(72);
+			// max-width: rem(72);
 			position: absolute;
 			right: 0;
 			bottom: 0;
 			z-index: -1;
+			max-width: calc(100% - 32px);
 			@include media-breakpoint-up(md) {
-				max-width: rem(172);
+				// max-width: rem(172);
+				max-width: 172px;
 				// right: rem(-26);
 				// bottom: rem(-14);
 			}

@@ -1,6 +1,6 @@
 // start .headerBlock
 .headerBlock {
-	--sPT: #{rem(16)};
+	--sPT: #{rem(8)};
 	--sPB: #{rem(12)};
 	// --sTPB: #{rem()}; 
 	@include media-breakpoint-up(md) {

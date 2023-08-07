@@ -26,7 +26,7 @@ mixin ie11()
 mixin addblock()
 	+b.addBlock
 		+e.btn--minus(type="button")
-		input(type="text" value="1")
+		input(type="text" placeholder='1' value="1")
 		+e.btn--plus(type="button")
 
 
@@ -127,7 +127,7 @@ mixin topBtns()
 				.catalog-toggle__toggle-icon.toggle-menu-mobile: span
 				span Каталог
 			+e.btn--profile-js(href='#').order-4.order-md-1
-				+icon('profile')
+				+iconC('profile')
 				+icon('close')
 				span.d-md-none Профиль
 				span.d-none.d-md-inline Войти

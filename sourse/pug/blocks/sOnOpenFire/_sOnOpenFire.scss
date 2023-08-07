@@ -1,142 +1,149 @@
 // start .sOnOpenFire
 .sOnOpenFire {
-	--sPT: #{rem(15)};
-	--sPB: #{rem(0)};
-	// --sTPB: #{rem()};
-	@include media-breakpoint-up(sm) {
-		--sPT: #{rem(30)};
-		--sPB: #{rem(30)};
-	}
-	@include media-breakpoint-up(md) {
-		--sPT: #{rem(56)};
-		--sPB: #{rem(56)};
-	}
-	&__recipe {
-		padding: rem(8) 0 0 0;
-		text-align: center;
-		border-radius: rem(8);
-		overflow: hidden;
-		background-color: #F8D4B0;
-		margin-bottom: rem(15);
-		@include media-breakpoint-up(md) {
-			background-color: #fcbdab;
-			padding: rem(25);
-			text-align: left;
-			margin-bottom: rem(56);
-		}
-		h5 {
-			font-size: rem(16);
-			line-height: 1.23;
-			margin-bottom: rem(4);
-			max-width: rem(372);
-			padding: 0 rem(16);
-			margin-left: auto;
-			margin-right: auto;
-			@include media-breakpoint-up(md) {
-				font-size: rem(19);
-				margin-bottom: 0;
-				padding: 0;
-				margin-left: 0;
-			}
-		}
-		p {
-			padding: 0 rem(16);
-			font-size: rem(12);
-			line-height: 1.23;
-			margin-bottom: rem(8);
-			max-width: rem(372);
-			margin-left: auto;
-			margin-right: auto;
-			@include media-breakpoint-up(md) {
-				font-size: rem(13);
-				padding: 0;
-				margin-left: 0;
-				margin-bottom: 0;
-			}
-		}
-		img {
-			@include media-breakpoint-down(md) {
-				width: 100%;
-			}
-			@include media-breakpoint-up(md) {
-				display: block;
-				height: 100%;
-				object-fit: cover;
-				width: 100%;
-				left: 0;
-				position: absolute;
-				top: 0;
-				z-index: -1;
-			}
-		}
-	}
-	&__wrap {
-		padding: rem(28) rem(16);
-		border-radius: 0;
-		background: #FFE2C2;
-		@include media-breakpoint-up(sm) {
-			padding: rem(32) rem(48);
-			border-radius: rem(8);
-		}
-		@include media-breakpoint-down(sm) {
-			margin-left: calc(var(--bs-gutter-x) / -2);
-			margin-right: calc(var(--bs-gutter-x) / -2);
-		} 
-		h4 {
-			margin-bottom: rem(16);
-		}
-	}
-	&__item {
-		@include block(1, 1);
-		background-color: #fff;
-		border-radius: rem(8);
-		overflow: hidden;
-		color: $body-color;
-		&:hover {
-			color: $primary;
-		}
-		span {
-			font-weight: 600;
-			font-size: rem(16);
-			line-height: 1.25;
-		}
-	}
-	&__img-wrap {
-		@include block(1, 1);
-		width: 100%;
-		max-width: rem(96);
-		margin-bottom: rem(16);
-		@include media-breakpoint-up(md) {
-			margin-bottom: rem(18);
-			max-width: rem(157);
-		}
-	}
-	&__item-wrap {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-	&__swiper-wrap {
-		position: relative;
-	}
-	&__swiper {
-		overflow: visible;
-		@include media-breakpoint-up(sm) {
-			overflow: hidden;
-		}
-	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+  --sPT: #{rem(15)};
+  --sPB: #{rem(0)};
+  // --sTPB: #{rem()};
+  @include media-breakpoint-up(sm) {
+    --sPT: #{rem(30)};
+    --sPB: #{rem(30)};
+  }
+  @include media-breakpoint-up(md) {
+    --sPT: #{rem(56)};
+    --sPB: #{rem(56)};
+  }
+  &__recipe {
+    padding: rem(8) 0 0 0;
+    text-align: center;
+    border-radius: rem(8);
+    overflow: hidden;
+    background-color: #f8d4b0;
+    margin-bottom: rem(15);
+    @include media-breakpoint-up(md) {
+      background-color: #fcbdab;
+      padding: rem(25);
+      text-align: left;
+      margin-bottom: rem(56);
+    }
+    h5 {
+      font-size: rem(16);
+      line-height: 1.23;
+      margin-bottom: rem(4);
+      max-width: rem(372);
+      padding: 0 rem(16);
+      margin-left: auto;
+      margin-right: auto;
+      @include media-breakpoint-up(md) {
+        font-size: rem(19);
+        margin-bottom: 0;
+        padding: 0;
+        margin-left: 0;
+      }
+    }
+    p {
+      padding: 0 rem(16);
+      font-size: rem(12);
+      line-height: 1.23;
+      margin-bottom: rem(8);
+      max-width: rem(372);
+      margin-left: auto;
+      margin-right: auto;
+      @include media-breakpoint-up(md) {
+        font-size: rem(13);
+        padding: 0;
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+    }
+    img {
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(md) {
+        display: block;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+      }
+    }
+  }
+  &__wrap {
+    padding: rem(28) rem(16);
+    border-radius: 0;
+    background: #ffe2c2;
+    @include media-breakpoint-up(sm) {
+      padding: rem(32) rem(48);
+      border-radius: rem(8);
+    }
+    @include media-breakpoint-down(sm) {
+      margin-left: calc(var(--bs-gutter-x) / -2);
+      margin-right: calc(var(--bs-gutter-x) / -2);
+    }
+    h4 {
+      margin-bottom: rem(16);
+    }
+  }
+  &__item {
+    @include block(1, 1);
+    background-color: #fff;
+    border-radius: rem(8);
+    overflow: hidden;
+    color: $body-color;
+    // &:hover {
+    //   color: $primary;
+    // }
+    span {
+      font-weight: 600;
+      font-size: rem(16);
+      line-height: 1.25;
+    }
+  }
+  &__img-wrap {
+    @include block(1, 1);
+    width: 100%;
+    max-width: rem(96);
+    margin-bottom: rem(8);
+    @include media-breakpoint-up(md) {
+      // margin-bottom: rem(9);
+      max-width: rem(157);
+    }
+  }
+  &__item-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__swiper-wrap {
+    position: relative;
+  }
+  &__swiper {
+    overflow: visible;
+    @include media-breakpoint-up(sm) {
+      overflow: hidden;
+    }
+  }
+  @include media-breakpoint-up(xl) {
+  }
+  @include media-breakpoint-up(lg) {
+  }
+  @include media-breakpoint-up(md) {
+  }
+  @include media-breakpoint-up(sm) {
+  }
+  @include media-breakpoint-between(md, xl) {
+  }
+  @include media-breakpoint-only(xl) {
+  }
+  @include media-breakpoint-down(xl) {
+  }
 } // end.sOnOpenFire

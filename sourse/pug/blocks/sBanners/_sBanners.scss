@@ -39,8 +39,11 @@
 			height: 100%;
 			left: 0;
 			top: 0;
-			background-image: linear-gradient(90deg, rgba(33, 33, 33, 0.47) 0%, rgba(29, 29, 29, 0.00) 100%);
 			z-index: -1;
+			background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
+			@include media-breakpoint-up(md) {
+				background-image: linear-gradient(90deg, rgba(33, 33, 33, 0.47) 0%, rgba(29, 29, 29, 0.00) 100%);
+			}
 		}
 		img {
 			@include mt;
