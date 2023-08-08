@@ -71,6 +71,10 @@
 			left: -50vw;
 			top: 0;
 			background-color: rgba(202, 202, 202, 0.70);
+			@include media-breakpoint-up(md) {
+				left: 0;
+				width: 100%;
+			}
 		}
 		.row {
 			--bs-gutter-x: #{rem(35)};

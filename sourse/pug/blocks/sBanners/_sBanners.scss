@@ -26,9 +26,11 @@
 		z-index: 1;
 		overflow: hidden;
 		&:hover {
-			color: $gray-200;
-			img {
-				transform: scale(1.1);
+			@include media-breakpoint-up(md) {
+				color: $gray-200;
+				img {
+					transform: scale(1.1);
+				}
 			}
 		}
 		&:before {
@@ -71,7 +73,42 @@
 			}
 		}
 	}
-
+	&--2 {
+		--sPT: #0;
+		--sPB: #{rem(16)};
+		// --sTPB: #{rem()};
+		@include media-breakpoint-up(md) {
+			--sPT: 0;
+			--sPB: #{rem(24)};
+		}
+		.sBanners {
+			&__item {
+				background-color: $link-hover-color;
+				border-radius: rem(9);
+				padding: rem(8);
+				min-height: rem(141);
+				overflow: hidden;
+				@include media-breakpoint-up(md) {
+					padding: rem(24) rem(48a);
+					min-height: rem(196);
+				}
+				&:before {
+					content: unset;
+				}
+				h5 {
+					margin-bottom: 0;
+					line-height: 1.33;
+					max-width: rem(173);
+					@include media-breakpoint-down(md) {
+						font-size: rem(17);
+					}
+					@include media-breakpoint-up(md) {
+						max-width: rem(264);
+					}
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

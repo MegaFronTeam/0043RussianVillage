@@ -352,6 +352,13 @@ class JSCCommon {
 		scrollTop > 160 ? topNav.classList.add('fixed') : topNav.classList.remove('fixed');
 		scrollTop > 250 ? topNav.classList.add('fixed-animate') : topNav.classList.remove('fixed-animate');
 		scrollTop > 400 ? topNav.classList.add('fixed-show') : topNav.classList.remove('fixed-show');
+	};
+
+	static setFixedCardInfo() {
+		let topCardInfo = document.querySelector('.fixed-card-info--js');
+		if (!topCardInfo) return;
+		var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		scrollTop > 400 ? topCardInfo.classList.add('fixed-show') : topCardInfo.classList.remove('fixed-show');
 	}
 
 	static init() {
@@ -366,6 +373,7 @@ class JSCCommon {
 		this.disabledBtn();
 		this.setScreen();
 		this.setFixedNav();
+		this.setFixedCardInfo();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();
 

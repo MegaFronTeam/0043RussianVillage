@@ -54,3 +54,35 @@ mixin sPopularCategories(data)
 					+item('Садовая техника', 'sPopularCategories-img-11.png', '#E8FCDD')
 					+item('Постройки и&nbsp;товары для животных и&nbsp;птиц', 'sPopularCategories-img-12.png', '#FDF8D0')
 	// end sPopularCategories
+
+mixin sPopularCategories2(data)
+	// start sPopularCategories
+	+b.SECTION.sPopularCategories--2.section#sPopularCategories&attributes(attributes)
+		+e.wrap
+			+b.section-title 
+				.row
+					.col
+						h5 Популярные
+					.col-auto
+						a.show-more-btn--js.d-md-none(href="#") 
+							span.show Смотреть все
+							span.hide Скрыть
+							+icon('chevron-down')
+			+e.row.row
+				mixin item(text, img, bgColor)
+					+e.col.col-md-auto
+						+e.item(href='#' style=`--bgColor: ${bgColor}`)
+							+e.item-inner
+								+e.img-wrap
+									img(src=`img/${img}`)
+								!= text
+				+item('Беседки и домики гриль', 'sPopularCategories-img-13.png', '#EBF8B5')
+				+item('Летние кухни, гриль зоны, барбекю комплексы', 'sPopularCategories-img-14.png', '#FFCDC6')
+				+item('Навесы для машин', 'sPopularCategories-img-15.png', '#E8FCDD')
+				+item('Дачные и садовые домики', 'sPopularCategories-img-16.png', '#F2E8DD')
+				+item('Бани, срубы, бани бочки', 'sPopularCategories-img-17.png', '#FFEBED')
+				+item('Пристройки и веранды к дому', 'sPopularCategories-img-18.png', '#FDF8D0')
+				+item('Хозблоки, бытовки, дровники', 'sPopularCategories-img-19.png', '#CFF3DC')
+				+item('Детские домики, игровые комплексы и площадки', 'sPopularCategories-img-7.png', '#FDF8D0')
+				+item('Теплицы и парники', 'sPopularCategories-img-20.png', '#E8FCDD')
+				+item('Постройки и товары для животных и птиц', 'sPopularCategories-img-12.png', '#FDF8D0')

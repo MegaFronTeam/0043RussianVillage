@@ -13,3 +13,14 @@ mixin sBanners(data)
 				.col-6
 					+item('sBanners-img-2.jpg', 'Садовый декор и освещение участка', 'Сделайте Ваш участок красивым!')
 	// end sBanners
+
+mixin sBanners2(data)
+	// start sBanners
+	+b.SECTION.sBanners--2.section#sBanners&attributes(attributes)
+		+e.item(href='#').bg-wrap
+			picture
+				source(media="(min-width: 768px)", srcset="img/sBanners-img-3-lg.jpg")
+				img(src="img/sBanners-img-3-sm.jpg", alt="").picture-bg.object-fit-js
+			h5 Дачные постройки и конструкции
+
+	// end sBanners

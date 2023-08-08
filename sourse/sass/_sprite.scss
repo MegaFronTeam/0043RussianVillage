@@ -67,6 +67,16 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
 }
+.icon-layout-grid {
+	--h: 32;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(32 / var(--h) *1em );
+}
+.icon-layout-list {
+	--h: 32;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(32 / var(--h) *1em );
+}
 .icon-logoDesign {
 	--h: 16;
 	font-size:calc( var(--h) / 10 * 1rem);
@@ -78,6 +88,11 @@
 	width: calc(16 / var(--h) *1em );
 }
 .icon-menu {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.icon-options {
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );

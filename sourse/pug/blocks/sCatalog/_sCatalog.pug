@@ -1,41 +1,64 @@
-mixin product-item(i, t, p ,pr)
-	+b.ARTICLE.product-item
-		+e.img-wrap(href="#")
-			//- если надо картинку по центру  вывести использовать обертку .img-wrap-center  - если нет- убираем
-			.img-wrap-center 
-				+img(`img/prod-${i}.jpg`)
-		+e.caption
-			+e.title!= t
-			+e.text!= p
-			+e.price!= pr
-			+e.btn(href='#')
-	// /.product-item
-
 mixin sCatalog(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sCatalog
-				p Выкупаем проблемные автомобили в день обращения
-
-			+e.row.row
-				- const wrapClass="col-3"
-				+e.col(class= wrapClass)
-					+product-item(`1`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`2`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`3`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`4`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`5`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`6`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`7`,``,``,``) 
-				+e.col(class= wrapClass)
-					+product-item(`8`,``,``,``) 
+		+e.head-row.row
+			.col
+				.d-md-none
+					+select('', 'По популярности', 'Сначала дешевые', 'Сначала дороже', 'По скидке', 'Новинки')
+				+e.link-wrap.d-none.d-md-block
+					+e.link.active(href='#') По популярности
+					+e.link(href='#') Сначала дешевые 
+					+e.link(href='#') Сначала дороже
+					+e.link(href='#') По скидке
+					+e.link(href='#') Новинки
+			.col-auto.d-md-none
+				+e.filter: +icon('options')
+			.col-auto
+				+e.btn-wrap
+					+e.btn: +icon('layout-grid')
+					+e.btn: +icon('layout-list')
+		+e.row.row
+			.col-6.col-md-3
+				+card('card-13.png', '5 850 ₽', 'Гриль угольный BestPicnic Barbeque 47, 55х47.5х86 см', false, true, true)
+			.col-6.col-md-3
+				+card('card-14.png', '17 890 ₽', 'Гриль-мангал с полками и крышкой барбекю Gratar Family Standart BBQ FSB 2000', false, true)
+			.col-6.col-md-3
+				+card('card-15.png', '81 000 ₽', 'Уличная кухня с мойкой AL-F VK14 - кухонный гарнитур для дачи и сада', 'bg', true)
+			.col-6.col-md-3
+				+card('card-16.png', '41 536 ₽', 'Уличная кухня. Кухня с мойкой и столешницей VERANDA 0802, нержавейка, для дачи, для балкона, для дома. 172x58 см, из 2 модулей', 'bg', true)
+			.col-6.col-md-3
+				+card('card-17.png', '79 190 ₽', 'Кедровая фитобочка полулежачая "Овальная люкс" 115*78*140*4 см', false, true)
+			.col-6.col-md-3
+				+card('card-18.png', '53 375 ₽', 'Купель из полипропилена круглая', 'bg', true)
+			.col-6.col-md-3
+				+card('card-19.png', '204 900 ₽', 'Банный чан елисей силович 4 человека на опоре с печью', 'bg', true)
+			.col-6.col-md-3
+				+card('card-20.png', '54 900 ₽', 'КУРрорт Курятник (Макси модель) Коричневый Правосторонний', false, true)
+			.col-6.col-md-3
+				+card('card-21.png', '14 580 ₽', 'Теплица Рязаночка3х6 (каркас)', false, true)
+			.col-6.col-md-3
+				+card('card-22.png', '22 812 ₽', 'Будка для собак Ferplast Argo 100 114.5х73х81 см коричневый', false, true)
+			.col-6.col-md-3
+				+card('card-23.png', '5 399 ₽', 'Парник каркасный с пленкой ПВХ 270 см * 120см*90см.', false, true)
+			.col-6.col-md-3
+				+card('card-24.png', '11 399 ₽', 'Каркас теплицы Благо 1,5х1,5х2 м с тентом из армированной пленки', 'bg', true)
+			.col-6.col-md-3
+				+card('card-25.png', '175 300 ₽', 'Уличная кухня AL-F VK10 островок - кухонный гарнитур для дачи и сада', 'bg', true)
+			.col-6.col-md-3
+				+card('card-26.png', '31 132 ₽', 'Комплект беседки CubeIT!', 'bg', true)
+			.col-6.col-md-3
+				+card('card-27.png', '32 200 ₽', 'Комплект металлических крепежей для возведения террасы из бруса', 'bg', true)
+			.col-6.col-md-3
+				+card('card-28.png', '26 640 ₽', 'Комплект крепежей для сборки беседки или перголы CUBE+', false, true)
+			.col-6.col-md-3
+				+card('card-29.png', '16 920 ₽', 'Комплект крепежей для сборки беседки или перголы TERRACE+', false, true)
+			.col-6.col-md-3
+				+card('card-30.png', '499 000 ₽', 'Каркасная баня под ключ', 'bg', true)
+			.col-6.col-md-3
+				+card('card-31.png', '93 561 ₽', 'Комплектдля возведения хозблока', 'bg', true)
+			.col-6.col-md-3
+				+card('card-32.png', '84 188 ₽', 'Комплект парковочного навеса', 'bg', true)
+		+e.show-more-btn.btn.btn-outline-primary(href='#') Показать еще
+		+pugin()
 
 	// end sCatalog

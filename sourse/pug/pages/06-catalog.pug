@@ -1,0 +1,42 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sPopularCategories/_sPopularCategories.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sIndividualOrder/_sIndividualOrder.pug
+include ../blocks/sBestsellers/_sBestsellers.pug
+
+block variables
+	- let  mainPage= 'bg-gray' 
+	- let  bg= ''
+
+block title
+	- let  title= 'Летние кухни, гриль зоны, барбекю комплексы'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		+page-head('Летние кухни, гриль зоны, барбекю комплексы', '', 'h4', 'Дачные постройки и конструкции', 'Летние кухни, гриль зоны, барбекю комплексы', 'Барбекю комплексы')
+		+b.block-with-aside
+			.container
+				+e.row.row
+					+e.col-auto.col-auto
+						+filter
+					.col
+						+sCatalog
+		+sAlsoWatch(false)
+	+parts('footer')
+      
+
+
+

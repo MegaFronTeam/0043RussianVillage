@@ -1,0 +1,21 @@
+mixin sIndividualOrder(data)
+	// start sIndividualOrder
+	+b.SECTION.sIndividualOrder.section#sIndividualOrder&attributes(attributes)
+		+b.section-title
+			h5 Возможно сделать индивидуальный заказ
+		+e.row
+			.row
+				mixin item(icon, title, text, btn, img)
+					+e.item
+						if img
+							+img('img/svg/sIndividualOrder-img-1.svg').img-1
+							+img('img/svg/sIndividualOrder-img-2.svg').img-2
+						+iconC(icon)
+						h6!= title
+						p!= text
+						+e.btn.btn.btn-sm.btn-outline-light(href='#')!= btn
+				+e.col.col
+					+item('sIndividualOrder-icon-1', 'Индивидуальный заказ по фото, эскизу, проекту', 'Оставьте заявку с&nbsp;фото, ссылкой на&nbsp;изображение или товар на&nbsp;другом сайте, проект и&nbsp;мы&nbsp;изготовим для вас.', 'Заказать', true)
+				.col
+					+item('sIndividualOrder-icon-2', 'Индивидуальный заказ по базовым конструкциям из нашего каталога', 'Подберите понравившую модель и&nbsp;мы&nbsp;изготовим её&nbsp;под ваши размеры.', 'Выбрать из каталога')
+	// end sIndividualOrder

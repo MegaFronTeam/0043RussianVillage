@@ -1,12 +1,12 @@
 // start .sCatalog
 .sCatalog {
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(0)};
 	// --sTPB: #{rem()};
 	&__row{
 		// --bs-gutter-x: #{rem()};
 		--bs-gutter-y: var(--bs-gutter-x);
-
+		margin-bottom: rem(24);
 	}
 	.section-title{
 		
@@ -20,7 +20,100 @@
 	&__slide{
 		height: auto;
 	}
+	.card {
+		border: 1px solid $gray-300;
+	}
+	&__head-row {
+		--bs-gutter-x: #{rem(8)};
 
+		margin-bottom: rem(16);
+		align-items: center;
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(12);
+		}
+	}
+	&__link-wrap {
+		@include roww('16px', '', 'm');
+	}
+	&__link {
+		@include mt;
+		font-size: rem(12);
+		font-weight: 700;
+		line-height: 1.33;
+		color: rgba(122, 122, 122, 0.60);
+		&:hover,
+		&.active {
+			color: $primary;
+		}
+	}
+	&__btn-wrap {
+		display: flex;
+		align-items: center;
+		border: 1px solid $gray-400;
+		border-radius: rem(4);
+		background-color: #fff;
+	}
+	&__btn {
+		@include mt;
+		color: $body-color;
+		&.active,
+		&:hover {
+			color: $link-hover-color;
+		}
+		.icon {
+			font-size: rem(30);
+		}
+	}
+	&__filter {
+		@include mt;
+		color: $body-color;
+		border: 1px solid $gray-400;
+		border-radius: rem(4);
+		padding: rem(3);
+		&.active,
+		&:hover {
+			color: $link-hover-color;
+		}
+		.icon {
+			font-size: rem(24);
+		}
+	}
+	&__input-wrap {
+		position: relative;
+		max-width: max-content;
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			width: rem(16);
+			height: rem(16);
+			background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.06 5.72656L8 8.7799L4.94 5.72656L4 6.66656L8 10.6666L12 6.66656L11.06 5.72656Z' fill='%23292929'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: contain;
+			right: rem(4);
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__input {
+		border-radius: rem(4);
+		border-color: $gray-400;
+		background-color: #fff;
+		padding: rem(7) rem(20) rem(7) rem(11);
+		font-size: rem(12);
+		line-height: 1.33;
+		font-weight: 700;
+
+	}
+	&__show-more-btn {
+		--bs-btn-bg: #fff;
+		width: 100%;
+		margin-bottom: rem(24);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(16);
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -29,25 +122,3 @@
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
 } // end.sCatalog
-
-
-
-.product-item{
-	display: flex;
-	flex-direction: column;
-	min-height: 100%;
-	background: #FFFFFF; 
-	border: 1px solid #E2E2E2;
-	border-radius: 15px;
-	overflow: hidden;
-	position: relative;
-	&__img-wrap{
-		@include block(298, 190);
-	}
-	&__caption{
-		flex-grow: 1;
-		display: flex;
-		flex-direction: column;
-		padding: rem(20);
-	}
-}

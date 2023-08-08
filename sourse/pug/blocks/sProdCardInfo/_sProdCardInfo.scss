@@ -12,10 +12,11 @@
 			padding: rem(16) rem(40);
 		}
 		.tabs {
-			overflow: visible;
+			// overflow: visible;
 			&__caption {
-				position: relative;
-				@include roww('24px', '', 'm');
+				overflow: visible;
+				// position: relative;
+				// @include roww('24px', '', 'm');
 				&:after {
 					content: '';
 					position: absolute;
@@ -25,6 +26,10 @@
 					left: -35vw;
 					bottom: 0px;
 					background-color: $gray-300;
+				}
+				.swiper-wrapper {
+					position: relative;
+					@include roww('24px', '', 'm');
 				}
 			}
 			&__btn {

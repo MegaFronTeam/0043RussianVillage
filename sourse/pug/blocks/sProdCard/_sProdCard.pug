@@ -1,9 +1,28 @@
 mixin sProdCard(data)
 	// start sProdCard
 	+b.SECTION.sProdCard.section#sProdCard&attributes(attributes)
-		//- +e.fixed-menu--js
-		//- 	.container
-
+		+b.fixed-card-info--js
+			.container
+				+e.row.row
+					.col.d-none.d-md-block
+						+e.content
+							+e.img-wrap
+								.img-wrap-center
+									+img('img/sProdCard-img-sm-1.png')
+							div
+								.h6 Парковые качели «Пагода_2»
+								.row
+									.col-auto 4.5
+									.col-auto: +stars
+									.col-auto: a(href="#") Оставить отзыв 
+					.col-auto.d-none.d-md-block
+						+addblock()
+					.col-md-auto
+						+e.btn.btn.btn-primary(href='#')
+							| В корзину
+							span 12 890 ₽
+					.col-auto.d-none.d-md-block
+						+e.favorite(href='#'): +icon('heart')
 		.container
 			+e.row.row
 				+e.col.col-md-auto

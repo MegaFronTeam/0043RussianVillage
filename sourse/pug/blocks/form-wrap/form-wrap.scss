@@ -114,6 +114,20 @@
 }
 
 // 
+
+.form-switch {
+	.form-check-input {
+		height: rem(24);
+		background-color: $gray-400;
+		&:checked {
+			background-color: #fff;
+			border-color: $gray-400;
+		}
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
 @include media-breakpoint-up(xl) {}
 
 @include media-breakpoint-up(lg) {}
