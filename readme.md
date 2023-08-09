@@ -13,3 +13,6 @@
 9. <https://megafronteam.github.io/0043RussianVillage/public/06-catalog.html>
 10. <https://megafronteam.github.io/0043RussianVillage/public/06-catalog-2.html>
 11. <https://megafronteam.github.io/0043RussianVillage/public/06-catalog-3.html>
+12. <https://megafronteam.github.io/0043RussianVillage/public/09-favorite.html>
+13. <https://megafronteam.github.io/0043RussianVillage/public/09-favorite-2.html>
+14. <https://megafronteam.github.io/0043RussianVillage/public/10-tnx.html>

@@ -12,10 +12,20 @@
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(24 / var(--h) *1em );
 }
+.iconC-dislike {
+	--h: 35;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(38 / var(--h) *1em );
+}
 .iconC-info {
 	--h: 20;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(20 / var(--h) *1em );
+}
+.iconC-like {
+	--h: 35;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(38 / var(--h) *1em );
 }
 .iconC-logo {
 	--h: 32;

@@ -59,6 +59,7 @@
 	&__btn {
 		@include mt;
 		color: $body-color;
+		cursor: pointer;
 		&.active,
 		&:hover {
 			color: $link-hover-color;

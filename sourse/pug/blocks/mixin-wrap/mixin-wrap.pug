@@ -80,10 +80,14 @@ mixin stars(rate=4)
 		+icon('rateStar')
 		+icon('rateStar')
 
-mixin card(img, price, text, bg='bg', review=false, badge=false)
-	+b.card
+mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false)
+	+b.card(class=(similar ? 'similar': ''))
 		if badge
 			.badge.badge-orange Скидка -50%
+		else if similar
+			.badge.badge-gray Нет в наличии
+		if like
+			+e.like(href="#"): +icon('heart')
 		+e.img-wrap(href='#')
 			.img-wrap-center
 				+img(`img/${img}`, bg)
@@ -98,13 +102,16 @@ mixin card(img, price, text, bg='bg', review=false, badge=false)
 				else
 					span 07.11.2021
 			//- +e.rate
-			+e.footer-row.row
-				.col
-					+e.btn.btn.btn-sm.btn-primary(href="#") 
-						+icon('shopping-cart', 'd-md-none')
-						span.d-none.d-md-block В корзину
-				.col-auto
-					+addblock
+			if similar
+				+e.btn.btn.btn-sm.btn-outline-light(href="#") Похожие
+			else
+				+e.footer-row.row
+					.col
+						+e.btn.btn.btn-sm.btn-primary(href="#") 
+							+icon('shopping-cart', 'd-md-none')
+							span.d-none.d-md-block В корзину
+					.col-auto
+						+addblock
 
 mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
 	+b.card--horizontal
@@ -131,7 +138,7 @@ mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
 				.col-md-auto
 					+e.btn.btn.btn-sm.btn-primary(href="#") 
 						span В корзину
-						
+
 mixin recipe-card(img, title, descr, bg='bg')
 	+b.card(href='#')
 		+e.img-wrap
@@ -197,3 +204,10 @@ mixin filter()
 		+e.btn.btn.btn-sm.btn-light(href='#') Сбросить
 		+e.btn-accept
 			a.btn.btn-sm.btn-primary(href='#') Показать
+
+mixin tags(tags=['Бассейны', 'Батуты', 'Детские комплексы', 'Детские домики', 'Игры', 'Тримеры', 'Топоры', 'Культиватор'])
+	+b.tags
+		+defSlider(false)
+			each tag in tags
+				+e.slide.swiper-slide
+					+e.tag(href='#')!= tag
