@@ -307,7 +307,7 @@ function eventHandler() {
 
 	$('[data-bs-toggle="tooltip"]').tooltip({
 		animation: true,
-		placement: 'bottom',
+		// placement: 'bottom',
 	});
 
 	// $('[data-bs-toggle="tooltip2"]')
@@ -355,6 +355,75 @@ function eventHandler() {
 	$('.form-wrap--js textarea').on('input', function(event) {
 		document.querySelector('.form-wrap--js p span').innerHTML = event.target.value.length;
 	})
+
+	// Range Slider
+	var $range = $(".js-range-slider");
+	var $inputFrom = $(".js-input-from");
+	var $inputTo = $(".js-input-to");
+	var instance;
+	var min = 0;
+	var max = 20000;
+	var from = 0;
+	var to = 0;
+
+	$range.ionRangeSlider({
+		skin: "round",
+		type: "double",
+		min: min,
+		max: max,
+		from: 890,
+		to: 18090,
+		onStart: updateInputs,
+		onChange: updateInputs,
+		onFinish: updateInputs
+	});
+	instance = $range.data("ionRangeSlider");
+
+	function updateInputs(data) {
+		from = data.from;
+		to = data.to;
+
+		$inputFrom.prop("value", from);
+		$inputTo.prop("value", to);
+	}
+
+	$inputFrom.on("change", function () {
+		var val = $(this).prop("value");
+		console.log(val);
+		// validate
+		if (val < min) {
+			val = min;
+		} else if (val > to) {
+			val = to;
+		}
+		instance.update({
+			from: val
+		});
+		$(this).prop("value", val);
+	});
+
+	$inputTo.on("change", function () {
+		var val = $(this).prop("value");
+		// validate
+		if (val < from) {
+			val = from;
+		} else if (val > max) {
+			val = max;
+		}
+		instance.update({
+			to: val
+		});
+		$(this).prop("value", val);
+	});
+
+	$('.sCatalog__filter--js').on('click', function() {
+		$('.filter').addClass('active');
+		$('body').addClass('fixed');
+	});
+	$('.filter__close').on('click', function() {
+		$('.filter').removeClass('active');
+		$('body').removeClass('fixed');
+	});
 
 };
 if (document.readyState !== 'loading') {

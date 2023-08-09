@@ -164,6 +164,7 @@ mixin topBtns()
 mixin filter()
 	+b.filter
 		+e.close: +icon('close')
+		//- +e.wrap
 		+e.row
 			.h4 Фильтр
 			+e.item
@@ -183,6 +184,50 @@ mixin filter()
 				div(class="form-check form-switch")
 					label(class="form-check-label" for="inStock") Только в наличии
 					input(class="form-check-input" type="checkbox" role="switch" id="inStock")
+			+ddGroup()
+				+ddGroupItem('Цена, ₽')
+					.range-slider
+						input.js-range-slider(type='text' value='')
+					.extra-controls
+						label(for="") 
+							input.js-input-from(type='text' value='0')
+						label
+							input.js-input-to(type='text' value='0')
+			+e.item
+				div(class="form-check form-switch")
+					label(class="form-check-label" for="payment") Рассрочка без доплаты
+					input(class="form-check-input" type="checkbox" role="switch" id="payment")
+			+ddGroup()
+				+ddGroupItem('Срок доставки')
+					+in-c('radio', 'Любой', 'deliveryTime')
+					+in-c('radio', '1 день', 'deliveryTime')
+					+in-c('radio', '2 дня', 'deliveryTime')
+					+in-c('radio', 'До 3 дней', 'deliveryTime')
+					+in-c('radio', 'До 5 дней', 'deliveryTime')
+				+ddGroupItem('Бренды', '', true)
+					+in-c('checkbox', 'Apple', 'brands')
+					+in-c('checkbox', 'Xiaomi', 'brands')
+					+in-c('checkbox', 'Samsung', 'brands')
+					+in-c('checkbox', 'Poco', 'brands')
+					+in-c('checkbox', 'Realme', 'brands')
+				+ddGroupItem('Цвет')
+					+in-c('checkbox', '', 'color'): .color.color--border(style='--bgColor: #fff;') Белый
+					+in-c('checkbox', '', 'color'): .color(style='--bgColor: #4D371F;') Венге
+					+in-c('checkbox', '', 'color'): .color(style='--bgColor: #397D22;') Зеленый
+					+in-c('checkbox', '', 'color'): .color(style='--bgColor: #8B4F1A;') Коричневый
+					+in-c('checkbox', '', 'color'): .color(style='--bgColor: #845B4B;') Палисандр
+					+in-c('checkbox', '', 'color'): .color(style='--bgColor: #808080;') Белый
+					+in-c('checkbox', '', 'color'): .color(style='--bgColor: #000;') Черный 
+				+ddGroupItem('Рейтинг')
+					+in-c('radio', 'Не важно', 'raiting')
+					+in-c('radio', '', 'raiting')
+						+e.stars
+							span От
+							+stars(3)
+					+in-c('radio', '', 'raiting')
+						+e.stars
+							span От
+							+stars()
 		+e.btn.btn.btn-sm.btn-light(href='#') Сбросить
 		+e.btn-accept
 			a.btn.btn-sm.btn-primary(href='#') Показать
