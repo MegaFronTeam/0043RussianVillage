@@ -52,6 +52,12 @@
 			// }
 		}
 	}
+	&--recipe {
+		.seen-card__img-wrap {
+			border-radius: 8px;
+			overflow: hidden;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

@@ -131,6 +131,15 @@ mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
 				.col-md-auto
 					+e.btn.btn.btn-sm.btn-primary(href="#") 
 						span В корзину
+						
+mixin recipe-card(img, title, descr, bg='bg')
+	+b.card(href='#')
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/${img}`, bg)
+		+e.content
+			+e.title!= title
+			+e.descr!= descr
 
 mixin defSlider(arrow)
 	+b.default-swiper.default-swiper-js&attributes(attributes)

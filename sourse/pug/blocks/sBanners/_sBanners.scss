@@ -109,6 +109,13 @@
 			}
 		}
 	}
+	&--29 {
+		.sBanners__item h5{
+			@include media-breakpoint-down(md) {
+				max-width: rem(140);
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

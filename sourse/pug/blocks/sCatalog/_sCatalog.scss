@@ -116,6 +116,10 @@
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(16);
 		}
+		&--29 {
+			width: min(100%, 328px);;
+			border: none;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
