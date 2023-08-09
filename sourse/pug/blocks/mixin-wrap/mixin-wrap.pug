@@ -106,6 +106,15 @@ mixin card(img, price, text, bg='bg', review=false, badge=false)
 				.col-auto
 					+addblock
 
+mixin recipe-card(img, title, descr, bg='bg')
+	+b.card(href='#')
+		+e.img-wrap
+			.img-wrap-center
+				+img(`img/${img}`, bg)
+		+e.content
+			+e.title!= title
+			+e.descr!= descr
+
 mixin defSlider(arrow)
 	+b.default-swiper.default-swiper-js&attributes(attributes)
 		.swiper
