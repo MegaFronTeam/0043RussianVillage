@@ -646,4 +646,34 @@ iframe {
 			color: $btn-link-hover-color;
 		}
 	}
+	&-ddGroup {
+		--bs-tooltip-max-width: calc(#{rem(158)} + var(--bs-tooltip-padding-x));
+		.tooltip-inner {
+			text-align: left;
+		}
+	}
+}
+
+.dd-group {
+	&__item {
+		&.active {
+			.dd-group__head {
+				&:before {
+					transform: rotateX(180deg);
+				}
+			}
+		}
+	}
+	&__head {
+		cursor: pointer;
+	}
+	&__icon {
+		display: inline;
+		.iconC {
+			font-size: rem(20);
+		}
+	}
+	&__content {
+		display: none;
+	}
 }

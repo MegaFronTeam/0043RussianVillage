@@ -8,11 +8,14 @@ mixin ddGroup()
 			+ddGroupItem('вопрос2')
 			+ddGroupItem('вопрос3')
 
-mixin ddGroupItem(txt, activeClasses='')
+mixin ddGroupItem(txt, activeClasses='', info)
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
 	+e.item(class=activeClasses)
-		+e.head.dd-head-js=txt
+		+e.head.dd-head-js
+			=txt
+			if info
+				+e.icon(data-bs-custom-class="tooltip-ddGroup" data-bs-placement="right" data-bs-toggle="tooltip" data-bs-original-title=`Описание элемента с большим количеством текста.`): +iconC('info')
 		+e.content.dd-content-js(class=activeClasses)
 			if block
 				block

@@ -4,7 +4,7 @@ mixin breadcrumb(...items)
 		ol.breadcrumb(itemscope itemtype="http://schema.org/BreadcrumbList").swiper-wrapper
 			-for (var i = 0; i < items.length; i++)
 				if i == items.length - 1
-					li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem" data-bs-toggle="tooltip" data-bs-original-title=items[i]).swiper-slide
+					li.breadcrumb-item( class=(i == items.length - 1 ? "active" : '')   itemprop="itemListElement" itemscope  itemtype="http://schema.org/ListItem" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title=items[i]).swiper-slide
 						a(href=(i == 0 ? "/" : '#') itemprop="item" )
 							span( itemprop="name")= items[i]
 							meta(itemprop="position" content= (i + 1) )
