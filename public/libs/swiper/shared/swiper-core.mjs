@@ -209,13 +209,13 @@ function Observer(_ref) {
   const init = () => {
     if (!swiper.params.observer) return;
     if (swiper.params.observeParents) {
-      const containerParents = elementParents(swiper.hostEl);
+      const containerParents = elementParents(swiper.el);
       for (let i = 0; i < containerParents.length; i += 1) {
         attach(containerParents[i]);
       }
     }
     // Observe container
-    attach(swiper.hostEl, {
+    attach(swiper.el, {
       childList: swiper.params.observeSlideChildren
     });
 
@@ -1815,13 +1815,11 @@ function loopFix(_temp) {
           swiper.slideTo(activeIndex + slidesPrepended, 0, false, true);
           if (setTranslate) {
             swiper.touches[swiper.isHorizontal() ? 'startX' : 'startY'] += diff;
-            swiper.touchEventsData.currentTranslate = swiper.translate;
           }
         }
       } else {
         if (setTranslate) {
           swiper.slideToLoop(slideRealIndex, 0, false, true);
-          swiper.touchEventsData.currentTranslate = swiper.translate;
         }
       }
     } else if (appendSlidesIndexes.length > 0 && isNext) {
@@ -1835,7 +1833,6 @@ function loopFix(_temp) {
           swiper.slideTo(activeIndex - slidesAppended, 0, false, true);
           if (setTranslate) {
             swiper.touches[swiper.isHorizontal() ? 'startX' : 'startY'] += diff;
-            swiper.touchEventsData.currentTranslate = swiper.translate;
           }
         }
       } else {
@@ -3400,7 +3397,7 @@ class Swiper {
       return false;
     }
     el.swiper = swiper;
-    if (el.parentNode && el.parentNode.host && el.parentNode.host.nodeName === 'SWIPER-CONTAINER') {
+    if (el.parentNode && el.parentNode.host) {
       swiper.isElement = true;
     }
     const getWrapperSelector = () => {
@@ -3426,7 +3423,7 @@ class Swiper {
     Object.assign(swiper, {
       el,
       wrapperEl,
-      slidesEl: swiper.isElement && !el.parentNode.host.slideSlots ? el.parentNode.host : wrapperEl,
+      slidesEl: swiper.isElement ? el.parentNode.host : wrapperEl,
       hostEl: swiper.isElement ? el.parentNode.host : el,
       mounted: true,
       // RTL
