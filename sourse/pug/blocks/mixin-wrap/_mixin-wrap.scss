@@ -18,6 +18,25 @@
   }
 }
 
+.share-soc {
+  display: flex;
+  &__item {
+    display:inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: $border-radius-sm;
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+  .icon {
+    font-size: rem(24);
+    color: var(--color);
+  }
+}
+
 .counter {
   counter-reset: num;
   &__item {

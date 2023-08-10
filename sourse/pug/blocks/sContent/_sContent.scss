@@ -1,17 +1,173 @@
 
 	// start .sContent
 	.sContent {
+		counter-reset: steps;
+		&__h1 {
+			@extend .h1;
+			text-align: center;
+			@include media-breakpoint-down(md) {
+				// font-size: rem(32) !important;
+				text-align: left;
+				max-width: 330px;
+			}
+		}
 	
-	// --sPT: #{rem()};
-	// --sPB: #{rem()};
-	// --sTPB: #{rem()};
-	&__row{
-		// --bs-gutter-x: #{rem()};
-		--bs-gutter-y: var(--bs-gutter-x);
-
+		--sPT: #{rem(0)};
+		// --sPB: #{rem()};
+		// --sTPB: #{rem()};
+		&__row{
+			// --bs-gutter-x: #{rem()};
+			--bs-gutter-y: var(--bs-gutter-x);
+			
+		}
+		.section-title{
+			
+		}
+	&__wrap {
+		margin-bottom:  rem(16);
+		border-radius:  rem(8);
+		overflow: hidden;
+		width: 100%;
+		img {
+			min-width: 100%;
+			max-width: 100%;
+			object-fit: cover;
+		}
 	}
-	.section-title{
-		
+	&__text-wrap {
+		padding: rem(32) rem(40);
+		border-radius: rem(8);
+		background: $white;
+	}
+	&__ingredients {
+		margin-bottom: 32px;
+	}
+	&__subtitle {
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+		font-family: Montserrat;
+		font-weight: 600;
+		line-height: 1;
+		&::before {
+			display: inline-block;
+			content: '';
+			margin-right: 8px;
+			width: 24px;
+			height: 24px;
+			background-color: $link-hover-color;
+			border-radius: 50%;
+			background-image: url('../img/check.png');
+			background-size: 12px 10px;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	}
+	&__list {
+		list-style-type: none;
+		li {
+			margin-bottom: 8px;
+		}
+	}
+	h2 {
+		margin-bottom: 34px;
+		color: #000;
+		font-size: rem(19);
+		font-weight: 600;
+	}
+	&__recept-steps {
+		list-style-type: none;
+		padding-left: 0;
+		li {
+			position: relative;
+			padding-top: 32px;
+			margin-bottom: 34px;
+			&::before {
+				position: absolute;
+				top: 0;
+				left: 0;
+				display: inline-block;
+				content: '';
+				margin-right: 8px;
+				width: 24px;
+				height: 24px;
+				background-color: $link-hover-color;
+				border-radius: 50%;
+				background-image: url('../img/check.png');
+				background-size: 12px 10px;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+			&::after {
+				position: absolute;
+				top: 0;
+				left: 32px;
+				display: inline-block;
+				counter-increment: steps;
+				content: "Шаг " counter(steps);
+				font-weight: 600;
+			}
+		}
+	}
+	&__step-text {
+		margin-bottom: 8px;
+		color: #000;
+		font-size: 15px;
+		font-weight: 500;
+		line-height:160%;
+	}
+	&__img-wrap {
+		margin: 0 auto;
+		width: 100%;
+		max-width: 852px;
+		border-radius: 8px;
+		overflow: hidden;
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__video-wrap {
+		@include block(852,480);
+		margin: 0 auto;
+		margin-bottom: 32px;
+		width: 100%;
+		max-width: 852px;
+		border-radius: 8px;
+		overflow: hidden;
+	}
+	&__video-subtitle{
+		margin-bottom: 8px;
+	}
+	&__video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	blockquote {
+		padding: rem(24) rem(16);
+		font-size: 15px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 160%;
+		border-radius: 8px;
+		border: 1px solid $link-hover-color;
+		background-image: url('../img/blockquote-bg.png');
+		background-repeat: no-repeat;
+		background-position: left center;
+		background-size: cover;
+		@include media-breakpoint-up(md) {
+			padding: rem(24) rem(32);
+			background-size: auto;
+		}
+	}
+	&__share {
+		margin-bottom: 4px;
+		color: $gray-400;
+		font-family: Roboto;
+		font-size: 12px;
 	}
 	&__col{
 

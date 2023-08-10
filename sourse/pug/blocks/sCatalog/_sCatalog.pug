@@ -113,6 +113,11 @@ mixin sCatalog29(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
 		+e.head-row.row
+			.col.d-md-none
+				+e.filter-btn--js
+					+e.filter-title Фильтр
+					+e.recipe-filter: +icon('options')
+		+e.head-row.row
 			+sBanners29
 		+e.row.row
 			.col-6.col-md-3

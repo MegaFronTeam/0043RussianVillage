@@ -82,6 +82,23 @@
 			font-size: rem(24);
 		}
 	}
+	&__filter-btn {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: $body-color;
+		background-color: $white;
+		border: 1px solid $gray-400;
+		border-radius: rem(4);
+		padding: rem(8) rem(12);
+		.icon {
+			font-size: rem(24);
+		}
+	}
+	&__filter-title {
+		font-size: 12px;
+		font-weight: 700;
+	}
 	&__input-wrap {
 		position: relative;
 		max-width: max-content;

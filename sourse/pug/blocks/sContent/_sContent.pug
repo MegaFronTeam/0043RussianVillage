@@ -1,9 +1,13 @@
+mixin recept-step(p,img)
+	+e.step.LI
+		+e.step-text.P!= p
+		|
+		+e.img-wrap
+			+img(`img/${img}.jpg`)
+			
 mixin sContent()
 	// start sContent
 	+b.SECTION.sContent.section#sContent&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContent
-				
-			+e.row.row
+			block
 	// end sContent
