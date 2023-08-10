@@ -28,6 +28,42 @@ block pagecontent
 	main
 		+page-head('Шашлык из говядины на мангале', '', 'sContent__h1', 'Каталог рецептов', 'Шашлык из говядины на мангале')
 		+sContent
+			+e.wrap.bg-wrap
+				+img('img/recipe-main.jpg', 'bg')
+			+e.text-wrap
+				+e.ingredients
+					+e.subtitle Ингредиенты
+					+e.list.UL
+						li Говяжья вырезка – 800 г
+						li Помидоры черри – 200 г
+						li Лаваш для подачи
+						li Пучок свежей зелени
+						li Крупная морская соль
+				+e.ingredients
+					+e.subtitle Для маринада
+					+e.list.UL
+						li Кислые яблоки – 2 шт.
+						li Зерна кориандра – 1 ч.л.
+						li Паприка – 1/2 ч.л.
+						li Смесь перцев – 2 ч.л.
+						li Винный уксус – 1 ч.л.
+				h2 Пошаговый рецепт приготовления
+				+e.recept-steps.OL
+					+recept-step('Подготовьте все ингредиенты для шашлыка. Говяжью вырезку вымойте, обсушите бумажными полотенцами. Нарежьте кубиками среднего размера и&nbsp;переложите в&nbsp;большую миску.', 'step-1')
+					+recept-step('Приготовьте маринад для шашлыка. Натрите яблоки на&nbsp;терке и&nbsp;отожмите сок руками (или воспользуйтесь соковыжималкой). Кориандр и&nbsp;перец слегка раздробите в&nbsp;ступке, но&nbsp;не&nbsp;измельчайте в&nbsp;муку. Смешайте в&nbsp;маленькой миске яблочный сок и&nbsp;все остальные ингредиенты маринада.', 'step-2')
+					+recept-step('Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;холодильник на&nbsp;1&nbsp;час.', 'step-3')
+					+recept-step('Нанижите на&nbsp;шампуры кусочки мяса поочередно с&nbsp;помидорами черри. Выложите на&nbsp;решетку мангала. Обжаривайте, время от&nbsp;времени переворачивая, чтобы шашлык не&nbsp;подгорел.', 'step-4')
+					+recept-step('Готовность шашлыка из&nbsp;говядины определяйте с&nbsp;помощью прокола острым ножом. Если выделяется красный сок, подержите мясо на&nbsp;мангале еще несколько минут. Если прозрачный&nbsp;&mdash; блюдо готово.', 'step-5')
+				+e.video-subtitle.H2 Видео-рецепт
+				+e.video-wrap
+					<iframe class="sContent__video" width="560" height="315" src="https://www.youtube.com/embed/Jz3_xAVxy5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				blockquote Полезный совет. Чтобы говядина лучше пропиталась маринадом, нарезанное мясо можно оставить в&nbsp;нем на&nbsp;несколько часов и&nbsp;даже на&nbsp;ночь. Не&nbsp;переживайте: это тот самый случай, когда лишнее время точно не&nbsp;помешает.
+				+e.share-block
+					+e.share Поделиться
+					+e.share-soc
+						+e.A.item--telegram
+							+icon(telegram)
+
 		+sAlsoWatch29(false)
 	+parts('footer')
       
