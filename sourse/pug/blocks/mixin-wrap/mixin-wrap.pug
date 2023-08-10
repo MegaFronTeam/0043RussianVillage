@@ -205,15 +205,6 @@ mixin filter()
 		+e.btn-accept
 			a.btn.btn-sm.btn-primary(href='#') Показать
 
-mixin filter29()
-	+b.filter
-		+e.close: +icon('close')
-		//- +e.wrap
-		+e.row
-			.h4 Фильтр
-		+e.btn.btn.btn-sm.btn-light(href='#') Сбросить
-		+e.btn-accept
-			a.btn.btn-sm.btn-primary(href='#') Показать
 mixin tags(tags=['Бассейны', 'Батуты', 'Детские комплексы', 'Детские домики', 'Игры', 'Тримеры', 'Топоры', 'Культиватор'])
 	+b.tags
 		+defSlider(false)

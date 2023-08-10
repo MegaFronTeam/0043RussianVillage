@@ -50,6 +50,22 @@ mixin modal()
 				+input('Введите свой e-mail', 'email', 'E-mail')
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  )   Оформить заказ
 				+policy()
+	div(id="modal-enter"  style="display: none" )
+		+b.modal-win--enter
+			+form-wrap
+				+e.title.form-data.h5.text-center Вход или регистрация
+				.tabs
+					.tabs__caption
+						.tabs__btn.active По телефону
+						.tabs__btn По почте
+					.tabs__content.active
+						+input('+7 (      )     -     -', 'tel', 'Телефон*')(required)
+						+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Далее
+						+policy()
+					.tabs__content
+						+input('Введите свой e-mail', 'email', 'E-mail')
+						+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Далее
+						+policy()
 	// #modal-call
 	
 	// end modals

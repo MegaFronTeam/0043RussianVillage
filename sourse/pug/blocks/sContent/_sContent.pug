@@ -4,6 +4,13 @@ mixin recept-step(p,img)
 		|
 		+e.img-wrap
 			+img(`img/${img}.jpg`)
+
+mixin article(header,p,img)
+	+e.article
+		h2= header
+		p!= p
+		+e.img-wrap
+			+img(`img/${img}.jpg`)
 			
 mixin sContent()
 	// start sContent

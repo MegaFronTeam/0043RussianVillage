@@ -9,6 +9,11 @@
 		--sPB: #{rem(47)};
 		--sTPB: #{rem(25)};
 	}
+	&--recipe {
+		// .card {
+		// 	height: auto;
+		// }
+	}
 	&__wrapper {
 		@include media-breakpoint-down(md) {
 			position: relative;

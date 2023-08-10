@@ -35,9 +35,12 @@
 		}
 	}
 	&__text-wrap {
-		padding: rem(32) rem(40);
+		padding: rem(16);
 		border-radius: rem(8);
 		background: $white;
+		@include media-breakpoint-up(md) {
+			padding: rem(32) rem(40);
+		}
 	}
 	&__ingredients {
 		margin-bottom: 32px;
@@ -118,6 +121,7 @@
 	}
 	&__img-wrap {
 		margin: 0 auto;
+		margin-bottom: rem(8);
 		width: 100%;
 		max-width: 852px;
 		border-radius: 8px;
@@ -125,6 +129,17 @@
 		img {
 			width: 100%;
 			object-fit: cover;
+		}
+	}
+	&__article {
+		img {
+			margin-bottom: rem(8);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(32);
+			}
+		}
+		h2 {
+			margin-bottom: 8px;
 		}
 	}
 	&__video-wrap {

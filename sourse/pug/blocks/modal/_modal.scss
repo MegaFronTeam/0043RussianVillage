@@ -119,6 +119,34 @@
 			}
 		}
 	}
+	&--enter {
+		padding-left: 18px;
+		padding-right: 18px;
+		@include media-breakpoint-up(md) {
+			padding-left: 67px;
+			padding-right: 67px;
+			padding-bottom: 48px;
+		}
+		.tabs__caption {
+			padding: 3px;
+			display: flex;
+			align-items: center;
+			margin-bottom: 16px;
+			width: 100%;
+			background-color: $gray-300;
+			border-radius: 4px;
+		}
+		.tabs__btn {
+			padding: 8px;
+			width: 50%;
+			text-align: center;
+			color: #000;
+			font-weight: 600;
+			&.active {
+				background-color: $white;;
+			}
+		}
+	}
 }
 
 a {

@@ -1,0 +1,118 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sPopularCategories/_sPopularCategories.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sIndividualOrder/_sIndividualOrder.pug
+include ../blocks/sBestsellers/_sBestsellers.pug
+
+block variables
+	- let  mainPage= 'bg-gray' 
+	- let  bg= ''
+
+block title
+	- let  title= 'Энциклопедия дачника'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		//- +page-head('Летние кухни, гриль зоны, барбекю комплексы', '', 'h4', 'Дачные постройки и конструкции', 'Летние кухни, гриль зоны, барбекю комплексы', 'Барбекю комплексы')
+		+b.block-with-aside
+			.container
+				+e.row.row
+					+e.col-auto.col-auto
+						+filter
+							+e.item
+								+e.headline.h5 Категории
+								+e.link(href='#') Рецепты
+								+e.link(href='#') Энциклопедия дачника
+							+ddGroup()
+								+ddGroupItem('Уход за растениями', '', '')
+									+in-c('checkbox', 'Подвязка', 'caring')
+									+in-c('checkbox', 'Рассада', 'caring')
+									+in-c('checkbox', 'Посевной календарь', 'caring')
+									+in-c('checkbox', 'Борьба с вредителями', 'caring')
+									+in-c('checkbox', 'Особенности полива', 'caring')
+									+in-c('checkbox', 'Укрытие грунта', 'caring')
+									+in-c('checkbox', 'Подготовка к зиме', 'caring')
+							+ddGroup()
+								+ddGroupItem('Домашние заготовки', '', '')
+									+in-c('checkbox', 'Мясо', 'homemade')
+									+in-c('checkbox', 'Рыба', 'homemade')
+									+in-c('checkbox', 'Морепродукты', 'homemade')
+									+in-c('checkbox', 'Овощи', 'homemade')
+									+in-c('checkbox', 'Супы', 'homemade')
+							+ddGroup()
+								+ddGroupItem('Благоустройство участка', '', '')
+									+in-c('checkbox', 'Мясо', 'landscaping')
+									+in-c('checkbox', 'Рыба', 'landscaping')
+									+in-c('checkbox', 'Морепродукты', 'landscaping')
+									+in-c('checkbox', 'Овощи', 'landscaping')
+									+in-c('checkbox', 'Супы', 'landscaping')
+							+ddGroup()
+								+ddGroupItem('Уход за мебелью', '', '')
+									+in-c('checkbox', 'Мясо', 'furniture')
+									+in-c('checkbox', 'Рыба', 'furniture')
+									+in-c('checkbox', 'Морепродукты', 'furniture')
+									+in-c('checkbox', 'Овощи', 'furniture')
+									+in-c('checkbox', 'Супы', 'furniture')
+							+ddGroup()
+								+ddGroupItem('Рецепты блюд для дачи', '', '')
+									+in-c('checkbox', 'Мясо', 'recipes')
+									+in-c('checkbox', 'Рыба', 'recipes')
+									+in-c('checkbox', 'Морепродукты', 'recipes')
+									+in-c('checkbox', 'Овощи', 'recipes')
+									+in-c('checkbox', 'Супы', 'recipes')
+							+ddGroup()
+								+ddGroupItem('Собираемся в баню', '', '')
+									+in-c('checkbox', 'Мясо', 'sauna')
+									+in-c('checkbox', 'Рыба', 'sauna')
+									+in-c('checkbox', 'Морепродукты', 'sauna')
+									+in-c('checkbox', 'Овощи', 'sauna')
+									+in-c('checkbox', 'Супы', 'sauna')
+							+ddGroup()
+								+ddGroupItem('Декор для сада 2024', '', '')
+									+in-c('checkbox', 'Мясо', 'decor')
+									+in-c('checkbox', 'Рыба', 'decor')
+									+in-c('checkbox', 'Морепродукты', 'decor')
+									+in-c('checkbox', 'Овощи', 'decor')
+									+in-c('checkbox', 'Супы', 'decor')
+							+ddGroup()
+								+ddGroupItem('Как выбрать освещение для сада', '', '')
+									+in-c('checkbox', 'Мясо', 'lighting')
+									+in-c('checkbox', 'Рыба', 'lighting')
+									+in-c('checkbox', 'Морепродукты', 'lighting')
+									+in-c('checkbox', 'Овощи', 'lighting')
+									+in-c('checkbox', 'Супы', 'lighting')
+							+ddGroup()
+								+ddGroupItem('Полив и уход', '', '')
+									+in-c('checkbox', 'Мясо', 'watering')
+									+in-c('checkbox', 'Рыба', 'Watering')
+									+in-c('checkbox', 'Морепродукты', 'Watering')
+									+in-c('checkbox', 'Овощи', 'Watering')
+									+in-c('checkbox', 'Супы', 'Watering')
+							+ddGroup()
+								+ddGroupItem('Выбор садовой техники и инвентаря', '', '')
+									+in-c('checkbox', 'Мясо', 'equipment')
+									+in-c('checkbox', 'Рыба', 'equipment')
+									+in-c('checkbox', 'Морепродукты', 'equipment')
+									+in-c('checkbox', 'Овощи', 'equipment')
+									+in-c('checkbox', 'Супы', 'equipment')
+					.col
+						+sCatalog29enc
+		+sAlsoWatch29(false)
+	+parts('footer')
+      
+
+
+
