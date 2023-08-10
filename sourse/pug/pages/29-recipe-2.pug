@@ -17,7 +17,7 @@ block variables
 	- let  bg= ''
 
 block title
-	- let  title= 'Каталог рецептовы'
+	- let  title= 'Рецепт'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -26,14 +26,8 @@ block pagecontent
 	+parts('header')
 	+topBtns().d-md-none
 	main
-		//- +page-head('Летние кухни, гриль зоны, барбекю комплексы', '', 'h4', 'Дачные постройки и конструкции', 'Летние кухни, гриль зоны, барбекю комплексы', 'Барбекю комплексы')
-		+b.block-with-aside
-			.container
-				+e.row.row
-					+e.col-auto.col-auto
-						+filter29
-					.col
-						+sCatalog29
+		+page-head('Шашлык из говядины на мангале', '', 'sContent__h1', 'Каталог рецептов', 'Шашлык из говядины на мангале')
+		+sContent
 		+sAlsoWatch29(false)
 	+parts('footer')
       
