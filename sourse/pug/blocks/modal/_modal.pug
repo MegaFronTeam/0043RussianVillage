@@ -21,6 +21,35 @@ mixin modal()
 				+input('Оставьте свой комментарий', 'textarea', 'Комментарий')
 				+e.BUTTON.btn.btn.btn-primary(type="submit"  )   Оформить заказ
 				+policy()
+	div(id="modal-question"  style="display: none" )
+		+b.modal-win
+			+form-wrap
+				+e.title.form-data.h5.text-center Задать вопрос
+				+input("Введите свое имя", 'text', 'Имя*')(required)
+				+input('+7 (      )     -     -', 'tel', 'Телефон*')(required)
+				+input('Введите свой e-mail', 'email', 'E-mail')
+				+input('Оставьте свой комментарий', 'textarea', 'Комментарий')
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  )   Оформить заказ
+				+policy()
+	div(id="modal-help-us"  style="display: none" )
+		+b.modal-win--help-us
+			+form-wrap
+				+e.title.form-data.h5.text-center Помогите нам стать лучше
+				+e.rate-row.row
+					.col-6
+						+in-c('radio', '', 'rate').custom-input__input--like
+							+iconC('like')
+							span Сказать спасибо
+					.col-6
+						+in-c('radio', '', 'rate').custom-input__input--dislike
+							+iconC('dislike')
+							span Пожаловаться
+				+input('Оставьте комментарий', 'textarea', 'Комментарий')
+				+input("Введите свое имя", 'text', 'Имя*')(required)
+				+input('+7 (      )     -     -', 'tel', 'Телефон*')(required)
+				+input('Введите свой e-mail', 'email', 'E-mail')
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  )   Оформить заказ
+				+policy()
 	// #modal-call
 	
 	// end modals

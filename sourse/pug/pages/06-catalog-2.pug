@@ -32,6 +32,78 @@ block pagecontent
 				+e.row.row
 					+e.col-auto.col-auto
 						+filter
+							+ddGroup()
+								+ddGroupItem('Категории')
+									+in-c('checkbox', 'Дачные постройки и конструкции', 'category')
+									+in-c('checkbox', 'Садовая мебель, качели и мебель для бани', 'category')
+									+in-c('checkbox', 'Качели и подвесные кресла', 'category')
+									+in-c('checkbox', 'Приготовление пищи на открытом огне', 'category')
+									+in-c('checkbox', 'Купели, фитобочки, банный чан, сборные сауны', 'category')
+									+in-c('checkbox', 'Все для бани и сауны', 'category')
+									+in-c('checkbox', 'Печи и камины', 'category')
+									+in-c('checkbox', 'Детские домики, детские комплексы и игрушки', 'category')
+									+in-c('checkbox', 'Бассейны', 'category')
+									+in-c('checkbox', 'Батуты', 'category')
+									+in-c('checkbox', 'Спорт, игры,развлечения', 'category')
+									+in-c('checkbox', 'Садовый декор, текстиль и ландшафтный дизайн', 'category')
+									+in-c('checkbox', 'Светильники, фонари и световые фигуры', 'category')
+									+in-c('checkbox', 'Полив, уход, емкости для воды', 'category')
+									+in-c('checkbox', 'Садовая техника', 'category')
+									+in-c('checkbox', 'Садовый инвентарь', 'category')
+									+in-c('checkbox', 'Постройки и товары для животных и птиц', 'category')
+									+in-c('checkbox', 'Товары для фермеров, сельские товары', 'category')
+							+e.item
+								div(class="form-check form-switch")
+									label(class="form-check-label" for="inStock") Акции и Скидки
+									input(class="form-check-input" type="checkbox" role="switch" id="inStock")
+							+e.item
+								div(class="form-check form-switch")
+									label(class="form-check-label" for="inStock") Только в наличии
+									input(class="form-check-input" type="checkbox" role="switch" id="inStock")
+							+ddGroup()
+								+ddGroupItem('Цена, ₽')
+									.range-slider
+										input.js-range-slider(type='text' value='')
+									.extra-controls
+										label(for="") 
+											input.js-input-from(type='text' value='0')
+										label
+											input.js-input-to(type='text' value='0')
+							+e.item
+								div(class="form-check form-switch")
+									label(class="form-check-label" for="payment") Рассрочка без доплаты
+									input(class="form-check-input" type="checkbox" role="switch" id="payment")
+							+ddGroup()
+								+ddGroupItem('Срок доставки')
+									+in-c('radio', 'Любой', 'deliveryTime')
+									+in-c('radio', '1 день', 'deliveryTime')
+									+in-c('radio', '2 дня', 'deliveryTime')
+									+in-c('radio', 'До 3 дней', 'deliveryTime')
+									+in-c('radio', 'До 5 дней', 'deliveryTime')
+								+ddGroupItem('Бренды', '', true)
+									+in-c('checkbox', 'Apple', 'brands')
+									+in-c('checkbox', 'Xiaomi', 'brands')
+									+in-c('checkbox', 'Samsung', 'brands')
+									+in-c('checkbox', 'Poco', 'brands')
+									+in-c('checkbox', 'Realme', 'brands')
+								+ddGroupItem('Цвет')
+									+in-c('checkbox', '', 'color'): .color.color--border(style='--bgColor: #fff;') Белый
+									+in-c('checkbox', '', 'color'): .color(style='--bgColor: #4D371F;') Венге
+									+in-c('checkbox', '', 'color'): .color(style='--bgColor: #397D22;') Зеленый
+									+in-c('checkbox', '', 'color'): .color(style='--bgColor: #8B4F1A;') Коричневый
+									+in-c('checkbox', '', 'color'): .color(style='--bgColor: #845B4B;') Палисандр
+									+in-c('checkbox', '', 'color'): .color(style='--bgColor: #808080;') Белый
+									+in-c('checkbox', '', 'color'): .color(style='--bgColor: #000;') Черный 
+								+ddGroupItem('Рейтинг')
+									+in-c('radio', 'Не важно', 'raiting')
+									+in-c('radio', '', 'raiting')
+										+e.stars
+											span От
+											+stars(3)
+									+in-c('radio', '', 'raiting')
+										+e.stars
+											span От
+											+stars()
 					.col
 						+sCatalog
 		+sAlsoWatch(false)

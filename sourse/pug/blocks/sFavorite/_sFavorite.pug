@@ -1,0 +1,33 @@
+mixin sFavorite(epmty)
+	// start sFavorite
+	+b.SECTION.sFavorite.section#sFavorite&attributes(attributes)
+		.container
+			if epmty
+				+e.wrap
+					h4 В избранном пока ничего нет
+					p Добавьте товары в избранное. У нас вы найдете то, что вам понравится!
+					+e.btn.btn.btn-primary(href='#') В каталог
+			else
+				+tags
+				+e.row.row
+					.col-6.col-md-3
+						+card('card-13.png', '5 850 ₽', 'Гриль угольный BestPicnic Barbeque 47, 55х47.5х86 см', false, true, false, false, true)
+					.col-6.col-md-3
+						+card('card-14.png', '17 890 ₽', 'Гриль-мангал с полками и крышкой барбекю Gratar Family Standart BBQ FSB 2000', false, true, false, true, true)
+					.col-6.col-md-3
+						+card('card-15.png', '81 000 ₽', 'Уличная кухня с мойкой AL-F VK14 - кухонный гарнитур для дачи и сада', 'bg', true, false, false, true)
+					.col-6.col-md-3
+						+card('card-16.png', '41 536 ₽', 'Уличная кухня. Кухня с мойкой и столешницей VERANDA 0802, нержавейка, для дачи, для балкона, для дома. 172x58 см, из 2 модулей', 'bg', true, false, false, true)
+					.col-6.col-md-3
+						+card('card-17.png', '79 190 ₽', 'Кедровая фитобочка полулежачая "Овальная люкс" 115*78*140*4 см', false, true, false, false, true)
+					.col-6.col-md-3
+						+card('card-18.png', '53 375 ₽', 'Купель из полипропилена круглая', 'bg', true, false, false, true)
+					.col-6.col-md-3
+						+card('card-19.png', '204 900 ₽', 'Банный чан елисей силович 4 человека на опоре с печью', 'bg', true, false, false, true)
+					.col-6.col-md-3
+						+card('card-20.png', '54 900 ₽', 'КУРрорт Курятник (Макси модель) Коричневый Правосторонний', false, true, false, false, true)
+					.col-6.col-md-3
+						+card('card-21.png', '14 580 ₽', 'Теплица Рязаночка3х6 (каркас)', false, true, false, false, true)
+					.col-6.col-md-3
+						+card('card-22.png', '22 812 ₽', 'Будка для собак Ferplast Argo 100 114.5х73х81 см коричневый', false, true, false, false, true)
+	// end sFavorite

@@ -424,7 +424,12 @@ function eventHandler() {
 		$('.filter').removeClass('active');
 		$('body').removeClass('fixed');
 	});
-
+	window.addEventListener('resize', () => {
+		if (window.matchMedia('(min-width: 992px)').matches) {
+			$('.filter').removeClass('active');
+			$('body').removeClass('fixed');
+		};
+	}, { passive: true });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
