@@ -7,6 +7,16 @@
 	fill: currentColor;
 }
 
+.iconC-MapPin {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
+.iconC-PhoneCall {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
+}
 .iconC-catalog-icon-1 {
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);
@@ -41,6 +51,11 @@
 	--h: 16;
 	font-size:calc( var(--h) / 10 * 1rem);
 	width: calc(28 / var(--h) *1em );
+}
+.iconC-mail2 {
+	--h: 24;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(24 / var(--h) *1em );
 }
 .iconC-profile {
 	--h: 20;

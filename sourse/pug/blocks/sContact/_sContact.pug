@@ -2,8 +2,54 @@ mixin sContact()
 	// start sContact
 	+b.SECTION.sContact.section#sContact&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 sContact
-				
-			+e.row.row
+			+e.wrapper
+				+e.row.row
+					.col-md
+						+e.wrap
+							img(src="img/svg/logo-bg-img.svg", alt="").bg-img
+							h4 Контактная инормация
+							+e.item
+								p Оформить заказ и узнать наличие 
+								a(href="tel:+74950217474")
+									+iconC('PhoneCall')
+									| +7 (495) 021-74-74 
+							+e.item
+								p Электронная почта для заказа
+								a(href="mailto:rbesedka@gmail.com")
+									+iconC('mail2')
+									| rbesedka@gmail.com
+							+e.item--adress
+								+iconC('MapPin')
+								span Адрес склада: 
+								| г. Москва, Рябиновая ул, 37, стр. 1
+							+e.title Реквизиты ООО «Русская Деревня»
+							ul
+								li Юридический адрес: 214009, г. Смоленск, Рославльское шоссе 5&nbsp;км. стр.&nbsp;4&nbsp;офис.&nbsp;1
+								li ОГРН: 1176733012576ИНН
+								li ИНН: 6732147556КПП
+								li КПП: 673201001
+								li Р/С: 40702810859000010277
+								li Наименование банка: СМОЛЕНСКОЕ ОТДЕЛЕНИЕ N8609&nbsp;ПАО СБЕРБАНК
+								li К/С: 30101810000000000632
+								li БИК: 046614632
+					.col-md
+						+e.map
+							#map
+						script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+						script.
+							var myMap;
+
+							// Дождёмся загрузки API и готовности DOM.
+							ymaps.ready(init);
+
+							function init () {
+								// Создание экземпляра карты и его привязка к контейнеру с
+								// заданным id ("map").
+								myMap = new ymaps.Map('map', {
+									// При инициализации карты обязательно нужно указать
+									// её центр и коэффициент масштабирования.
+									center:[55.70415618556699,37.42413108465574], // Москва
+									zoom:17
+								});
+							};
 	// end sContact

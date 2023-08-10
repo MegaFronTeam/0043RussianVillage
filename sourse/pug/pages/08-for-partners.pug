@@ -1,0 +1,89 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+
+block variables
+	- let  mainPage= 'bg-gray' 
+	- let  bg= ''
+
+block title
+	- let  title= 'Избранное'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		+sContent
+			+e.banner.bg-wrap
+				picture
+					source(media="(min-width: 768px)", srcset="img/sBanners-img-5-lg.jpg")
+					img(src="img/sBanners-img-5-sm.jpg", alt="").picture-bg.object-fit-js
+				h1.h3 Станьте нашим поставщиком
+			+e.text-wrap
+				h3 Анкета поставщика
+				p Чтобы отправить сообщение, заполните, пожалуйста, все поля формы. Наш менеджер свяжется с вами в рабочее время.
+				+form-wrap()
+					+e.row.row
+						.col-md-6
+							+e.inputs-wrapper
+								+input('Введите название организации', 'text', 'Наименование организации*')(required)
+								+input('Год основания', 'text', 'Год образования компании*')(required)
+								+input('Введите количество сотрудников', 'text', 'Товарооборот за последний год')
+						.col-md-6
+							+e.inputs-wrapper
+								+input('Производство', 'select', 'Предоставляемвые услуги*')(required)
+								+input('Введите количество сотрудников', 'text', 'Численность сотрудников')
+								+input('Введите количество сотрудников', 'text', 'Основные каналы сбыта продукции')
+					.h5 Товарные группы
+					+e.custom-inputs-row.row
+						.col-md-4
+							+e.custom-inputs-wrap
+								+in-c('checkbox', 'Дачные постройки и конструкции', 'group')
+								+in-c('checkbox', 'Садовая мебель, качели и мебель для бани', 'group')
+								+in-c('checkbox', 'Приготовление пищи на открытом огне', 'group')
+								+in-c('checkbox', 'Купели, фитобочки, сборные сауны, банный чан', 'group')
+								+in-c('checkbox', 'Все для бани и сауны', 'group')
+								+in-c('checkbox', 'Печи и камины', 'group')
+						.col-md-4
+							+e.custom-inputs-wrap
+								+in-c('checkbox', 'Детские домики, детские комплексы и игрушки', 'group')
+								+in-c('checkbox', 'Бассейны и батуты', 'group')
+								+in-c('checkbox', 'Спорт, игры, развлечения', 'group')
+								+in-c('checkbox', 'Садовый декор, текстиль и ландшафтный дизайн', 'group')
+								+in-c('checkbox', 'Светильники, фонари и световые фигуры', 'group')
+						.col-md-4
+							+e.custom-inputs-wrap
+								+in-c('checkbox', 'Садовый Инвентарь', 'group')
+								+in-c('checkbox', 'Полив, уход, емкости для воды', 'group')
+								+in-c('checkbox', 'Садовая техника', 'group')
+								+in-c('checkbox', 'Постройки и товары для животных и птиц', 'group')
+								+in-c('checkbox', 'Товары для фермеров, сельские товары', 'group')
+					.h5 Контактная информация
+					+e.row.row
+						.col-md-6
+							+e.inputs-wrapper
+								+input('Введите ваше ФИО', 'text', 'ФИО*')(required)
+								+input('Занимаемая должность', 'text', 'Должность*')(required)
+								+input('Сайт компании', 'text', 'Сайт')
+						.col-md-6
+							+e.inputs-wrapper
+								+input('Ваш e-mail', 'email', 'E-mail*')(required)
+								+input('Ваш телефонный номер', 'tel', 'Телефон*')(required)
+								+input('Дополнительная информация', 'text', 'Дополнительная информация')
+					.h5 Дополнительная информация
+					+e.btn.btn.btn-primary(type='button') Отправить
+					+policy
+	+parts('footer')
+      
+
+
+
