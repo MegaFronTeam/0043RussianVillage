@@ -34,4 +34,12 @@ mixin sBanners29(data)
 				img(src="img/sBanners-recipe-sm.jpg", alt="").picture-bg.object-fit-js
 			h5 Каталог рецептов
 
+mixin sBanners29enc(data)
+	// start sBanners
+	+b.SECTION.sBanners--2.sBanners--29.section#sBanners&attributes(attributes)
+		+e.item(href='#').bg-wrap
+			picture
+				source(media="(min-width: 768px)", srcset="img/sBanners-house-lg.jpg")
+				img(src="img/sBanners-house-sm.jpg", alt="").picture-bg.object-fit-js
+			h5 Энциклопедия дачника
 	// end sBanners

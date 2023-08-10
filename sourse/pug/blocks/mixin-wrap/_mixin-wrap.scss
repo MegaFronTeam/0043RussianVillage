@@ -20,6 +20,12 @@
 
 .share-soc {
   display: flex;
+  list-style-type: none;
+  li {
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
   &__item {
     display:inline-flex;
     align-items: center;
@@ -27,13 +33,19 @@
     width: 32px;
     height: 32px;
     border-radius: $border-radius-sm;
-    &:not(:last-child) {
-      margin-right: 4px;
+    &--telegram {
+      background-color: #1DA1F2;
+    }
+    &--vk {
+      background-color: #4680C2;
+    }
+    &--whatsapp {
+      background-color: #2DB10F;
     }
   }
   .icon {
     font-size: rem(24);
-    color: var(--color);
+    color: $white;
   }
 }
 

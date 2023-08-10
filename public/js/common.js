@@ -430,6 +430,7 @@ function eventHandler() {
 			$('body').removeClass('fixed');
 		};
 	}, { passive: true });
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
