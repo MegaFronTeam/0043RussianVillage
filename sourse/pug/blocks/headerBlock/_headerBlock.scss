@@ -132,6 +132,33 @@
 			}
 		}
 	}
+	&--2 {
+
+		.headerBlock {
+			&__wrap {
+				margin-bottom: 0;
+			}
+			&__content {
+				max-width: rem(461);
+			}
+			&__btn-wrap {
+				display: flex;
+				align-items: center;
+				flex-wrap: wrap;
+				@include roww('6px', '6px', m);
+			}
+			&__btn {
+				width: 100%;
+				@include media-breakpoint-up(md) {
+					max-width: rem(189);
+				}
+				&.btn-light {
+					--bs-btn-bg: #fff;
+					--bs-btn-border-color: #fff;
+				}
+			}
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 
 	@include media-breakpoint-up(lg) {}

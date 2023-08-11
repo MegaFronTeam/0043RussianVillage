@@ -1,0 +1,39 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sVacancyInfo/_sVacancyInfo.pug
+
+block variables
+	- let  mainPage= 'bg-gray' 
+	- let  bg= ''
+
+block title
+	- let  title= 'Вакансия'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		+headerBlock2('headerBlock-img-7.jpg', 'Работай в команде «Русская Деревня»', 'Делай людей счастливыми вместе с нами', true)
+		+sVacancyInfo
+			+e.content
+				h5 О Компании
+				p Компания &laquo;Русская Деревня&raquo;&nbsp;&mdash; это крупнейшая и&nbsp;уникальная компания в&nbsp;сфере комплексного обустройства загородного участка.
+				p Компания состоит из&nbsp;самого большого в&nbsp;России производства дачных построек и&nbsp;конструкций, торгового отдела, отдела маркетинга, архитектурно проектного отдела, отдела снабжения и&nbsp;логистики, вместительных складов и&nbsp;строительно-монтажного участка.
+				p Персонал &laquo;Русской Деревни&raquo;&nbsp;&mdash; сплоченная команда единомышленников, работающая в&nbsp;одном направлении для достижения общей цели. Для нас важно, чтобы сотруднику было не&nbsp;все равно&nbsp;&mdash; не&nbsp;только на&nbsp;свою работу, но&nbsp;и&nbsp;на&nbsp;успех всей компании. Поэтому мы&nbsp;поощряем инициативу в&nbsp;улучшении любых процессов и&nbsp;продуктов компании. Каждый сотрудник, вне зависимости от&nbsp;должности и&nbsp;опыта, может предложить идею, как сделать компанию лучше&nbsp;&mdash; мы&nbsp;берем в&nbsp;работу мнение каждого.
+				p Мы&nbsp;адекватно относимся к&nbsp;ошибкам: наши сотрудники их&nbsp;не&nbsp;боятся и&nbsp;не&nbsp;замалчивают. Ошибки&nbsp;&mdash; это почва для размышлений и&nbsp;роста.
+				p За&nbsp;десять лет работы мы&nbsp;ни&nbsp;разу не&nbsp;задержали выплаты зарплат. А&nbsp;средний стаж работы в&nbsp;компании&nbsp;&mdash; 5&nbsp;лет.<br>Если вам близко&nbsp;то, что вы&nbsp;прочитали&nbsp;&mdash; смело откликайтесь на&nbsp;вакансию, узнаем друг друга поближе.
+	+parts('footer')
+      
+
+
+

@@ -33,3 +33,18 @@ mixin headerBlock()
 								p Собственное производство деревянных построек, конструкций и&nbsp;других товаров для дачи. Более 10&nbsp;000 товаров
 				.swiper-pagination
 	// end headerBlock
+
+mixin headerBlock2(img, title, text, btn)
+	// start headerBlock
+	+b.headerBlock--2.section#headerBlock&attributes(attributes)
+		.container
+			+e.wrap.bg-wrap
+				+img(`img/${img}`, 'bg').picture-bg
+				+e.content
+					h1.h3!= title
+					if text
+						p!= text
+					if btn
+						+e.btn-wrap
+							+e.btn.btn.btn-light(href='#') Отправить резюме
+							+e.btn.btn.btn-primary(href='#') Смотреть вакансии
