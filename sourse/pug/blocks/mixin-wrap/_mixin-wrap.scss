@@ -75,6 +75,7 @@
     height: rem(24);
     width: 100%;
     font-weight: 500;
+    color: $body-color;
   }
   &__btn {
     color: inherit;
@@ -961,7 +962,7 @@
       padding-top: rem(40);
     }
     .block-with-aside__row {
-      --bs-gutter-x: #[rem(36)];
+      --bs-gutter-x: #{rem(36)};
     }
     .block-with-aside__col-auto {
       max-width: rem(264);

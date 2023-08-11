@@ -90,8 +90,8 @@
 		}
 		.img-1 {
 			position: absolute;
-			top: 0;
-			left: 0;
+			top: rem(-24);
+			left: rem(-199);
 			z-index: -1;
 			display: none;
 			@include media-breakpoint-up(md) {

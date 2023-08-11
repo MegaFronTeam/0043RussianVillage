@@ -259,6 +259,13 @@
     }
     & > ul {
       & > li {
+        @include media-breakpoint-down(md) {
+          &:last-of-type {
+            .catalog-menu__link::before {
+              content: unset;
+            }
+          }
+        }
         @include media-breakpoint-up(md) {
           &:hover,
           &.hover {
@@ -293,18 +300,16 @@
       top: 0;
     }
 		@include media-breakpoint-down(md) {
-			&:not(:last-of-type) {
-				&:before {
-					content: '';
-					position: absolute;
-					display: block;
-					width: 200vw;
-					height: 1px;
-					background-color: $gray-300;
-					left: -50vw;
-					bottom: 0;
-				}
-			}
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 200vw;
+        height: 1px;
+        background-color: $gray-300;
+        left: -50vw;
+        bottom: 0;
+      }
 		}
     &:hover {
 			@include media-breakpoint-up(md) {
