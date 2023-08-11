@@ -16,3 +16,9 @@
 12. <https://megafronteam.github.io/0043RussianVillage/public/07-about-company.html>
 12. <https://megafronteam.github.io/0043RussianVillage/public/09-favorite.html>
 13. <https://megafronteam.github.io/0043RussianVillage/public/09-favorite-2.html>
+14. <https://megafronteam.github.io/0043RussianVillage/public/17-recipe.html>
+15. <https://megafronteam.github.io/0043RussianVillage/public/17-recipe-2.html>
+16. <https://megafronteam.github.io/0043RussianVillage/public/18-articles.html>
+17. <https://megafronteam.github.io/0043RussianVillage/public/18-articles-2.html>
+18. <https://megafronteam.github.io/0043RussianVillage/public/19-settings.html>
+19. <https://megafronteam.github.io/0043RussianVillage/public/19-settings-2.html>
