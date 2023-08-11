@@ -1,0 +1,32 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sOrder/_sOrder.pug
+
+block variables
+	- let  mainPage= 'cart-page' 
+	- let  bg= ''
+
+block title
+	- let  title= 'История заказов'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		+page-head('История заказов', '', 'h4')
+		+sOrder19-2
+	+parts('footer')
+      
+
+
+

@@ -1,0 +1,11 @@
+mixin s404(data)
+	// start s404
+	+b.s404.section#s404&attributes(attributes)
+		.text-center
+			+e.logo(href='#'): +img('/img/logo-white.png')
+			+b.section-title
+				h1 404
+			p Страница не найдена. Она не существовала или срок публикации истёк.
+			+e.btn.btn.btn-outline-primary На главную
+					
+	// end s404

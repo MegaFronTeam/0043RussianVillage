@@ -629,6 +629,9 @@ iframe {
 .bg-gray {
 	background-color: $gray-200;
 }
+.bg-green {
+	background-color: $link-hover-color;
+}
 
 .tooltip {
 	--bs-tooltip-max-width: #{rem(295)};

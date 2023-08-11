@@ -416,6 +416,10 @@ function eventHandler() {
 		$(this).prop("value", val);
 	});
 
+	$(".table-history__tr--js").click(function () {
+		$(this).toggleClass("active").next().find('.table-history__inner-block--js').slideToggle(150);
+	})
+
 	$('.sCatalog__filter--js').on('click', function() {
 		$('.filter').addClass('active');
 		$('body').addClass('fixed');

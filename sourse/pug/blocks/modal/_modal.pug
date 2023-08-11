@@ -66,6 +66,50 @@ mixin modal()
 						+input('Введите свой e-mail', 'email', 'E-mail')
 						+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Далее
 						+policy()
-	// #modal-call
+	div(id="modal-code"  style="display: none" )
+		+b.modal-win--code.text-center
+			+e.title.form-data.h5 Вход
+			p На номер <span>+7 904 786-98-67</span> выслан код. 
+			a(href='#') Изменить номер
+			p  Выслать код повторно через <span class="countdown">0:32</span>
+			+form-wrap
+				.form-caption Введите код для подтвержения
+				.form-row
+					+input('', 'text', '')(maxlength="1")
+					+input('', 'text', '')(maxlength="1")
+					+input('', 'text', '')(maxlength="1")
+					+input('', 'text', '')(maxlength="1")
+	div(id="modal-invalid-code"  style="display: none" )
+		+b.modal-win--code.text-center
+			+e.title.form-data.h5 Вход
+			p На номер <span>+7 904 786-98-67</span> выслан код. 
+			a(href='#') Изменить номер
+			a(href='#') Выслать код повторно
+			+form-wrap
+				.form-caption Введите код для подтвержения
+				.form-row
+					+input('', 'text', '')(maxlength="1")
+					+input('', 'text', '')(maxlength="1")
+					+input('', 'text', '')(maxlength="1")
+					+input('', 'text', '')(maxlength="1")
+				.invalid-feedback Неверный код
+	div(id="modal-invalid-email"  style="display: none" )
+		+b.modal-win--enter
+			+form-wrap
+				+e.title.form-data.h5.text-center Вход или регистрация
+				.tabs
+					.tabs__caption
+						.tabs__btn По телефону
+						.tabs__btn.active По почте
+					.tabs__content
+						+input('+7 (      )     -     -', 'tel', 'Телефон*')(required)
+						+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Далее
+						+policy()
+					.tabs__content.active
+						+input('Введите свой e-mail', 'email', 'E-mail')(class="is-invalid")
+						.invalid-feedback Пользователь с таким адресом не найден
+						+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Далее
+						+policy()
 	
+	// #modal-call
 	// end modals
