@@ -91,6 +91,8 @@
     // padding-left: rem(8);
     // padding-right: rem(8);
     width: rem(16);
+    padding: 0;
+    flex: 0 0 auto;
     &:hover {
       color: $primary;
     }
