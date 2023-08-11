@@ -118,13 +118,14 @@
 	&__full-slider-wrap {
 		padding: rem(63) rem(16) rem(25);
 		background-color: #fff;
-		border-radius: rem(8);
+		border-radius: rem(8) rem(8) 0 0;
 		position: relative;
 		overflow: hidden;
 		@include media-breakpoint-up(md) {
 			padding: rem(10) rem(13);
 			display: flex;
 			align-items: center;
+			border-radius: rem(8);
 		}
 		.sProdCard__swiper-wrap {
 			height: 100%;
@@ -232,7 +233,7 @@
 	}
 	&__main-info {
 		background-color: #fff;
-		border-radius: 8px;
+		border-radius: 0 0 8px 8px;
 		padding: 0 rem(16) rem(24) rem(16);
 		min-height: rem(253);
 		display: flex;
@@ -240,6 +241,7 @@
 		@include media-breakpoint-up(md) {
 			min-height: rem(370);
 			padding: rem(24);
+			border-radius: 8px;
 		}
 		h4 {
 			line-height: 1.25;

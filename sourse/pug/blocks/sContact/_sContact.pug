@@ -13,17 +13,23 @@ mixin sContact()
 								a(href="tel:+74950217474")
 									+iconC('PhoneCall')
 									| +7 (495) 021-74-74 
+								a(href="tel:+79953828855").d-md-none
+									+iconC('whatsapp2')
+									| +7 (995) 382-88-55 
+								a(href="tel:+79953828855").d-md-none
+									+iconC('tg2')
+									| +7 (995) 382-88-55
 							+e.item
 								p Электронная почта для заказа
 								a(href="mailto:rbesedka@gmail.com")
-									+iconC('mail2')
+									+img('img/mail2.png')
 									| rbesedka@gmail.com
 							+e.item--adress
 								+iconC('MapPin')
 								span Адрес склада: 
 								| г. Москва, Рябиновая ул, 37, стр. 1
-							+e.title Реквизиты ООО «Русская Деревня»
-							ul
+							+e.title.d-none.d-md-block Реквизиты ООО «Русская Деревня»
+							ul.d-none.d-md-block
 								li Юридический адрес: 214009, г. Смоленск, Рославльское шоссе 5&nbsp;км. стр.&nbsp;4&nbsp;офис.&nbsp;1
 								li ОГРН: 1176733012576ИНН
 								li ИНН: 6732147556КПП
@@ -52,4 +58,37 @@ mixin sContact()
 									zoom:17
 								});
 							};
+					.col.d-md-none
+						+e.list-wrap
+							+e.title Реквизиты ООО «Русская Деревня»
+							ul
+								li Юридический адрес: 214009, г. Смоленск, Рославльское шоссе 5&nbsp;км. стр.&nbsp;4&nbsp;офис.&nbsp;1
+								li ОГРН: 1176733012576ИНН
+								li ИНН: 6732147556КПП
+								li КПП: 673201001
+								li Р/С: 40702810859000010277
+								li Наименование банка: СМОЛЕНСКОЕ ОТДЕЛЕНИЕ N8609&nbsp;ПАО СБЕРБАНК
+								li К/С: 30101810000000000632
+								li БИК: 046614632
+			+e.departments
+				h5 Контакты отделов
+				.row
+					mixin item(icon, bgColor, text, link)
+						+e.departments-item
+							+e.icon-wrap(style=`--bgColor: ${bgColor}`): +img(`img/svg/${icon}`)
+							div
+								p!=text
+								a(href=`mailto:${link}`)!=link 
+					.col-md-4: +item('departments-icon-1.png', '#FFE8C6', 'Почта для приёма заказов', 'zakaz@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-2.svg', '#FFE8C6', 'Сервисный центр', 'service@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-3.svg', '#FFE8C6', 'Отдел по работе с сайтом', 'zotvet@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-4.svg', '#DAF4FF', 'По общим вопросам', 'info@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-5.svg', '#DAF4FF', 'Отдел поддержки продаж<br>(Доставке, статус и оплата заказа)', 'pozakazu@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-6.svg', '#DAF4FF', 'Реклама и маркетинг', 'marketing@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-7.svg', '#FFEBED', 'По вопросам актов сверок', 'sverka@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-8.png', '#FFEBED', 'Почта для официальных претензий', 'op@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-9.svg', '#FFEBED', 'Пресс-служба и сотрудничество', 'pr@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-10.svg', '#E8FCDD', 'Для поставщиков', 'partner@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-11.svg', '#E8FCDD', 'Отдел подбора персонала', 'hr@russkayaderevnya.ru')
+					.col-md-4: +item('departments-icon-12.png', '#E8FCDD', 'Генеральный директор', 'dir@russkayaderevnya.ru')
 	// end sContact

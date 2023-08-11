@@ -8,8 +8,8 @@ mixin sIndividualOrder(data)
 				mixin item(icon, title, text, btn, img)
 					+e.item
 						if img
-							+img('img/svg/sIndividualOrder-img-1.svg').img-1
-							+img('img/svg/sIndividualOrder-img-2.svg').img-2
+							img(src='img/svg/logo-bg-img.svg' alt='').img-1
+							img(src='img/svg/sIndividualOrder-img-2.svg' alt='').img-2
 						+iconC(icon)
 						h6!= title
 						p!= text
