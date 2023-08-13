@@ -2,6 +2,7 @@
 // start .sContent
 .sContent {
 	counter-reset: steps;
+	counter-reset: number;
 	&__h1 {
 		@extend .h1;
 		text-align: center;
@@ -45,6 +46,18 @@
 			padding: rem(32) rem(40);
 		}
 	}
+	h1, h2 {
+		font-weight: 700;
+	}
+	h2 {
+		margin-bottom: rem(32);
+	}
+	h3 {
+		margin-bottom: rem(32);
+	}
+	h4 {
+		margin-bottom: rem(24);
+	}
 	&__ingredients {
 		margin-bottom: 32px;
 	}
@@ -75,7 +88,7 @@
 			margin-bottom: 8px;
 		}
 	}
-	h2 {
+	&__heading {
 		margin-bottom: 34px;
 		color: #000;
 		font-size: rem(19);
@@ -87,7 +100,9 @@
 		li {
 			position: relative;
 			padding-top: 32px;
-			margin-bottom: 34px;
+			&:not(:last-child) {
+				margin-bottom: 34px;
+			}
 			&::before {
 				position: absolute;
 				top: 0;
@@ -239,7 +254,6 @@
 	p {
 		font-size: rem(15);
 		line-height: 1.6;
-		margin-bottom: rem(30);
 	}
 	.mb-40 {
 		margin-bottom: rem(24);
@@ -366,6 +380,113 @@
 			margin-right: auto;
 		}
 	}
+	&__numbered-list {
+		padding-left: 0;
+		list-style-type: none;
+		li {
+			position: relative;
+			margin-bottom: 12px;
+			font-weight: 600;
+			&::before {
+				top: 0;
+				left: 0;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 24px;
+				height: 24px;
+				margin-right: 8px;
+				counter-increment: number;
+				content: counter(number);
+				font-weight: 600;
+				font-size: 13px;
+				color: $white;
+				border-radius: 50%;
+				background-color: $link-hover-color;
+				line-height: 1;
+			}
+			p {
+				font-weight: 500;
+				margin-bottom: 8px;
+				&:first-child {
+					margin-top: 24px;
+				}
+				&:last-child {
+					margin-bottom: 24px;
+				}
+			}
+		}
+	}
+	&__table-wrap {
+		overflow-x: auto;
+		position: relative;
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(32);
+		}
+		table {
+			min-width: rem(762);
+			@extend .table, .table-hover;
+		}
+	}
+	table {
+		thead {
+			th {
+				color: $dark-bg-subtle;
+				padding-bottom: 8px;
+				font-size: rem(14);
+			}
+		}
+		tbody {
+			border-top: none!important;
+		}
+		th {
+			border-bottom: 1px solid $gray-200;
+			padding-top: rem(16);
+			padding-bottom: rem(16);
+			font-weight: 400;
+			color: $black;
+		}
+		td {
+			padding-top: rem(16);
+			padding-bottom: rem(14.4);
+			font-size: 15px;
+			font-weight: 500;
+		}
+	}
+	&__swiper-wrap {
+		position: relative;
+		margin: 0 auto;
+		margin-bottom: 32px;
+		width: 100%;
+		max-width: 852px;
+		border-radius: 8px;
+		.sContent__img-wrap {
+			margin-bottom: 0;
+		}
+	}
+	.swiper {
+		border-radius: 8px;
+	}
+	.swiper-button-hand-prev {
+		left: 22px;
+	}
+	.swiper-button-hand-next {
+		right: 22px;
+	}
+	.swiper-pagination {
+		bottom: -20px;
+		text-align: left;
+	}
+	.swiper-pagination-bullet {
+		border: 1px solid transparent;
+		background-color: $gray-400;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: $white;
+		border: 1px solid $gray-400;
+	}
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

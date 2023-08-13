@@ -80,6 +80,14 @@ mixin stars(rate=4)
 		+icon('rateStar')
 		+icon('rateStar')
 
+mixin empty-stars(rate=0)
+	+b.stars(data-rating=rate)
+		+icon('rateStar')
+		+icon('rateStar')
+		+icon('rateStar')
+		+icon('rateStar')
+		+icon('rateStar')
+
 mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false)
 	+b.card(class=(similar ? 'similar': ''))
 		if badge
@@ -138,6 +146,28 @@ mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
 				.col-md-auto
 					+e.btn.btn.btn-sm.btn-primary(href="#") 
 						span В корзину
+
+mixin orderCard(img, price, text, bg='bg', review=false, badge=false)
+	+b.card--horizontal.card--order
+		if badge
+			.badge.badge-orange.d-none.d-mg-block Скидка -50%
+		+e.img-wrap(href='#')
+			.img-wrap-center
+				+img(`img/${img}`, bg)
+		+e.text-wrap
+			+e.text(href='#')!=text 
+			+e.create Производство Италия
+			+e.review-wrap
+				+stars
+				if review
+					span 3 отзыва
+				else
+					span 07.11.2021
+		+e.price!= price
+		+e.buttons
+			+addblock
+			+e.btn.btn.btn-sm.btn-primary(href="#") 
+				span В корзину
 
 mixin recipe-card(img, title, descr, bg='bg')
 	+b.card(href='#')

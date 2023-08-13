@@ -680,3 +680,47 @@ iframe {
 		display: none;
 	}
 }
+.bg-green {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	background-image: url('../img/404-bottom-bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: bottom center;
+	.main-wrapper {
+		padding-top: 0;
+	}
+	&::before {
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 137px;
+		height: 127px;
+		background-image: url('../img/404-left-bg.png');
+		background-size: 100% 100%;
+		background-color: transparent;
+		opacity: 1;
+		@include media-breakpoint-up(md) {
+			width: 248px;
+			height: 255px;
+		}
+	}
+	&::after {
+		position: absolute;
+		content: url('../img/404-right-bg.png');
+		top: 10px;
+		right: 0;
+		z-index: -1;
+		transform: scale(0.6, 0.6);
+		@include media-breakpoint-up(md) {
+			top: 10%;
+			right: 10%;
+			transform: none;
+		}
+	}
+}

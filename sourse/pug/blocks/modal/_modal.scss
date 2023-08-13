@@ -211,10 +211,49 @@
 	}
 	.invalid-feedback {
 		display: block;
-		color: #DF331B;
+		color: $red;
 	}
 	.is-invalid {
 		border-color: $danger;
+	}
+	&--feedback {
+		text-align: center;
+		@include media-breakpoint-up(md) {
+			max-width: rem(734);
+			width: rem(734);
+		}
+		.form-wrap__caption {
+			margin-bottom: 8px;
+			font-size: 13px;
+		}
+		.stars {
+			margin-bottom: 8px;
+			justify-content: center;
+		}
+		.stars .icon-rateStar {
+			font-size: rem(48);
+		}
+		.form-wrap__form-title {
+			margin-bottom: 16px;
+			color: #DF331B;
+		}
+		.form-wrap__input-wrap {
+
+		}
+		.form-wrap__input-title {
+			text-align: left;
+			font-size: 13px;
+		}
+		textarea {
+			height: 94px;
+			@include media-breakpoint-up(md) {
+				height: 222px;
+			}
+		}
+		.invalid-feedback {
+			text-align: left;
+			font-size: 12px;
+		}
 	}
 }
 

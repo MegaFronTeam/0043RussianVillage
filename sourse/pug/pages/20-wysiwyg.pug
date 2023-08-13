@@ -48,14 +48,68 @@ block pagecontent
 						li Паприка – 1/2 ч.л.
 						li Смесь перцев – 2 ч.л.
 						li Винный уксус – 1 ч.л.
-				+e.heading.H2 Пошаговый рецепт приготовления
+				h2 Пошаговый рецепт приготовления
 				+e.recept-steps.OL
 					+recept-step('Подготовьте все ингредиенты для шашлыка. Говяжью вырезку вымойте, обсушите бумажными полотенцами. Нарежьте кубиками среднего размера и&nbsp;переложите в&nbsp;большую миску.', 'step-1')
-					+recept-step('Приготовьте маринад для шашлыка. Натрите яблоки на&nbsp;терке и&nbsp;отожмите сок руками (или воспользуйтесь соковыжималкой). Кориандр и&nbsp;перец слегка раздробите в&nbsp;ступке, но&nbsp;не&nbsp;измельчайте в&nbsp;муку. Смешайте в&nbsp;маленькой миске яблочный сок и&nbsp;все остальные ингредиенты маринада.', 'step-2')
-					+recept-step('Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;холодильник на&nbsp;1&nbsp;час.', 'step-3')
-					+recept-step('Нанижите на&nbsp;шампуры кусочки мяса поочередно с&nbsp;помидорами черри. Выложите на&nbsp;решетку мангала. Обжаривайте, время от&nbsp;времени переворачивая, чтобы шашлык не&nbsp;подгорел.', 'step-4')
-					+recept-step('Готовность шашлыка из&nbsp;говядины определяйте с&nbsp;помощью прокола острым ножом. Если выделяется красный сок, подержите мясо на&nbsp;мангале еще несколько минут. Если прозрачный&nbsp;&mdash; блюдо готово.', 'step-5')
-				+e.video-subtitle.H2 Видео-рецепт
+				h3 Пошаговый рецепт приготовления
+				p Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;<a href="">холодильник</a> на&nbsp;1&nbsp;час.
+				h4 Оплата банковской картой на сайте
+				p Оплатить заказанные на&nbsp;сайте товары вы&nbsp;можете на&nbsp;этапе оформления заказа банковской картой.<br> Мы&nbsp;принимаем карты &laquo;Мир&raquo;, Visa, Mastercard. Оплата через Google Pay&nbsp;/ Apple Pay недоступна.
+				+e.numbered-list.OL
+					li Выберите оплату картой на сайте.
+					li После выбора оплаты картой нажмите кнопку «Перейти к оплате».
+					li Оплатите заказ на странице банка.
+						p Выбрав оплату картой, вы&nbsp;будете автоматически перенаправлены на&nbsp;страницу оплаты банка. Заполните все необходимые поля и&nbsp;нажмите кнопку &laquo;Оплатить&raquo;
+						p Далее вы&nbsp;будете перенаправлены на&nbsp;страницу вашего банка для ввода кода из&nbsp;СМС.
+						p СМС придёт на&nbsp;мобильный телефон, привязанный к&nbsp;карте.
+					li Номер заказа будет направлен на&nbsp;Ваш email и&nbsp;по&nbsp;SMS.
+					li Вы&nbsp;получите электронный чек, подтверждающий оплату заказа.
+						p После оплаты вы&nbsp;получите подтверждающий платёжный документ&nbsp;&mdash; по&nbsp;электронной почте или СМС.
+				+e.table-wrap
+					table.table-hover
+						thead
+							tr
+								th Maecenas
+								th Phasellus
+								th Gravida
+								th Integer
+						tbody
+							tr
+								td Nullam
+								td Tincidunt
+								td At elementum
+								td Dapibus
+							tr
+								td Luctus
+								td Mauris
+								td Felis
+								td Aenean
+							tr
+								td Dignissim
+								td Vestibulum
+								td Fusce
+								td Donec
+				h5 Пошаговый рецепт приготовления
+				p Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;холодильник на&nbsp;1&nbsp;час.
+				+e.recept-steps.OL
+					li Готовность шашлыка из&nbsp;говядины определяйте с&nbsp;помощью прокола острым ножом. Если выделяется красный сок, подержите мясо на&nbsp;мангале еще несколько минут. Если прозрачный&nbsp;&mdash; блюдо готово.
+				+e.swiper-wrap.default-swiper-js
+					+e.swiper--js.swiper
+						.swiper-wrapper
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/step-2.jpg`)
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/step-3.jpg`)
+							+e.slide.swiper-slide
+								+e.img-wrap
+									+img(`img/step-4.jpg`)
+					.d-none.d-md-block
+						+arrow
+					.d-md-none
+						.swiper-pagination
+				+e.video-subtitle.H6 Видео-рецепт
 				+e.video-wrap
 					<iframe class="sContent__video" width="560" height="315" src="https://www.youtube.com/embed/Jz3_xAVxy5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 				blockquote Полезный совет. Чтобы говядина лучше пропиталась маринадом, нарезанное мясо можно оставить в&nbsp;нем на&nbsp;несколько часов и&nbsp;даже на&nbsp;ночь. Не&nbsp;переживайте: это тот самый случай, когда лишнее время точно не&nbsp;помешает.

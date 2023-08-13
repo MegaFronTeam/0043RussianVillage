@@ -586,8 +586,14 @@
 		 }
 		}
 	}
+	td:not(:last-child) {
+		@include media-breakpoint-down(md) {
+			border: none;
+		}
+	}
 	&__td {
 		@include media-breakpoint-down(md) {
+			border: none;
 			&::before {
 				content: attr(data-title);
 				margin-right: 8px;
@@ -634,10 +640,15 @@
 		padding: 16px;
 		text-align: right;
 		background-color: $white;
+		// @include media-breakpoint-down(md) {
+		// 	.table-history__btn {
+		// 		width: 100%;
+		// 	}
+		// }
+	}
+	.table-history__btn {
 		@include media-breakpoint-down(md) {
-			.table-history__btn {
-				width: 100%;
-			}
+			width: 100%;
 		}
 	}
 	// &__toggle {

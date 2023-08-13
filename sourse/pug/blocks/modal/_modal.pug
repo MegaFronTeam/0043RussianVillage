@@ -110,6 +110,18 @@ mixin modal()
 						.invalid-feedback Пользователь с таким адресом не найден
 						+e.BUTTON.btn.btn.btn-primary(type="submit"  ) Далее
 						+policy()
-	
+	div(id="modal-feedback"  style="display: none" )
+		+b.modal-win--feedback
+			+form-wrap
+				+e.title.form-data.h5.text-center Ваш отзыв
+				+e.caption Оценка товара
+				+empty-stars
+				+e.form-title Укажите оценку.
+				//- +input('Оставьте свой отзыв', 'textarea', 'Отзыв')
+				//- (class="is-invalid")
+				label
+					+e.SPAN.input-title Отзыв
+					+e.TEXTAREA.input.form-control(placeholder='Оставьте свой отзыв' class="is-invalid")
+					.invalid-feedback Поле обязательно для заполнения. Напишите отзыв.
 	// #modal-call
 	// end modals
