@@ -6,8 +6,9 @@ include ../blocks/sContent/_sContent.pug
  
 include ../blocks/sContact/_sContact.pug
 include ../blocks/sCatalog/_sCatalog.pug
-include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sDirection/_sDirection.pug
 include ../blocks/sVacancyInfo/_sVacancyInfo.pug
+include ../blocks/sVacancyBlock/_sVacancyBlock.pug
 
 block variables
 	- let  mainPage= 'bg-gray' 
@@ -24,6 +25,7 @@ block pagecontent
 	+topBtns().d-md-none
 	main
 		+headerBlock2('headerBlock-img-7.jpg', 'Работай в команде «Русская Деревня»', 'Делай людей счастливыми вместе с нами', true)
+		+sDirection()
 		+sVacancyInfo
 			+e.content
 				h5 О Компании
@@ -32,6 +34,22 @@ block pagecontent
 				p Персонал &laquo;Русской Деревни&raquo;&nbsp;&mdash; сплоченная команда единомышленников, работающая в&nbsp;одном направлении для достижения общей цели. Для нас важно, чтобы сотруднику было не&nbsp;все равно&nbsp;&mdash; не&nbsp;только на&nbsp;свою работу, но&nbsp;и&nbsp;на&nbsp;успех всей компании. Поэтому мы&nbsp;поощряем инициативу в&nbsp;улучшении любых процессов и&nbsp;продуктов компании. Каждый сотрудник, вне зависимости от&nbsp;должности и&nbsp;опыта, может предложить идею, как сделать компанию лучше&nbsp;&mdash; мы&nbsp;берем в&nbsp;работу мнение каждого.
 				p Мы&nbsp;адекватно относимся к&nbsp;ошибкам: наши сотрудники их&nbsp;не&nbsp;боятся и&nbsp;не&nbsp;замалчивают. Ошибки&nbsp;&mdash; это почва для размышлений и&nbsp;роста.
 				p За&nbsp;десять лет работы мы&nbsp;ни&nbsp;разу не&nbsp;задержали выплаты зарплат. А&nbsp;средний стаж работы в&nbsp;компании&nbsp;&mdash; 5&nbsp;лет.<br>Если вам близко&nbsp;то, что вы&nbsp;прочитали&nbsp;&mdash; смело откликайтесь на&nbsp;вакансию, узнаем друг друга поближе.
+			h5 Почему «Русская деревня»?
+			+e.enumeration
+				img(src='img/svg/logo-bg-img.svg' alt='').bg-img
+				mixin enumerationItem(icon, title, text)
+					+e.enumeration-item
+						+img(`img/svg/${icon}`).res-i
+						.h6!= title
+						!= text
+				.row
+					.col-md-4
+						+enumerationItem('sContent-icon-15.svg', 'Стабильность', 'Ты&nbsp;точно знаешь, сколько заработаешь и&nbsp;всегда получаешь зарплату вовремя')
+					.col-md-4
+						+enumerationItem('sContent-icon-16.svg', 'Команда', 'Ты работаешь в сплоченном коллективе, который поддерживает и мотивирует')
+					.col-md-4
+						+enumerationItem('sContent-icon-17.svg', 'Развитие', 'Ты&nbsp;развиваешься в&nbsp;профессии и&nbsp;проходишь обучение за&nbsp;счёт компании')
+		+sVacancyBlock
 	+parts('footer')
       
 

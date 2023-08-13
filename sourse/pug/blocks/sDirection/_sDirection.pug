@@ -1,0 +1,30 @@
+mixin sDirectionCard(img, text)
+	+b.direction-item.bg-wrap(href='#')
+		+img(`img/${img}`, 'bg').picture-bg
+		+e.text 
+			!= text
+			+icon('chevron-right')
+mixin sDirection(data)
+	// start sDirection
+	+b.SECTION.sDirection.section#sDirection&attributes(attributes)
+		.container
+			+b.section-title
+				h5 В каком направление хотите работать?
+			+e.row.row
+				+e.col.col-6.col-md-3
+					+sDirectionCard('sDirectionCard-img-1.jpg', 'Отдел маркетинга')
+				+e.col.col-6.col-md-3
+					+sDirectionCard('sDirectionCard-img-2.jpg', 'Торговый отдел')
+				+e.col.col-6.col-md-3
+					+sDirectionCard('sDirectionCard-img-3.jpg', 'Архитектурно-проектный отдел')
+				+e.col.col-6.col-md-3
+					+sDirectionCard('sDirectionCard-img-4.jpg', 'Отдел снабжения')
+				+e.col.col-6.col-md-3
+					+sDirectionCard('sDirectionCard-img-5.jpg', 'Производство дачных построек и конструкций')
+				+e.col.col-6.col-md-3
+					+sDirectionCard('sDirectionCard-img-6.jpg', 'Склад')
+				+e.col.col-6.col-md-3
+					+sDirectionCard('sDirectionCard-img-7.jpg', 'Отдел логистики')
+				+e.col.col-6.col-md-3
+					+sDirectionCard('sDirectionCard-img-8.jpg', 'Монтажный участок')
+	// end sDirection
