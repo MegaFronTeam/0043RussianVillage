@@ -702,6 +702,12 @@
         grid-row: 1 / 3;
       }
     }
+    .card__create {
+      margin-bottom: rem(8);
+      @include media-breakpoint-up(md) {
+        margin-bottom: rem(40);
+      }
+    }
     .card__price {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
@@ -733,14 +739,23 @@
         height: 32px;
       }
     }
-    .sOrder .card__buttons .addBlock input {
+    .addBlock .addBlock__btn {
       height: 32px;
+      width: 33%;
+      @include media-breakpoint-up(md) {
+        width: 36px;
+      }
+
+    }
+    .card__buttons .addBlock input {
+      height: 32px;
+      width: 33%;
+      @include media-breakpoint-up(md) {
+        width: 36px;
+      }
     }
     .card__review-wrap span {
       margin-left: 8px;
-      @include media-breakpoint-up(md) {
-        margin-left: auto;
-      }
     }
   }
 }
