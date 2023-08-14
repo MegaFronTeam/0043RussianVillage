@@ -77,16 +77,17 @@
 			content: unset;
 		}
 	}
-	#modal-call,
-	#modal-question, 
-	#modal-help-us {
+	& > * {
 		@include media-breakpoint-down(md) {
 			height: 100%;
+			width: 100%;
 			.modal-win {
 				display: flex;
 				height: 100%;
 				flex-direction: column;
-				justify-content: center;
+				// justify-content: center;
+				overflow-x: hidden;
+				overflow-y: auto;
 			}
 		}
 	}

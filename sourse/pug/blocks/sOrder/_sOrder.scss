@@ -238,15 +238,18 @@
 	}
 	.addBlock {
 		background-color: $gray-200;
-		max-width: rem(94);
+		// max-width: rem(94);
 		border-radius: rem(4);
+		max-width: min-content;
 		@include media-breakpoint-up(md) {
 			max-width: rem(108);
 			margin-left: 0;
 		}
 		input {
 			background-color: $gray-200;
+			width: 100%;
 			height: rem(32);
+			min-width: rem(20);
 			@include media-breakpoint-up(md) {
 				height: rem(40);
 			}
