@@ -241,3 +241,10 @@ mixin tags(tags=['Бассейны', 'Батуты', 'Детские компл�
 			each tag in tags
 				+e.slide.swiper-slide
 					+e.tag(href='#')!= tag
+
+mixin sDirectionCard(img, text)
+	+b.direction-item.bg-wrap(href='#')
+		+img(`img/${img}`, 'bg').picture-bg
+		+e.text 
+			!= text
+			+icon('chevron-right')
