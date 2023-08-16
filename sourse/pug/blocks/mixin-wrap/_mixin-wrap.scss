@@ -1171,6 +1171,9 @@
     &:not(:last-of-type) {
       margin-bottom: rem(8);
     }
+    &.active {
+      color: $link-hover-color;
+    }
   }
   &__categories-link {
     position: relative;

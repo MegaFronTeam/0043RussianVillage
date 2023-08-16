@@ -75,6 +75,8 @@
 			font-size: rem(136);
 			font-weight: 700;
 			@include media-breakpoint-up(md) {
+				margin-bottom: 15px;
+				line-height: 1;
 				font-size: rem(280);
 			}
 		}

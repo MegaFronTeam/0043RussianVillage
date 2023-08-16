@@ -632,6 +632,15 @@ iframe {
 .bg-green {
 	background-color: $link-hover-color;
 }
+.bg-white {
+	background-color: $white;
+	.block-with-aside {
+		padding-top: rem(20);
+		@include media-breakpoint-up(md) {
+			padding-top: rem(40);
+		}
+	}
+}
 
 .tooltip {
 	--bs-tooltip-max-width: #{rem(295)};
@@ -686,10 +695,13 @@ iframe {
 	align-items: center;
 	justify-content: center;
 	height: 100vh;
-	background-image: url('../img/404-bottom-bg.png');
+	background-image: url('../img/404-bottom-bg-sm.svg');
 	background-repeat: no-repeat;
 	background-size: 100% auto;
 	background-position: bottom center;
+	@include media-breakpoint-up(md) {
+		background-image: url('../img/404-bottom-bg.svg');
+	}
 	.main-wrapper {
 		padding-top: 0;
 	}
@@ -701,7 +713,7 @@ iframe {
 		z-index: -1;
 		width: 137px;
 		height: 127px;
-		background-image: url('../img/404-left-bg.png');
+		background-image: url('../img/404-left-bg.svg');
 		background-size: 100% 100%;
 		background-color: transparent;
 		opacity: 1;
@@ -712,7 +724,7 @@ iframe {
 	}
 	&::after {
 		position: absolute;
-		content: url('../img/404-right-bg.png');
+		content: url('../img/404-right-bg.svg');
 		top: 10px;
 		right: 0;
 		z-index: -1;
@@ -721,6 +733,29 @@ iframe {
 			top: 10%;
 			right: 10%;
 			transform: none;
+		}
+	}
+}
+
+.help-menu {
+	&__title {
+		margin-bottom: 4px;
+		font-size: 16px;
+		font-weight: 600;
+	}
+	&__list {
+		list-style-type: none;
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+	}
+	&__link {
+		font-size: 13px;
+		color: $dark-text;
+		&--active {
+			color: $link-hover-color;
 		}
 	}
 }

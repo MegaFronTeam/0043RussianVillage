@@ -171,6 +171,10 @@
 	}
 	&__video-subtitle{
 		margin-bottom: 8px;
+		font-size: rem(16);
+		@include media-breakpoint-up(md) {
+			font-size: rem(19);
+		}
 	}
 	&__video {
 		position: absolute;
@@ -179,7 +183,7 @@
 		width: 100%;
 		height: 100%;
 	}
-	blockquote {
+	&__blockquote {
 		padding: rem(24) rem(16);
 		font-size: 15px;
 		font-style: normal;

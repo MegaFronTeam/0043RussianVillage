@@ -53,6 +53,9 @@
 		}
 	}
 	&--recipe {
+		.seen-card {
+			border: none;
+		}
 		.seen-card__img-wrap {
 			border-radius: 8px;
 			overflow: hidden;

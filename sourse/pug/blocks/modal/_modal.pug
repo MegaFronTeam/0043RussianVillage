@@ -123,5 +123,18 @@ mixin modal()
 					+e.SPAN.input-title Отзыв
 					+e.TEXTAREA.input.form-control(placeholder='Оставьте свой отзыв' class="is-invalid")
 					.invalid-feedback Поле обязательно для заполнения. Напишите отзыв.
+	div(id="modal-resume"  style="display: none" )
+		+b.modal-win--resume
+			+form-wrap
+				+e.title.form-data.h5.text-center Обратный звонок
+				+input("Введите свое имя", 'text', 'Имя*')(required)
+				+input("Введите свою фамилию", 'text', 'Имя*')(required)
+				+input("дд.мм.гггг", 'text', 'Дата рождения')(required)
+				+input("Выберите должность",'select', 'Желаемая должность')
+				+input('+7 (      )     -     -', 'tel', 'Телефон*')(required)
+				+input('Введите свой e-mail', 'email', 'E-mail')
+				input(type="file" class="resume-filepod")
+				+e.BUTTON.btn.btn.btn-primary(type="submit"  )   Отправить резюме
+				+policy()
 	// #modal-call
 	// end modals
