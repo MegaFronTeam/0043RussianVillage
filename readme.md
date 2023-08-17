@@ -24,6 +24,9 @@
 20. <https://megafronteam.github.io/0043RussianVillage/public/13-help.html>
 20. <https://megafronteam.github.io/0043RussianVillage/public/13-help-2.html>
 20. <https://megafronteam.github.io/0043RussianVillage/public/13-help-3.html>
+20. <https://megafronteam.github.io/0043RussianVillage/public/13-help-4.html>
+20. <https://megafronteam.github.io/0043RussianVillage/public/13-help-5.html>
+20. <https://megafronteam.github.io/0043RussianVillage/public/13-help-6.html>
 21. <https://megafronteam.github.io/0043RussianVillage/public/17-recipe.html>
 22. <https://megafronteam.github.io/0043RussianVillage/public/17-recipe-2.html>
 23. <https://megafronteam.github.io/0043RussianVillage/public/18-articles.html>

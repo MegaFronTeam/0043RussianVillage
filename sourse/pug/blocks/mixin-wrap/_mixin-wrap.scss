@@ -1054,6 +1054,22 @@
       }
     }
   }
+  &__col--refund {
+    .section-title {
+      margin-bottom: rem(24);
+      @include media-breakpoint-down(md) {
+        padding-top: 24px;
+      }
+    }
+    h2 {
+      margin-bottom: rem(24);
+    }
+    p {
+      margin-bottom: rem(24);
+      font-weight: 500;
+      line-height: 150%;
+    }
+  }
 }
 
 .filter {

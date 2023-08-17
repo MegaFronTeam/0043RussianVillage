@@ -1,0 +1,164 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sPopularCategories/_sPopularCategories.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sIndividualOrder/_sIndividualOrder.pug
+include ../blocks/sBestsellers/_sBestsellers.pug
+include ../blocks/sMakingAnOrder/_sMakingAnOrder.pug
+include ../blocks/sOrderPayment/_sOrderPayment.pug
+include ../blocks/sProdCardInfo/_sProdCardInfo
+
+block variables
+	- let  mainPage= 'bg-white' 
+	- let  bg= ''
+
+block title
+	- let  title= 'География заказа'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		//- +page-head('Летние кухни, гриль зоны, барбекю комплексы', '', 'h4', 'Дачные постройки и конструкции', 'Летние кухни, гриль зоны, барбекю комплексы', 'Барбекю комплексы')
+		+b.block-with-aside
+			.container
+				+e.row.row
+					+e.col.col-12.col-md-auto
+						+b.help-menu
+							+e.title Помощь
+							+e.dd-button--js.d-md-none.BUTTON Получение заказа
+							+e.list.UL.d-md-block
+								+e.item.LI
+									+e.link(href="#") Как оформить заказ
+								+e.item.LI
+									+e.link(href="#") Оплата заказа
+								+e.item.LI
+									+e.link(href="#") Получение заказа
+								+e.item.LI
+									+e.link--active(href="#") География продаж
+								+e.item.LI
+									+e.link(href="#") Доставка и установка
+								+e.item.LI
+									+e.link(href="#") Возврат товара
+					.col.sProdCardInfo.sProdCardInfo--geo
+						+b.receiptGoods
+							+e.item
+								+e.head
+									.h6 География поставок
+									span Москва
+								+e.wrap
+									+e.subCity Московская область
+									ul
+										li Андреевка
+										li Балашиха
+										li Белоозерский
+										li Большие
+										li Бронницы
+										li Быково
+										li Видное
+										li Видное (Ленинский)
+										li Власиха
+										li Волоколамск
+										li Воскресенск
+										li Восход
+										li Вяземы
+										li Дедовск
+										li Дзержинск
+										li Дмитров
+										li Долгопрудный
+										li Домодедово
+										li Дубна
+										li Егорьевск
+										li Жуковский
+										li Запрудня
+										li Зарайск
+										li Звездный городок
+										li Ивантеевка
+										li Ильинский
+										li Истра
+										li Калининец
+										li Кашира
+										li Климовск
+										li Клин
+										li Коломна
+										li Королев
+										li Котельники
+										li Красково
+										li Красноармейск
+										li Красногорск
+										li Краснознаменск
+										li Ликино-Дулево
+										li Лобня
+										li Лосино-Петровский
+										li Лотошино
+										li Луховицы
+										li Лыткарино
+										li Львовский
+										li Люберцы
+										li Малаховка
+										li Михнево
+										li Можайск
+										li Молодежный
+										li Монино
+										li Москва
+										li Мытищи
+										li Наро-Фоминск
+										li Нахабино
+										li Некрасовский
+										li Ногинск
+										li Ногинск (Богородский)
+										li Одинцово
+										li Озеры
+										li Октябрьский
+										li Орехово-Зуева
+										li Павловский Посад
+										li Подольск
+										li Правдинский
+										li Протвино
+										li Пушкино
+										li Раменское
+										li Реутов
+										li Руза
+										li Селятино
+										li Сергиев Посад
+										li Серебряные Пруды
+										li Серпухов
+										li Солнечногорск
+										li Софрино
+										li Ступино
+										li Талдом
+										li Томилино
+										li Тучково
+										li Удельная
+										li Фрязино
+										li Фряново
+										li Химки
+										li Черноголовка
+										li Чехов
+										li Шатура
+										li Шаховская
+										li Щелково
+										li Электросталь
+									.receiptGoods__show-more.show-more-btn--js
+										.show-more Показать еще
+										.hide Скрыть
+										+icon('chevron-down')
+							+e.list-wrap
+								.h6 Доставка в соседние области обговаривается отдельно
+								p Время работы службы доставки: ПН - ВС: с 09:00 до 21:00
+
+	+parts('footer')
+      
+
+
+

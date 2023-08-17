@@ -1,0 +1,59 @@
+extends ../layout/main.pug
+
+include ../blocks/headerBlock/_headerBlock.pug
+include ../blocks/sForm/_sForm.pug
+include ../blocks/sContent/_sContent.pug
+ 
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sCatalog/_sCatalog.pug
+include ../blocks/sAlsoWatch/_sAlsoWatch.pug
+include ../blocks/sPopularCategories/_sPopularCategories.pug
+include ../blocks/sBanners/_sBanners.pug
+include ../blocks/sIndividualOrder/_sIndividualOrder.pug
+include ../blocks/sBestsellers/_sBestsellers.pug
+include ../blocks/sMakingAnOrder/_sMakingAnOrder.pug
+include ../blocks/sOrderPayment/_sOrderPayment.pug
+include ../blocks/sProdCardInfo/_sProdCardInfo.pug
+
+block variables
+	- let  mainPage= 'bg-white' 
+	- let  bg= ''
+
+block title
+	- let  title= 'Доставка и установка'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	
+	
+	+parts('header')
+	+topBtns().d-md-none
+	main
+		//- +page-head('Летние кухни, гриль зоны, барбекю комплексы', '', 'h4', 'Дачные постройки и конструкции', 'Летние кухни, гриль зоны, барбекю комплексы', 'Барбекю комплексы')
+		+b.block-with-aside
+			.container
+				+e.row.row
+					+e.col.col-12.col-md-auto
+						+b.help-menu
+							+e.title Помощь
+							+e.dd-button--js.d-md-none.BUTTON Получение заказа
+							+e.list.UL.d-md-block
+								+e.item.LI
+									+e.link(href="#") Как оформить заказ
+								+e.item.LI
+									+e.link(href="#") Оплата заказа
+								+e.item.LI
+									+e.link(href="#") Получение заказа
+								+e.item.LI
+									+e.link(href="#") География продаж
+								+e.item.LI
+									+e.link--active(href="#") Доставка и установка
+								+e.item.LI
+									+e.link(href="#") Возврат товара
+					.col
+						+sOrderPayment3
+	+parts('footer')
+      
+
+
+
