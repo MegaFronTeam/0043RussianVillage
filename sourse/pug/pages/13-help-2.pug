@@ -12,13 +12,14 @@ include ../blocks/sBanners/_sBanners.pug
 include ../blocks/sIndividualOrder/_sIndividualOrder.pug
 include ../blocks/sBestsellers/_sBestsellers.pug
 include ../blocks/sMakingAnOrder/_sMakingAnOrder.pug
+include ../blocks/sOrderPayment/_sOrderPayment.pug
 
 block variables
 	- let  mainPage= 'bg-white' 
 	- let  bg= ''
 
 block title
-	- let  title= 'Как оформить заказ'
+	- let  title= 'Оплата заказа'
 	title= title
 block pagecontent
 	//- +mob-mnu()
@@ -34,12 +35,12 @@ block pagecontent
 					+e.col.col-12.col-md-auto
 						+b.help-menu
 							+e.title Помощь
-							+e.dd-button--js.d-md-none.BUTTON Как оформить заказ
+							+e.dd-button--js.d-md-none.BUTTON Оплата заказа
 							+e.list.UL.d-md-block
 								+e.item.LI
-									+e.link--active(href="#") Как оформить заказ
+									+e.link(href="#") Как оформить заказ
 								+e.item.LI
-									+e.link(href="#") Оплата заказа
+									+e.link--active(href="#") Оплата заказа
 								+e.item.LI
 									+e.link(href="#") Получение заказа
 								+e.item.LI
@@ -48,8 +49,8 @@ block pagecontent
 									+e.link(href="#") Доставка и установка
 								+e.item.LI
 									+e.link(href="#") Возврат товара
-					+e.col--reg.col
-						+sMakingAnOrder
+					.col
+						+sOrderPayment
 	+parts('footer')
       
 

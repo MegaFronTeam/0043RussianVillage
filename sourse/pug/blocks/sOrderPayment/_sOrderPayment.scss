@@ -1,0 +1,109 @@
+// start .sOrderPayment
+.sOrderPayment {
+	counter-reset: number;
+	--sPT: #{rem(0)};
+	--sPB: #{rem(50)};
+	--sTPB: #{rem(24)};
+	@include media-breakpoint-down(md) {
+		--sPB: #{rem(22)};
+	}
+	&__row{
+		// --bs-gutter-x: #{rem()};
+		// --bs-gutter-y: #{rem()};
+
+	}
+	.section-title{
+		h1 {
+			@include media-breakpoint-down(md) {
+				padding-top: rem(23);
+				font-size: rem(18);
+			}
+		}
+	}
+	&__title {
+		margin-bottom: rem(23);
+		font-weight: 600;
+	}
+	&__dl-title {
+		margin-bottom: 8px;
+	}
+	&__dd {
+		margin-bottom: 8px;
+	}
+	&__col{
+
+	}
+	&__item{
+		
+	}
+	&__dt {
+		float: left;
+		font-weight: 500;
+	}
+	.dd-group__item {
+		border-radius: 8px;
+		background: $body-secondary-bg;
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		&.active {
+			// margin-bottom: 0;
+			.dd-group__head::after {
+				transform: rotate(135deg);
+				transform-origin: 50% 50%;
+			}
+		}
+	}
+	.dd-group__head {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		line-height: 1;
+		padding: rem(16);
+		font-size:rem(19);
+		font-weight: 600;
+		@include media-breakpoint-up(md) {
+			padding: rem(20);
+		}
+		&::after {
+			display: inline-block;
+			content: '';
+			margin-left: 15px;
+			width:10px;
+			height: 10px;
+			border-left: 2px solid $body-color;
+			border-bottom: 2px solid $body-color;
+			transition: transform .3s ease-in-out;
+			transform: rotate(-45deg);
+			flex-shrink: 0;
+			@include media-breakpoint-up(md) {
+				width: 13px;
+				height: 13px;
+			}
+		}
+	}
+	.dd-group__content {
+		padding: 0 16px 16px;
+		@include media-breakpoint-up(md) {
+			padding: 0 24px 32px;
+		}
+	}
+	.dd-group__content.active {
+		display: block;
+	}
+	p {
+		font-size: 15px;
+	}
+	.numbered-list li p:last-child {
+		margin-bottom: 0;
+	}
+
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-between(md, xl) {}
+	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-down(xl) {}
+} // end.sOrderPayment

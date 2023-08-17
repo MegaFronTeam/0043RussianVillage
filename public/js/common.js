@@ -305,6 +305,10 @@ function eventHandler() {
 		},
 	});
 
+	$(document).on("click", '.help-menu__dd-button--js', function () {
+		$(this).next().slideToggle(300);
+	})
+
 	$('[data-bs-toggle="tooltip"]').tooltip({
 		animation: true,
 		// placement: 'bottom',
