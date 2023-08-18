@@ -197,7 +197,7 @@
 		background-size: cover;
 		@include media-breakpoint-up(md) {
 			padding: rem(24) rem(32);
-			background-size: auto;
+			background-size: auto 100%;
 		}
 	}
 	&__share {
