@@ -34,12 +34,17 @@ mixin headerBlock()
 				.swiper-pagination
 	// end headerBlock
 
-mixin headerBlock2(img, title, text, btn)
+mixin headerBlock2(img, title, text, btn, picture)
 	// start headerBlock
 	+b.headerBlock--2.section#headerBlock&attributes(attributes)
 		.container
 			+e.wrap.bg-wrap
-				+img(`img/${img}`, 'bg').picture-bg
+				if picture
+					picture
+						source(media="(min-width: 768px)", srcset=`img/${img}`)
+						img(src=`img/${picture}`, alt="").picture-bg
+				else
+					+img(`img/${img}`, 'bg').picture-bg
 				+e.content
 					h1.h3!= title
 					if text

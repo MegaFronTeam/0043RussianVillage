@@ -500,10 +500,11 @@
       font-weight: 600;
       color: $gray-700;
       line-height: 1;
-      margin-left: auto;
-      @include media-breakpoint-up(md) {
-        margin-left: rem(8);
-      }
+      margin-left: rem(8);
+      // margin-left: auto;
+      // @include media-breakpoint-up(md) {
+      //   margin-left: rem(8);
+      // }
     }
   }
   &__btn {

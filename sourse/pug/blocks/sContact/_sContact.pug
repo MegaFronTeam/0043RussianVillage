@@ -10,21 +10,21 @@ mixin sContact()
 							h4 Контактная инормация
 							+e.item
 								p Оформить заказ и узнать наличие 
-								a(href="tel:+74950217474")
+								a(href="tel:+74950217474").icon-wrap
 									+iconC('PhoneCall')
 									| +7 (495) 021-74-74 
-								a(href="tel:+79953828855").d-md-none
+								a(href="tel:+79953828855").icon-wrap.d-md-none
 									+iconC('whatsapp2')
 									| +7 (995) 382-88-55 
-								a(href="tel:+79953828855").d-md-none
+								a(href="tel:+79953828855").icon-wrap.d-md-none
 									+iconC('tg2')
 									| +7 (995) 382-88-55
 							+e.item
 								p Электронная почта для заказа
-								a(href="mailto:rbesedka@gmail.com")
+								a(href="mailto:rbesedka@gmail.com").icon-wrap
 									+img('img/mail2.png')
 									| rbesedka@gmail.com
-							+e.item--adress
+							+e.item--adress.icon-wrap
 								+iconC('MapPin')
 								span Адрес склада: 
 								| г. Москва, Рябиновая ул, 37, стр. 1
