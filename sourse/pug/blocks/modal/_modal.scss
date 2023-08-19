@@ -363,7 +363,67 @@
 		// }
 	}
 }
-
+.resume-filepod {
+}
+.filepond--drop-label {
+	padding: 16px;
+	border-radius: 8px;
+	background-color: $body-secondary-bg;
+	label {
+		color: $body-color;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 150%;
+	}
+}
+.filepond--item {
+	
+}
+.filepond--file-wrapper {
+	background: $white;
+	border-radius: $border-radius-sm;
+	border: 1px solid $border-color;
+}
+.filepond--file {
+	
+}
+.filepond--file-info {
+	color: $body-color;
+}
+.filepond--file-action-button {
+	color: $body-color;
+	background-color: transparent;
+}
+.filepond--file-info {
+	// max-width: 100px;
+}
+.filepond--file-info-main {
+	margin-bottom: 2px;
+	color:	$body-color;
+	font-family: Montserrat;
+	font-size: 11px;
+	font-weight: 500;
+}
+.filepond--file-info-sub {
+	color: $dark-text;
+	font-size: 11px;
+	font-weight: 500;
+}
+.filepond--file-status-main {
+	color: $danger;
+	font-size: 11px;
+	font-weight: 500;
+}
+.filepond--file-status-sub {
+	color: $body-color;
+	font-size: 11px;
+	font-style: normal;
+	font-weight: 500;
+}
+.filepond--file-action-button.filepond--file-action-button {
+	width: 16px;
+	height: 16px;
+}
 .filepond--credits {
 	display: none;
 }

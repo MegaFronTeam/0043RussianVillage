@@ -238,15 +238,17 @@
 			min-height: rem(376);
 			padding: rem(32);
 			margin-top: rem(32);
-			margin-bottom: rem(48);
+			margin-bottom: rem(32);
 		}
 		h1 {
 			line-height: 1.14;
-			margin-bottom: rem(12);
+			// margin-bottom: rem(12);
+			margin-bottom: 0;
 			max-width: rem(416);
 			@include media-breakpoint-down(md) {
-				margin-bottom: rem(8);
+				// margin-bottom: rem(8);
 				font-size: rem(24);
+				margin-top: auto;
 			}
 		}
 		p {

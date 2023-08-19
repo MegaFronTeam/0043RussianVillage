@@ -615,9 +615,9 @@
 		.show-more-btn {
 			--bs-btn-padding-x: #{rem(2)};
 			width: 100%;
-			max-width: rem(327);
 			margin-top: rem(16);
 			@include media-breakpoint-up(md) {
+				max-width: rem(327);
 				margin-top: rem(24);
 			}
 		}
