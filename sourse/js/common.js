@@ -313,53 +313,55 @@ function eventHandler() {
 	const sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
 		slidesPerView: 1,
 		navigation: {
-			nextEl: '.sProdCard__swiper-wrap .swiper-button-next',
-			prevEl: '.sProdCard__swiper-wrap .swiper-button-prev',
+			nextEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-next',
+			prevEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-prev',
 		},
 		thumbs: {
 			swiper: sProdCardThumbSwiper,
 		},
 	});
-
-	const sProdCardThumbSwiper2 = new Swiper('.sProdCard__thumb-slider--thumb-js-2', {
-		slidesPerView: 'auto',
-		spaceBetween: 3,
-		// direction: 'vertical',
-		// observer: true,
-		breakpoints: {
-			768: {
-				slidesPerView: 7,
-				direction: 'vertical',
-			}
-		},
-		navigation: {
-			nextEl: '.sProdCard__thumb-arrow-wrap--modal .swiper-button-next',
-			prevEl: '.sProdCard__thumb-arrow-wrap--modal .swiper-button-prev',
-		},
-	});
-	const sProdCardSwiper22 = new Swiper('.sProdCard__slider--js-2', {
-		slidesPerView: 1,
-		observer: true,
-		observeParents: true, 
-		navigation: {
-			nextEl: '.sProdCard__swiper-wrap--modal .swiper-button-next',
-			prevEl: '.sProdCard__swiper-wrap--modal .swiper-button-prev',
-		},
-		thumbs: {
-			swiper: sProdCardThumbSwiper2,
-		},
-	});
-
-	sProdCardSwiper22.controller.control = [sProdCardSwiper2];
-	sProdCardSwiper2.controller.control = sProdCardSwiper22;
 	
 	Fancybox.bind("[data-fancybox='modal-with-slider']", {
 		dragToClose: false,
 		on: {
+			ready: () => {
+				// console.log('true');
+				const sProdCardThumbSwiper2 = new Swiper('.sProdCard__thumb-slider--thumb-js-2', {
+					slidesPerView: 'auto',
+					spaceBetween: 3,
+					// direction: 'vertical',
+					// observer: true,
+					breakpoints: {
+						768: {
+							slidesPerView: 7,
+							direction: 'vertical',
+						}
+					},
+					navigation: {
+						nextEl: '.sProdCard__thumb-arrow-wrap--modal .swiper-button-next',
+						prevEl: '.sProdCard__thumb-arrow-wrap--modal .swiper-button-prev',
+					},
+				});
+				const sProdCardSwiper22 = new Swiper('.sProdCard__slider--js-2', {
+					slidesPerView: 1,
+					observer: true,
+					observeParents: true, 
+					navigation: {
+						nextEl: '.sProdCard__swiper-wrap--modal .swiper-button-next',
+						prevEl: '.sProdCard__swiper-wrap--modal .swiper-button-prev',
+					},
+					thumbs: {
+						swiper: sProdCardThumbSwiper2,
+					},
+				});
+
+				sProdCardSwiper22.controller.control = [sProdCardSwiper2];
+				sProdCardSwiper2.controller.control = sProdCardSwiper22;
+			},
 			reveal: (fancybox) => {
 				// sProdCardSwiper22.init();
 				// sProdCardSwiper2.controller.control = sProdCardSwiper22;
-				console.log(fancybox);
+				// console.log(fancybox);
 				fancybox.container.classList.add("fancybox-modal-slider-container");
 			},
 		},
