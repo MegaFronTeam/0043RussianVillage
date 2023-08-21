@@ -274,6 +274,22 @@
 			--bs-btn-padding-y: #{rem(11)};
 
 			width: 100%;
+			&.btn-light {
+				cursor: auto;
+
+				--bs-btn-color: #{$gray-400};
+				--bs-btn-bg: #{$gray-200};
+				--bs-btn-border-color: #{$gray-200};
+				--bs-btn-hover-color: #{$gray-400};
+				--bs-btn-hover-bg: #{$gray-200};
+				--bs-btn-hover-border-color: #{$gray-200};
+				--bs-btn-active-color: #{$gray-400};
+				--bs-btn-active-bg: #{$gray-200}8;
+				--bs-btn-active-border-color: #{$gray-200};
+				--bs-btn-disabled-color: #{$gray-400};
+				--bs-btn-disabled-bg: #{$gray-200};
+				--bs-btn-disabled-border-color: #{$gray-200};
+			}
 		}
 		&__rate-item {
 			@include roww('16px', '', 'm');

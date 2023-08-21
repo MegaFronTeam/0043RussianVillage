@@ -30,7 +30,7 @@ mixin sProdCard(data)
 						+e.swiper-wrap.order-md-2
 							if data.discount
 								.badge.badge-orange Скидка -50%
-							+e.slider--js.swiper
+							+e.slider--js.swiper(data-fancybox='modal-with-slider' data-src="#modal-slider").btn-modal-js
 								.swiper-wrapper
 									-for(let i = 0; i < 9; i++)
 										+e.slide.swiper-slide

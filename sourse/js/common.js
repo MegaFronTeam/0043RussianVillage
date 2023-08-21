@@ -305,6 +305,54 @@ function eventHandler() {
 		},
 	});
 
+	const sProdCardThumbSwiper2 = new Swiper('.sProdCard__thumb-slider--thumb-js-2', {
+		slidesPerView: 'auto',
+		spaceBetween: 3,
+		// direction: 'vertical',
+		// observer: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 7,
+				direction: 'vertical',
+			}
+		},
+		navigation: {
+			nextEl: '.sProdCard__thumb-arrow-wrap--modal .swiper-button-next',
+			prevEl: '.sProdCard__thumb-arrow-wrap--modal .swiper-button-prev',
+		},
+	});
+	const sProdCardSwiper22 = new Swiper('.sProdCard__slider--js-2', {
+		slidesPerView: 1,
+		observer: true,
+		observeParents: true, 
+		navigation: {
+			nextEl: '.sProdCard__swiper-wrap--modal .swiper-button-next',
+			prevEl: '.sProdCard__swiper-wrap--modal .swiper-button-prev',
+		},
+		thumbs: {
+			swiper: sProdCardThumbSwiper2,
+		},
+	});
+
+	sProdCardSwiper22.controller.control = [sProdCardSwiper2];
+	sProdCardSwiper2.controller.control = sProdCardSwiper22;
+	
+	Fancybox.bind("[data-fancybox='modal-with-slider']", {
+		dragToClose: false,
+		on: {
+			reveal: (fancybox) => {
+				// sProdCardSwiper22.init();
+				// sProdCardSwiper2.controller.control = sProdCardSwiper22;
+				console.log(fancybox);
+				fancybox.container.classList.add("fancybox-modal-slider-container");
+			},
+		},
+	});
+
+	// $('.sProdCard__slider--js').on('click', function() {
+	// 	sProdCardSwiper22.init();
+	// });
+
 	$(document).on("click", '.help-menu__dd-button--js', function () {
 		$(this).next().slideToggle(300);
 	})

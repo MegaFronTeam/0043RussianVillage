@@ -871,3 +871,25 @@ iframe {
 		font-weight: 600;
 	}
 }
+
+.modal-with-slider {
+	.fancybox-modal-slider-container:not(.is-compact) .fancybox__slide.has-close-btn {
+		padding-top: 0;
+	}
+	.fancybox__slide {
+		// padding: 0;
+		// &:before, &:after {
+		// 	content: unset;
+		// }
+		// background-color: #fff;
+	}
+	.fancybox-modal-slider-container {
+		--fancybox-bg: #fff;
+		z-index: 4000;
+	}
+	#modal-slider,
+	.sProdCard--modal, 
+	.sProdCard--modal .sProdCard__full-slider-wrap{
+		height: 100%;
+	}
+}
