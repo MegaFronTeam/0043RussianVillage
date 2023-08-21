@@ -15,7 +15,7 @@
 	// @include media-breakpoint-between(xl, xxl) {
 	// 	--bs-body-font-size: calc(#{$em-base} - 0.175rem + .12vw + .12vh);
 	// }
-	@include media-breakpoint-up(xl) {
+	@include media-breakpoint-up(xxl) {
 		--bs-body-font-size: calc(#{$em-base} - 0.175rem + .12vw + .12vh);
 	}
 	--sPT: #{rem(80 * .5)};

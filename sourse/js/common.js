@@ -269,7 +269,7 @@ function eventHandler() {
 
 	document.addEventListener('click', function(event) {
 		let profileTarget = event.target.closest('.top-btns__btn--profile-js');
-		if (profileTarget) {
+		if (profileTarget && window.matchMedia('(max-width: 768px)').matches) {
 			let profileMenu = document.querySelector('.profile-menu');
 			event.preventDefault();
 			profileTarget.classList.toggle('active');
@@ -278,7 +278,7 @@ function eventHandler() {
 		}
 	});
 	window.addEventListener('resize', () => {
-		if (window.matchMedia('(min-width: 992px)').matches) {
+		if (window.matchMedia('(min-width: 768px)').matches) {
 			$('body').removeClass('fixed-profile-menu');
 			$('.profile-menu').removeClass('active');
 			$('.top-btns__btn--profile-js').removeClass('active');

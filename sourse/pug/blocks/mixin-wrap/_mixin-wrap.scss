@@ -285,22 +285,24 @@
           display: none;
         }
       }
-      &.active {
-				.iconC-profile {
-					display: none;
-				}
-        .icon {
-          &-profile {
+      @include media-breakpoint-down(md) {
+        &.active {
+          .iconC-profile {
             display: none;
           }
-          &-close {
-            display: inline-block;
-						color: $btn-link-hover-color;
+          .icon {
+            &-profile {
+              display: none;
+            }
+            &-close {
+              display: inline-block;
+              color: $btn-link-hover-color;
+            }
+          }
+          span {
+            color: $btn-link-hover-color;
           }
         }
-				span {
-					color: $btn-link-hover-color;
-				}
       }
     }
   }
@@ -1465,6 +1467,10 @@
       font-size: rem(13);
       line-height: 1.23;
       color: $body-color;
+      &:hover {
+        background-color: $primary;
+        color: #fff;
+      }
     }
   }
 }

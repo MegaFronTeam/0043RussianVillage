@@ -210,13 +210,15 @@
     color: $primary !important;
     line-height: 1.23;
     margin-bottom: rem(16);
-    &:hover {
-      background-color: $primary;
-      color: #fff !important;
-      border-color: $primary;
-      .catalog-menu__icon-wrap {
-        color: $primary;
-        background-color: #fff;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        background-color: $primary;
+        color: #fff !important;
+        border-color: $primary;
+        .catalog-menu__icon-wrap {
+          color: $primary;
+          background-color: #fff;
+        }
       }
     }
     .icon {

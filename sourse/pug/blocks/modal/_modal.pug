@@ -152,7 +152,8 @@ mixin modal()
 									+e.img-wrap
 										.img-wrap-center
 											+img(`img/sProdCard-img-1.png`)
-					+arrow('chevron-down-dd', 'chevron-down-dd')
+					.d-none.d-md-block
+						+arrow('chevron-down-dd', 'chevron-down-dd')
 				+e.swiper-wrap--modal.order-1.order-md-2
 					+e.slider--js-2.swiper
 						.swiper-wrapper
@@ -161,7 +162,7 @@ mixin modal()
 									+e.img-wrap
 										.img-wrap-center
 											+img('img/sProdCard-img-1.png')
-
-					+arrow()
+					.d-none.d-md-block
+						+arrow()
 	// #modal-call
 	// end modals
