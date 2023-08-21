@@ -256,6 +256,9 @@
 		}
 	}
 	&--resume {
+		.select2 {
+			width: 100%;
+		}
 		.resume-filepod {
 		}
 		.filepond--drop-label {
@@ -278,7 +281,7 @@
 			border: 1px solid $border-color;
 		}
 		.filepond--file {
-			
+			align-items: center;
 		}
 		.filepond--file-info {
 			color: $body-color;
@@ -314,8 +317,8 @@
 			font-weight: 500;
 		}
 		.filepond--file-action-button.filepond--file-action-button {
-			// width: 16px;
-			// height: 16px;
+			width: 26px;
+			height: 26px;
 		}
 		.filepond-load {
 			display: flex;

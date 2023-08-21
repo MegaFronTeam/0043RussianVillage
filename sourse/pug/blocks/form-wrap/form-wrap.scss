@@ -329,6 +329,7 @@ input::-webkit-inner-spin-button {
 	@extend .form-select;
 	height: auto !important;
 	padding-left: rem(10);
+	background-color: transparent;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -337,4 +338,15 @@ input::-webkit-inner-spin-button {
 
 .select2-container--default .select2-selection--single .select2-selection__arrow {
 	display: none;
+}
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+	background-color: $link-hover-color;
+}
+.select2-dropdown {
+	@include media-breakpoint-down(md) {
+		background-color: $gray-200;
+	}
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	color: #999EAB;
 }
