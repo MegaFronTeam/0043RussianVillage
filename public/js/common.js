@@ -7,6 +7,22 @@ function eventHandler() {
 
 	JSCCommon.init()
 
+	$(".custom-select-js").select2({
+		tags: true, 
+		// allowClear: true,
+		dropdownParent: $(".custom-select-js").parent(),
+	});
+
+
+	$(".custom-select-js").each(function(){ 
+		if (!this.value)  return;
+		$(this).parents(".form-wrap__input-wrap").find(".form-wrap__input-title").addClass("active")
+
+	})
+	$(".custom-select-js").on('select2:selecting', function (e) {
+		console.log('Selecting: ', e.params.args.data);
+		$(this).parents(".form-wrap__input-wrap").find(".form-wrap__input-title").addClass("active")
+	});
 
 	function whenResize() {
 		JSCCommon.setFixedNav();
@@ -491,7 +507,7 @@ function eventHandler() {
 		labelMaxFileSize:'Нажмите для отмены',		
 		styleButtonRemoveItemPosition: 'right',
 		maxFileSize: '100KB',
-		iconRemove: '<svg width="26" height="26" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="close"><path id="close_2" d="M4.14979 3.20698C3.88944 2.94663 3.46733 2.94663 3.20698 3.20698C2.94663 3.46733 2.94663 3.88944 3.20698 4.14979L7.0568 7.99961L3.20702 11.8494C2.94667 12.1097 2.94667 12.5319 3.20702 12.7922C3.46737 13.0526 3.88948 13.0526 4.14983 12.7922L7.99961 8.94242L11.8494 12.7922C12.1097 13.0526 12.5319 13.0526 12.7922 12.7922C13.0526 12.5319 13.0526 12.1097 12.7922 11.8494L8.94242 7.99961L12.7922 4.14979C13.0526 3.88944 13.0526 3.46733 12.7922 3.20698C12.5319 2.94663 12.1098 2.94663 11.8494 3.20698L7.99961 7.0568L4.14979 3.20698Z" fill="#292929"/></g></svg>',
+		iconRemove: '<svg width="26" height="26" viewBox="-2 -2 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid"><g id="close"><path id="close_2" d="M4.14979 3.20698C3.88944 2.94663 3.46733 2.94663 3.20698 3.20698C2.94663 3.46733 2.94663 3.88944 3.20698 4.14979L7.0568 7.99961L3.20702 11.8494C2.94667 12.1097 2.94667 12.5319 3.20702 12.7922C3.46737 13.0526 3.88948 13.0526 4.14983 12.7922L7.99961 8.94242L11.8494 12.7922C12.1097 13.0526 12.5319 13.0526 12.7922 12.7922C13.0526 12.5319 13.0526 12.1097 12.7922 11.8494L8.94242 7.99961L12.7922 4.14979C13.0526 3.88944 13.0526 3.46733 12.7922 3.20698C12.5319 2.94663 12.1098 2.94663 11.8494 3.20698L7.99961 7.0568L4.14979 3.20698Z" fill="#292929"/></g></svg>',
 		iconProcess: '<div class="filepond-load"><div></div><div></div><div></div><div></div></div>',
 	});
 
