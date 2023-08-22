@@ -141,41 +141,41 @@ mixin sOrder2()
 									span Телефон
 									a(href="tel:84956468218") 8 (495) 646-82-18
 								+e.map
-									//- #map
-									//- script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
-									//- script.
-									//- 	var myMap;
+									#map
+									script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+									script.
+										var myMap;
 
-									//- 	// Дождёмся загрузки API и готовности DOM.
-									//- 	ymaps.ready(init);
+										// Дождёмся загрузки API и готовности DOM.
+										ymaps.ready(init);
 
-									//- 	function init () {
-									//- 		// Создание экземпляра карты и его привязка к контейнеру с
-									//- 		// заданным id ("map").
-									//- 		myMap = new ymaps.Map('map', {
-									//- 			// При инициализации карты обязательно нужно указать
-									//- 			// её центр и коэффициент масштабирования.
-									//- 			center:[55.74498979811124,37.589906491821296], // Москва
-									//- 			zoom:14
-									//- 		}),
-									//- 		myPlacemark = new ymaps.Placemark([55.74498979811124,37.589906491821296], {
-									//- 			hintContent: 'Собственный значок метки',
-									//- 			balloonContent: 'Это красивая метка'
-									//- 		}, {
-									//- 			// Опции.
-									//- 			// Необходимо указать данный тип макета.
-									//- 			iconLayout: 'default#image',
-									//- 			// Своё изображение иконки метки.
-									//- 			iconImageHref: 'img/map-pin.png',
-									//- 			// Размеры метки.
-									//- 			iconImageSize: [47, 73],
-									//- 			// Смещение левого верхнего угла иконки относительно
-									//- 			// её "ножки" (точки привязки).
-									//- 			iconImageOffset: [-5, -38],
-									//- 		});
-									//- 		myMap.geoObjects
-									//- 			.add(myPlacemark)
-									//- 	};
+										function init () {
+											// Создание экземпляра карты и его привязка к контейнеру с
+											// заданным id ("map").
+											myMap = new ymaps.Map('map', {
+												// При инициализации карты обязательно нужно указать
+												// её центр и коэффициент масштабирования.
+												center:[55.74498979811124,37.589906491821296], // Москва
+												zoom:14
+											}),
+											myPlacemark = new ymaps.Placemark([55.74498979811124,37.589906491821296], {
+												hintContent: 'Собственный значок метки',
+												balloonContent: 'Это красивая метка'
+											}, {
+												// Опции.
+												// Необходимо указать данный тип макета.
+												iconLayout: 'default#image',
+												// Своё изображение иконки метки.
+												iconImageHref: 'img/map-pin.png',
+												// Размеры метки.
+												iconImageSize: [47, 73],
+												// Смещение левого верхнего угла иконки относительно
+												// её "ножки" (точки привязки).
+												iconImageOffset: [-5, -38],
+											});
+											myMap.geoObjects
+												.add(myPlacemark)
+										};
 						+e.table-wrap.d-md-none
 							table
 								tr
