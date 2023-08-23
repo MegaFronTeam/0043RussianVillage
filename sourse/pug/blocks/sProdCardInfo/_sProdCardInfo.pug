@@ -3,7 +3,7 @@ mixin sProdCardInfo(data)
 	+b.sProdCardInfo.section#sProdCardInfo&attributes(attributes)
 		.container
 			+e.wrap
-				.tabs
+				.tabs(data-aos="fade-up" data-aos-duration="400")
 					.tabs__caption.swiper.freemode-slider--js
 						.swiper-wrapper
 							.tabs__btn.swiper-slide.active Описание и характеристики

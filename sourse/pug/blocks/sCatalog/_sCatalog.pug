@@ -1,7 +1,7 @@
 mixin sCatalog(horizontal)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		+e.head-row.row
+		+e.head-row.row(data-aos="fade-up" data-aos-duration="400")
 			.col
 				.d-md-none
 					+select('', 'По популярности', 'Сначала дешевые', 'Сначала дороже', 'По скидке', 'Новинки')
@@ -104,15 +104,15 @@ mixin sCatalog(horizontal)
 					+card('card-31.png', '93 561 ₽', 'Комплектдля возведения хозблока', 'bg', true)
 				.col-6.col-md-3
 					+card('card-32.png', '84 188 ₽', 'Комплект парковочного навеса', 'bg', true)
-		+e.show-more-btn.btn.btn-outline-primary(href='#') Показать еще
-		+pugin()
+		+e.show-more-btn.btn.btn-outline-primary(href='#' data-aos="fade-up" data-aos-duration="400") Показать еще
+		+pugin()(data-aos="fade-up" data-aos-duration="400")
 
 	// end sCatalog
 
 mixin sCatalog29(data)
 	// start sCatalog
 	+b.sCatalog.section&attributes(attributes)
-		+e.head-row.row.d-md-none
+		+e.head-row.row.d-md-none(data-aos="fade-up" data-aos-duration="400")
 			.col.d-md-none
 				.sCatalog__filter-btn.sCatalog__filter--js
 					+e.filter-title Фильтр
@@ -168,7 +168,7 @@ mixin sCatalog29(data)
 				+recipe-card('recipe-img-11.jpg', 'Киноа с печеными овощами и козьим сыром', 'Хорошо добавить в такой салат яйцо, или кусочки рыбы, скажем консервированного тунца, или')
 			.col-6.col-md-3
 				+recipe-card('recipe-img-12.jpg', 'Киноа с печеными овощами и козьим сыром', 'Хорошо добавить в такой салат яйцо, или кусочки рыбы, скажем консервированного тунца, или')
-		.sBestsellers__btn.btn.btn-sm.btn-light(href='#') Показать еще
+		.sBestsellers__btn.btn.btn-sm.btn-light(href='#' data-aos="fade-up" data-aos-duration="400") Показать еще
 		
 mixin sCatalog29enc(data)
 	// start sCatalog
@@ -229,6 +229,6 @@ mixin sCatalog29enc(data)
 				+recipe-card('enc-11.jpg', 'Киноа с печеными овощами и козьим сыром', 'Хорошо добавить в такой салат яйцо, или кусочки рыбы, скажем консервированного тунца, или')
 			.col-6.col-md-3
 				+recipe-card('enc-12.jpg', 'Киноа с печеными овощами и козьим сыром', 'Хорошо добавить в такой салат яйцо, или кусочки рыбы, скажем консервированного тунца, или')
-		.sBestsellers__btn.btn.btn-sm.btn-light(href='#') Показать еще
+		.sBestsellers__btn.btn.btn-sm.btn-light(href='#' data-aos="fade-up" data-aos-duration="400") Показать еще
 
 	// end sCatalog

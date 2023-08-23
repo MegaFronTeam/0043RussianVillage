@@ -270,10 +270,10 @@ function eventHandler() {
 	document.addEventListener('click', function(event) {
 		let profileTarget = event.target.closest('.top-btns__btn--profile-js');
 		if (profileTarget && window.matchMedia('(max-width: 768px)').matches) {
-			let profileMenu = document.querySelector('.profile-menu');
+			let profileMenus = document.querySelectorAll('.profile-menu');
 			event.preventDefault();
 			profileTarget.classList.toggle('active');
-			profileMenu.classList.toggle('active');
+			profileMenus.forEach(profileMenu => {profileMenu.classList.toggle('active')});
 			$('body').toggleClass('fixed-profile-menu');
 		}
 	});
@@ -379,30 +379,6 @@ function eventHandler() {
 		animation: true,
 		// placement: 'bottom',
 	});
-
-	// $('[data-bs-toggle="tooltip2"]')
-	// 	.attr("tabindex", 0)
-	// 	.tooltip({ 
-	// 		trigger: "manual",
-	// 		placement: 'bottom',
-	// 	})
-	// 	.mouseover(event => {
-	// 		$(event.target).tooltip("show");
-	// 		$(".tooltip").on("mouseleave", function() {
-	// 			$(event.target).tooltip("hide");
-	// 		});
-	// 	})
-	// 	.mouseout(event => {
-	// 		setTimeout(() => {
-	// 			if (!$(".tooltip:hover").length) $(event.target).tooltip("hide");
-	// 		}, 100);
-	// 	})
-	// 	.focus(event => {
-	// 		$(event.target).tooltip("show");
-	// 	})
-	// 	.blur(event => {
-	// 		$(event.target).tooltip("hide");
-	// 	});
 
 
 	$('.show-more-btn--js').click(function(event) {
@@ -528,6 +504,8 @@ function eventHandler() {
 			$('body').removeClass('fixed');
 		};
 	}, { passive: true });
+
+	AOS.init();
 
 };
 if (document.readyState !== 'loading') {

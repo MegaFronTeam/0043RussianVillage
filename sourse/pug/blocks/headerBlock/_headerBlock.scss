@@ -38,6 +38,20 @@
 		}
 		img {
 			object-position: left;
+			@include media-breakpoint-down(md) {
+				animation: bgTransition 40s linear infinite ;
+			}
+		}
+	}
+	@keyframes bgTransition {
+		0% {
+			object-position: 0%;
+		}
+		50% {
+			object-position: 100%;
+		}
+		100% {
+			object-position: 0%;
 		}
 	}
 	&__content {

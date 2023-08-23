@@ -2,7 +2,7 @@ mixin sOtherDirection(data)
 	// start sOtherDirection
 	+b.SECTION.sOtherDirection.section#sOtherDirection&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title(data-aos="fade-up" data-aos-duration="400")
 				h5 Другие направления
 			+defSlider(arrow)
 				+e.slide.swiper-slide

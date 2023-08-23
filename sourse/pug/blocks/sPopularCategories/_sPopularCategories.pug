@@ -3,7 +3,7 @@ mixin sPopularCategories(data)
 	+b.SECTION.sPopularCategories.section#sPopularCategories&attributes(attributes)
 		.container
 			+e.wrap
-				+b.section-title 
+				+b.section-title(data-aos="fade-up" data-aos-duration="400")
 					.row
 						.col
 							h4 Популярные категории
@@ -11,7 +11,7 @@ mixin sPopularCategories(data)
 							a.show-more-js(href="#") 
 								| Смотреть все
 								+icon('chevron-right')
-				+e.row.row
+				+e.row.row(data-aos="fade-up" data-aos-duration="400")
 					mixin item(text, img, bgColor)
 						+e.col.col-md-2
 							+e.item(href='#' style=`--bgColor: ${bgColor}`)
@@ -59,7 +59,7 @@ mixin sPopularCategories2(data)
 	// start sPopularCategories
 	+b.SECTION.sPopularCategories--2.section#sPopularCategories&attributes(attributes)
 		+e.wrap
-			+b.section-title 
+			+b.section-title(data-aos="fade-up" data-aos-duration="400")
 				.row
 					.col
 						h5 Популярные
@@ -68,7 +68,7 @@ mixin sPopularCategories2(data)
 							span.show Смотреть все
 							span.hide Скрыть
 							+icon('chevron-down')
-			+e.row.row
+			+e.row.row(data-aos="fade-up" data-aos-duration="400")
 				mixin item(text, img, bgColor)
 					+e.col.col-md-auto
 						+e.item(href='#' style=`--bgColor: ${bgColor}`)

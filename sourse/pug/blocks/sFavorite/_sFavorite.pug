@@ -3,7 +3,7 @@ mixin sFavorite(epmty)
 	+b.SECTION.sFavorite.section#sFavorite&attributes(attributes)
 		.container
 			if epmty
-				+e.wrap
+				+e.wrap(data-aos="fade-up" data-aos-duration="400")
 					h4 В избранном пока ничего нет
 					p Добавьте товары в избранное. У нас вы найдете то, что вам понравится!
 					+e.btn.btn.btn-primary(href='#') В каталог

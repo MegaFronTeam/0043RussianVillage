@@ -3,7 +3,7 @@ mixin sOrder(empty)
 	+b.SECTION.sOrder.section#sOrder&attributes(attributes)
 		.container
 			if empty
-				+e.empty-wrap
+				+e.empty-wrap(data-aos="fade-up" data-aos-duration="400")
 					+e.empty
 						h1.h4 В корзине пока ничего нет
 						p Добавьте товары в корзину. У нас вы найдете то, что вам понравится!
@@ -12,14 +12,14 @@ mixin sOrder(empty)
 				+e.row.row
 					.col-md
 						+e.wrap--left
-							+e.head-row.row
+							+e.head-row.row(data-aos="fade-up" data-aos-duration="400")
 								.col-auto
 									+in-c('checkbox', 'Выбрать все')
 								.col-auto
 									+e.delete-all(href='#')
 										+icon('delete')
 										| Удалить выбранные 
-							+e.item
+							+e.item(data-aos="fade-up" data-aos-duration="400")
 								+in-c('checkbox')
 								.row
 									.col-auto
@@ -44,7 +44,7 @@ mixin sOrder(empty)
 														h5 25 780 ₽
 														+e.full-price 12 890 ₽/ шт.
 													+addblock
-							+e.item
+							+e.item(data-aos="fade-up" data-aos-duration="400")
 								+in-c('checkbox')
 								.row
 									.col-auto
@@ -68,7 +68,7 @@ mixin sOrder(empty)
 													+e.price-wrap
 														h5 5 670 ₽
 													+addblock
-							+e.item
+							+e.item(data-aos="fade-up" data-aos-duration="400")
 								+in-c('checkbox')
 								.row
 									.col-auto
@@ -94,7 +94,7 @@ mixin sOrder(empty)
 													+addblock
 					+e.col.col-md
 						+e.wrap--right
-							+e.summary 
+							+e.summary(data-aos="fade-up" data-aos-duration="400")
 								.row
 									.col-md
 										+e.end Итого
@@ -110,7 +110,7 @@ mixin sOrder2()
 			+e.row.row
 				.col-md
 					+e.wrap--left
-						.tabs
+						.tabs(data-aos="fade-up" data-aos-duration="400")
 							.tabs__caption
 								.tabs__btn.active Доставка
 								.tabs__btn Самовывоз
@@ -176,7 +176,7 @@ mixin sOrder2()
 											myMap.geoObjects
 												.add(myPlacemark)
 										};
-						+e.table-wrap.d-md-none
+						+e.table-wrap.d-md-none(data-aos="fade-up" data-aos-duration="400")
 							table
 								tr
 									td Сумма заказа
@@ -186,7 +186,7 @@ mixin sOrder2()
 									td 5 000 ₽
 				+e.col.col-md
 					+e.wrap--right
-						+e.table-wrap.d-none.d-md-block
+						+e.table-wrap.d-none.d-md-block(data-aos="fade-up" data-aos-duration="400")
 							table
 								tr
 									td Сумма заказа
@@ -194,7 +194,7 @@ mixin sOrder2()
 								tr
 									td Доставка
 									td 5 000 ₽
-						+e.summary
+						+e.summary(data-aos="fade-up" data-aos-duration="400")
 							.row
 								.col-md
 									+e.end Итого
@@ -210,7 +210,7 @@ mixin sOrder19()
 			+e.row.row
 				.col-md
 					+e.wrap--left
-						+form-wrap()
+						+form-wrap()(data-aos="fade-up" data-aos-duration="400")
 							.row
 								.col-md-12
 									+input('Введите свое имя', 'text', 'ФИО*')
@@ -225,8 +225,8 @@ mixin sOrder19()
 									+e.btn.btn.btn-primary.BUTTON Сохранить
 				+e.col.col-md.d-none.d-md-block
 					+e.wrap--right
-						h2 Личный кабинет
-						+e.menu.UL
+						h2(data-aos="fade-up" data-aos-duration="400") Личный кабинет
+						+e.menu.UL(data-aos="fade-up" data-aos-duration="400")
 							+e.menu-item.active
 								+e.menu-link(href="#") Настройки
 							+e.menu-item
@@ -243,7 +243,7 @@ mixin sOrder19-2()
 		.container
 			+e.row.row
 				.col-md
-					+e.table-wrap
+					+e.table-wrap(data-aos="fade-up" data-aos-duration="400")
 						+b.table-history.table.TABLE
 							thead
 								tr
@@ -301,8 +301,8 @@ mixin sOrder19-2()
 												+e.btn.btn.btn-primary(href='#') Повторить заказ
 				+e.col.col-md.d-none.d-md-block
 					+e.wrap--right
-						h2 Личный кабинет
-						+e.menu.UL
+						h2(data-aos="fade-up" data-aos-duration="400") Личный кабинет
+						+e.menu.UL(data-aos="fade-up" data-aos-duration="400")
 							+e.menu-item
 								+e.menu-link(href="#") Настройки
 							+e.menu-item.active

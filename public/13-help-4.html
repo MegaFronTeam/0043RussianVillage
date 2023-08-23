@@ -31,6 +31,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -62,6 +63,16 @@
 							<use xlink:href="img/svg/sprite.svg#close"></use>
 						</svg><span class="d-md-none">Профиль</span><span class="d-none d-md-inline">Войти</span>
 					</a>
+					<div class="profile-menu">
+						<div class="h5">Профиль</div>
+						<ul>
+							<li><a href="#">История заказов </a></li>
+							<li><a href="#">Настройки</a></li>
+							<li><a href="#">Помощь</a></li>
+							<li><a href="#">Задать вопрос</a></li>
+							<li><a href="#">Выйти</a></li>
+						</ul>
+					</div>
 					<a class="top-btns__btn d-none d-md-flex order-md-2" href="#">
 						<div class="top-btns__icon">
 							<svg class="icon icon-heart ">
@@ -95,7 +106,7 @@
 					<div class="container">
 						<div class="block-with-aside__row row">
 							<div class="block-with-aside__col col-12 col-md-auto">
-								<div class="help-menu">
+								<div class="help-menu" data-aos="fade-up" data-aos-duration="400">
 									<div class="help-menu__title">Помощь
 									</div>
 									<button class="help-menu__dd-button help-menu__dd-button--js d-md-none">Получение заказа
@@ -129,7 +140,7 @@
 								</div>
 							</div>
 							<div class="col sProdCardInfo sProdCardInfo--geo">
-								<div class="receiptGoods">
+								<div class="receiptGoods" data-aos="fade-up" data-aos-duration="400">
 									<div class="receiptGoods__item">
 										<div class="receiptGoods__head">
 											<div class="h6">География поставок</div><span>Москва</span>
@@ -238,7 +249,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="receiptGoods__list-wrap">
+									<div class="receiptGoods__list-wrap" data-aos="fade-up" data-aos-duration="400">
 										<div class="h6">Доставка в соседние области обговаривается отдельно</div>
 										<p>Время работы службы доставки: ПН - ВС: с 09:00 до 21:00</p>
 									</div>
@@ -258,7 +269,8 @@
 		<script src="libs/select2/js/select2.min.js"></script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js"> </script>
-		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
+		<script src="libs/aos/aos.js"> </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>

@@ -11,7 +11,7 @@ mixin ddGroup()
 mixin ddGroupItem(txt, activeClasses='', info, showMore)
 	//-хедеру и контенту => .dd-head-js, .dd-content-js
 	//-!!! они должни вкладиваться в 1 контейнер(+e.item) header стилизируеться от етого контейнера, внутри хедера втавлять что душе угодно
-	+e.item(class=activeClasses)
+	+e.item(class=activeClasses)&attributes(attributes)
 		+e.head.dd-head-js
 			=txt
 			if info

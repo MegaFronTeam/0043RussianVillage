@@ -75,12 +75,4 @@ mixin top-nav()
 														ul
 															each link in innerItem.links
 																li: a(href=link.href)!= link.text
-	+b.profile-menu
-		.h5 Профиль
-		ul
-			li: a(href="#") История заказов 
-			li: a(href="#") Настройки
-			li: a(href="#") Помощь
-			li: a(href="#") Задать вопрос
-			li: a(href="#") Выйти
 	// end top-nav

@@ -31,6 +31,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -62,6 +63,16 @@
 							<use xlink:href="img/svg/sprite.svg#close"></use>
 						</svg><span class="d-md-none">Профиль</span><span class="d-none d-md-inline">Войти</span>
 					</a>
+					<div class="profile-menu">
+						<div class="h5">Профиль</div>
+						<ul>
+							<li><a href="#">История заказов </a></li>
+							<li><a href="#">Настройки</a></li>
+							<li><a href="#">Помощь</a></li>
+							<li><a href="#">Задать вопрос</a></li>
+							<li><a href="#">Выйти</a></li>
+						</ul>
+					</div>
 					<a class="top-btns__btn d-none d-md-flex order-md-2" href="#">
 						<div class="top-btns__icon">
 							<svg class="icon icon-heart ">
@@ -94,16 +105,16 @@
 				<!-- start sContent-->
 				<section class="sContent section" id="sContent">
 					<div class="container">
-						<div class="sContent__banner bg-wrap">
+						<div class="sContent__banner bg-wrap" data-aos="fade-up" data-aos-duration="400">
 							<picture>
 								<source media="(min-width: 768px)" srcset="img/sBanners-img-4-lg.jpg"><img class="picture-bg object-fit-js" src="img/sBanners-img-4-sm.jpg" alt="">
 							</picture>
 							<h1 class="h3">О компании «Русская деревня»</h1>
 							<p>крупнейшая и уникальная компания в сфере комплексного обустройства загородного участка</p>
 						</div>
-						<p>Компания &laquo;Русская Деревня&raquo;&nbsp;&mdash; это крупнейшая и&nbsp;уникальная компания в&nbsp;сфере комплексного обустройства загородного участка.</p>
-						<p class="mb-40">Все, что нужно для комфортной жизни за&nbsp;городом&nbsp;&mdash; отдыха, работы, благоустройства, приготовления пищи на&nbsp;открытом огне, активных игр и&nbsp;развлечений, теперь&nbsp;Вы можете приобрести в&nbsp;одном месте. Компания состоит<br>из&nbsp;самого большого в&nbsp;России производства дачных построек и&nbsp;конструкций, торгового отдела, отдела маркетинга, архитектурно-проектного отдела, отдела снабжения и&nbsp;логистики, вместительных складов и&nbsp;строительно-монтажного участка.</p>
-						<div class="sContent__enumeration"><img class="bg-img" src="img/svg/logo-bg-img.svg" alt="">
+						<p data-aos="fade-up" data-aos-duration="400">Компания &laquo;Русская Деревня&raquo;&nbsp;&mdash; это крупнейшая и&nbsp;уникальная компания в&nbsp;сфере комплексного обустройства загородного участка.</p>
+						<p class="mb-40" data-aos="fade-up" data-aos-duration="400">Все, что нужно для комфортной жизни за&nbsp;городом&nbsp;&mdash; отдыха, работы, благоустройства, приготовления пищи на&nbsp;открытом огне, активных игр и&nbsp;развлечений, теперь&nbsp;Вы можете приобрести в&nbsp;одном месте. Компания состоит<br>из&nbsp;самого большого в&nbsp;России производства дачных построек и&nbsp;конструкций, торгового отдела, отдела маркетинга, архитектурно-проектного отдела, отдела снабжения и&nbsp;логистики, вместительных складов и&nbsp;строительно-монтажного участка.</p>
+						<div class="sContent__enumeration" data-aos="fade-up" data-aos-duration="400"><img class="bg-img" src="img/svg/logo-bg-img.svg" alt="">
 							<div class="row">
 								<div class="col-6 col-md-3">
 									<div class="sContent__enumeration-item"><img src="img/svg/sContent-icon-1.svg" alt="" loading="lazy"/>Отдел<br>маркетинга
@@ -139,12 +150,12 @@
 								</div>
 							</div>
 						</div>
-						<p>Наша история началась в&nbsp;2014&nbsp;году, когда была создана производственная компания &laquo;Русская Беседка&raquo;, специализирующаяся на&nbsp;производстве и&nbsp;строительстве деревянных беседок, навесов для автомобилей, летних кухонь, пристроек, детских домиков, пергол и&nbsp;гриль-домиков.</p>
-						<p>Мы&nbsp;успешно справлялись с&nbsp;намеченными целями, радовали заказчиков красивыми, качественными постройками, и&nbsp;вскоре стало расти количество запросов на&nbsp;производство, монтаж и&nbsp;поставку других изделий, предназначенных для обустройства загородных участков и&nbsp;частично городской среды.</p>
-						<p>В&nbsp;дополнение к&nbsp;основному ассортименту мы&nbsp;стали производить дачные домики, скамейки, столы, лавки, качели, вазоны, арки, деревянные горки и&nbsp;многое другое. Стали поставлять печи-барбекю, мангалы, грили, мягкие окна, уличные шторы, освещение, ограждения.</p>
-						<p>Количество запросов на&nbsp;разнопрофильные товары, производимые и&nbsp;поставляемые нами, постоянно увеличивалось, что подтолкнуло нас к&nbsp;созданию крупнейшей торгово&nbsp;&mdash; производственной компании, поставляющей все товары, предназначенные для жизни за&nbsp;городом.</p>
-						<p class="mb-40">Персонал &laquo;Русской Деревни&raquo;&nbsp;&mdash; сплоченная команда единомышленников, работающая в&nbsp;одном направлении для достижения общей цели. Нашим клиентам гарантируется вежливое и&nbsp;внимательное отношение, высокое качество обслуживания, подбор изделий полностью отвечающих запросам потребителя.</p>
-						<div class="sContent__enumeration"><img class="bg-img" src="img/svg/logo-bg-img.svg" alt="">
+						<p data-aos="fade-up" data-aos-duration="400">Наша история началась в&nbsp;2014&nbsp;году, когда была создана производственная компания &laquo;Русская Беседка&raquo;, специализирующаяся на&nbsp;производстве и&nbsp;строительстве деревянных беседок, навесов для автомобилей, летних кухонь, пристроек, детских домиков, пергол и&nbsp;гриль-домиков.</p>
+						<p data-aos="fade-up" data-aos-duration="400">Мы&nbsp;успешно справлялись с&nbsp;намеченными целями, радовали заказчиков красивыми, качественными постройками, и&nbsp;вскоре стало расти количество запросов на&nbsp;производство, монтаж и&nbsp;поставку других изделий, предназначенных для обустройства загородных участков и&nbsp;частично городской среды.</p>
+						<p data-aos="fade-up" data-aos-duration="400">В&nbsp;дополнение к&nbsp;основному ассортименту мы&nbsp;стали производить дачные домики, скамейки, столы, лавки, качели, вазоны, арки, деревянные горки и&nbsp;многое другое. Стали поставлять печи-барбекю, мангалы, грили, мягкие окна, уличные шторы, освещение, ограждения.</p>
+						<p data-aos="fade-up" data-aos-duration="400">Количество запросов на&nbsp;разнопрофильные товары, производимые и&nbsp;поставляемые нами, постоянно увеличивалось, что подтолкнуло нас к&nbsp;созданию крупнейшей торгово&nbsp;&mdash; производственной компании, поставляющей все товары, предназначенные для жизни за&nbsp;городом.</p>
+						<p class="mb-40" data-aos="fade-up" data-aos-duration="400">Персонал &laquo;Русской Деревни&raquo;&nbsp;&mdash; сплоченная команда единомышленников, работающая в&nbsp;одном направлении для достижения общей цели. Нашим клиентам гарантируется вежливое и&nbsp;внимательное отношение, высокое качество обслуживания, подбор изделий полностью отвечающих запросам потребителя.</p>
+						<div class="sContent__enumeration" data-aos="fade-up" data-aos-duration="400"><img class="bg-img" src="img/svg/logo-bg-img.svg" alt="">
 							<h5>Почему мы?</h5>
 							<div class="row">
 								<div class="col-6 col-md-4">
@@ -173,10 +184,10 @@
 								</div>
 							</div>
 						</div>
-						<h5>Наша цель</h5>
-						<p>Воплотить в&nbsp;жизнь ваши мечты об&nbsp;обустройстве загородного участка, создать обстановку, которая сделает Ваши дни ярче, а&nbsp;так&nbsp;же предоставлять качественный клиентский сервис покупателям, быть максимально удобными и&nbsp;работать честно.</p>
-						<h5>Сведения о юридическом лице</h5>
-						<ul> 
+						<h5 data-aos="fade-up" data-aos-duration="400">Наша цель</h5>
+						<p data-aos="fade-up" data-aos-duration="400">Воплотить в&nbsp;жизнь ваши мечты об&nbsp;обустройстве загородного участка, создать обстановку, которая сделает Ваши дни ярче, а&nbsp;так&nbsp;же предоставлять качественный клиентский сервис покупателям, быть максимально удобными и&nbsp;работать честно.</p>
+						<h5 data-aos="fade-up" data-aos-duration="400">Сведения о юридическом лице</h5>
+						<ul data-aos="fade-up" data-aos-duration="400"> 
 							<li>ООО &laquo;РУССКАЯ ДЕРЕВНЯ&raquo;</li>
 							<li>ИНН: 6732211233</li>
 							<li>КПП: 673201001</li>
@@ -203,7 +214,8 @@
 		<script src="libs/select2/js/select2.min.js"></script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js"> </script>
-		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
+		<script src="libs/aos/aos.js"> </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>

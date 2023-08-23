@@ -4,7 +4,7 @@ mixin sCardSlider(title, items=[], arrow)
 		.container
 			+e.wrapper
 				if items.length == 0
-					.section-title
+					.section-title(data-aos="fade-up" data-aos-duration="400")
 						.row.align-items-end
 							.col
 								h4!= title
@@ -13,9 +13,9 @@ mixin sCardSlider(title, items=[], arrow)
 									| Смотреть все
 									+icon('chevron-right')
 				else
-					+b.section-title
+					+b.section-title(data-aos="fade-up" data-aos-duration="400")
 						h4!= title
-					+e.head-row.row
+					+e.head-row.row(data-aos="fade-up" data-aos-duration="400")
 						.col
 							+e.tag-slider.freemode-slider--js.swiper
 								.swiper-wrapper

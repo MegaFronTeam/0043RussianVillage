@@ -285,6 +285,14 @@
           display: none;
         }
       }
+      @include media-breakpoint-up(md) {
+        &:hover {
+          & ~ .profile-menu {
+            opacity: 1;
+            pointer-events: all;
+          }
+        }
+      }
       @include media-breakpoint-down(md) {
         &.active {
           .iconC-profile {

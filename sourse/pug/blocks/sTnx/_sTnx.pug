@@ -2,7 +2,7 @@ mixin sTnx(data)
 	// start sTnx
 	+b.SECTION.sTnx.section#sTnx&attributes(attributes)
 		.container
-			+e.wrap
+			+e.wrap(data-aos="fade-up" data-aos-duration="400")
 				h4 Спасибо за заказ
 				p В ближайшее время с вами свяжется менеджер и уточнит заказ, доставку и стоимость. 
 				+e.btn.btn.btn-primary(href='#') В каталог
