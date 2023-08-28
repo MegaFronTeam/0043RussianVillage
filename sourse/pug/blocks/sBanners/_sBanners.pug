@@ -7,7 +7,7 @@ mixin sBanners(data)
 					+img(`img/${img}`, 'bg').picture-bg
 					h5!=title
 					p!= text
-			+e.row.row
+			+e.row.row(data-aos="fade-up" data-aos-duration="400")
 				.col-6
 					+item('sBanners-img-1.jpg', 'Все для бани и сауны', 'Наслаждайтесь и получайте удовольствие вместе с нами')
 				.col-6
@@ -17,7 +17,7 @@ mixin sBanners(data)
 mixin sBanners2(data)
 	// start sBanners
 	+b.SECTION.sBanners--2.section#sBanners&attributes(attributes)
-		+e.item(href='#').bg-wrap
+		+e.item(href='#' data-aos="fade-up" data-aos-duration="400").bg-wrap
 			picture
 				source(media="(min-width: 768px)", srcset="img/sBanners-img-3-lg.jpg")
 				img(src="img/sBanners-img-3-sm.jpg", alt="").picture-bg.object-fit-js
@@ -28,7 +28,7 @@ mixin sBanners2(data)
 mixin sBanners29(data)
 	// start sBanners
 	+b.SECTION.sBanners--2.sBanners--29.section#sBanners&attributes(attributes)
-		+e.item(href='#').bg-wrap
+		+e.item(href='#' data-aos="fade-up" data-aos-duration="400").bg-wrap
 			picture
 				source(media="(min-width: 768px)", srcset="img/sBanners-recipe-lg.jpg")
 				img(src="img/sBanners-recipe-sm.jpg", alt="").picture-bg.object-fit-js
@@ -37,7 +37,7 @@ mixin sBanners29(data)
 mixin sBanners29enc(data)
 	// start sBanners
 	+b.SECTION.sBanners--2.sBanners--29.section#sBanners&attributes(attributes)
-		+e.item(href='#').bg-wrap
+		+e.item(href='#' data-aos="fade-up" data-aos-duration="400").bg-wrap
 			picture
 				source(media="(min-width: 768px)", srcset="img/sBanners-house-lg.jpg")
 				img(src="img/sBanners-house-sm.jpg", alt="").picture-bg.object-fit-js

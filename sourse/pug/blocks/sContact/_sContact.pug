@@ -5,7 +5,7 @@ mixin sContact()
 			+e.wrapper
 				+e.row.row
 					.col-md
-						+e.wrap
+						+e.wrap(data-aos="fade-up" data-aos-duration="400")
 							img(src="img/svg/logo-bg-img.svg", alt="").bg-img
 							h4 Контактная инормация
 							+e.item
@@ -39,7 +39,7 @@ mixin sContact()
 								li К/С: 30101810000000000632
 								li БИК: 046614632
 					.col-md
-						+e.map
+						+e.map(data-aos="fade-up" data-aos-duration="400")
 							#map
 						script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
 						script.
@@ -59,7 +59,7 @@ mixin sContact()
 								});
 							};
 					.col.d-md-none
-						+e.list-wrap
+						+e.list-wrap(data-aos="fade-up" data-aos-duration="400")
 							+e.title Реквизиты ООО «Русская Деревня»
 							ul
 								li Юридический адрес: 214009, г. Смоленск, Рославльское шоссе 5&nbsp;км. стр.&nbsp;4&nbsp;офис.&nbsp;1
@@ -70,7 +70,7 @@ mixin sContact()
 								li Наименование банка: СМОЛЕНСКОЕ ОТДЕЛЕНИЕ N8609&nbsp;ПАО СБЕРБАНК
 								li К/С: 30101810000000000632
 								li БИК: 046614632
-			+e.departments
+			+e.departments(data-aos="fade-up" data-aos-duration="400")
 				h5 Контакты отделов
 				.row
 					mixin item(icon, bgColor, text, link)

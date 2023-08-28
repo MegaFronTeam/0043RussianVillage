@@ -21,6 +21,11 @@
 
     border-bottom: 1px solid $gray-300;
   }
+  &__container {
+    @include media-breakpoint-up(md) {
+      position: relative;
+    }
+  }
   &__row {
     align-items: center;
     @include media-breakpoint-up(md) {
@@ -210,13 +215,15 @@
     color: $primary !important;
     line-height: 1.23;
     margin-bottom: rem(16);
-    &:hover {
-      background-color: $primary;
-      color: #fff !important;
-      border-color: $primary;
-      .catalog-menu__icon-wrap {
-        color: $primary;
-        background-color: #fff;
+    @include media-breakpoint-up(md) {
+      &:hover {
+        background-color: $primary;
+        color: #fff !important;
+        border-color: $primary;
+        .catalog-menu__icon-wrap {
+          color: $primary;
+          background-color: #fff;
+        }
       }
     }
     .icon {
@@ -540,7 +547,70 @@
 
 .profile-menu {
   @include media-breakpoint-up(md) {
-    display: none;
+    @include mt;
+    position: absolute;
+    top: 100%;
+    right: rem(92);
+    padding: rem(16);
+    box-shadow: 0px 7px 20px 0 rgba(0,0,0,.16);
+    border-radius: rem(8);
+    opacity: 0;
+    pointer-events: none;
+    background-color: #fff;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: rem(-12);
+      width: rem(12);
+      height: rem(12);
+      background-color: #fff;
+      transform: rotate(-45deg) translateX(-50%);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: rem(20);
+      left: 0;
+      top: rem(-20);
+    }
+    &:hover {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .h5 {
+      display: none;
+    }
+    ul {
+      border-top: 0;
+      li {
+        &:not(:last-child) {
+          a {
+            border-bottom: none;
+          }
+        }
+        &:first-child {
+          a {
+            padding-top: 0;
+          }
+        }
+        &:last-child {
+          a {
+            padding: rem(6) 0 0;
+            border-top: 1px solid $gray-300;
+          }
+        }
+        a {
+          font-size: rem(13);
+          line-height: 1.23;
+          padding: rem(8) 0;
+          &:not(:hover) {
+            color: $gray-700;
+          }
+        }
+      }
+    }
   }
   @include media-breakpoint-down(md) {
     @include mt;
@@ -554,6 +624,7 @@
     transform: translateX(100vw);
     background-color: #fff;
     padding: rem(24) 0;
+    margin: 0;
     &.active {
       transform: none;
     }

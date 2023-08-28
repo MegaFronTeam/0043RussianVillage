@@ -103,7 +103,8 @@
 		font-size: rem(11);
 		color: $body-color;
 		&:hover {
-			color: $primary;
+			background-color: $primary;
+			color: #fff;
 		}
 		@include media-breakpoint-up(md) {
 			font-size: rem(13);
@@ -139,8 +140,12 @@
 		}
 		.sCardSlider__tag {
 			background-color: $gray-200;
-			&:not(:hover) {
-				color: $body-color;
+			// &:not(:hover) {
+			// 	color: $body-color;
+			// }
+			&:hover {
+				background-color: $primary;
+				color: #fff;
 			}
 		}
 		.swiper-button-hand {

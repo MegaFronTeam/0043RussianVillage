@@ -11,6 +11,9 @@
 		// @extend .form-control;
 	//  outline: 0 !important;
 		resize: none;
+		&.is-invalid {
+			background-image: none;
+		}
  	}
 	&__input-title {
 		display: block;	

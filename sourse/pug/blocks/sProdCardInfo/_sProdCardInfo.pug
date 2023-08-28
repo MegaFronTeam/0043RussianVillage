@@ -3,7 +3,7 @@ mixin sProdCardInfo(data)
 	+b.sProdCardInfo.section#sProdCardInfo&attributes(attributes)
 		.container
 			+e.wrap
-				.tabs
+				.tabs(data-aos="fade-up" data-aos-duration="400")
 					.tabs__caption.swiper.freemode-slider--js
 						.swiper-wrapper
 							.tabs__btn.swiper-slide.active Описание и характеристики
@@ -73,6 +73,7 @@ mixin sProdCardInfo(data)
 												.col-auto
 													+stars
 											+e.btn.btn.btn-primary(href='#' data-bs-custom-class="tooltip-custom" data-bs-placement="bottom" data-bs-html="true" data-bs-toggle="tooltip" data-bs-original-title=`Если вы приобретали этот товар, то <span>авторизуйтесь</span>, чтобы оставить отзыв. `) Оставить отзыв
+											+e.btn.btn.btn-light(data-bs-custom-class="tooltip-custom" data-bs-placement="bottom" data-bs-html="true" data-bs-toggle="tooltip" data-bs-original-title=`Вы уже оставили отзыв.`) Оставить отзыв
 									.col-md-6
 										mixin rateItem(stars, count)
 											+e.rate-item

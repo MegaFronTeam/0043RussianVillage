@@ -28,7 +28,7 @@ class JSCCommon {
 				AJAX_NOT_FOUND: "Ошибка при загрузке AJAX: не найдено",
 				AJAX_FORBIDDEN: "Ошибка при загрузке AJAX: запрещено",
 				IFRAME_ERROR: "Ошибка загрузки iframe",
-			},
+			}
 		});
 		document.querySelectorAll(".modal-close-js").forEach(el => {
 			el.addEventListener("click", () => {

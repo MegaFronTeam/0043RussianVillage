@@ -32,7 +32,7 @@ mixin addblock()
 
 
 mixin page-head(t, span, customClass='h5', ...items)
-	+b.page-head
+	+b.page-head(data-aos="fade-up" data-aos-duration="400")
 		- let l = items.length
 		if l > 0
 			+e.breadcrumb
@@ -89,7 +89,7 @@ mixin empty-stars(rate=0)
 		+icon('rateStar')
 
 mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false)
-	+b.card(class=(similar ? 'similar': ''))
+	+b.card(class=(similar ? 'similar': '') data-aos="fade-up" data-aos-duration="400")
 		if badge
 			.badge.badge-orange Скидка -50%
 		else if similar
@@ -122,7 +122,7 @@ mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, 
 						+addblock
 
 mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
-	+b.card--horizontal
+	+b.card--horizontal(data-aos="fade-up" data-aos-duration="400")
 		if badge
 			.badge.badge-orange Скидка -50%
 		+e.img-wrap(href='#')
@@ -148,7 +148,7 @@ mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
 						span В корзину
 
 mixin orderCard(img, price, text, bg='bg', review=false, badge=false)
-	+b.card--horizontal.card--order
+	+b.card--horizontal.card--order(data-aos="fade-up" data-aos-duration="400")
 		if badge
 			.badge.badge-orange.d-none.d-mg-block Скидка -50%
 		+e.img-wrap(href='#')
@@ -170,7 +170,7 @@ mixin orderCard(img, price, text, bg='bg', review=false, badge=false)
 				span В корзину
 
 mixin recipe-card(img, title, descr, bg='bg')
-	+b.card(href='#')
+	+b.card(href='#' data-aos="fade-up" data-aos-duration="400")
 		+e.img-wrap
 			.img-wrap-center
 				+img(`img/${img}`, bg)
@@ -179,7 +179,7 @@ mixin recipe-card(img, title, descr, bg='bg')
 			+e.descr!= descr
 
 mixin defSlider(arrow)
-	+b.default-swiper.default-swiper-js&attributes(attributes)
+	+b.default-swiper.default-swiper-js(data-aos="fade-up" data-aos-duration="400")&attributes(attributes)
 		.swiper
 			.swiper-wrapper
 				block
@@ -188,7 +188,7 @@ mixin defSlider(arrow)
 				+arrow
 
 mixin textBlock()
-	+b.text-block
+	+b.text-block(data-aos="fade-up" data-aos-duration="400")
 		.container
 			+e.wrap
 				p С&nbsp;другой стороны, повышение уровня гражданского сознания предоставляет широкие возможности для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений. Разнообразный и&nbsp;богатый опыт говорит нам, что разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо экономической целесообразности принимаемых решений. С&nbsp;другой стороны, повышение уровня гражданского сознания предоставляет широкие возможности для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений. Разнообразный и&nbsp;богатый опыт говорит нам, что разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо экономической целесообразности принимаемых решений.
@@ -208,6 +208,14 @@ mixin topBtns()
 				+icon('close')
 				span.d-md-none Профиль
 				span.d-none.d-md-inline Войти
+			+b.profile-menu
+				.h5 Профиль
+				ul
+					li: a(href="#") История заказов 
+					li: a(href="#") Настройки
+					li: a(href="#") Помощь
+					li: a(href="#") Задать вопрос
+					li: a(href="#") Выйти
 			+e.btn(href='#').d-none.d-md-flex.order-md-2
 				+e.icon
 					+icon('heart')
@@ -225,7 +233,7 @@ mixin topBtns()
 				span.d-md-none Меню
 
 mixin filter()
-	+b.filter
+	+b.filter(data-aos="fade-up" data-aos-duration="400")
 		+e.close: +icon('close')
 		//- +e.wrap
 		+e.row
@@ -236,14 +244,14 @@ mixin filter()
 			a.btn.btn-sm.btn-primary(href='#') Показать
 
 mixin tags(tags=['Бассейны', 'Батуты', 'Детские комплексы', 'Детские домики', 'Игры', 'Тримеры', 'Топоры', 'Культиватор'])
-	+b.tags
+	+b.tags(data-aos="fade-up" data-aos-duration="400")
 		+defSlider(false)
 			each tag in tags
 				+e.slide.swiper-slide
 					+e.tag(href='#')!= tag
 
 mixin sDirectionCard(img, text)
-	+b.direction-item.bg-wrap(href='#')
+	+b.direction-item.bg-wrap(href='#' data-aos="fade-up" data-aos-duration="400")
 		+img(`img/${img}`, 'bg').picture-bg
 		+e.text 
 			!= text

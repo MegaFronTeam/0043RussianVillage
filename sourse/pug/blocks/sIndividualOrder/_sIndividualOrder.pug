@@ -1,9 +1,9 @@
 mixin sIndividualOrder(data)
 	// start sIndividualOrder
 	+b.SECTION.sIndividualOrder.section#sIndividualOrder&attributes(attributes)
-		+b.section-title
+		+b.section-title(data-aos="fade-up" data-aos-duration="400")
 			h5 Возможно сделать индивидуальный заказ
-		+e.row
+		+e.row(data-aos="fade-up" data-aos-duration="400")
 			.row
 				mixin item(icon, title, text, btn, img)
 					+e.item

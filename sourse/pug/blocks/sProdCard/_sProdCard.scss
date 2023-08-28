@@ -7,6 +7,15 @@
 	@include media-breakpoint-up(md) {
 		--sPB: #{rem(26)};
 	}
+	&--modal {
+		.sProdCard__full-slider-wrap {
+			margin: 0;
+		}
+		.sProdCard__img-wrap {
+			max-width: rem(877);
+			margin: 0 auto;
+		}
+	}
 	&__row{
 		--bs-gutter-x: #{rem(0)};
 		--bs-gutter-y: 0;
@@ -442,6 +451,97 @@
 			box-shadow: -2px 0px 4px 0px rgba(0, 0, 0, 0.08);
 			&:not(:first-child) {
 				margin-left: rem(-16);
+			}
+		}
+	}
+	&--modal {
+		.sProdCard {
+			&__full-slider-wrap {
+				padding: 16px;
+				@include media-breakpoint-down(md) {
+					overflow-x: hidden;
+					overflow-y: auto;
+					display: flex;
+					flex-direction: column;
+				}
+				.sProdCard__swiper-wrap {
+					@include media-breakpoint-up(md) {
+						margin-left: 0;
+					}
+				}
+			}
+			&__thumb-arrow-wrap--modal {
+				@include media-breakpoint-down(md) {
+					margin-top: auto;
+				}
+				@include media-breakpoint-up(md) {
+					height: 100%;
+					min-width: 82px;
+					width: 82px;
+					margin-right: rem(16);
+				}
+				.swiper-button-hand {
+					&-prev {
+						top: 0;
+					}
+					&-next {
+						bottom: 0;
+					}
+				}
+			}
+			&__thumb-slider {
+				max-height: none;
+				margin-top: 0;
+				@include media-breakpoint-up(md) {
+					margin-top: rem(26);
+					height: 100%;
+					max-height: calc(var(--vh) * 100 - 87px);
+				}
+				.sProdCard__img-wrap {
+					max-width: none;
+				}
+			}
+			&__swiper-wrap {
+				display: flex;
+				align-items: center;
+				max-width: none;
+				height: auto;
+				@include media-breakpoint-down(md) {
+					margin-top: auto;
+				}
+				@include media-breakpoint-up(md) {
+					position: relative;
+					height: 100%;
+					&:before {
+						content: '';
+						position: absolute;
+						left: 0;
+						top: -50vh;
+						height: 200vh;
+						width: rem(1);
+						background-color: $gray-300;
+						z-index: 2;
+						pointer-events: none;
+					}
+				}
+				.swiper-button-hand-next {
+					@include media-breakpoint-up(md) {
+						right: -6px;
+					}
+				}
+			}
+			&__slider-wrap {
+				height: auto;
+				@include media-breakpoint-up(md) {
+					height: 100%;
+				}
+			}
+			&__slider {
+				border: none;
+				width: 100%;
+				@include media-breakpoint-down(md) {
+					height: auto;
+				}
 			}
 		}
 	}

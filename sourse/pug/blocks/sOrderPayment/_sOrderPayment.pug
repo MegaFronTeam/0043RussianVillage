@@ -1,11 +1,11 @@
 mixin sOrderPayment(data)
 	// start sOrderPayment
 	+b.SECTION.sOrderPayment.section#sOrderPayment&attributes(attributes)
-		+b.section-title
+		+b.section-title(data-aos="fade-up" data-aos-duration="400")
 			h1.h5 Оплата заказа
 		+ddGroup
-			+ddGroupItem('Оплата наличными',)
-			+ddGroupItem('Оплата банковской картой на сайте','active')
+			+ddGroupItem('Оплата наличными')(data-aos="fade-up" data-aos-duration="400")
+			+ddGroupItem('Оплата банковской картой на сайте','active')(data-aos="fade-up" data-aos-duration="400")
 				p Оплатить заказанные на сайте товары вы можете на этапе оформления заказа банковской картой.</br> Мы принимаем карты «Мир», Visa, Mastercard. Оплата через Google Pay / Apple Pay недоступна.
 				+b.numbered-list.UL
 					+e.item.LI 
@@ -22,21 +22,21 @@ mixin sOrderPayment(data)
 					+e.item.LI 
 						+e.title Вы&nbsp;получите электронный чек, подтверждающий оплату заказа.
 						p После оплаты вы&nbsp;получите подтверждающий платёжный документ&nbsp;&mdash; по&nbsp;электронной почте или СМС.
-			+ddGroupItem('Система быстрых платежей')
-			+ddGroupItem('Безналичный расчет – банковским переводом')
-			+ddGroupItem('Оплата банковской картой через терминал')
-			+ddGroupItem('Кредит для физических лиц')
+			+ddGroupItem('Система быстрых платежей')(data-aos="fade-up" data-aos-duration="400")
+			+ddGroupItem('Безналичный расчет – банковским переводом')(data-aos="fade-up" data-aos-duration="400")
+			+ddGroupItem('Оплата банковской картой через терминал')(data-aos="fade-up" data-aos-duration="400")
+			+ddGroupItem('Кредит для физических лиц')(data-aos="fade-up" data-aos-duration="400")
 				
 	// end sOrderPayment
 
 mixin sOrderPayment2(data)
 	// start sOrderPayment
 	+b.SECTION.sOrderPayment.section#sOrderPayment&attributes(attributes)
-		+b.section-title
+		+b.section-title(data-aos="fade-up" data-aos-duration="400")
 			h1.h5 Получение заказа
 		+ddGroup
-			+ddGroupItem('Получение заказа',)
-			+ddGroupItem('Выгрузка и занос на участок','active')
+			+ddGroupItem('Получение заказа')(data-aos="fade-up" data-aos-duration="400")
+			+ddGroupItem('Выгрузка и занос на участок','active')(data-aos="fade-up" data-aos-duration="400")
 				.sOrderPayment__title Возможны два варианта
 				+b.numbered-list.UL
 					+e.item.LI 
@@ -58,16 +58,16 @@ mixin sOrderPayment2(data)
 							.sOrderPayment__dd.DD30 минут.
 							.sOrderPayment__dt.DT Заказ больше 5000 кг — 
 							.sOrderPayment__dd.DD 120 минут.
-			+ddGroupItem('Монтаж')
-			+ddGroupItem('Документы')
+			+ddGroupItem('Монтаж')(data-aos="fade-up" data-aos-duration="400")
+			+ddGroupItem('Документы')(data-aos="fade-up" data-aos-duration="400")
 
 mixin sOrderPayment3(data)
 	// start sOrderPayment
 	+b.SECTION.sOrderPayment.section#sOrderPayment&attributes(attributes)
-		+b.section-title
+		+b.section-title(data-aos="fade-up" data-aos-duration="400")
 			h1.h5 Доставка и установка
 		+ddGroup
-			+ddGroupItem('Доставка','active')
+			+ddGroupItem('Доставка','active')(data-aos="fade-up" data-aos-duration="400")
 				p Доставка по&nbsp;указанному адресу до&nbsp;Вашего загородного участка.
 				p Доставка включает в&nbsp;себя доставку товаров по&nbsp;указанному адресу, с&nbsp;размещением транспортного средства максимально приближенным к&nbsp;месту выгрузки, только на&nbsp;дорогах общественного пользования пригодных для движения грузового транспорта (без заезда транспортного средства на&nbsp;территорию частного домовладения). Водитель обязан припарковаться так, чтобы обеспечить безопасную выгрузку товара из&nbsp;машины (необходимо обратить внимание на&nbsp;пешеходов, на&nbsp;припаркованные машины).<br>Доставка осуществляется в&nbsp;день согласованный при оформления заказа (дата зависит от&nbsp;наличия товара на&nbsp;складе или зависит от&nbsp;графика производства)
 				p Доставка осуществляется одним из&nbsp;следующих способов
@@ -196,7 +196,7 @@ mixin sOrderPayment3(data)
 						li Сотрудник службы доставки свяжется с вами, когда будет на месте.
 						li При получении товаров рекомендуется их&nbsp;распаковать и&nbsp;сверить с&nbsp;заказом, а&nbsp;также убедиться, что товары и&nbsp;упаковка не&nbsp;повреждены. На&nbsp;проверку товаров у&nbsp;вас есть 30&nbsp;минут. Сотрудник службы доставки вскроет упаковку при вас.
 						li После получения и&nbsp;проверки заказа внимательно ознакомьтесь с&nbsp;документами и&nbsp;подпишите&nbsp;их. После подписания акта приёма-передачи претензии по&nbsp;количеству и&nbsp;качеству полученного товара не&nbsp;принимаются.
-			+ddGroupItem('Стоимость доставки','active')
+			+ddGroupItem('Стоимость доставки','active')(data-aos="fade-up" data-aos-duration="400")
 				+b.delivery-table
 					table.table-hover
 						thead
@@ -296,7 +296,7 @@ mixin sOrderPayment3(data)
 								td(data-title="Малые") 500
 								td(data-title="Средние") 2 500
 								td(data-title="Большие") 5 000
-			+ddGroupItem('Самовывоз')
+			+ddGroupItem('Самовывоз')(data-aos="fade-up" data-aos-duration="400")
 				p Самовывоз со склада организации.
 				p Склад расположен по адресу: г. Москва, Рябиновая ул, 37, стр. 1
 				.sOrderPayment__map-wrap
@@ -328,8 +328,8 @@ mixin sOrderPayment3(data)
 						li Печать компании или доверенность на&nbsp;подписание накладных и&nbsp;документ, удостоверяющий личность, в&nbsp;случае отсутствия печати.
 				p Обращаем ваше внимание, что ожидание на&nbsp;складе выдачи вашего заказа не&nbsp;регламентируется. Мы&nbsp;осуществляем сборку вашего заказа только после вашего прибытия на&nbsp;склад.
 				p Самовывоз возможен только при 100% предоплате заказа. Для получения товара необходимо оформить пропуск на&nbsp;склад и&nbsp;выбрать дату самовывоза через Личный кабинет.
-			+ddGroupItem('Выгрузка и занос на участок')
-			+ddGroupItem('Монтаж')
-			+ddGroupItem('Документы')
+			+ddGroupItem('Выгрузка и занос на участок')(data-aos="fade-up" data-aos-duration="400")
+			+ddGroupItem('Монтаж')(data-aos="fade-up" data-aos-duration="400")
+			+ddGroupItem('Документы')(data-aos="fade-up" data-aos-duration="400")
 				
 	// end sOrderPayment

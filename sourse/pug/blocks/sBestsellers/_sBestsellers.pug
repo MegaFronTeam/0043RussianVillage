@@ -1,7 +1,7 @@
 mixin sBestsellers(data)
 	// start sBestsellers
 	+b.SECTION.sBestsellers.section#sBestsellers&attributes(attributes)
-		+b.section-title
+		+b.section-title(data-aos="fade-up" data-aos-duration="400")
 			h5 Хиты продаж
 		+e.row.row
 			.col-6.col-md-3
@@ -44,5 +44,5 @@ mixin sBestsellers(data)
 				+card('card-31.png', '93 561 ₽', 'Комплектдля возведения хозблока', 'bg', true)
 			.col-6.col-md-3
 				+card('card-32.png', '84 188 ₽', 'Комплект парковочного навеса', 'bg', true)
-		+e.btn.btn.btn-sm.btn-light(href='#') Показать еще
+		+e.btn.btn.btn-sm.btn-light(href='#' data-aos="fade-up" data-aos-duration="400") Показать еще
 	// end sBestsellers

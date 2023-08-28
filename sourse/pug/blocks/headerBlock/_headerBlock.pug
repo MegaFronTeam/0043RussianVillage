@@ -2,12 +2,12 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+e.wrap.bg-wrap
+			+e.wrap.bg-wrap(data-aos="fade-up" data-aos-duration="400")
 				+img('img/headerBlock-bg-1.jpg', 'bg').picture-bg
 				+e.content
 					h1.h3 Всё для загородной жизни
 					p для отдыха, работы и обустройства участка
-			+e.swiper-wrap.default-swiper-js
+			+e.swiper-wrap.default-swiper-js(data-aos="fade-up" data-aos-duration="400")
 				+e.swiper.swiper
 					.swiper-wrapper
 						+e.slide.swiper-slide
@@ -38,7 +38,7 @@ mixin headerBlock2(img, title, text, btn, picture)
 	// start headerBlock
 	+b.headerBlock--2.section#headerBlock&attributes(attributes)
 		.container
-			+e.wrap.bg-wrap
+			+e.wrap.bg-wrap(data-aos="fade-up" data-aos-duration="400")
 				if picture
 					picture
 						source(media="(min-width: 768px)", srcset=`img/${img}`)

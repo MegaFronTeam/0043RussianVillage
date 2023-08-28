@@ -31,6 +31,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto&display=swap" rel="stylesheet">
 		<link href="libs/filepond/filepond.min.css" rel="stylesheet"/>
 		<link href="libs/select2/css/select2.min.css" rel="stylesheet"/>
+		<link href="libs/aos/aos.css" rel="stylesheet"/>
 		<link href="css/main.min.css" rel="stylesheet"/>
 		<script>
 			function addBlock(elem) {
@@ -62,6 +63,16 @@
 							<use xlink:href="img/svg/sprite.svg#close"></use>
 						</svg><span class="d-md-none">Профиль</span><span class="d-none d-md-inline">Войти</span>
 					</a>
+					<div class="profile-menu">
+						<div class="h5">Профиль</div>
+						<ul>
+							<li><a href="#">История заказов </a></li>
+							<li><a href="#">Настройки</a></li>
+							<li><a href="#">Помощь</a></li>
+							<li><a href="#">Задать вопрос</a></li>
+							<li><a href="#">Выйти</a></li>
+						</ul>
+					</div>
 					<a class="top-btns__btn d-none d-md-flex order-md-2" href="#">
 						<div class="top-btns__icon">
 							<svg class="icon icon-heart ">
@@ -91,7 +102,7 @@
 				</div>
 			</div>
 			<main>
-				<div class="page-head">
+				<div class="page-head" data-aos="fade-up" data-aos-duration="400">
 					<div class="page-head__breadcrumb">
 						<div class="container">
 							<nav class="swiper freemode-slider--js" aria-label="breadcrumb">
@@ -114,10 +125,10 @@
 				<!-- start sContent-->
 				<section class="sContent section" id="sContent">
 					<div class="container">
-						<div class="sContent__wrap bg-wrap"><img class="object-fit-js" src="img/recipe-main.jpg" alt="" loading="lazy"/>
+						<div class="sContent__wrap bg-wrap" data-aos="fade-up" data-aos-duration="400"><img class="object-fit-js" src="img/recipe-main.jpg" alt="" loading="lazy"/>
 						</div>
 						<div class="sContent__text-wrap">
-							<div class="sContent__ingredients">
+							<div class="sContent__ingredients" data-aos="fade-up" data-aos-duration="400">
 								<div class="sContent__subtitle">Ингредиенты
 								</div>
 								<ul class="sContent__list">
@@ -128,7 +139,7 @@
 									<li>Крупная морская соль</li>
 								</ul>
 							</div>
-							<div class="sContent__ingredients">
+							<div class="sContent__ingredients" data-aos="fade-up" data-aos-duration="400">
 								<div class="sContent__subtitle">Для маринада
 								</div>
 								<ul class="sContent__list">
@@ -139,8 +150,8 @@
 									<li>Винный уксус – 1 ч.л.</li>
 								</ul>
 							</div>
-							<h2>Пошаговый рецепт приготовления</h2>
-							<ol class="sContent__recept-steps">
+							<h2 data-aos="fade-up" data-aos-duration="400">Пошаговый рецепт приготовления</h2>
+							<ol class="sContent__recept-steps" data-aos="fade-up" data-aos-duration="400">
 								<li class="sContent__step">
 									<p class="sContent__step-text">Подготовьте все ингредиенты для шашлыка. Говяжью вырезку вымойте, обсушите бумажными полотенцами. Нарежьте кубиками среднего размера и&nbsp;переложите в&nbsp;большую миску.
 									</p>
@@ -148,37 +159,37 @@
 									</div>
 								</li>
 							</ol>
-							<h3>Пошаговый рецепт приготовления</h3>
-							<p>Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;<a href="">холодильник</a> на&nbsp;1&nbsp;час.</p>
-							<h4>Оплата банковской картой на сайте</h4>
-							<p>Оплатить заказанные на&nbsp;сайте товары вы&nbsp;можете на&nbsp;этапе оформления заказа банковской картой.<br> Мы&nbsp;принимаем карты &laquo;Мир&raquo;, Visa, Mastercard. Оплата через Google Pay&nbsp;/ Apple Pay недоступна.</p>
+							<h3 data-aos="fade-up" data-aos-duration="400">Пошаговый рецепт приготовления</h3>
+							<p data-aos="fade-up" data-aos-duration="400">Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;<a href="">холодильник</a> на&nbsp;1&nbsp;час.</p>
+							<h4 data-aos="fade-up" data-aos-duration="400">Оплата банковской картой на сайте</h4>
+							<p data-aos="fade-up" data-aos-duration="400">Оплатить заказанные на&nbsp;сайте товары вы&nbsp;можете на&nbsp;этапе оформления заказа банковской картой.<br> Мы&nbsp;принимаем карты &laquo;Мир&raquo;, Visa, Mastercard. Оплата через Google Pay&nbsp;/ Apple Pay недоступна.</p>
 							<ol class="numbered-list">
-								<li class="numbered-list__item">
+								<li class="numbered-list__item" data-aos="fade-up" data-aos-duration="400">
 									<div class="numbered-list__title">Выберите оплату картой на сайте.
 									</div>
 								</li>
-								<li class="numbered-list__item">
+								<li class="numbered-list__item" data-aos="fade-up" data-aos-duration="400">
 									<div class="numbered-list__title">После выбора оплаты картой нажмите кнопку «Перейти к оплате».
 									</div>
 								</li>
-								<li class="numbered-list__item">
+								<li class="numbered-list__item" data-aos="fade-up" data-aos-duration="400">
 									<div class="numbered-list__title">Оплатите заказ на странице банка.
 									</div>
 									<p>Выбрав оплату картой, вы&nbsp;будете автоматически перенаправлены на&nbsp;страницу оплаты банка. Заполните все необходимые поля и&nbsp;нажмите кнопку &laquo;Оплатить&raquo;</p>
 									<p>Далее вы&nbsp;будете перенаправлены на&nbsp;страницу вашего банка для ввода кода из&nbsp;СМС.</p>
 									<p>СМС придёт на&nbsp;мобильный телефон, привязанный к&nbsp;карте.</p>
 								</li>
-								<li class="numbered-list__item">
+								<li class="numbered-list__item" data-aos="fade-up" data-aos-duration="400">
 									<div class="numbered-list__title">Номер заказа будет направлен на&nbsp;Ваш email и&nbsp;по&nbsp;SMS.
 									</div>
 								</li>
-								<li class="numbered-list__item">
+								<li class="numbered-list__item" data-aos="fade-up" data-aos-duration="400">
 									<div class="numbered-list__title">Вы&nbsp;получите электронный чек, подтверждающий оплату заказа.
 									</div>
 									<p>После оплаты вы&nbsp;получите подтверждающий платёжный документ&nbsp;&mdash; по&nbsp;электронной почте или СМС.</p>
 								</li>
 							</ol>
-							<div class="sContent__table-wrap">
+							<div class="sContent__table-wrap" data-aos="fade-up" data-aos-duration="400">
 								<table class="table-hover">
 									<thead>
 										<tr>
@@ -210,12 +221,12 @@
 									</tbody>
 								</table>
 							</div>
-							<h5>Пошаговый рецепт приготовления</h5>
-							<p>Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;холодильник на&nbsp;1&nbsp;час.</p>
-							<ol class="sContent__recept-steps">
+							<h5 data-aos="fade-up" data-aos-duration="400">Пошаговый рецепт приготовления</h5>
+							<p data-aos="fade-up" data-aos-duration="400">Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;холодильник на&nbsp;1&nbsp;час.</p>
+							<ol class="sContent__recept-steps" data-aos="fade-up" data-aos-duration="400">
 								<li>Готовность шашлыка из&nbsp;говядины определяйте с&nbsp;помощью прокола острым ножом. Если выделяется красный сок, подержите мясо на&nbsp;мангале еще несколько минут. Если прозрачный&nbsp;&mdash; блюдо готово.</li>
 							</ol>
-							<div class="sContent__swiper-wrap default-swiper-js">
+							<div class="sContent__swiper-wrap default-swiper-js" data-aos="fade-up" data-aos-duration="400">
 								<div class="sContent__swiper sContent__swiper--js swiper">
 									<div class="swiper-wrapper">
 										<div class="sContent__slide swiper-slide">
@@ -248,13 +259,13 @@
 									<div class="swiper-pagination"></div>
 								</div>
 							</div>
-							<h6 class="sContent__video-subtitle">Видео-рецепт
+							<h6 class="sContent__video-subtitle" data-aos="fade-up" data-aos-duration="400">Видео-рецепт
 							</h6>
-							<div class="sContent__video-wrap"><iframe class="sContent__video" width="560" height="315" src="https://www.youtube.com/embed/Jz3_xAVxy5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+							<div class="sContent__video-wrap" data-aos="fade-up" data-aos-duration="400"><iframe class="sContent__video" width="560" height="315" src="https://www.youtube.com/embed/Jz3_xAVxy5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 							</div>
-							<blockquote class="sContent__blockquote">Полезный совет. Чтобы говядина лучше пропиталась маринадом, нарезанное мясо можно оставить в&nbsp;нем на&nbsp;несколько часов и&nbsp;даже на&nbsp;ночь. Не&nbsp;переживайте: это тот самый случай, когда лишнее время точно не&nbsp;помешает.
+							<blockquote class="sContent__blockquote" data-aos="fade-up" data-aos-duration="400">Полезный совет. Чтобы говядина лучше пропиталась маринадом, нарезанное мясо можно оставить в&nbsp;нем на&nbsp;несколько часов и&nbsp;даже на&nbsp;ночь. Не&nbsp;переживайте: это тот самый случай, когда лишнее время точно не&nbsp;помешает.
 							</blockquote>
-							<div class="sContent__share-block">
+							<div class="sContent__share-block" data-aos="fade-up" data-aos-duration="400">
 								<div class="sContent__share">Поделиться
 								</div>
 								<ul class="share-soc">
@@ -289,7 +300,7 @@
 				<div class="sCardSlider section sCardSlider sCardSlider--recipe">
 					<div class="container">
 						<div class="sCardSlider__wrapper">
-							<div class="section-title">
+							<div class="section-title" data-aos="fade-up" data-aos-duration="400">
 								<div class="row align-items-end">
 									<div class="col">
 										<h4>Похожие рецепты</h4>
@@ -304,11 +315,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="default-swiper default-swiper-js">
+							<div class="default-swiper default-swiper-js" data-aos="fade-up" data-aos-duration="400">
 								<div class="swiper">
 									<div class="swiper-wrapper">
 										<div class="default-swiper__slide swiper-slide">
-											<a class="card" href="#">
+											<a class="card" href="#" data-aos="fade-up" data-aos-duration="400">
 												<div class="card__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/recipe-img-1.jpg" alt="" loading="lazy"/>
 													</div>
@@ -322,7 +333,7 @@
 											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<a class="card" href="#">
+											<a class="card" href="#" data-aos="fade-up" data-aos-duration="400">
 												<div class="card__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/recipe-img-3.jpg" alt="" loading="lazy"/>
 													</div>
@@ -336,7 +347,7 @@
 											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<a class="card" href="#">
+											<a class="card" href="#" data-aos="fade-up" data-aos-duration="400">
 												<div class="card__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/recipe-img-4.jpg" alt="" loading="lazy"/>
 													</div>
@@ -350,7 +361,7 @@
 											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<a class="card" href="#">
+											<a class="card" href="#" data-aos="fade-up" data-aos-duration="400">
 												<div class="card__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/recipe-img-5.jpg" alt="" loading="lazy"/>
 													</div>
@@ -364,7 +375,7 @@
 											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<a class="card" href="#">
+											<a class="card" href="#" data-aos="fade-up" data-aos-duration="400">
 												<div class="card__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/recipe-img-6.jpg" alt="" loading="lazy"/>
 													</div>
@@ -378,7 +389,7 @@
 											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<a class="card" href="#">
+											<a class="card" href="#" data-aos="fade-up" data-aos-duration="400">
 												<div class="card__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/recipe-img-7.jpg" alt="" loading="lazy"/>
 													</div>
@@ -392,7 +403,7 @@
 											</a>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<a class="card" href="#">
+											<a class="card" href="#" data-aos="fade-up" data-aos-duration="400">
 												<div class="card__img-wrap">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/recipe-img-8.jpg" alt="" loading="lazy"/>
 													</div>
@@ -416,7 +427,7 @@
 				<div class="sCardSlider section">
 					<div class="container">
 						<div class="sCardSlider__wrapper">
-							<div class="section-title">
+							<div class="section-title" data-aos="fade-up" data-aos-duration="400">
 								<div class="row align-items-end">
 									<div class="col">
 										<h4>Вам может понравиться</h4>
@@ -431,11 +442,11 @@
 									</div>
 								</div>
 							</div>
-							<div class="default-swiper default-swiper-js">
+							<div class="default-swiper default-swiper-js" data-aos="fade-up" data-aos-duration="400">
 								<div class="swiper">
 									<div class="swiper-wrapper">
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
+											<div class="card" data-aos="fade-up" data-aos-duration="400">
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-9.png" alt="" loading="lazy"/>
 													</div>
@@ -488,7 +499,7 @@
 											</div>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
+											<div class="card" data-aos="fade-up" data-aos-duration="400">
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-10.png" alt="" loading="lazy"/>
 													</div>
@@ -541,7 +552,7 @@
 											</div>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
+											<div class="card" data-aos="fade-up" data-aos-duration="400">
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-11.png" alt="" loading="lazy"/>
 													</div>
@@ -594,7 +605,7 @@
 											</div>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
+											<div class="card" data-aos="fade-up" data-aos-duration="400">
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-12.png" alt="" loading="lazy"/>
 													</div>
@@ -647,7 +658,7 @@
 											</div>
 										</div>
 										<div class="default-swiper__slide swiper-slide">
-											<div class="card">
+											<div class="card" data-aos="fade-up" data-aos-duration="400">
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-13.png" alt="" loading="lazy"/>
 													</div>
@@ -709,10 +720,10 @@
 				<!-- start sAlsoWatch-->
 				<section class="sAlsoWatch sAlsoWatch--recipe section" id="sAlsoWatch">
 					<div class="container">
-						<div class="section-title">
+						<div class="section-title" data-aos="fade-up" data-aos-duration="400">
 							<h6>Вы смотрели</h6>
 						</div>
-						<div class="default-swiper default-swiper-js">
+						<div class="default-swiper default-swiper-js" data-aos="fade-up" data-aos-duration="400">
 							<div class="swiper">
 								<div class="swiper-wrapper">
 									<div class="default-swiper__slide swiper-slide">
@@ -791,11 +802,11 @@
 		<script src="libs/@fancyapps/ui/fancybox/fancybox.umd.js"> </script>
 		<script src="libs/swiper/swiper-bundle.min.js"> </script>
 		<script src="libs/inputmask/inputmask.min.js"> </script>
-		<script src="libs/hc-sticky/hc-sticky.js"> </script>
 		<script src="libs/select2/js/select2.min.js"></script>
 		<script src="libs/filepond/filepond.min.js"> </script>
 		<script src="libs/filepond-plugin-file-validate-size/filepond-plugin-file-validate-size.min.js"> </script>
-		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"> </script>
+		<script src="libs/aos/aos.js"> </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
 	</body>
