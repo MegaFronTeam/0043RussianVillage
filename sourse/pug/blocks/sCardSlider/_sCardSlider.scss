@@ -10,9 +10,9 @@
 		--sTPB: #{rem(25)};
 	}
 	&--recipe {
-		// .card {
-		// 	height: auto;
-		// }
+		.card__title {
+			margin-bottom: 4px;
+		}
 	}
 	&__wrapper {
 		@include media-breakpoint-down(md) {

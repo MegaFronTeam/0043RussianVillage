@@ -139,6 +139,11 @@
 			border: none;
 		}
 	}
+	&--recipe {
+		.card__title {
+			margin-bottom: 4px;
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
