@@ -24,6 +24,22 @@
  	&__btn{
  		cursor: pointer;
  	}
+	&__confirm {
+		display: flex;
+		align-items: center;
+		padding: 2px 0;
+		font-size: 12px;
+		.iconC {
+			margin-right: 4px;
+			font-size: 16px;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		a {
+			color: $link-hover-color;
+		}
+	}
  	label{
  		width: 100%;
  		display: block;

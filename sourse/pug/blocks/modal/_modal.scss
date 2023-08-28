@@ -166,6 +166,7 @@
 		a {
 			display: block;
 			margin-bottom: 8px;
+			color: $link-hover-color;
 		}
 		p {
 			margin-bottom: 4px;
@@ -211,7 +212,7 @@
 	}
 	.invalid-feedback {
 		display: block;
-		color: $red;
+		color: #DF331B;
 	}
 	.is-invalid {
 		border-color: $danger;

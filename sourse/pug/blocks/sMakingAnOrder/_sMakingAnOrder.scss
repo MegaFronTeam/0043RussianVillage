@@ -23,19 +23,22 @@
 	&__item{
 
 	}
-	&__img-wrap {
-		padding: rem(8) 0 rem(24);
-		max-width: 608px;
-		width: 100%;
-		img {
-			width: 100%;
-		}
-	}
 	.numbered-list {
 		li {
 			line-height: 125%;
 			&:not(:last-child) {
 				margin-bottom: rem(24);
+			}
+		}
+		&__img-wrap {
+			padding: rem(8) 0 rem(24);
+			max-width: 608px;
+			width: 100%;
+			@include media-breakpoint-down(md) {
+				width: calc(100% + 32px);
+			}
+			img {
+				width: 100%;
 			}
 		}
 	}

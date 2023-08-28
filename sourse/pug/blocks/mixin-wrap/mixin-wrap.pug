@@ -150,7 +150,7 @@ mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
 mixin orderCard(img, price, text, bg='bg', review=false, badge=false)
 	+b.card--horizontal.card--order(data-aos="fade-up" data-aos-duration="400")
 		if badge
-			.badge.badge-orange.d-none.d-mg-block Скидка -50%
+			.badge.badge-orange.d-none.d-md-block Скидка -50%
 		+e.img-wrap(href='#')
 			.img-wrap-center
 				+img(`img/${img}`, bg)
@@ -166,7 +166,7 @@ mixin orderCard(img, price, text, bg='bg', review=false, badge=false)
 		+e.price!= price
 		+e.buttons
 			+addblock
-			+e.btn.btn.btn-sm.btn-primary(href="#") 
+			+e.btn.btn.btn-sm.btn-outline-primary(href="#") 
 				span В корзину
 
 mixin recipe-card(img, title, descr, bg='bg')
@@ -233,7 +233,7 @@ mixin topBtns()
 				span.d-md-none Меню
 
 mixin filter()
-	+b.filter(data-aos="fade-up" data-aos-duration="400")
+	+b.filter
 		+e.close: +icon('close')
 		//- +e.wrap
 		+e.row

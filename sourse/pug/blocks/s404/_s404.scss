@@ -56,6 +56,7 @@
 		color:$white;
 		z-index: 2;
 		p {
+			margin-bottom: 36px;
 			max-width: 235px;
 			font-size: 15px;
 			font-weight: 500;
@@ -67,15 +68,25 @@
 		}
 	}
 	&__logo {
-		width: 138px;
-		height: 47px;
+		img {
+			width: 99px;
+			height: 40px;
+			margin-bottom: 10px;
+			@include media-breakpoint-up(md) {
+				width: 138px;
+				height: 56px;
+
+			}
+		}
 	}
 	.section-title{
+		margin-bottom: 0;
 		h1 {
+			line-height: 1.1;
 			font-size: rem(136);
 			font-weight: 700;
+			margin-bottom: 0;
 			@include media-breakpoint-up(md) {
-				margin-bottom: 15px;
 				line-height: 1;
 				font-size: rem(280);
 			}
@@ -86,6 +97,8 @@
 		// border-radius: $border-radius-sm;
 		font-size: 16px;
 		background: $white;
+		border: none;
+		font-weight: 600;
 	}
 	&__col{
 

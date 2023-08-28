@@ -494,6 +494,10 @@
 				background-color: transparent;
 			}
 		}
+		.form-wrap__input:read-only {
+			border: 1px solid $gray-400;
+			background-color: $gray-200;
+		}
 		.form-select {
 			color:$secondary-text;
 		}
@@ -553,17 +557,36 @@
 			border-bottom-right-radius: 8px;
 		}
 	}
+	tr.active td {
+		&:first-child {
+			border-bottom-left-radius: 0;
+		}
+		@include media-breakpoint-up(md) {
+			&:nth-last-child(2) {
+				border-bottom-right-radius: 0;
+			}
+		}
+	}
+	td {
+		@include media-breakpoint-up(md) {
+			&:nth-last-child(2) {
+				border-top-right-radius: 8px;
+				border-bottom-right-radius: 8px;
+			}
+		}
+	}
 	&__tr {
 		position: relative;
 		background-color: $white;
 		@include media-breakpoint-down(md) {
 			display: flex;
 			flex-direction: column;
+			border-radius: 8px;
 		}
 		&::after {
 			position: absolute;
 			right: 20px;
-			top: 50%;
+			top: 32px;
 			content: '';
 			display: inline-block;
 			width: 14px;
@@ -616,12 +639,13 @@
 	th {
 		padding: 14px 16px;
 		font-size: 16px;
+		border-bottom: none;
 	}
 	td {
-		padding: 8px 16px;
+		padding: 16px;
 		font-size: 15px;
 		border: none;
-		vertical-align: middle;
+		// vertical-align: middle;
 		@include media-breakpoint-down(md) {
 			&:not(:last-child) {
 				padding: 4px 16px;
@@ -638,6 +662,23 @@
 				margin-bottom: 16px;
 			}
 		}
+	}
+	&__date {
+		margin-bottom: 2px;
+	}
+	&__status {
+		max-width: 170px;
+		margin-bottom: 7px;
+		.iconC {
+			margin-right: 4px;
+			font-size: 16px;
+		}
+	}
+	&__btn {
+		padding-top: 8px;
+		padding-bottom: 8px;
+		// height: 32px;
+		width: 108px;
 	}
 	&__inner-block {
 		display: none;
@@ -700,12 +741,18 @@
 			width: 100%;
 		}
 	}
-	// &__toggle {
-	// 	td {
-	// 		padding: 0;
-	// 	}
-	// }
-	// &__inner-block {
-	// 	background-color: $white;
-	// }
+	&__toggle {
+		td[colspan="4"] {
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+		.table-history__btn-wrap,
+		.table-history__inner-block {
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 8px;
+		}
+	}
+	&__inner-block {
+		background-color: $white;
+	}
 }
