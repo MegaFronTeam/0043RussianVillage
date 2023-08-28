@@ -29,6 +29,9 @@
 		align-items: center;
 		padding: 2px 0;
 		font-size: 12px;
+		@include media-breakpoint-down(sm) {
+			align-items: flex-start;
+		}
 		.iconC {
 			margin-right: 4px;
 			font-size: 16px;
