@@ -507,6 +507,10 @@ function eventHandler() {
 
 	AOS.init();
 
+	$('.success__close').on('click', () => {
+		$('.success').fadeOut();
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

@@ -467,12 +467,26 @@
 				width: 100%;
 				@include media-breakpoint-up(md) {
 					max-width: rem(171);
+					--bs-btn-padding-x: #{rem(50)};
 				}
 			}
 			p {
 				margin-bottom: 0;
 				color: $gray-700;
 				font-size: rem(13);
+			}
+			&__attention {
+				font-size: rem(11);
+				line-height: 1.23;
+				text-align: center;
+				color: #141414;
+				margin-bottom: rem(8);
+				@include media-breakpoint-up(md) {
+					font-size: rem(13);
+					max-width: rem(209);
+					text-align: left;
+					margin-bottom: 0;
+				}
 			}
 		}
 		&__item {

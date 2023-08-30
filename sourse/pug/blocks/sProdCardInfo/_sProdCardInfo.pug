@@ -125,8 +125,10 @@ mixin sProdCardInfo(data)
 										+input('Задайте свой вопрос', 'textarea')
 									.col-md-auto.order-md-last
 										p Введено символов #[span 0] / 1000
-									.col-md
+									.col-md-auto
 										+e.btn.btn.btn-primary(type='button') Отправить
+									.col-md.align-self-center
+										+e.attention Вопрос будет опубликован после модерации.
 							mixin faqItem(title, answerTitle, who='Егор, 8 декабря 2019 в 17:04', answerWho='Егор, менеджер по работе с общественностью, 8 декабря 2019 в 17:04')
 								+e.item
 									.h6!= title

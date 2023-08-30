@@ -7,7 +7,7 @@
 	background-color: $gray-200;
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(40)};
-		border-top: 2px solid $gray-300;
+		border-top: 1px solid $gray-300;
 	}
 	&__row{
 		--bs-gutter-x: #{rem(24)};

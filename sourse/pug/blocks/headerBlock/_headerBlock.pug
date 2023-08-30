@@ -42,7 +42,7 @@ mixin headerBlock2(img, title, text, btn, picture)
 				if picture
 					picture
 						source(media="(min-width: 768px)", srcset=`img/${img}`)
-						img(src=`img/${picture}`, alt="").picture-bg
+						img(src=`img/${picture}`, alt="").picture-bg.object-fit-js
 				else
 					+img(`img/${img}`, 'bg').picture-bg
 				+e.content

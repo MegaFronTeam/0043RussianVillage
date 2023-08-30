@@ -335,9 +335,7 @@ function Mousewheel(_ref) {
         // Stop autoplay
         if (swiper.params.autoplay && swiper.params.autoplayDisableOnInteraction) swiper.autoplay.stop();
         // Return page scroll on edge positions
-        if (params.releaseOnEdges && (position === swiper.minTranslate() || position === swiper.maxTranslate())) {
-          return true;
-        }
+        if (position === swiper.minTranslate() || position === swiper.maxTranslate()) return true;
       }
     }
     if (e.preventDefault) e.preventDefault();else e.returnValue = false;

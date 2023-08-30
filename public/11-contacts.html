@@ -164,6 +164,11 @@
 												center:[55.70415618556699,37.42413108465574], // Москва
 												zoom:17
 											});
+											myMap.behaviors.disable('scrollZoom');
+											if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+												// ... отключаем перетаскивание карты
+												myMap.behaviors.disable('drag');
+											};
 										};
 									</script>
 								</div>

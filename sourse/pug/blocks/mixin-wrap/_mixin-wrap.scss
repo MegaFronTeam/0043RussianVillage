@@ -554,7 +554,7 @@
       --bs-badge-padding-y: #{rem(5.5)};
       top: rem(16);
       left: rem(16);
-      opacity: 0.5;
+      opacity: 0.8;
     }
     .card {
       &__img-wrap,
@@ -677,6 +677,7 @@
       input {
         background-color: $gray-200;
         height: rem(32);
+        min-width: auto;
         @include media-breakpoint-up(md) {
           height: rem(32);
         }
@@ -1479,6 +1480,41 @@
         background-color: $primary;
         color: #fff;
       }
+    }
+  }
+}
+
+.success {
+  position: fixed;
+  bottom: rem(56);
+  right: 0;
+  background-color: #fff;
+  border: 1px solid $gray-200;
+  box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.17);
+  padding: rem(12) rem(46) rem(12) rem(12);
+  font-size: rem(13);
+  line-height: 1.23;
+  z-index: 100;
+  width: 100%;
+  @include media-breakpoint-up(md) {
+    max-width: rem(372);
+    top: rem(112);
+    right: rem(8);
+    bottom: unset;
+    border-radius: rem(4);
+  }
+  &__close {
+    position: absolute;
+    top: rem(12);
+    right: rem(12);
+    color: $gray-400;
+    cursor: pointer;
+    @include mt;
+    .icon {
+      font-size: rem(24);
+    }
+    &:hover {
+      color: $body-color;
     }
   }
 }

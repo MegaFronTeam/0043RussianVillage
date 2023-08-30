@@ -29,7 +29,7 @@ block pagecontent
 		+b.block-with-aside--2
 			.container
 				+e.row.row
-					+e.col-auto.col-auto
+					+e.col-auto.col-auto(data-aos="fade-up" data-aos-duration="400")
 						.h6(data-aos="fade-up" data-aos-duration="400") Дачные постройки и конструкции
 						mixin item(text, links=[])
 							+e.item(data-aos="fade-up" data-aos-duration="400")
@@ -61,7 +61,7 @@ block pagecontent
 						+sIndividualOrder
 						+sPopularCategories2
 						+sBestsellers
-		+sAlsoWatch(false)
+		+sAlsoWatchSearch(false)
 	+parts('footer')
       
 

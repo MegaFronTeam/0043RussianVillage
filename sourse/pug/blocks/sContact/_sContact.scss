@@ -12,6 +12,7 @@
 		background-color: #fff;
 		border-radius: rem(8);
 		margin-bottom: rem(19);
+		overflow: hidden;
 		@include media-breakpoint-up(md) {
 			margin-bottom: rem(24);
 		}
@@ -63,6 +64,9 @@
 		font-weight: 600;
 		line-height: 1.23;
 		margin-bottom: rem(8);
+		@include media-breakpoint-up(md) {
+			margin-top: rem(24);
+		}
 	}
 	&__item {
 		margin-bottom: rem(16);

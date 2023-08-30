@@ -116,7 +116,11 @@
     --bs-btn-border-color: #{$gray-400};
 		// --bs-btn-hover-bg: #fff;
     // --bs-btn-hover-border-color: #fff;
-
+		--bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #{$body-color};
+    --bs-btn-hover-border-color: #{$body-color};
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #{$body-color};
 		width: 100%;
 		display: block;
 		margin-top: auto;
