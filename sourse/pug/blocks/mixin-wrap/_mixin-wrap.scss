@@ -677,7 +677,7 @@
       input {
         background-color: $gray-200;
         height: rem(32);
-        min-width: auto;
+        min-width: 20px;
         @include media-breakpoint-up(md) {
           height: rem(32);
         }
