@@ -685,6 +685,7 @@
       &__btn {
         width: rem(44);
         height: rem(32);
+        flex: none;
         @include media-breakpoint-up(md) {
           height: rem(32);
         }
