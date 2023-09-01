@@ -69,5 +69,5 @@ mixin headerBlock2(img, title, text, btn, picture)
 						p!= text
 					if btn
 						+e.btn-wrap
-							+e.btn.btn.btn-light(href='#') Отправить резюме
-							+e.btn.btn.btn-primary(href='#') Смотреть вакансии
+							+e.btn.btn.btn-light(href='#' data-fancybox='send-resume' data-src='#modal-resume') Отправить резюме
+							+e.btn.btn.btn-primary(href='#sVacancyBlock') Смотреть вакансии

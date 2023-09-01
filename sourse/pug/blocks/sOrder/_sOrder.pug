@@ -131,51 +131,55 @@ mixin sOrder2()
 										.col-md-12
 											+input('Укажите дополнительные пожелания к заказу', 'textarea', 'Комментарий')
 							.tabs__content
-								+e.info-wrap
-									span Адрес
-									p м. Черкизовская, Щёлковское шоссе, 5с1
-								+e.info-wrap
-									span Режим работы
-									p Пн - Пт  9:00 - 20:00. Сб - Вс 9:00 - 18:00
-								+e.info-wrap
-									span Телефон
-									a(href="tel:84956468218") 8 (495) 646-82-18
-								+e.map
-									#map
-									script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
-									script.
-										var myMap;
+								+e.content
+									+ddGroup
+										+ddGroupItem('Склад: г. Москва, Рябиновая ул, 37, стр. 1', '')
+											.sOrder__info-wrap
+												span Режим работы
+												p Пн - Пт  9:00 - 20:00. Сб - Вс 9:00 - 18:00
+											.sOrder__info-wrap
+												span Телефон
+												a(href="tel:84956468218") 8 (495) 646-82-18
+											.sOrder__map
+												#map
+												script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=2066e304-cee0-4ed2-9cb2-5f6521d5f96c')
+												script.
+													var myMap;
 
-										// Дождёмся загрузки API и готовности DOM.
-										ymaps.ready(init);
+													// Дождёмся загрузки API и готовности DOM.
+													ymaps.ready(init);
 
-										function init () {
-											// Создание экземпляра карты и его привязка к контейнеру с
-											// заданным id ("map").
-											myMap = new ymaps.Map('map', {
-												// При инициализации карты обязательно нужно указать
-												// её центр и коэффициент масштабирования.
-												center:[55.74498979811124,37.589906491821296], // Москва
-												zoom:14
-											}),
-											myPlacemark = new ymaps.Placemark([55.74498979811124,37.589906491821296], {
-												hintContent: 'Собственный значок метки',
-												balloonContent: 'Это красивая метка'
-											}, {
-												// Опции.
-												// Необходимо указать данный тип макета.
-												iconLayout: 'default#image',
-												// Своё изображение иконки метки.
-												iconImageHref: 'img/map-pin.png',
-												// Размеры метки.
-												iconImageSize: [47, 73],
-												// Смещение левого верхнего угла иконки относительно
-												// её "ножки" (точки привязки).
-												iconImageOffset: [-5, -38],
-											});
-											myMap.geoObjects
-												.add(myPlacemark)
-										};
+													function init () {
+														// Создание экземпляра карты и его привязка к контейнеру с
+														// заданным id ("map").
+														myMap = new ymaps.Map('map', {
+															// При инициализации карты обязательно нужно указать
+															// её центр и коэффициент масштабирования.
+															center:[55.74498979811124,37.589906491821296], // Москва
+															zoom:14
+														}),
+														myPlacemark = new ymaps.Placemark([55.74498979811124,37.589906491821296], {
+															hintContent: 'Собственный значок метки',
+															balloonContent: 'Это красивая метка'
+														}, {
+															// Опции.
+															// Необходимо указать данный тип макета.
+															iconLayout: 'default#image',
+															// Своё изображение иконки метки.
+															iconImageHref: 'img/map-pin.png',
+															// Размеры метки.
+															iconImageSize: [47, 73],
+															// Смещение левого верхнего угла иконки относительно
+															// её "ножки" (точки привязки).
+															iconImageOffset: [-5, -38],
+														});
+														myMap.geoObjects
+															.add(myPlacemark)
+													};
+								+e.content
+									.h6 Выберите способ оплаты
+									+in-c('radio', 'Онлайн', 'delivery')
+									+in-c('radio', 'При получении. Оплата возможна наличными и картой.', 'delivery')
 						+e.table-wrap.d-md-none(data-aos="fade-up" data-aos-duration="400")
 							table
 								tr
