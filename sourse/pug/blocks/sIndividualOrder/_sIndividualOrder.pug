@@ -5,7 +5,7 @@ mixin sIndividualOrder(data)
 			h5 Возможно сделать индивидуальный заказ
 		+e.row(data-aos="fade-up" data-aos-duration="400")
 			.row
-				mixin item(icon, title, text, btn, img)
+				mixin item(icon, title, text, img)
 					+e.item
 						if img
 							img(src='img/svg/logo-bg-img.svg' alt='').img-1
@@ -13,9 +13,11 @@ mixin sIndividualOrder(data)
 						+iconC(icon)
 						h6!= title
 						p!= text
-						+e.btn.btn.btn-sm.btn-outline-light(href='#')!= btn
+						block
 				+e.col.col
-					+item('sIndividualOrder-icon-1', 'Индивидуальный заказ по фото, эскизу, проекту', 'Оставьте заявку с&nbsp;фото, ссылкой на&nbsp;изображение или товар на&nbsp;другом сайте, проект и&nbsp;мы&nbsp;изготовим для вас.', 'Заказать', true)
+					+item('sIndividualOrder-icon-1', 'Индивидуальный заказ по фото, эскизу, проекту', 'Оставьте заявку с&nbsp;фото, ссылкой на&nbsp;изображение или товар на&nbsp;другом сайте, проект и&nbsp;мы&nbsp;изготовим для вас.', true)
+						+e.btn.btn.btn-sm.btn-outline-light(href='#' data-fancybox='sIndividualOrder-modal-call' data-src='#modal-call') Заказать
 				.col
-					+item('sIndividualOrder-icon-2', 'Индивидуальный заказ по базовым конструкциям из нашего каталога', 'Подберите понравившую модель и&nbsp;мы&nbsp;изготовим её&nbsp;под ваши размеры.', 'Выбрать из каталога')
+					+item('sIndividualOrder-icon-2', 'Индивидуальный заказ по базовым конструкциям из нашего каталога', 'Подберите понравившую модель и&nbsp;мы&nbsp;изготовим её&nbsp;под ваши размеры.')
+						+e.btn.btn.btn-sm.btn-outline-light(href='#') Выбрать из каталога
 	// end sIndividualOrder

@@ -12,12 +12,17 @@
     --sPB: #{rem(56)};
   }
   &__recipe {
+    @include mt;
     padding: rem(8) 0 0 0;
     text-align: center;
     border-radius: rem(8);
     overflow: hidden;
     background-color: #f8d4b0;
     margin-bottom: rem(15);
+    display: block;
+    color: $body-color;
+    // &:not(:hover) {
+    // }
     @include media-breakpoint-up(md) {
       background-color: #fcbdab;
       padding: rem(25);

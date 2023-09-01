@@ -60,7 +60,7 @@ mixin sProdCardInfo(data)
 							+b.create-content
 								.h6 Ваш отзыв будет первым!
 								p Поделитесь опытом, помогите другим покупателям с выбором.
-								+e.btn.btn.btn-primary(href='#') Оставить отзыв
+								+e.btn.btn.btn-primary(href='#' data-fancybox='send-review' data-src='#modal-feedback') Оставить отзыв
 							+e.head
 								+e.head-row.row
 									.col-md-6
@@ -72,7 +72,7 @@ mixin sProdCardInfo(data)
 														| Средний рейтинг
 												.col-auto
 													+stars
-											+e.btn.btn.btn-primary(href='#' data-bs-custom-class="tooltip-custom" data-bs-placement="bottom" data-bs-html="true" data-bs-toggle="tooltip" data-bs-original-title=`Если вы приобретали этот товар, то <span>авторизуйтесь</span>, чтобы оставить отзыв. `) Оставить отзыв
+											+e.btn.btn.btn-primary(href='#' data-fancybox='send-review-2' data-src='#modal-feedback' data-bs-custom-class="tooltip-custom" data-bs-placement="bottom" data-bs-html="true" data-bs-toggle="tooltip" data-bs-original-title=`Если вы приобретали этот товар, то <span>авторизуйтесь</span>, чтобы оставить отзыв. `) Оставить отзыв
 											+e.btn.btn.btn-light(data-bs-custom-class="tooltip-custom" data-bs-placement="bottom" data-bs-html="true" data-bs-toggle="tooltip" data-bs-original-title=`Вы уже оставили отзыв.`) Оставить отзыв
 									.col-md-6
 										mixin rateItem(stars, count)

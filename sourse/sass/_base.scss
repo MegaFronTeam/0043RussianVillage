@@ -894,16 +894,3 @@ iframe {
 		height: 100%;
 	}
 }
-
-.main-page {
-	.headerBlock {
-		&__wrap {
-			img {
-				object-position: left;
-				@include media-breakpoint-down(md) {
-					animation: bgTransition 40s linear infinite ;
-				}
-			}
-		}
-	}
-}

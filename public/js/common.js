@@ -80,6 +80,21 @@ function eventHandler() {
 
 	});
 
+	new Swiper('.headerBlock__swiper-main--js', {
+		slidesPerView: 'auto',
+		loop: true,
+	});
+
+	new Swiper('.headerBlock__swiper-wrap--js .swiper', {
+		slidesPerView: 'auto',
+		loop: true,
+		pagination: {
+			el: document.querySelector('.headerBlock__swiper-wrap--js .swiper-pagination'),
+			type: 'bullets',
+			clickable: true,
+		},
+	});
+
 	let defSwipers = document.querySelectorAll('.default-swiper-js');
 	if (defSwipers.length > 0) {
 		for (const defSwiper of defSwipers) {

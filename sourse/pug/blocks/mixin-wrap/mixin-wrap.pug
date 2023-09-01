@@ -70,7 +70,7 @@ mixin mainPageNav()
 					a(href="#")
 						span %
 						| Акции и Скидки
-				.col-auto: a(href="#") Остались вопросы?
+				.col-auto: a(href="#" data-fancybox='send-question' data-src='#modal-question') Остались вопросы?
 
 mixin stars(rate=4)
 	+b.stars(data-rating=rate)
@@ -88,7 +88,7 @@ mixin empty-stars(rate=0)
 		+icon('rateStar')
 		+icon('rateStar')
 
-mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false)
+mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false, order, inCart)
 	+b.card(class=(similar ? 'similar': '') data-aos="fade-up" data-aos-duration="400")
 		if badge
 			.badge.badge-orange Скидка -50%
@@ -115,11 +115,17 @@ mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, 
 			else
 				+e.footer-row.row
 					.col
-						+e.btn.btn.btn-sm.btn-primary(href="#") 
-							+icon('shopping-cart', 'd-md-none')
-							span.d-none.d-md-block В корзину
-					.col-auto
-						+addblock
+						if order
+							+e.btn.btn.btn-sm.btn-primary(href="#" data-fancybox='order' data-src='#modal-call') Заказать
+						else if inCart
+							+e.btn.btn.btn-sm.btn-outline-dark.disabled(href="#") В корзине
+						else
+							+e.btn.btn.btn-sm.btn-primary(href="#") 
+								+icon('shopping-cart', 'd-md-none')
+								span.d-none.d-md-block В корзину
+					if !order
+						.col-auto
+							+addblock
 
 mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
 	+b.card--horizontal(data-aos="fade-up" data-aos-duration="400")

@@ -2,12 +2,30 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		.container
-			+e.wrap.bg-wrap(data-aos="fade-up" data-aos-duration="400")
-				+img('img/headerBlock-bg-1.jpg', 'bg').picture-bg
-				+e.content
-					h1.h3 Всё для загородной жизни
-					p для отдыха, работы и обустройства участка
-			+e.swiper-wrap.default-swiper-js(data-aos="fade-up" data-aos-duration="400")
+			+e.swiper-main--js.swiper
+				.swiper-wrapper
+					.swiper-slide
+						+e.wrap.animate.bg-wrap(data-aos="fade-up" data-aos-duration="400")
+							+img('img/headerBlock-bg-1.jpg', 'bg').picture-bg
+							+e.content
+								h1.h3 Всё для загородной жизни
+								p для отдыха, работы и обустройства участка
+					.swiper-slide
+						+e.wrap.bg-wrap(data-aos="fade-up" data-aos-duration="400")
+							+img('img/headerBlock-bg-1.jpg', 'bg').picture-bg
+							+e.content
+								h1.h3 Всё для загородной жизни
+								p для отдыха, работы и обустройства участка
+					.swiper-slide
+						+e.wrap.bg-wrap(data-aos="fade-up" data-aos-duration="400")
+							//- +img('img/headerBlock-bg-1.jpg', 'bg').picture-bg
+							//- +e.content
+							//- 	h1.h3 Всё для загородной жизни
+							//- 	p для отдыха, работы и обустройства участка
+							video.picture-bg(autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" preload="metadata")
+								source(src="video/video-bg.mp4" type="video/mp4")
+								source(src="video/video-bg.webm" type="video/webm")
+			+e.swiper-wrap--js(data-aos="fade-up" data-aos-duration="400")
 				+e.swiper.swiper
 					.swiper-wrapper
 						+e.slide.swiper-slide

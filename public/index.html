@@ -110,20 +110,42 @@
 							<div class="col-auto"><a href="#">Получение заказа</a></div>
 							<div class="col-auto"><a href="#">География продаж</a></div>
 							<div class="col-auto"><a href="#"><span>%</span>Акции и Скидки</a></div>
-							<div class="col-auto"><a href="#">Остались вопросы?</a></div>
+							<div class="col-auto"><a href="#" data-fancybox="send-question" data-src="#modal-question">Остались вопросы?</a></div>
 						</div>
 					</div>
 				</div>
 				<!-- start headerBlock-->
 				<div class="headerBlock section" id="headerBlock">
 					<div class="container">
-						<div class="headerBlock__wrap bg-wrap" data-aos="fade-up" data-aos-duration="400"><img class="object-fit-js picture-bg" src="img/headerBlock-bg-1.jpg" alt="" loading="lazy"/>
-							<div class="headerBlock__content">
-								<h1 class="h3">Всё для загородной жизни</h1>
-								<p>для отдыха, работы и обустройства участка</p>
+						<div class="headerBlock__swiper-main headerBlock__swiper-main--js swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="headerBlock__wrap animate bg-wrap" data-aos="fade-up" data-aos-duration="400"><img class="object-fit-js picture-bg" src="img/headerBlock-bg-1.jpg" alt="" loading="lazy"/>
+										<div class="headerBlock__content">
+											<h1 class="h3">Всё для загородной жизни</h1>
+											<p>для отдыха, работы и обустройства участка</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="headerBlock__wrap bg-wrap" data-aos="fade-up" data-aos-duration="400"><img class="object-fit-js picture-bg" src="img/headerBlock-bg-1.jpg" alt="" loading="lazy"/>
+										<div class="headerBlock__content">
+											<h1 class="h3">Всё для загородной жизни</h1>
+											<p>для отдыха, работы и обустройства участка</p>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="headerBlock__wrap bg-wrap" data-aos="fade-up" data-aos-duration="400">
+										<video class="picture-bg" autoplay="autoplay" loop="loop" muted="muted" playsinline="playsinline" preload="metadata">
+											<source src="video/video-bg.mp4" type="video/mp4"/>
+											<source src="video/video-bg.webm" type="video/webm"/>
+										</video>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="headerBlock__swiper-wrap default-swiper-js" data-aos="fade-up" data-aos-duration="400">
+						<div class="headerBlock__swiper-wrap headerBlock__swiper-wrap--js" data-aos="fade-up" data-aos-duration="400">
 							<div class="headerBlock__swiper swiper">
 								<div class="swiper-wrapper">
 									<div class="headerBlock__slide swiper-slide">
@@ -477,20 +499,8 @@
 													</div>
 													<div class="card__footer-row row">
 														<div class="col">
-															<a class="card__btn btn btn-sm btn-primary" href="#"> 
-																<svg class="icon icon-shopping-cart d-md-none">
-																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-																</svg><span class="d-none d-md-block">В корзину</span>
+															<a class="card__btn btn btn-sm btn-primary" href="#" data-fancybox="order" data-src="#modal-call">Заказать
 															</a>
-														</div>
-														<div class="col-auto">
-															<div class="addBlock">
-																<button class="addBlock__btn addBlock__btn--minus" type="button">
-																</button>
-																<input type="text" placeholder="1" value="1"/>
-																<button class="addBlock__btn addBlock__btn--plus" type="button">
-																</button>
-															</div>
 														</div>
 													</div>
 												</div>
@@ -530,10 +540,7 @@
 													</div>
 													<div class="card__footer-row row">
 														<div class="col">
-															<a class="card__btn btn btn-sm btn-primary" href="#"> 
-																<svg class="icon icon-shopping-cart d-md-none">
-																	<use xlink:href="img/svg/sprite.svg#shopping-cart"></use>
-																</svg><span class="d-none d-md-block">В корзину</span>
+															<a class="card__btn btn btn-sm btn-outline-dark disabled" href="#">В корзине
 															</a>
 														</div>
 														<div class="col-auto">
@@ -1080,12 +1087,14 @@
 				<!-- start sOnOpenFire-->
 				<section class="sOnOpenFire section" id="sOnOpenFire">
 					<div class="container">
-						<div class="sOnOpenFire__recipe bg-wrap" data-aos="fade-up" data-aos-duration="400">
-							<h5>Рецепты блюд на открытом огне</h5>
-							<p>Коллекция горячих блюд для истинных ценителей дачной жизни</p>
-							<picture>
-								<source media="(min-width: 768px)" srcset="img/recipe-bg-1.png"/><img src="img/recipe-bg-1-sm.png"/>
-							</picture>
+						<div data-aos="fade-up" data-aos-duration="400">
+							<a class="sOnOpenFire__recipe bg-wrap" href="#">
+								<h5>Рецепты блюд на открытом огне</h5>
+								<p>Коллекция горячих блюд для истинных ценителей дачной жизни</p>
+								<picture>
+									<source media="(min-width: 768px)" srcset="img/recipe-bg-1.png"/><img src="img/recipe-bg-1-sm.png"/>
+								</picture>
+							</a>
 						</div>
 						<div class="sOnOpenFire__wrap" data-aos="fade-up" data-aos-duration="400">
 							<h4>Приготовление пищи на открытом огне</h4>

@@ -90,7 +90,7 @@ mixin sProdCard(data)
 											+e.rate-wrap
 												span 4.5
 												+stars
-												+e.create-review(href='#') Оставить отзыв
+												+e.create-review(href='#' data-fancybox='prodCard-modal-call' data-src='#modal-call') Оставить отзыв
 										.col-auto
 											+e.favorite(href='#' class=(data.favActive ? 'active' : ''))
 												span В избранное
