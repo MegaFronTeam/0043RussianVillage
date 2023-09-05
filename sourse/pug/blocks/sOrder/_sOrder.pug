@@ -271,7 +271,7 @@ mixin sOrder19-2()
 									td г. Москва, улица Марьинский Парк, 25к2
 									td(data-title="Сумма заказа").table-history__td 36 700 ₽
 									td(data-title="Кол-во товаров").table-history__td 6
-									td.d-block.d-md-none
+									td.btn-td.d-block.d-md-none
 										.table-history__btn.btn.btn-primary(href='#') Оплатить
 								+e.toggle.TR
 									td(colspan="4")
@@ -279,8 +279,8 @@ mixin sOrder19-2()
 											+orderCard('card-13.png', '5 850 ₽', 'Гриль угольный BestPicnic Barbeque 47, 55х47.5х86 см', false, true, 'true')
 											+orderCard('card-14.png', '17 890 ₽', 'Гриль-мангал с полками и крышкой барбекю Gratar Family Standart BBQ FSB 2000', false, true, 'true')
 											+orderCard('card-15.png', '81 000 ₽', 'Уличная кухня с мойкой AL-F VK14 - кухонный гарнитур для дачи и сада', 'bg', true, true)
-											+e.btn-wrap.d-none.d-md-block
-												+e.btn.btn.btn-primary(href='#') Повторить заказ
+											+e.btn-wrap
+												+e.btn.btn.btn-primary(href='#') Оплатить
 								+e.tr--js.TR
 									td
 										+e.date #[span №234], 16.05.2023
@@ -288,7 +288,7 @@ mixin sOrder19-2()
 									td г. Москва, улица Марьинский Парк, 25к2
 									td(data-title="Сумма заказа").table-history__td 36 700 ₽
 									td(data-title="Кол-во товаров").table-history__td 6
-									td.d-block.d-md-none
+									td.d-block.d-md-none.btn-td
 										.table-history__btn.btn.btn-primary(href='#') Повторить заказ
 								+e.toggle.TR
 									td(colspan="4")
@@ -296,7 +296,7 @@ mixin sOrder19-2()
 											+orderCard('card-13.png', '5 850 ₽', 'Гриль угольный BestPicnic Barbeque 47, 55х47.5х86 см', false, true, true)
 											+orderCard('card-14.png', '17 890 ₽', 'Гриль-мангал с полками и крышкой барбекю Gratar Family Standart BBQ FSB 2000', false, true, true)
 											+orderCard('card-15.png', '81 000 ₽', 'Уличная кухня с мойкой AL-F VK14 - кухонный гарнитур для дачи и сада', 'bg', true, true)
-											+e.btn-wrap.d-none.d-md-block
+											+e.btn-wrap
 												+e.btn.btn.btn-primary(href='#') Повторить заказ
 								+e.tr--js.TR
 									td
@@ -308,16 +308,16 @@ mixin sOrder19-2()
 									td г. Москва, улица Марьинский Парк, 25к2
 									td(data-title="Сумма заказа").table-history__td 36 700 ₽
 									td(data-title="Кол-во товаров").table-history__td 6
-									td.d-block.d-md-none
-										.table-history__btn.btn.btn-primary(href='#').A Повторить заказ
+									td.d-block.d-md-none.btn-td
+										.table-history__btn.btn.btn-primary(href='#').A Оплатить
 								+e.toggle.TR
 									td(colspan="4")
 										+e.inner-block--js
 											+orderCard('card-13.png', '5 850 ₽', 'Гриль угольный BestPicnic Barbeque 47, 55х47.5х86 см', false, true, true)
 											+orderCard('card-14.png', '17 890 ₽', 'Гриль-мангал с полками и крышкой барбекю Gratar Family Standart BBQ FSB 2000', false, true, true)
 											+orderCard('card-15.png', '81 000 ₽', 'Уличная кухня с мойкой AL-F VK14 - кухонный гарнитур для дачи и сада', 'bg', true, true)
-											+e.btn-wrap.d-none.d-md-block
-												+e.btn.btn.btn-primary(href='#') Повторить заказ
+											+e.btn-wrap
+												+e.btn.btn.btn-primary(href='#') Оплатить
 				+e.col.col-md.d-none.d-md-block
 					+e.wrap--right
 						h2(data-aos="fade-up" data-aos-duration="400") Личный кабинет

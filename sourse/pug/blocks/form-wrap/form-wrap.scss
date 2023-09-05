@@ -370,5 +370,8 @@ input::-webkit-inner-spin-button {
 	}
 }
 .select2-container--default .select2-selection--single .select2-selection__rendered {
-	color: #999EAB;
+	color: $body-color;
+	&:placeholder {
+		color: #999EAB;
+	}
 }
