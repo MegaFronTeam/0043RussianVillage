@@ -9,21 +9,25 @@ function eventHandler() {
 
 	$(".custom-select-js").select2({
 		tags: true, 
-		// allowClear: true,
+		placeholder: "Выберите регион",
 		dropdownParent: $(".custom-select-js").parent(),
 	});
-
-
+	
 	$(".custom-select-js").each(function(){ 
 		if (!this.value)  return;
 		$(this).parents(".form-wrap__input-wrap").find(".form-wrap__input-title").addClass("active")
-
+		
 	})
 	$(".custom-select-js").on('select2:selecting', function (e) {
 		console.log('Selecting: ', e.params.args.data);
 		$(this).parents(".form-wrap__input-wrap").find(".form-wrap__input-title").addClass("active")
 	});
 
+	$(".resume-select-js").select2({
+		tags: true, 
+		placeholder: "Выберите должность",
+		dropdownParent: $(".resume-select-js").parent(),
+	});	
 	function whenResize() {
 		JSCCommon.setFixedNav();
 		JSCCommon.setFixedCardInfo();

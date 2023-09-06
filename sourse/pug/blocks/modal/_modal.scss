@@ -276,12 +276,27 @@
 			}
 		}
 	}
+	.form-control:focus {
+		border-color: $secondary-text;
+	}
 	&--resume {
 		input[type="date"] {
 			color: $input-placeholder-color;
 		}
+		input[type=date]::-webkit-calendar-picker-indicator{
+		 opacity: 0;
+		}
+		input[type=date]{
+			background:url("../img/calendar.svg") no-repeat 97% 50%;
+		}
 		.select2 {
-			width: 100%;
+			width: 100% !important;
+		}
+		.select2-selection {
+			padding: rem(7.5) rem(10);
+		}
+		.select2-container--default .select2-selection--single .select2-selection__rendered {
+			line-height: 1.6;
 		}
 		.resume-filepod {
 		}

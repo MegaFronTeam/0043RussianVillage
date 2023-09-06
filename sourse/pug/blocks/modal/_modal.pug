@@ -130,9 +130,9 @@ mixin modal()
 			+form-wrap
 				+e.title.form-data.h5.text-center Обратный звонок
 				+input("Введите свое имя", 'text', 'Имя*')(required)
-				+input("Введите свою фамилию", 'text', 'Имя*')(required)
+				+input("Введите свою фамилию", 'text', 'Фамилия*')(required)
 				+input("дд.мм.гггг", 'date', 'Дата рождения')(required)
-				+input("Выберите должность",'select', 'Желаемая должность')(class="сustom-select-js")
+				+input("",'select', 'Желаемая должность')(class="resume-select-js")
 				+input('+7 (      )     -     -', 'tel', 'Телефон*')(required)
 				+input('Введите свой e-mail', 'email', 'E-mail')
 				input(type="file" class="resume-filepod")
