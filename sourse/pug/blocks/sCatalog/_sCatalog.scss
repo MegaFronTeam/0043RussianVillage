@@ -144,6 +144,11 @@
 			margin-bottom: 4px;
 		}
 	}
+	&--horizontal-cards {
+		.sCatalog__row {
+			--bs-gutter-y: #{rem(8)};
+		}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

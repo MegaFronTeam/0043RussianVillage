@@ -154,7 +154,9 @@
 		}
 	}
 	&--2 {
-
+		@include media-breakpoint-up(md) {
+			--sPT: #{rem(32)};
+		}
 		.headerBlock {
 			&__wrap {
 				margin-bottom: 0;

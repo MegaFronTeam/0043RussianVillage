@@ -327,10 +327,10 @@
 		}
 	}
 	&__empty-wrap {
-		padding-top: rem(16);
+		padding-top: rem(8);
 		padding-bottom: rem(5);
 		@include media-breakpoint-up(md) {
-			padding-top: rem(32);
+			padding-top: rem(8);
 			padding-bottom: rem(2);
 		}
 	}
