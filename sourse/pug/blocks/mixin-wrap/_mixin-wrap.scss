@@ -701,6 +701,13 @@
       grid-template-columns: 120px auto 224px;
       grid-template-rows: auto auto;
     }
+    .badge {
+      position: static;
+      margin-bottom: 4px;
+      @include media-breakpoint-up(md) {
+        position: absolute;
+      }
+    }
     .card__img-wrap {
       grid-column: 1 / 2;
       grid-row: 1 / 2;

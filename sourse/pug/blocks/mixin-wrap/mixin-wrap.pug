@@ -156,12 +156,12 @@ mixin cardHorizontal(img, price, text, bg='bg', review=false, badge=false)
 
 mixin orderCard(img, price, text, bg='bg', review=false, badge=false)
 	+b.card--horizontal.card--order(data-aos="fade-up" data-aos-duration="400")
-		if badge
-			.badge.badge-orange.d-none.d-md-block Скидка -50%
+		//- if badge
 		+e.img-wrap(href='#')
 			.img-wrap-center
 				+img(`img/${img}`, bg)
 		+e.text-wrap
+			.badge.badge-orange Скидка -50%
 			+e.text(href='#')!=text 
 			+e.create Производство Италия
 			+e.review-wrap
