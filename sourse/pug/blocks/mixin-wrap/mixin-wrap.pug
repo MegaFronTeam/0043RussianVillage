@@ -32,18 +32,19 @@ mixin addblock()
 
 
 mixin page-head(t, span, customClass='h5', ...items)
-	+b.page-head(data-aos="fade-up" data-aos-duration="400")
+	+b.page-head(data-aos="fade-up" data-aos-duration="400")&attributes(attributes)
 		- let l = items.length
 		if l > 0
 			+e.breadcrumb
 				.container
 					+breadcrumb('Главная',...items)
-		.container
+		if t
+			.container
 
-			h1(class=customClass)
-				!= t
-				if span 
-					span!= span
+				h1(class=customClass)
+					!= t
+					if span 
+						span!= span
 
 mixin parts(elem)
 	script.

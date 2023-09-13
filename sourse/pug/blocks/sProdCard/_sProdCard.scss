@@ -609,12 +609,13 @@
 		input {
 			background-color: $gray-200;
 			height: rem(32);
+			min-width: 20px;
 			@include media-breakpoint-up(md) {
 				height: rem(40);
 			}
 		}
 		&__btn {
-			width: rem(44);
+			width: rem(31);
 			height: rem(32);
 			@include media-breakpoint-up(md) {
 				height: rem(40);
