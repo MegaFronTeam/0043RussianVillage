@@ -32,7 +32,7 @@
 	// &::after {
 	// 	position: absolute;
 	// 	content: url('../img/404-right-bg.png');
-	// 	top: 10px;
+	// 	top: rem(12);
 	// 	right: 0;
 	// 	z-index: -1;
 	// 	transform: scale(0.6, 0.6);
@@ -71,7 +71,7 @@
 		img {
 			width: 99px;
 			height: 40px;
-			margin-bottom: 10px;
+			margin-bottom: rem(12);
 			@include media-breakpoint-up(md) {
 				width: 138px;
 				height: 56px;

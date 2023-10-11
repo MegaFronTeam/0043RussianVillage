@@ -2,7 +2,7 @@
 :root {
 	--animate-delay: 1.2s;
 	--bs-body-font-size: #{$em-base};
-
+	--bs-danger-text: var(--bs-danger);
 	@include media-breakpoint-up(md) {
 
 		--sPT: #{rem(80)};
@@ -16,7 +16,7 @@
 	// 	--bs-body-font-size: calc(#{$em-base} - 0.175rem + .12vw + .12vh);
 	// }
 	@include media-breakpoint-up(xxl) {
-		--bs-body-font-size: calc(#{$em-base} - 0.175rem + .12vw + .12vh);
+		--bs-body-font-size: calc(20px - 0.175rem + .12vw + .12vh);
 	}
 	--sPT: #{rem(80 * .5)};
 	--sPB: #{rem(90 * .5)};

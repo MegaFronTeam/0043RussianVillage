@@ -226,7 +226,7 @@
 		}
 		.form-wrap__caption {
 			margin-bottom: 8px;
-			font-size: 13px;
+			font-size: rem(13);
 		}
 		.stars {
 			margin-bottom: 8px;
@@ -244,7 +244,7 @@
 		}
 		.form-wrap__input-title {
 			text-align: left;
-			font-size: 13px;
+			font-size: rem(13);
 		}
 		textarea {
 			height: 94px;
@@ -254,7 +254,7 @@
 		}
 		.invalid-feedback {
 			text-align: left;
-			font-size: 12px;
+			font-size: rem(12);
 			margin-bottom: rem(20);
 		}
 		.form-wrap__btn {
@@ -336,22 +336,22 @@
 			margin-bottom: 2px;
 			color:	$body-color;
 			font-family: Montserrat;
-			font-size: 11px;
+			font-size: rem(12);
 			font-weight: 500;
 		}
 		.filepond--file-info-sub {
 			color: $dark-text;
-			font-size: 11px;
+			font-size: rem(12);
 			font-weight: 500;
 		}
 		.filepond--file-status-main {
 			color: $danger;
-			font-size: 11px;
+			font-size: rem(12);
 			font-weight: 500;
 		}
 		.filepond--file-status-sub {
 			color: $body-color;
-			font-size: 11px;
+			font-size: rem(12);
 			font-style: normal;
 			font-weight: 500;
 		}
@@ -443,22 +443,22 @@
 	margin-bottom: 2px;
 	color:	$body-color;
 	font-family: Montserrat;
-	font-size: 11px;
+	font-size: rem(12);
 	font-weight: 500;
 }
 .filepond--file-info-sub {
 	color: $dark-text;
-	font-size: 11px;
+	font-size: rem(12);
 	font-weight: 500;
 }
 .filepond--file-status-main {
 	color: $danger;
-	font-size: 11px;
+	font-size: rem(12);
 	font-weight: 500;
 }
 .filepond--file-status-sub {
 	color: $body-color;
-	font-size: 11px;
+	font-size: rem(12);
 	font-style: normal;
 	font-weight: 500;
 }

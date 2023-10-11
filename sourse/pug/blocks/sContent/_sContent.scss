@@ -87,7 +87,7 @@
 			background-color: $link-hover-color;
 			border-radius: 50%;
 			background-image: url('../img/check.svg');
-			background-size: 12px 10px;
+			background-size: rem(12) 10px;
 			background-position: center;
 			background-repeat: no-repeat;
 		}
@@ -125,7 +125,7 @@
 				background-color: $link-hover-color;
 				border-radius: 50%;
 				background-image: url('../img/check.png');
-				background-size: 12px 10px;
+				background-size: rem(12) 10px;
 				background-position: center;
 				background-repeat: no-repeat;
 			}
@@ -214,7 +214,7 @@
 		margin-bottom: 4px;
 		color: $gray-400;
 		font-family: Roboto;
-		font-size: 12px;
+		font-size: rem(12);
 	}
 	&__banner {
 		display: flex;
@@ -409,7 +409,7 @@
 		// li {
 		// 	position: relative;
 		// 	padding-left: 32px;
-		// 	margin-bottom: 12px;
+		// 	margin-bottom: rem(12);
 		// 	font-weight: 600;
 		// 	&::before {
 		// 		position: absolute;
@@ -424,7 +424,7 @@
 		// 		height: 24px;
 		// 		margin-right: 8px;
 		// 		font-weight: 600;
-		// 		font-size: 13px;
+		// 		font-size: rem(13);
 		// 		color: $white;
 		// 		border-radius: 50%;
 		// 		background-color: $link-hover-color;

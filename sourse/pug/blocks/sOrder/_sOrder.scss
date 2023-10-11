@@ -590,7 +590,7 @@
 			margin: 0;
 			align-items: flex-start;
 			color: $dark-text;
-			font-size: 13px;
+			font-size: rem(13);
 			font-weight: 500;
 			list-style-type: none;
 			&::after {
@@ -721,7 +721,7 @@
 				content: attr(data-title);
 				margin-right: 8px;
 				color: $dark-text;
-				font-size: 13px;
+				font-size: rem(13);
 				font-weight: 500;
 			}
 		}
