@@ -765,7 +765,7 @@ iframe {
 	}
 	&__link {
 		display: block;
-		font-size: 13px;
+		font-size: rem(13);
 		color: $dark-text;
 		&:hover {
 			color: $link-hover-color;
@@ -797,7 +797,7 @@ iframe {
 		text-align: left;
 		width: 100%;
 		color: $link-hover-color;
-		font-size: 13px;
+		font-size: rem(13);
 		font-weight: 500;
 		line-height: 1;
 		border: 1px solid $link-hover-color;
@@ -831,7 +831,7 @@ iframe {
 		position: relative;
 		padding-left: 32px;
 		&:not(:last-child) {
-			margin-bottom: 12px;
+			margin-bottom: rem(12);
 		}
 		&::before {
 			position: absolute;
@@ -846,7 +846,7 @@ iframe {
 			height: 24px;
 			margin-right: 8px;
 			font-weight: 600;
-			font-size: 13px;
+			font-size: rem(13);
 			color: $white;
 			border-radius: 50%;
 			background-color: $link-hover-color;
@@ -867,7 +867,7 @@ iframe {
 		}
 	}
 	&__title {
-		margin-bottom: 12px;
+		margin-bottom: rem(12);
 		font-size: 16px;
 		font-weight: 600;
 	}

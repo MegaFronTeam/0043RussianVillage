@@ -217,7 +217,8 @@ mixin sOrder19()
 						+form-wrap()(data-aos="fade-up" data-aos-duration="400")
 							.row
 								.col-md-12
-									+input('Введите свое имя', 'text', 'ФИО*')
+									+input('Введите свое имя', 'text', 'ФИО*').is-invalid
+										.invalid-feedback Please choose a username.
 								.col-md-6
 									+input('+7 (900) 345-44-55', 'tel', 'Телефон*')(required readonly)
 								.col-md-6
