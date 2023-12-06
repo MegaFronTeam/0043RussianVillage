@@ -97,6 +97,9 @@
     border-radius: rem(8);
     overflow: hidden;
     color: $body-color;
+    @include media-breakpoint-up(sm) {
+      --ratio: 294/306;
+    }
     // &:hover {
     //   color: $primary;
     // }

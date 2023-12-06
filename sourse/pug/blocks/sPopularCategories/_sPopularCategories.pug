@@ -3,7 +3,7 @@ mixin sPopularCategories(data)
 	+b.SECTION.sPopularCategories.section#sPopularCategories&attributes(attributes)
 		.container
 			+e.wrap
-				+b.section-title(data-aos="fade-up" data-aos-duration="400")
+				+b.section-title
 					.row
 						.col
 							h4 Популярные категории
@@ -11,7 +11,7 @@ mixin sPopularCategories(data)
 							a.show-more-js(href="#") 
 								| Смотреть все
 								+icon('chevron-right')
-				+e.row.row(data-aos="fade-up" data-aos-duration="400")
+				+e.row.row
 					mixin item(text, img, bgColor)
 						+e.col.col-md-2
 							+e.item(href='#' style=`--bgColor: ${bgColor}`)

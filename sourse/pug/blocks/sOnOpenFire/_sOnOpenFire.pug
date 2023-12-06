@@ -2,14 +2,14 @@ mixin sOnOpenFire(data)
 	// start sOnOpenFire
 	+b.SECTION.sOnOpenFire.section#sOnOpenFire&attributes(attributes)
 		.container
-			div(data-aos="fade-up" data-aos-duration="400")
+			div
 				+e.recipe.bg-wrap(href='#')
 					h5 Рецепты блюд на открытом огне
 					p Коллекция горячих блюд для истинных ценителей дачной жизни
 					picture
 						source(media="(min-width: 768px)", srcset="img/recipe-bg-1.png")
 						img(src='img/recipe-bg-1-sm.png')
-			+e.wrap(data-aos="fade-up" data-aos-duration="400")
+			+e.wrap
 				h4 Приготовление пищи на открытом огне
 				+e.swiper-wrap
 					+e.swiper--js.swiper

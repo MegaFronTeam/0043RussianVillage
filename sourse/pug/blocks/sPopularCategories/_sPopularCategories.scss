@@ -236,8 +236,8 @@
 		}
 		.sPopularCategories__img-wrap {
 			@include media-breakpoint-down(md) {
-				width: rem(37.2);
-				height: rem(37.2);
+				width: rem(67.2);
+				height: rem(67.2);
 				flex: 0 0 auto;
 				margin-right: rem(16);
 				position: relative;
@@ -246,7 +246,7 @@
 				border-radius: 3px;
 				overflow: hidden;
 				img {
-					width: rem(48);
+					// width: rem(48);
 					max-width: none;
 				}
 			}

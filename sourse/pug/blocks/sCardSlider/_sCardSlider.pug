@@ -1,10 +1,10 @@
-mixin sCardSlider(title, items=[], arrow)
+mixin sCardSlider(title, items=[], arrow, isAnimate=true)
 	// start sCardSlider
 	+b.sCardSlider.section&attributes(attributes)
 		.container
 			+e.wrapper
 				if items.length == 0
-					.section-title(data-aos="fade-up" data-aos-duration="400")
+					.section-title
 						.row.align-items-end
 							.col
 								h4!= title
@@ -13,9 +13,9 @@ mixin sCardSlider(title, items=[], arrow)
 									| Смотреть все
 									+icon('chevron-right')
 				else
-					+b.section-title(data-aos="fade-up" data-aos-duration="400")
+					+b.section-title
 						h4!= title
-					+e.head-row.row(data-aos="fade-up" data-aos-duration="400")
+					+e.head-row.row
 						.col
 							+e.tag-slider.freemode-slider--js.swiper
 								.swiper-wrapper
@@ -25,6 +25,10 @@ mixin sCardSlider(title, items=[], arrow)
 							+e.show-more(href="#") 
 								| Смотреть все
 								+icon('chevron-right')
-				+defSlider(arrow)
-					block
+				if isAnimate
+					+defSlider(arrow)
+						block
+				else
+					+defSliderWithoutAnimation(arrow)
+						block
 	// end sCardSlider

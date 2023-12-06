@@ -131,6 +131,7 @@ function eventHandler() {
 		breakpoints: {
 			768: {
 				slidesPerView: 4,
+				spaceBetween: 28,
 				grid: {
 					rows: 1,
 				},

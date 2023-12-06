@@ -89,7 +89,46 @@ mixin empty-stars(rate=0)
 		+icon('rateStar')
 		+icon('rateStar')
 
-mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false, order, inCart)
+mixin cardWithoutAnimation(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false, order, inCart, isAnimate=true)
+	+b.card(class=(similar ? 'similar': ''))
+		if badge
+			.badge.badge-orange Скидка -50%
+		else if similar
+			.badge.badge-gray Нет в наличии
+		if like
+			+e.like(href="#"): +icon('heart')
+		+e.img-wrap(href='#')
+			.img-wrap-center
+				+img(`img/${img}`, bg)
+		+e.content
+			+e.price!= price
+			+e.text(href='#')!=text 
+			+e.create Производство Италия
+			+e.review-wrap
+				+stars
+				if review
+					span 3 отзыва
+				else
+					span 07.11.2021
+			//- +e.rate
+			if similar
+				+e.btn.btn.btn-sm.btn-outline-dark(href="#") Похожие
+			else
+				+e.footer-row.row
+					.col
+						if order
+							+e.btn.btn.btn-sm.btn-primary(href="#" data-fancybox='order' data-src='#modal-call') Заказать
+						else if inCart
+							+e.btn.btn.btn-sm.btn-outline-dark.disabled(href="#") В корзине
+						else
+							+e.btn.btn.btn-sm.btn-primary(href="#") 
+								+icon('shopping-cart', 'd-md-none')
+								span.d-none.d-md-block В корзину
+					if !order
+						.col-auto
+							+addblock
+
+mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false, order, inCart, isAnimate=true)
 	+b.card(class=(similar ? 'similar': '') data-aos="fade-up" data-aos-duration="400")
 		if badge
 			.badge.badge-orange Скидка -50%
@@ -185,6 +224,15 @@ mixin recipe-card(img, title, descr, bg='bg')
 			+e.title!= title
 			+e.descr!= descr
 
+mixin defSliderWithoutAnimation(arrow)
+	+b.default-swiper.default-swiper-js&attributes(attributes)
+		.swiper
+			.swiper-wrapper
+				block
+		if arrow
+			.d-none.d-md-block
+				+arrow
+
 mixin defSlider(arrow)
 	+b.default-swiper.default-swiper-js(data-aos="fade-up" data-aos-duration="400")&attributes(attributes)
 		.swiper
@@ -195,7 +243,7 @@ mixin defSlider(arrow)
 				+arrow
 
 mixin textBlock()
-	+b.text-block(data-aos="fade-up" data-aos-duration="400")
+	+b.text-block
 		.container
 			+e.wrap
 				p С&nbsp;другой стороны, повышение уровня гражданского сознания предоставляет широкие возможности для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений. Разнообразный и&nbsp;богатый опыт говорит нам, что разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо экономической целесообразности принимаемых решений. С&nbsp;другой стороны, повышение уровня гражданского сознания предоставляет широкие возможности для как самодостаточных, так и&nbsp;внешне зависимых концептуальных решений. Разнообразный и&nbsp;богатый опыт говорит нам, что разбавленное изрядной долей эмпатии, рациональное мышление однозначно определяет каждого участника как способного принимать собственные решения касаемо экономической целесообразности принимаемых решений.

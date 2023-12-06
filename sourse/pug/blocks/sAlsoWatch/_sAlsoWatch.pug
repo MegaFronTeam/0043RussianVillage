@@ -2,9 +2,9 @@ mixin sAlsoWatch(arrow=true)
 	// start sAlsoWatch
 	+b.SECTION.sAlsoWatch.section#sAlsoWatch&attributes(attributes)
 		.container
-			+b.section-title(data-aos="fade-up" data-aos-duration="400")
+			+b.section-title
 				h6 Вы смотрели
-			+defSlider(arrow)
+			+defSliderWithoutAnimation(arrow)
 				+e.slide.swiper-slide
 					+b.seen-card(href='#')
 						+e.img-wrap
@@ -116,7 +116,7 @@ mixin sAlsoWatchSearch(arrow=true)
 					+b.seen-card(href='#')
 						+e.img-wrap
 							.img-wrap-center
-								+img('img/sAlsoWatch-img-1.png')
+								+img('img/sAlsoWatch-img-1.png', 'bg')
 						p Составная круговая скамейка "Диско 1/4 с подлокотниками"
 				+e.slide.swiper-slide
 					+b.seen-card(href='#')
