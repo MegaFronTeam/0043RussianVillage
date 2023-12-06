@@ -151,6 +151,9 @@
 }
 
 .top-btns {
+  @include media-breakpoint-up(md) {
+    position: relative;
+  }
   @include media-breakpoint-down(md) {
     position: fixed;
     left: 0;
@@ -931,6 +934,8 @@
     // flex: 0 0 auto;
     margin-bottom: rem(4);
     flex: 0 0 auto;
+    border-radius: rem(8);
+    overflow: hidden;
     @include media-breakpoint-up(md) {
       margin-right: rem(8);
       margin-bottom: 0;
