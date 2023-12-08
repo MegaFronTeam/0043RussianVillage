@@ -609,6 +609,9 @@
 		.sOrder__menu-link {
 			color: inherit;
 		}
+		.card__btn {
+			--bs-btn-padding-x: #{rem(5)};
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
