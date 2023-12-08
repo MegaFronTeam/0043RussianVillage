@@ -8,7 +8,7 @@
     --sPB: #{rem(30)};
   }
   @include media-breakpoint-up(md) {
-    --sPT: #{rem(56)};
+    --sPT: #{rem(40)};
     --sPB: #{rem(56)};
   }
   &__recipe {
@@ -27,7 +27,7 @@
       background-color: #fcbdab;
       padding: rem(25);
       text-align: left;
-      margin-bottom: rem(56);
+      margin-bottom: rem(40);
     }
     h5 {
       font-size: rem(16);

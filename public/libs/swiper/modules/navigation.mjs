@@ -22,7 +22,10 @@ function Navigation(_ref) {
     nextEl: null,
     prevEl: null
   };
-  const makeElementsArray = el => (Array.isArray(el) ? el : [el]).filter(e => !!e);
+  const makeElementsArray = el => {
+    if (!Array.isArray(el)) el = [el].filter(e => !!e);
+    return el;
+  };
   function getEl(el) {
     let res;
     if (el && typeof el === 'string' && swiper.isElement) {
@@ -140,11 +143,7 @@ function Navigation(_ref) {
     } = swiper.navigation;
     nextEl = makeElementsArray(nextEl);
     prevEl = makeElementsArray(prevEl);
-    if (swiper.enabled) {
-      update();
-      return;
-    }
-    [...nextEl, ...prevEl].filter(el => !!el).forEach(el => el.classList.add(swiper.params.navigation.lockClass));
+    [...nextEl, ...prevEl].filter(el => !!el).forEach(el => el.classList[swiper.enabled ? 'remove' : 'add'](swiper.params.navigation.lockClass));
   });
   on('click', (_s, e) => {
     let {

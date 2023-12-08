@@ -48,7 +48,10 @@ function Pagination(_ref) {
   };
   let bulletSize;
   let dynamicBulletIndex = 0;
-  const makeElementsArray = el => (Array.isArray(el) ? el : [el]).filter(e => !!e);
+  const makeElementsArray = el => {
+    if (!Array.isArray(el)) el = [el].filter(e => !!e);
+    return el;
+  };
   function isPaginationDisabled() {
     return !swiper.params.pagination.el || !swiper.pagination.el || Array.isArray(swiper.pagination.el) && swiper.pagination.el.length === 0;
   }
@@ -75,28 +78,14 @@ function Pagination(_ref) {
     const index = elementIndex(bulletEl) * swiper.params.slidesPerGroup;
     if (swiper.params.loop) {
       if (swiper.realIndex === index) return;
-      const realIndex = swiper.realIndex;
       const newSlideIndex = swiper.getSlideIndexByData(index);
       const currentSlideIndex = swiper.getSlideIndexByData(swiper.realIndex);
-      const loopFix = dir => {
-        const indexBeforeLoopFix = swiper.activeIndex;
+      if (newSlideIndex > swiper.slides.length - swiper.loopedSlides) {
         swiper.loopFix({
-          direction: dir,
+          direction: newSlideIndex > currentSlideIndex ? 'next' : 'prev',
           activeSlideIndex: newSlideIndex,
           slideTo: false
         });
-        const indexAfterFix = swiper.activeIndex;
-        if (indexBeforeLoopFix === indexAfterFix) {
-          swiper.slideToLoop(realIndex, 0, false, true);
-        }
-      };
-      if (newSlideIndex > swiper.slides.length - swiper.loopedSlides) {
-        loopFix(newSlideIndex > currentSlideIndex ? 'next' : 'prev');
-      } else if (swiper.params.centeredSlides) {
-        const slidesPerView = swiper.params.slidesPerView === 'auto' ? swiper.slidesPerViewDynamic() : Math.ceil(parseFloat(swiper.params.slidesPerView, 10));
-        if (newSlideIndex < Math.floor(slidesPerView / 2)) {
-          loopFix('prev');
-        }
       }
       swiper.slideToLoop(index);
     } else {
@@ -327,7 +316,7 @@ function Pagination(_ref) {
     el = makeElementsArray(el);
     el.forEach(subEl => {
       if (params.type === 'bullets' && params.clickable) {
-        subEl.classList.add(...(params.clickableClass || '').split(' '));
+        subEl.classList.add(params.clickableClass);
       }
       subEl.classList.add(params.modifierClass + params.type);
       subEl.classList.add(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
@@ -360,7 +349,6 @@ function Pagination(_ref) {
         subEl.classList.remove(params.modifierClass + params.type);
         subEl.classList.remove(swiper.isHorizontal() ? params.horizontalClass : params.verticalClass);
         if (params.clickable) {
-          subEl.classList.remove(...(params.clickableClass || '').split(' '));
           subEl.removeEventListener('click', onBulletClick);
         }
       });

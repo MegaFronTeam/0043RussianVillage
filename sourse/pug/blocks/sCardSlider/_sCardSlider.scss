@@ -5,8 +5,8 @@
 	--sTPB: #{rem(12)};
 	background-color: $gray-200;
 	@include media-breakpoint-up(md) {
-		--sPT: #{rem(54)};
-		--sPB: #{rem(47)};
+		--sPT: #{rem(40)};
+		--sPB: #{rem(40)};
 		--sTPB: #{rem(25)};
 	}
 	&--recipe {

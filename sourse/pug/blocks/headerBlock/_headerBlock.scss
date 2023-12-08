@@ -1,6 +1,6 @@
 // start .headerBlock
 .headerBlock {
-	--sPT: #{rem(8)};
+	--sPT: #{rem(0)};
 	--sPB: #{rem(12)};
 	// --sTPB: #{rem()}; 
 	@include media-breakpoint-up(md) {
@@ -16,7 +16,7 @@
 		overflow: hidden;
 		position: relative;
 		z-index: 1;
-		margin-bottom: rem(8);
+		margin-bottom: rem(16);
 		background-color: #d4d4d4;
 		@include media-breakpoint-up(md) {
 			min-height: rem(376);
