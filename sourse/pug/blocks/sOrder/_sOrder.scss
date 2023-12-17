@@ -250,15 +250,17 @@
 			background-color: $gray-200;
 			width: 100%;
 			height: rem(32);
-			min-width: rem(20);
+			min-width: rem(40);
 			@include media-breakpoint-up(md) {
+				min-width: rem(20);
 				height: rem(40);
 			}
 		}
 		&__btn {
-			width: rem(44);
 			height: rem(32);
+			width: rem(34);
 			@include media-breakpoint-up(md) {
+				width: rem(44);
 				height: rem(40);
 			}
 		}

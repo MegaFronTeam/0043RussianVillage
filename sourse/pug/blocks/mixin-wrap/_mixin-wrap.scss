@@ -73,7 +73,11 @@
     text-align: center;
     border: none;
     height: rem(24);
-    min-width: rem(40);
+    @include media-breakpoint-up(md) {
+
+      min-width: rem(40);
+    }
+    min-width: rem(80);
     width: 100%;
     font-weight: 500;
     color: $body-color;
