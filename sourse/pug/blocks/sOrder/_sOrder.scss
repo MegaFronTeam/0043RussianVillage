@@ -241,7 +241,8 @@
 		background-color: $gray-200;
 		// max-width: rem(94);
 		border-radius: rem(4);
-		max-width: min-content;
+		// max-width: min-content;
+		max-width: rem(118);
 		@include media-breakpoint-up(md) {
 			max-width: rem(108);
 			margin-left: 0;
