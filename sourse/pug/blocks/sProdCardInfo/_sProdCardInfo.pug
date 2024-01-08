@@ -6,7 +6,8 @@ mixin sProdCardInfo(data)
 				.tabs(data-aos="fade-up" data-aos-duration="400")
 					.tabs__caption.swiper.freemode-slider--js
 						.swiper-wrapper
-							.tabs__btn.swiper-slide.active Описание и характеристики
+							.tabs__btn.swiper-slide.active Описание
+							.tabs__btn.swiper-slide Комплектация
 							.tabs__btn.swiper-slide
 								| Отзывы
 								span 5
@@ -55,6 +56,7 @@ mixin sProdCardInfo(data)
 								+advantageCol('Колеса с глубоким протектором')
 								+advantageCol('Усиленные закаленные фрезы')
 								+advantageCol('Колеса с глубоким протектором')
+					.tabs__content Комплектация
 					.tabs__content
 						+b.review-block
 							+b.create-content
