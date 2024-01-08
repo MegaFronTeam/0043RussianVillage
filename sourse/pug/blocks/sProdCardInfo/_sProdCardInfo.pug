@@ -17,45 +17,114 @@ mixin sProdCardInfo(data)
 							.tabs__btn.swiper-slide Доставка
 							.tabs__btn.swiper-slide Получение товара
 					.tabs__content.active
-						+e.content
-							.h5 Описание
-							p Практичное, стильное, удобное кресло Престиж — идеальный выбор для сада, загородного дома, коттеджа, дачи. Оно выполнено из качественного полипропилена высокой прочности, способного выдерживать высокие нагрузки. Материал не требует особого ухода, чистится обычными моющими средствами, удобно в хранении и транспортировке. Кресло не боится повышенной влажности, резких перепадов температур, его можно ставить около бассейна, в бане, сауне, на улице. Дополнительное удобство обеспечивают удобные подлокотники.
-						+e.content
-							.h5 Характеристики
-							+e.table-row.row
-								mixin tr(key, value)
-									+e.tr-row.row
-										.col-md!= key
-										.col-md-auto.ms-md-auto.text-md-end!= value
-								.col-md
-									+tr('Производитель', 'Италия')
-									+tr('Гарантия', '18 мес.')
-									+tr('Срок службы', '2 года')
-									+tr('Материал', 'Полипропилен')
-									+tr('Цвет', 'Коричневый')
-									+tr('Размер (Ш×В×Г)', '33×79×92')
-								.col-md
-									+tr('Высота сиденья от пола', '40 см')
-									+tr('Maксимальная нагрузка на 1 посадочное место', '117 кг')
-									+tr('Мягкие элементы в комплекте', 'Нет')
-									+tr('Регулируемый наклон спинки', 'Нет')
-									+tr('Температурный режим', 'От -20 до +45 градусов')
-									+tr('Материал каркаса', 'Дерево')
-						+e.content
-							.h5 Преимущества
-							+e.advantage-row.row
-								mixin advantageCol(text)
-									+e.advantage-col.col-6.col-md-12
-										+e.item!= text
-								+advantageCol('Усиленные закаленные фрезы')
-								+advantageCol('Колеса с глубоким протектором')
-								+advantageCol('Шестеренчатый редуктор')
-								+advantageCol('Укрепленная рама')
-								+advantageCol('Шестеренчатый редуктор')
-								+advantageCol('Усиленные закаленные фрезы')
-								+advantageCol('Колеса с глубоким протектором')
-								+advantageCol('Усиленные закаленные фрезы')
-								+advantageCol('Колеса с глубоким протектором')
+						+sContent().pb-0
+							.h2 Конструкция изготовлена
+							+e.img-wrap: +img('img/prod-card-bg.jpg')
+							.h3 Требования к участку
+							p Площадка должна быть максимально ровная, избавлена от&nbsp;растительности (деревья, кусты, высокая трава), должна располагаться поблизости от&nbsp;инженерных коммуникаций. В&nbsp;случае перепада участка&nbsp;&mdash; просьба сообщить об&nbsp;этом.
+							.h4 Обшивка цоколя
+							p Оплатить заказанные на&nbsp;сайте товары вы&nbsp;можете на&nbsp;этапе оформления заказа банковской картой.<br>Мы&nbsp;принимаем карты &laquo;Мир&raquo;, Visa, Mastercard. Оплата через Google Pay&nbsp;/ Apple Pay недоступна.
+							+b.numbered-list.OL
+								+e.item.LI(data-aos="fade-up" data-aos-duration="400")
+									+e.title Выберите оплату картой на сайте.
+								+e.item.LI(data-aos="fade-up" data-aos-duration="400")
+									+e.title После выбора оплаты картой нажмите кнопку «Перейти к оплате».
+								+e.item.LI(data-aos="fade-up" data-aos-duration="400")
+									+e.title Оплатите заказ на странице банка.
+									p Выбрав оплату картой, вы&nbsp;будете автоматически перенаправлены на&nbsp;страницу оплаты банка. Заполните все необходимые поля и&nbsp;нажмите кнопку &laquo;Оплатить&raquo;
+									p Далее вы&nbsp;будете перенаправлены на&nbsp;страницу вашего банка для ввода кода из&nbsp;СМС.
+									p СМС придёт на&nbsp;мобильный телефон, привязанный к&nbsp;карте.
+								+e.item.LI(data-aos="fade-up" data-aos-duration="400")
+									+e.title Номер заказа будет направлен на&nbsp;Ваш email и&nbsp;по&nbsp;SMS.
+								+e.item.LI(data-aos="fade-up" data-aos-duration="400")
+									+e.title Вы&nbsp;получите электронный чек, подтверждающий оплату заказа.
+									p После оплаты вы&nbsp;получите подтверждающий платёжный документ&nbsp;&mdash; по&nbsp;электронной почте или СМС.
+							+e.table-wrap(data-aos="fade-up" data-aos-duration="400")
+								table.table-hover
+									thead
+										tr
+											th Maecenas
+											th Phasellus
+											th Gravida
+											th Integer
+									tbody
+										tr
+											td Nullam
+											td Tincidunt
+											td At elementum
+											td Dapibus
+										tr
+											td Luctus
+											td Mauris
+											td Felis
+											td Aenean
+										tr
+											td Dignissim
+											td Vestibulum
+											td Fusce
+											td Donec
+							.h5 Потолок и свесы
+							p Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;холодильник на&nbsp;1&nbsp;час.
+							+e.recept-steps.OL(data-aos="fade-up" data-aos-duration="400")
+								li Готовность шашлыка из&nbsp;говядины определяйте с&nbsp;помощью прокола острым ножом. Если выделяется красный сок, подержите мясо на&nbsp;мангале еще несколько минут. Если прозрачный&nbsp;&mdash; блюдо готово.
+							+e.swiper-wrap.default-swiper-js(data-aos="fade-up" data-aos-duration="400")
+								+e.swiper--js.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide
+											+e.img-wrap
+												+img(`img/step-2.jpg`)
+										+e.slide.swiper-slide
+											+e.img-wrap
+												+img(`img/step-3.jpg`)
+										+e.slide.swiper-slide
+											+e.img-wrap
+												+img(`img/step-4.jpg`)
+								.d-none.d-md-block
+									+arrow
+								.d-md-none
+									.swiper-pagination
+							+e.video-subtitle.H6(data-aos="fade-up" data-aos-duration="400") Стойки каркаса несущие
+							+e.video-wrap(data-aos="fade-up" data-aos-duration="400")
+								<iframe class="sContent__video" width="560" height="315" src="https://www.youtube.com/embed/Jz3_xAVxy5g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+						//- +e.content
+						//- 	.h5 Описание
+						//- 	p Практичное, стильное, удобное кресло Престиж — идеальный выбор для сада, загородного дома, коттеджа, дачи. Оно выполнено из качественного полипропилена высокой прочности, способного выдерживать высокие нагрузки. Материал не требует особого ухода, чистится обычными моющими средствами, удобно в хранении и транспортировке. Кресло не боится повышенной влажности, резких перепадов температур, его можно ставить около бассейна, в бане, сауне, на улице. Дополнительное удобство обеспечивают удобные подлокотники.
+						//- +e.content
+						//- 	.h5 Характеристики
+						//- 	+e.table-row.row
+						//- 		mixin tr(key, value)
+						//- 			+e.tr-row.row
+						//- 				.col-md!= key
+						//- 				.col-md-auto.ms-md-auto.text-md-end!= value
+						//- 		.col-md
+						//- 			+tr('Производитель', 'Италия')
+						//- 			+tr('Гарантия', '18 мес.')
+						//- 			+tr('Срок службы', '2 года')
+						//- 			+tr('Материал', 'Полипропилен')
+						//- 			+tr('Цвет', 'Коричневый')
+						//- 			+tr('Размер (Ш×В×Г)', '33×79×92')
+						//- 		.col-md
+						//- 			+tr('Высота сиденья от пола', '40 см')
+						//- 			+tr('Maксимальная нагрузка на 1 посадочное место', '117 кг')
+						//- 			+tr('Мягкие элементы в комплекте', 'Нет')
+						//- 			+tr('Регулируемый наклон спинки', 'Нет')
+						//- 			+tr('Температурный режим', 'От -20 до +45 градусов')
+						//- 			+tr('Материал каркаса', 'Дерево')
+						//- +e.content
+						//- 	.h5 Преимущества
+						//- 	+e.advantage-row.row
+						//- 		mixin advantageCol(text)
+						//- 			+e.advantage-col.col-6.col-md-12
+						//- 				+e.item!= text
+						//- 		+advantageCol('Усиленные закаленные фрезы')
+						//- 		+advantageCol('Колеса с глубоким протектором')
+						//- 		+advantageCol('Шестеренчатый редуктор')
+						//- 		+advantageCol('Укрепленная рама')
+						//- 		+advantageCol('Шестеренчатый редуктор')
+						//- 		+advantageCol('Усиленные закаленные фрезы')
+						//- 		+advantageCol('Колеса с глубоким протектором')
+						//- 		+advantageCol('Усиленные закаленные фрезы')
+						//- 		+advantageCol('Колеса с глубоким протектором')
 					.tabs__content Комплектация
 					.tabs__content
 						+b.review-block
