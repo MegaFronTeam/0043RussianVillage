@@ -95,7 +95,16 @@ mixin sProdCard(data)
 											+e.favorite(href='#' class=(data.favActive ? 'active' : ''))
 												span В избранное
 												+icon('heart')
-								h4(data-aos="fade-up" data-aos-duration="400") 12 890 ₽
+								+e.complictation(data-aos="fade-up" data-aos-duration="400") Выберите комплектацию
+								+e.tabs.tabs(data-aos="fade-up" data-aos-duration="400")
+									+e.tabs-select--js Несущий каркас
+									.tabs__caption
+										.tabs__btn.active Несущий каркас
+										.tabs__btn Базовый
+										.tabs__btn Премиум
+									.tabs__content.h4.active 12 890 ₽
+									.tabs__content.h4 890 ₽
+									.tabs__content.h4 18 290 ₽
 								+e.btn-row.row(data-aos="fade-up" data-aos-duration="400")
 									.col-12
 										if data.addToCard

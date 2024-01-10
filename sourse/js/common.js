@@ -531,6 +531,21 @@ function eventHandler() {
 		$('.success').fadeOut();
 	});
 
+	let tabSelect = document.querySelector('.sProdCard__tabs-select--js');
+	if(tabSelect) {
+		tabSelect.addEventListener('click', () => {
+			tabSelect.classList.toggle('active');
+		})
+	}
+
+	document.addEventListener('click', (e) => {
+		let tabSelectTarget = e.target.closest('.sProdCard__tabs-select--js');
+
+		if (!tabSelectTarget) {
+			tabSelect.classList.remove('active');
+		}
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

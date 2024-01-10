@@ -144,6 +144,12 @@ class JSCCommon {
 
 		});
 
+		$('.' + tab + '__caption').on('click', '.' + tab + '__btn:not(.active)', function (e) {
+			let tabSelect = document.querySelector('.sProdCard__tabs-select--js');
+			if(tabSelect) {
+				tabSelect.innerHTML = $(this).html();
+			}
+		});
 	}
 	// /tabs
 
