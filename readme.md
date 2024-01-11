@@ -3,6 +3,7 @@
 #### Правки 08.01.2024
 1. <https://megafronteam.github.io/0043RussianVillage/public/02-prod-card>
 2. <https://megafronteam.github.io/0043RussianVillage/public/02-prod-card-2>
+2. <https://megafronteam.github.io/0043RussianVillage/public/02-prod-card-3>
 ----
 1. <https://megafronteam.github.io/0043RussianVillage/public>
 2. <https://megafronteam.github.io/0043RussianVillage/public/00-modal>

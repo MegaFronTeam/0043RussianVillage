@@ -1,4 +1,4 @@
-mixin sProdCardInfo(secondVariant)
+mixin sProdCardInfo(secondVariant, table)
 	// start sProdCardInfo
 	+b.sProdCardInfo.section#sProdCardInfo&attributes(attributes)
 		.container
@@ -16,7 +16,7 @@ mixin sProdCardInfo(secondVariant)
 								span 6
 							.tabs__btn.swiper-slide Доставка
 							.tabs__btn.swiper-slide Получение товара
-					.tabs__content.active
+					.tabs__content
 						+sContent().pb-0
 							.h2 Конструкция изготовлена
 							+e.img-wrap: +img('img/prod-card-bg.jpg')
@@ -125,30 +125,84 @@ mixin sProdCardInfo(secondVariant)
 						//- 		+advantageCol('Колеса с глубоким протектором')
 						//- 		+advantageCol('Усиленные закаленные фрезы')
 						//- 		+advantageCol('Колеса с глубоким протектором')
-					.tabs__content
-						+e.UL.equipment(class=(secondVariant ? "sProdCardInfo__equipment--second" : ""))
-							li
-								.h6 Материал
-								ul
-									li Конструкция изготовлена из хвойных пород древесины (ель, сосна).
-									li Сорт по лицевой стороне: АВ.
-									li Материал — массив сухой строганный камерной сушки.
-							li
-								.h6 Крепеж
-								ul
-									li В крепеже не используем черных саморезов, только желтопассированные.
-									li Крепеж не является сборно – разборным.
-							li
-								.h6 Генератор
-								ul
-									li На&nbsp;участке необходимо электричество, для производства работ по&nbsp;строительству. В&nbsp;случае его отсутствия необходимо об&nbsp;этом сообщить на&nbsp;стадии оформления заказа. В&nbsp;этом случае привозится генератор.
-							li
-								.h6 Фундамент
-								ul
-									li Блочный из бетонных блоков (возможно необходима подготовка из щебня и песка).
-									li Размер блоков: 200×200×400 или 100×200×400.
-									li Если почва – суглинистая, глинистая, торфяная или болотистая — установка на блоки не желательна.
-									li В&nbsp;этом случае предпочтительнее использовать винтовые сваи,<br>песчано&mdash;щебеночную подушку, готовую площадку&nbsp;&mdash; тротуарная плитка или брусчатка на&nbsp;монолитной плите, ленточный фундамент.
+					.tabs__content.active
+						if table
+							+b.equipment-slider
+								+e.wrap
+									+e.row.row
+										+e.col.col
+											+e.item--price
+												.title Конструктивный элемент навеса
+												+e.price 12 890 ₽
+										+e.col.col
+											+e.item--price
+												.title Комплектация #[span «Несущий каркас»]
+												+e.price 12 890 ₽
+										+e.col.col
+											+e.item--price.current
+												.title Комплектация #[span «Базовая»]
+												+e.price 12 890 ₽
+										+e.col.col
+											+e.item--price
+												.title Комплектация #[span «Премиум»]
+												+e.price 12 890 ₽
+									+e.row.row
+										+e.col.col
+											+e.item--img
+												.subtitle Стойки навеса
+												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
+										+e.col.col
+											+e.item Брус сечением 140&times;140&nbsp;мм, из&nbsp;цельного массива дерева (не клееные*) *Допускается возникновение трещин, не&nbsp;влияющих на&nbsp;надежность и&nbsp;функционал конструкции.Во избежание трещин, возможна замена на&nbsp;Клееный брус.
+										+e.col.col
+											+e.item.current Клееный брус 140×140 мм.
+										+e.col.col
+											+e.item Клееный брус 140×140 мм.
+									+e.row.row
+										+e.col.col
+											+e.item--img
+												.subtitle Верхняя обвязка
+												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
+										+e.col.col
+											+e.item Клееный брус 290×140 мм.
+										+e.col.col
+											+e.item.current Клееный брус 290×140 мм.
+										+e.col.col
+											+e.item Клееный брус 290×140 мм.
+									+e.row.row
+										+e.col.col
+											+e.item--img
+												.subtitle Обрешетка кровли
+												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
+										+e.col.col
+											+e.item--cross: +icon('close')
+										+e.col.col
+											+e.item.current Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
+										+e.col.col
+											+e.item Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
+						else
+							+e.UL.equipment(class=(secondVariant ? "sProdCardInfo__equipment--second" : ""))
+								li
+									.h6 Материал
+									ul
+										li Конструкция изготовлена из хвойных пород древесины (ель, сосна).
+										li Сорт по лицевой стороне: АВ.
+										li Материал — массив сухой строганный камерной сушки.
+								li
+									.h6 Крепеж
+									ul
+										li В крепеже не используем черных саморезов, только желтопассированные.
+										li Крепеж не является сборно – разборным.
+								li
+									.h6 Генератор
+									ul
+										li На&nbsp;участке необходимо электричество, для производства работ по&nbsp;строительству. В&nbsp;случае его отсутствия необходимо об&nbsp;этом сообщить на&nbsp;стадии оформления заказа. В&nbsp;этом случае привозится генератор.
+								li
+									.h6 Фундамент
+									ul
+										li Блочный из бетонных блоков (возможно необходима подготовка из щебня и песка).
+										li Размер блоков: 200×200×400 или 100×200×400.
+										li Если почва – суглинистая, глинистая, торфяная или болотистая — установка на блоки не желательна.
+										li В&nbsp;этом случае предпочтительнее использовать винтовые сваи,<br>песчано&mdash;щебеночную подушку, готовую площадку&nbsp;&mdash; тротуарная плитка или брусчатка на&nbsp;монолитной плите, ленточный фундамент.
 					.tabs__content
 						+b.review-block
 							+b.create-content
