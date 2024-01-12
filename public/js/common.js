@@ -546,6 +546,39 @@ function eventHandler() {
 		}
 	});
 
+	let sProdCardTabsWrap = document.querySelector('.sProdCard__tabs');
+	
+	if(sProdCardTabsWrap) {
+		// let index = 1;
+		let tabsBtns = sProdCardTabsWrap.querySelectorAll('.tabs__btn');
+		let equipmentSliderRow = document.querySelectorAll('.equipment-slider__row');
+		for(let i = 0; i < tabsBtns.length; i++) {
+			tabsBtns[i].addEventListener('click', () => {
+				console.log(i);
+				equipmentSliderRow.forEach((item) => {
+					item.querySelectorAll('.equipment-slider__item').forEach((innerItem) => {innerItem.classList.remove('current2')});
+					item.querySelectorAll('.equipment-slider__item')[i + 1].classList.add('current2');
+				})
+			})
+		};
+	}
+
+	let stickyRow = document.querySelector('.equipment-slider__row--js');
+
+	if(stickyRow) {
+		let Sticky = new hcSticky(stickyRow, {
+			stickTo: '.equipment-slider',
+			mobileFirst: true,
+			disable: false,
+			top: 0,
+			responsive: {
+				768: {
+					disable: true,
+				}
+			}
+		});
+	}
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

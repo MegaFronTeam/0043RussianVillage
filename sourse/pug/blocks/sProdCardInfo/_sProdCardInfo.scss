@@ -910,6 +910,7 @@
 			}
 		}
 		&__item {
+			@include mt;
 			position: relative;
 			font-weight: 500;
 			line-height: 1.45;
@@ -923,7 +924,14 @@
 				padding: rem(16);
 			}
 			&.current {
-				background-color: #DCEBD3;
+				@include media-breakpoint-up(md) {
+					background-color: #DCEBD3;
+				}
+			}
+			&.current2 {
+				@include media-breakpoint-down(md) {
+					background-color: #DCEBD3;
+				}
 			}
 			.title {
 				font-size: rem(11);
@@ -945,7 +953,7 @@
 					left: 0;
 					font-size: rem(12);
 					font-weight: 600;
-					line-height: 1,33;
+					line-height: 1.33;
 				}
 			}
 			&--price {

@@ -305,7 +305,8 @@
 			border-radius: 8px;
 			background-color: $body-secondary-bg;
 			label {
-				color: $body-color;
+				// color: $body-color;
+				color: #6E9545;
 				font-size: 16px;
 				font-weight: 500;
 				line-height: 150%;
@@ -403,6 +404,52 @@
 		// 		background-color: transparent;
 		// 	}
 		// }
+		.form-wrap{
+
+			&__info {
+				display: flex;
+				align-items: flex-start;
+				padding: rem(8);
+				border-radius: rem(4);
+				background-color: $gray-200;
+				margin-bottom: rem(16);
+				img {
+					flex: 0 0 auto;
+					width: 100%;
+					max-width: rem(72);
+					margin-right: rem(16);
+				}
+				.title {
+					color: #493B2B;
+					font-size: rem(12);
+					font-weight: 600;
+					line-height: 1.33;
+					margin-bottom: rem(8);
+					@include media-breakpoint-up(md) {
+						font-size: rem(13);
+					}
+				}
+			}
+			&__equipment {
+				color: #493B2B;
+				font-size: rem(11);
+				font-weight: 500;
+				line-height: 1.23;
+				margin-bottom: rem(8);
+				@include media-breakpoint-up(md) {
+					font-size: rem(13);
+				}
+			}
+			&__price {
+				color: #493B2B;
+				font-size: rem(12);
+				font-weight: 600;
+				line-height: 1.33;
+				@include media-breakpoint-up(md) {
+					font-size: rem(13);
+				}
+			}
+		}
 	}
 }
 .resume-filepod {
