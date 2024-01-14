@@ -16,7 +16,7 @@ mixin sProdCardInfo(secondVariant, table)
 								span 6
 							.tabs__btn.swiper-slide Доставка
 							.tabs__btn.swiper-slide Получение товара
-					.tabs__content
+					.tabs__content.active
 						+sContent().pb-0
 							.h2 Конструкция изготовлена
 							+e.img-wrap: +img('img/prod-card-bg.jpg')
@@ -125,60 +125,60 @@ mixin sProdCardInfo(secondVariant, table)
 						//- 		+advantageCol('Колеса с глубоким протектором')
 						//- 		+advantageCol('Усиленные закаленные фрезы')
 						//- 		+advantageCol('Колеса с глубоким протектором')
-					.tabs__content.active
+					.tabs__content
 						if table
 							+b.equipment-slider
-								+e.wrap
-									+e.row--js.row
-										+e.col.col
-											+e.item--price
-												.title Конструктивный элемент навеса
-												+e.price 12 890 ₽
-										+e.col.col
-											+e.item--price
-												.title Комплектация #[span «Несущий каркас»]
-												+e.price 12 890 ₽
-										+e.col.col
-											+e.item--price.current
-												.title Комплектация #[span «Базовая»]
-												+e.price 12 890 ₽
-										+e.col.col
-											+e.item--price
-												.title Комплектация #[span «Премиум»]
-												+e.price 12 890 ₽
-									+e.row.row
-										+e.col.col
+								+e.head-slider-wrap
+									+e.head-slider.swiper
+										.swiper-wrapper
+											+e.slide.swiper-slide
+												+e.item--price
+													.title Конструктивный элемент навеса
+													+e.price 12 890 ₽
+											+e.slide.swiper-slide
+												+e.item--price.current2(data-type='Несущий каркас')
+													.title Комплектация #[span «Несущий каркас»]
+													+e.price 12 890 ₽
+											+e.slide.swiper-slide
+												+e.item--price.current(data-type='Базовый')
+													.title Комплектация #[span «Базовая»]
+													+e.price 12 890 ₽
+											+e.slide.swiper-slide
+												+e.item--price(data-type='Премиум')
+													.title Комплектация #[span «Премиум»]
+													+e.price 12 890 ₽
+								+e.swiper--js.swiper
+									.swiper-wrapper
+										+e.slide.swiper-slide
 											+e.item--img
 												.subtitle Стойки навеса
 												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
-										+e.col.col
-											+e.item Брус сечением 140&times;140&nbsp;мм, из&nbsp;цельного массива дерева (не клееные*) *Допускается возникновение трещин, не&nbsp;влияющих на&nbsp;надежность и&nbsp;функционал конструкции.Во избежание трещин, возможна замена на&nbsp;Клееный брус.
-										+e.col.col
-											+e.item.current Клееный брус 140×140 мм.
-										+e.col.col
-											+e.item Клееный брус 140×140 мм.
-									+e.row.row
-										+e.col.col
+										+e.slide.swiper-slide
+											+e.item.current2(data-type='Несущий каркас') Брус сечением 140&times;140&nbsp;мм, из&nbsp;цельного массива дерева (не клееные*) *Допускается возникновение трещин, не&nbsp;влияющих на&nbsp;надежность и&nbsp;функционал конструкции.Во избежание трещин, возможна замена на&nbsp;Клееный брус.
+										+e.slide.swiper-slide
+											+e.item.current(data-type='Базовый') Клееный брус 140×140 мм.
+										+e.slide.swiper-slide
+											+e.item(data-type='Премиум') Клееный брус 140×140 мм.
+										+e.slide.swiper-slide
 											+e.item--img
 												.subtitle Верхняя обвязка
 												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
-										+e.col.col
-											+e.item Клееный брус 290×140 мм.
-										+e.col.col
-											+e.item.current Клееный брус 290×140 мм.
-										+e.col.col
-											+e.item Клееный брус 290×140 мм.
-									+e.row.row
-										+e.col.col
+										+e.slide.swiper-slide
+											+e.item.current2(data-type='Несущий каркас') Клееный брус 290×140 мм.
+										+e.slide.swiper-slide
+											+e.item.current(data-type='Базовый') Клееный брус 290×140 мм.
+										+e.slide.swiper-slide
+											+e.item(data-type='Премиум') Клееный брус 290×140 мм.
+										+e.slide.swiper-slide
 											+e.item--img
 												.subtitle Обрешетка кровли
 												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
-										+e.col.col
-											+e.item--cross: +icon('close')
-										+e.col.col
-											+e.item.current Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
-										+e.col.col
-											+e.item Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
+										+e.slide.swiper-slide
+											+e.item--cross.current2(data-type='Несущий каркас'): +icon('close')
+										+e.slide.swiper-slide
+											+e.item.current(data-type='Базовый') Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
+										+e.slide.swiper-slide
+											+e.item(data-type='Премиум') Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
 						else
 							+e.UL.equipment(class=(secondVariant ? "sProdCardInfo__equipment--second" : ""))
 								li

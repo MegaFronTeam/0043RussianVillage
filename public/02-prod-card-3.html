@@ -385,9 +385,9 @@
 												<div class="sProdCard__tabs-select sProdCard__tabs-select--js">Несущий каркас
 												</div>
 												<div class="tabs__caption">
-													<div class="tabs__btn active">Несущий каркас</div>
-													<div class="tabs__btn">Базовый</div>
-													<div class="tabs__btn">Премиум</div>
+													<div class="tabs__btn active" data-type="Несущий каркас">Несущий каркас</div>
+													<div class="tabs__btn" data-type="Базовый">Базовый</div>
+													<div class="tabs__btn" data-type="Премиум">Премиум</div>
 												</div>
 												<div class="tabs__content h4 active">12 890 ₽</div>
 												<div class="tabs__content h4">890 ₽</div>
@@ -467,7 +467,7 @@
 										<div class="tabs__btn swiper-slide">Получение товара</div>
 									</div>
 								</div>
-								<div class="tabs__content">
+								<div class="tabs__content active">
 									<!-- start sContent-->
 									<section class="sContent section pb-0" id="sContent">
 										<div class="container">
@@ -582,41 +582,45 @@
 									</section>
 									<!-- end sContent-->
 								</div>
-								<div class="tabs__content active">
+								<div class="tabs__content">
 									<div class="equipment-slider">
-										<div class="equipment-slider__wrap">
-											<div class="equipment-slider__row equipment-slider__row--js row">
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item equipment-slider__item--price">
-														<div class="title">Конструктивный элемент навеса</div>
-														<div class="equipment-slider__price">12 890 ₽
+										<div class="equipment-slider__head-slider-wrap">
+											<div class="equipment-slider__head-slider swiper">
+												<div class="swiper-wrapper">
+													<div class="equipment-slider__slide swiper-slide">
+														<div class="equipment-slider__item equipment-slider__item--price">
+															<div class="title">Конструктивный элемент навеса</div>
+															<div class="equipment-slider__price">12 890 ₽
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item equipment-slider__item--price">
-														<div class="title">Комплектация <span>«Несущий каркас»</span></div>
-														<div class="equipment-slider__price">12 890 ₽
+													<div class="equipment-slider__slide swiper-slide">
+														<div class="equipment-slider__item equipment-slider__item--price current2" data-type="Несущий каркас">
+															<div class="title">Комплектация <span>«Несущий каркас»</span></div>
+															<div class="equipment-slider__price">12 890 ₽
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item equipment-slider__item--price current">
-														<div class="title">Комплектация <span>«Базовая»</span></div>
-														<div class="equipment-slider__price">12 890 ₽
+													<div class="equipment-slider__slide swiper-slide">
+														<div class="equipment-slider__item equipment-slider__item--price current" data-type="Базовый">
+															<div class="title">Комплектация <span>«Базовая»</span></div>
+															<div class="equipment-slider__price">12 890 ₽
+															</div>
 														</div>
 													</div>
-												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item equipment-slider__item--price">
-														<div class="title">Комплектация <span>«Премиум»</span></div>
-														<div class="equipment-slider__price">12 890 ₽
+													<div class="equipment-slider__slide swiper-slide">
+														<div class="equipment-slider__item equipment-slider__item--price" data-type="Премиум">
+															<div class="title">Комплектация <span>«Премиум»</span></div>
+															<div class="equipment-slider__price">12 890 ₽
+															</div>
 														</div>
 													</div>
 												</div>
 											</div>
-											<div class="equipment-slider__row row">
-												<div class="equipment-slider__col col">
+										</div>
+										<div class="equipment-slider__swiper equipment-slider__swiper--js swiper">
+											<div class="swiper-wrapper">
+												<div class="equipment-slider__slide swiper-slide">
 													<div class="equipment-slider__item equipment-slider__item--img">
 														<div class="subtitle">Стойки навеса</div>
 														<div class="equipment-slider__img-wrap">
@@ -625,21 +629,19 @@
 														</div>
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item">Брус сечением 140&times;140&nbsp;мм, из&nbsp;цельного массива дерева (не клееные*) *Допускается возникновение трещин, не&nbsp;влияющих на&nbsp;надежность и&nbsp;функционал конструкции.Во избежание трещин, возможна замена на&nbsp;Клееный брус.
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item current2" data-type="Несущий каркас">Брус сечением 140&times;140&nbsp;мм, из&nbsp;цельного массива дерева (не клееные*) *Допускается возникновение трещин, не&nbsp;влияющих на&nbsp;надежность и&nbsp;функционал конструкции.Во избежание трещин, возможна замена на&nbsp;Клееный брус.
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item current">Клееный брус 140×140 мм.
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item current" data-type="Базовый">Клееный брус 140×140 мм.
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item">Клееный брус 140×140 мм.
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item" data-type="Премиум">Клееный брус 140×140 мм.
 													</div>
 												</div>
-											</div>
-											<div class="equipment-slider__row row">
-												<div class="equipment-slider__col col">
+												<div class="equipment-slider__slide swiper-slide">
 													<div class="equipment-slider__item equipment-slider__item--img">
 														<div class="subtitle">Верхняя обвязка</div>
 														<div class="equipment-slider__img-wrap">
@@ -648,21 +650,19 @@
 														</div>
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item">Клееный брус 290×140 мм.
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item current2" data-type="Несущий каркас">Клееный брус 290×140 мм.
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item current">Клееный брус 290×140 мм.
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item current" data-type="Базовый">Клееный брус 290×140 мм.
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item">Клееный брус 290×140 мм.
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item" data-type="Премиум">Клееный брус 290×140 мм.
 													</div>
 												</div>
-											</div>
-											<div class="equipment-slider__row row">
-												<div class="equipment-slider__col col">
+												<div class="equipment-slider__slide swiper-slide">
 													<div class="equipment-slider__item equipment-slider__item--img">
 														<div class="subtitle">Обрешетка кровли</div>
 														<div class="equipment-slider__img-wrap">
@@ -671,19 +671,19 @@
 														</div>
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item equipment-slider__item--cross">
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item equipment-slider__item--cross current2" data-type="Несущий каркас">
 														<svg class="icon icon-close ">
 															<use xlink:href="img/svg/sprite.svg#close"></use>
 														</svg>
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item current">Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item current" data-type="Базовый">Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
 													</div>
 												</div>
-												<div class="equipment-slider__col col">
-													<div class="equipment-slider__item">Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
+												<div class="equipment-slider__slide swiper-slide">
+													<div class="equipment-slider__item" data-type="Премиум">Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
 													</div>
 												</div>
 											</div>

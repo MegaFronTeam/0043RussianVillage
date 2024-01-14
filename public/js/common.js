@@ -551,22 +551,52 @@ function eventHandler() {
 	if(sProdCardTabsWrap) {
 		// let index = 1;
 		let tabsBtns = sProdCardTabsWrap.querySelectorAll('.tabs__btn');
-		let equipmentSliderRow = document.querySelectorAll('.equipment-slider__row');
+		let equipmentSliderRow = document.querySelectorAll('.equipment-slider__item');
 		for(let i = 0; i < tabsBtns.length; i++) {
 			tabsBtns[i].addEventListener('click', () => {
-				console.log(i);
 				equipmentSliderRow.forEach((item) => {
-					item.querySelectorAll('.equipment-slider__item').forEach((innerItem) => {innerItem.classList.remove('current2')});
-					item.querySelectorAll('.equipment-slider__item')[i + 1].classList.add('current2');
+					if(tabsBtns[i].dataset.type === item.dataset.type) {
+						item.classList.add('current2');
+					} else {
+						item.classList.remove('current2');
+					}
 				})
 			})
 		};
 	}
 
-	let stickyRow = document.querySelector('.equipment-slider__row--js');
+	let sProdCardTabsSwiper = document.querySelector('.equipment-slider__swiper');
+	
+	if(sProdCardTabsSwiper) {
+		const mainSlider = new Swiper(sProdCardTabsSwiper, {
+			slidesPerView: 2,
+			spaceBetween: 28,
+			breakpoints: {
+				768: {
+					slidesPerView: 4,
+					spaceBetween: 28,
+				},
+			},
+			grid: {
+				fill: 'row',
+				rows: 3,
+			}
+		});
+		const headSlider = new Swiper('.equipment-slider__head-slider', {
+			slidesPerView: 2,
+			spaceBetween: 28,
+			breakpoints: {
+				768: {
+					slidesPerView: 4,
+					spaceBetween: 28,
+				},
+			},
+		});
 
-	if(stickyRow) {
-		let Sticky = new hcSticky(stickyRow, {
+		mainSlider.controller.control = headSlider;
+		headSlider.controller.control = mainSlider;
+		
+		let Sticky = new hcSticky('.equipment-slider__head-slider-wrap', {
 			stickTo: '.equipment-slider',
 			mobileFirst: true,
 			disable: false,
