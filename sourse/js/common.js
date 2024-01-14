@@ -215,6 +215,11 @@ function eventHandler() {
 		// 	toggleCatalog.forEach(el => el.classList.remove('active'))
 			
 		// }
+		if(!target && !targetcatalog) {
+			catalog.classList.remove('active');
+			toggleCatalog.forEach(el => el.classList.remove('active'));
+			document.querySelector("body").classList.remove('fixed-catalog');
+		}
 	})
 
 	function togglemobmenu(menu) {
@@ -315,31 +320,44 @@ function eventHandler() {
 		$('body').removeClass('fixed');
 	})
 
-	const sProdCardThumbSwiper = new Swiper('.sProdCard__thumb-slider--thumb-js', {
-		slidesPerView: 'auto',
-		spaceBetween: 3,
-		// direction: 'vertical',
-		navigation: {
-			nextEl: '.sProdCard__thumb-arrow-wrap .swiper-button-next',
-			prevEl: '.sProdCard__thumb-arrow-wrap .swiper-button-prev',
-		},
-		breakpoints: {
-			768: {
-				slidesPerView: 6,
-				direction: 'vertical',
+	if(document.querySelector('.sProdCard__thumb-slider--thumb-js')) {
+		const sProdCardThumbSwiper = new Swiper('.sProdCard__thumb-slider--thumb-js', {
+			slidesPerView: 'auto',
+			spaceBetween: 3,
+			// direction: 'vertical',
+			navigation: {
+				nextEl: '.sProdCard__thumb-arrow-wrap .swiper-button-next',
+				prevEl: '.sProdCard__thumb-arrow-wrap .swiper-button-prev',
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 6,
+					direction: 'vertical',
+				}
 			}
-		}
-	});
-	const sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
-		slidesPerView: 1,
-		navigation: {
-			nextEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-next',
-			prevEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-prev',
-		},
-		thumbs: {
-			swiper: sProdCardThumbSwiper,
-		},
-	});
+		});
+		const sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
+			slidesPerView: 1,
+			navigation: {
+				nextEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-next',
+				prevEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-prev',
+			},
+			thumbs: {
+				swiper: sProdCardThumbSwiper,
+			},
+		});
+	} else {
+		const sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
+			slidesPerView: 1,
+			navigation: {
+				nextEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-next',
+				prevEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-prev',
+			},
+			// thumbs: {
+			// 	swiper: sProdCardThumbSwiper,
+			// },
+		});
+	}
 	
 	Fancybox.bind("[data-fancybox='modal-with-slider']", {
 		dragToClose: false,

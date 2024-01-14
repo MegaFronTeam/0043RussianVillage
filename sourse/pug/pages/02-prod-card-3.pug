@@ -27,14 +27,15 @@ block pagecontent
 	main
 		+page-head('Парковые качели «Пагода_2»', '#83274058', 'h5', 'Дачные постройки и конструкции', 'Летние кухни, гриль зоны, барбекю комплексы', 'Летние кухни, гриль зоны, барбекю комплексы', 'Парковые качели «Пагода_2» идеальный выбор для сада, загородного дома, коттеджа, дачи. Оно выполнено из качественного полипропилена')
 		+sProdCard({
-			discount: false,
+			discount: true,
 			img: {
 				link: 'sProdCard-img-2.png',
 				bg: 'bg',
 			},
 			addToCard: false,
 			favActive: true,
-			getConsultation: false
+			getConsultation: false,
+			thumbSlider: false
 		})
 		+sProdCardInfo(false, true)
 		+sCardSlider('С этим также берут', '', true)

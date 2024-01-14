@@ -104,9 +104,24 @@ body {
 		z-index: 999; 
 		touch-action: none;
     -webkit-overflow-scrolling: none;
-    overflow: hidden;
+    // overflow: hidden;
     /* Other browsers */
     overscroll-behavior: none;
+		
+	}
+	&.fixed-catalog {
+		@include media-breakpoint-down(md) {
+			overflow: hidden;
+		}
+		&::before {
+			@include media-breakpoint-up(md) {
+				z-index: 498;
+				opacity: 0.76;
+			}
+		}
+	}
+	&.fixed-profile-menu {
+		overflow: hidden;
 	}
 }
 

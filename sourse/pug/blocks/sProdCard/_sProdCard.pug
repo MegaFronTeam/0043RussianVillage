@@ -27,7 +27,7 @@ mixin sProdCard(data)
 			+e.row.row
 				+e.col.col-md-auto
 					+e.full-slider-wrap
-						+e.swiper-wrap.order-md-2(data-aos="fade-up" data-aos-duration="400")
+						+e.swiper-wrap.order-md-2(class=(data.thumbSlider == false ? 'single-slider' : '') data-aos="fade-up" data-aos-duration="400")
 							if data.discount
 								.badge.badge-orange Скидка -50%
 							+e.slider--js.swiper(data-fancybox='modal-with-slider' data-src="#modal-slider").btn-modal-js
@@ -39,47 +39,48 @@ mixin sProdCard(data)
 													+img(`img/${data.img.link}`, data.img.bg)
 							+e.main-slider-arrow-wrap.d-none.d-md-block
 								+arrow()
-						+e.thumb-arrow-wrap.order-md-1
-							+e.thumb-slider--thumb-js.swiper
-								.swiper-wrapper
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-1.png')
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-2.png')
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-1.png')
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-1.png')
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-3.png')
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-3.png')
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-1.png')
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-3.png')
-									+e.slide-thumb.swiper-slide
-										+e.img-wrap
-											.img-wrap-center
-												+img('img/sProdCard-img-sm-3.png')
-							.d-none.d-md-block
-								+arrow()
+						if data.thumbSlider
+							+e.thumb-arrow-wrap.order-md-1
+								+e.thumb-slider--thumb-js.swiper
+									.swiper-wrapper
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-1.png')
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-2.png')
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-1.png')
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-1.png')
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-3.png')
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-3.png')
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-1.png')
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-3.png')
+										+e.slide-thumb.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													+img('img/sProdCard-img-sm-3.png')
+								.d-none.d-md-block
+									+arrow()
 				.col-md
 					+e.main-row.row
 						.col-12

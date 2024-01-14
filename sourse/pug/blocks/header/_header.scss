@@ -13,6 +13,9 @@
 		&.fixed-animate{
 			transition: transform .4s;
 			position: fixed;
+			@include media-breakpoint-down(md) {
+				transform: translateY(0);
+			}
 		}
 		&.fixed{
 			// transform: translateY(-100%);
