@@ -498,7 +498,7 @@ iframe {
 .custom-scroll {
 	/* ===== Scrollbar CSS ===== */
   /* Firefox */
-	--bs-primary: #DEDEDE;
+	--bs-primary: #466330;
  
   & {
     scrollbar-width: auto;
@@ -507,7 +507,8 @@ iframe {
 
   /* Chrome, Edge, and Safari */
   &::-webkit-scrollbar {
-    width: 4px;
+    width: 1px;
+    height: 2px;
   }
 
   &::-webkit-scrollbar-track {

@@ -168,7 +168,7 @@
 		position: relative;
 		@include media-breakpoint-up(md) {
 			width: rem(84);
-			height: rem(574);
+			height: rem(563.188);
 			min-width: rem(74);
 		}
 		.swiper-button-hand {
@@ -364,6 +364,7 @@
 		font-size: rem(11);
 		line-height: 1.23;
 		color: $link-hover-color;
+		margin-top: auto;
 		&:hover {
 			color: $body-color;
 		}
@@ -596,6 +597,7 @@
 				font-size: rem(12);
 				font-weight: 700;
 				line-height: 1.33;
+				border-radius: rem(4);
 				&:not(:last-child) {
 					margin-bottom: rem(8);
 					@include media-breakpoint-up(md) {

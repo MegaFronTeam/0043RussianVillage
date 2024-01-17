@@ -162,6 +162,7 @@
     opacity: 0;
     pointer-events: none;
     transform: translateY(-100vh);
+    padding-bottom: rem(26);
     &.active {
       opacity: 1;
       pointer-events: all;
@@ -170,12 +171,13 @@
   }
   @include media-breakpoint-down(md) {
     position: fixed;
-    top: rem(108);
+    top: rem(52);
     left: 0;
     z-index: 501;
     width: 100%;
-    // height: calc(var(--vh) * 100 - rem(56));
-    height: calc(var(--vh) * 100 - rem(169));
+    // height: calc(var(--vh) * 100 - rem(52));
+    height: calc(var(--vh) * 100 - rem(112));
+    // height: calc(var(--vh) * 100 - rem(169));
     box-shadow: inset 0px -6px 10px rgba(0, 0, 0, 0.08);
     transform: translateX(100vw);
     &.active {

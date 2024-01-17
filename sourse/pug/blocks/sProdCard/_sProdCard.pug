@@ -117,14 +117,14 @@ mixin sProdCard(data)
 									if data.getConsultation
 										.col-12
 											+e.btn.btn.btn-outline-dark(href='#' data-src='#modal-call' data-fancybox).btn-modal-js Получить консультацию
-								table(data-aos="fade-up" data-aos-duration="400")
-									mixin tr(key, value)
-										tr
-											td!=key
-											td.text-end!=value
-									+tr('Размер (Ш×В×Г) см', '33×79×92')
-									+tr('Материал', 'Дерево')
-									+tr('Цвет', 'Коричневый')
+								//- table(data-aos="fade-up" data-aos-duration="400")
+								//- 	mixin tr(key, value)
+								//- 		tr
+								//- 			td!=key
+								//- 			td.text-end!=value
+								//- 	+tr('Размер (Ш×В×Г) см', '33×79×92')
+								//- 	+tr('Материал', 'Дерево')
+								//- 	+tr('Цвет', 'Коричневый')
 								+e.all(href='#' data-aos="fade-up" data-aos-duration="400") Все характеристики
 						.col-12
 							+e.delivery
