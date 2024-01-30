@@ -650,7 +650,17 @@ function eventHandler() {
 		// 	false,
 		// );
 
-	}
+	};
+
+	new Swiper('.sContent__table-wrap--js', {
+		slidesPerView: 'auto',
+		spaceBetween: 0,
+		scrollbar: {
+			el: ".swiper-scrollbar",
+			hide: false,
+		},
+	});
+
 
 };
 if (document.readyState !== 'loading') {

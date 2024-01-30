@@ -39,30 +39,33 @@ mixin sProdCardInfo(secondVariant, table)
 								+e.item.LI(data-aos="fade-up" data-aos-duration="400")
 									+e.title Вы&nbsp;получите электронный чек, подтверждающий оплату заказа.
 									p После оплаты вы&nbsp;получите подтверждающий платёжный документ&nbsp;&mdash; по&nbsp;электронной почте или СМС.
-							+e.table-wrap.custom-scroll(data-aos="fade-up" data-aos-duration="400")
-								table.table-hover
-									thead
-										tr
-											th Maecenas
-											th Phasellus
-											th Gravida
-											th Integer
-									tbody
-										tr
-											td Nullam
-											td Tincidunt
-											td At elementum
-											td Dapibus
-										tr
-											td Luctus
-											td Mauris
-											td Felis
-											td Aenean
-										tr
-											td Dignissim
-											td Vestibulum
-											td Fusce
-											td Donec
+							+e.table-wrap--js.swiper(data-aos="fade-up" data-aos-duration="400")
+								.swiper-wrapper 
+									//- .swiper-slide
+									table.table-hover.swiper-slide
+										thead
+											tr
+												th Maecenas
+												th Phasellus
+												th Gravida
+												th Integer
+										tbody
+											tr
+												td Nullam
+												td Tincidunt
+												td At elementum
+												td Dapibus
+											tr
+												td Luctus
+												td Mauris
+												td Felis
+												td Aenean
+											tr
+												td Dignissim
+												td Vestibulum
+												td Fusce
+												td Donec
+								.swiper-scrollbar
 							.h5 Потолок и свесы
 							p Залейте получившимся яблочным маринадом кусочки говядины с&nbsp;большой миске и&nbsp;осторожно перемешайте. Накройте пищевой пленкой и&nbsp;уберите в&nbsp;холодильник на&nbsp;1&nbsp;час.
 							+e.recept-steps.OL(data-aos="fade-up" data-aos-duration="400")
