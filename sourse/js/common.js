@@ -650,6 +650,14 @@ function eventHandler() {
 			false,
 		);
 
+		document.addEventListener('click', (e) => {
+			let tabBtnTarget = e.target.closest('.tabs__btn');
+			if(tabBtnTarget) {
+				Sticky.refresh();
+			}
+		});
+
+
 	};
 
 	new Swiper('.sContent__table-wrap--js', {
