@@ -988,6 +988,13 @@
 					font-size: rem(24);
 				}
 			}
+			&--img {
+				@include media-breakpoint-down(md) {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+			}
 		}
 		&__price {
 			font-size: rem(12);
@@ -1033,7 +1040,7 @@
 								height: 100%;
 								background-color: $gray-300;
 								top: 0;
-								right: rem(-4);
+								right: rem(3.200);
 							}
 						}
 					}
@@ -1041,6 +1048,9 @@
 				.equipment-slider__item {
 					padding: rem(8);
 					background-color: #fff;
+					.title span {
+						line-height: 1.1;
+					}
 				}
 				.equipment-slider__price {
 					margin-top: 0;

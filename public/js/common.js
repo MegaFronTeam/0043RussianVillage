@@ -617,38 +617,38 @@ function eventHandler() {
 		mainSlider.controller.control = headSlider;
 		headSlider.controller.control = mainSlider;
 		
-		// let Sticky = new hcSticky('.equipment-slider__head-slider-wrap', {
-		// 	stickTo: '.equipment-slider',
-		// 	mobileFirst: true,
-		// 	disable: false,
-		// 	top: 0,
-		// 	responsive: {
-		// 		768: {
-		// 			disable: true,
-		// 		}
-		// 	}
-		// });
+		let Sticky = new hcSticky('.equipment-slider__head-slider-wrap', {
+			stickTo: '.equipment-slider',
+			mobileFirst: true,
+			disable: false,
+			top: 0,
+			responsive: {
+				768: {
+					disable: true,
+				}
+			}
+		});
 
-		// let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+		let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-		// window.addEventListener(
-		// 	'scroll',
-		// 	function handleScroll() {
-		// 		const scrollTopPosition =
-		// 			window.pageYOffset || document.documentElement.scrollTop;
+		window.addEventListener(
+			'scroll',
+			function handleScroll() {
+				const scrollTopPosition =
+					window.pageYOffset || document.documentElement.scrollTop;
 	
-		// 		if (scrollTopPosition > lastScrollTop) {
-		// 			$('.equipment-slider__head-slider-wrap.sticky').addClass('scroll-down');
-		// 			$('.equipment-slider__head-slider-wrap.sticky').removeClass('scroll-up');
-		// 		} else if (scrollTopPosition < lastScrollTop) {
-		// 			$('.equipment-slider__head-slider-wrap.sticky').addClass('scroll-up');
-		// 			$('.equipment-slider__head-slider-wrap.sticky').removeClass('scroll-down');
-		// 		}
-		// 		lastScrollTop =
-		// 			scrollTopPosition <= 0 ? 0 : scrollTopPosition;
-		// 	},
-		// 	false,
-		// );
+				if (scrollTopPosition > lastScrollTop) {
+					$('.equipment-slider__head-slider-wrap.sticky').addClass('scroll-down');
+					$('.equipment-slider__head-slider-wrap.sticky').removeClass('scroll-up');
+				} else if (scrollTopPosition < lastScrollTop) {
+					$('.equipment-slider__head-slider-wrap.sticky').addClass('scroll-up');
+					$('.equipment-slider__head-slider-wrap.sticky').removeClass('scroll-down');
+				}
+				lastScrollTop =
+					scrollTopPosition <= 0 ? 0 : scrollTopPosition;
+			},
+			false,
+		);
 
 	};
 
