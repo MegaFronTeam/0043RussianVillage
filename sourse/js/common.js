@@ -323,6 +323,7 @@ function eventHandler() {
 		$('body').removeClass('fixed');
 	})
 
+	let sProdCardSwiper2 = '';
 	if(document.querySelector('.sProdCard__thumb-slider--thumb-js')) {
 		const sProdCardThumbSwiper = new Swiper('.sProdCard__thumb-slider--thumb-js', {
 			slidesPerView: 'auto',
@@ -339,7 +340,7 @@ function eventHandler() {
 				}
 			}
 		});
-		const sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
+		sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
 			slidesPerView: 1,
 			navigation: {
 				nextEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-next',
@@ -350,7 +351,7 @@ function eventHandler() {
 			},
 		});
 	} else {
-		const sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
+		sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
 			slidesPerView: 1,
 			navigation: {
 				nextEl: '.sProdCard__swiper-wrap .sProdCard__main-slider-arrow-wrap .swiper-button-next',
@@ -395,7 +396,7 @@ function eventHandler() {
 						swiper: sProdCardThumbSwiper2,
 					},
 				});
-
+				
 				sProdCardSwiper22.controller.control = [sProdCardSwiper2];
 				sProdCardSwiper2.controller.control = sProdCardSwiper22;
 			},
@@ -669,6 +670,19 @@ function eventHandler() {
 		},
 	});
 
+	let scrollTop = document.querySelector('.all-pages-btn__btn--scrool-up-js');
+	if(scrollTop) {
+		document.addEventListener('scroll', () => {
+			window.scrollY > 1400 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+		}, {passive: true});
+		
+		scrollTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior:'smooth',
+      });
+    });
+	}
 
 };
 if (document.readyState !== 'loading') {

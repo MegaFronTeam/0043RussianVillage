@@ -26,7 +26,6 @@ block pagecontent
 	+parts('header')
 	+topBtns().d-md-none
 	main
-		+page-head('По запросу «летние кухни» найдено 357 товаров и 100 разделов', '', 'h4')
 		+b.block-with-aside
 			.container
 				+e.row.row
@@ -88,6 +87,7 @@ block pagecontent
 											span От
 											+stars()
 					.col
+						+page-head2('По запросу «летние кухни» найдено 357 товаров и 100 разделов', '', 'h4 pt-0')
 						+sCatalog
 		+sAlsoWatchSearch(false)
 	+parts('footer')

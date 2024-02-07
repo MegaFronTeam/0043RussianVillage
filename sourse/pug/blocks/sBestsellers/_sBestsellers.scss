@@ -1,54 +1,68 @@
 // start .sBestsellers
 .sBestsellers {
-	--sPT: #{rem(24)};
-	--sPB: #{rem(0)};
-	--sTPB: #{rem(16)};
-	@include media-breakpoint-up(md) {
-		--sPT: #{rem(32)};
-		--sTPB: #{rem(24)};
-	}
-	&__row{
-		--bs-gutter-x: #{rem(8)};
-		--bs-gutter-y: #{rem(8)};
-		margin-bottom: rem(24);
-		@include media-breakpoint-up(md) {
-			--bs-gutter-x: #{rem(17)};
-			--bs-gutter-y: #{rem(24)};
+  --sPT: #{rem(24)};
+  --sPB: #{rem(0)};
+  --sTPB: #{rem(16)};
+  @include media-breakpoint-up(md) {
+    --sPT: #{rem(32)};
+    --sTPB: #{rem(24)};
+  }
+  &__row {
+    --bs-gutter-x: #{rem(8)};
+    --bs-gutter-y: #{rem(8)};
+    margin-bottom: rem(24);
+    @include media-breakpoint-up(md) {
+      --bs-gutter-x: #{rem(17)};
+      --bs-gutter-y: #{rem(24)};
 
-			margin-bottom: rem(40);
-		}
-	}
-	.section-title{
-		h5 {
-			@include media-breakpoint-down(md) {
-				font-size: rem(18);
-			}
-		}
-	}
-	.card {
-		border: 1px solid $gray-300;
-		&__text {
-			-webkit-line-clamp: 3;
-		}
-	}
-	&__btn {
-		--bs-btn-color: #{$body-color};
+      margin-bottom: rem(40);
+    }
+  }
+  .section-title {
+    h5 {
+      @include media-breakpoint-down(md) {
+        font-size: rem(18);
+      }
+    }
+  }
+  .card {
+    border: 1px solid $gray-300;
+    &__text {
+      -webkit-line-clamp: 3;
+    }
+  }
+  &__btn {
+    --bs-btn-color: #{$body-color};
     --bs-btn-border-color: transparent;
-		--bs-btn-bg: #fff;
+    --bs-btn-bg: #fff;
 
-		display: block;
-		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
-		@include media-breakpoint-up(md) {
-			max-width: rem(328);
-		}
-	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    @include media-breakpoint-up(md) {
+      max-width: rem(328);
+    }
+  }
+  &--second {
+    .card {
+      &__img-wrap {
+        background-color: #f8f8f8;
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+  }
+  @include media-breakpoint-up(lg) {
+  }
+  @include media-breakpoint-up(md) {
+  }
+  @include media-breakpoint-up(sm) {
+  }
+  @include media-breakpoint-between(md, xl) {
+  }
+  @include media-breakpoint-only(xl) {
+  }
+  @include media-breakpoint-down(xl) {
+  }
 } // end.sBestsellers

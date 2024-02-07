@@ -13,7 +13,7 @@ include ../blocks/sIndividualOrder/_sIndividualOrder.pug
 include ../blocks/sBestsellers/_sBestsellers.pug
 
 block variables
-	- let  mainPage= 'bg-gray' 
+	- let  mainPage= '' 
 	- let  bg= ''
 
 block title
@@ -60,7 +60,7 @@ block pagecontent
 						+sBanners2
 						+sIndividualOrder
 						+sPopularCategories2
-						+sBestsellers
+						+sBestsellers().sBestsellers--second
 		+sAlsoWatchSearch(false)
 	+parts('footer')
       

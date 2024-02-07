@@ -49,7 +49,7 @@
 			}
 		</script>
 	</head>
-	<body class="bg-gray" data-bg="">
+	<body data-bg="">
 		<div class="main-wrapper">
 			<script>addBlock(`header`)</script>
 			<div id="headerWrap"></div>
@@ -76,13 +76,13 @@
 							<li><a href="#">Выйти</a></li>
 						</ul>
 					</div>
-					<a class="top-btns__btn d-none d-md-flex order-md-2" href="#">
+					<a class="top-btns__btn d-md-flex order-2" href="#">
 						<div class="top-btns__icon">
 							<svg class="icon icon-heart ">
 								<use xlink:href="img/svg/sprite.svg#heart"></use>
 							</svg>
 							<div class="badge badge-orange">3</div>
-						</div>
+						</div><span class="d-md-none">Избранное</span>
 					</a>
 					<a class="top-btns__btn order-3" href="#">
 						<div class="top-btns__icon">
@@ -92,7 +92,7 @@
 							<div class="badge badge-orange">2</div>
 						</div><span class="d-md-none">Корзина</span>
 					</a>
-					<a class="top-btns__btn order-2 d-md-none" href="#">
+					<a class="top-btns__btn d-none" href="#">
 						<svg class="icon icon-search ">
 							<use xlink:href="img/svg/sprite.svg#search"></use>
 						</svg><span class="d-md-none">Поиск</span>
@@ -314,7 +314,7 @@
 									</div>
 								</section>
 								<!-- start sBestsellers-->
-								<section class="sBestsellers section" id="sBestsellers">
+								<section class="sBestsellers section sBestsellers sBestsellers--second" id="sBestsellers">
 									<div class="section-title" data-aos="fade-up" data-aos-duration="400">
 										<h5>Хиты продаж</h5>
 									</div>
@@ -331,8 +331,6 @@
 													</div>
 													<a class="card__text" href="#">Гриль угольный BestPicnic Barbeque 47, 55х47.5х86 см
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -375,6 +373,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-14.png" alt="" loading="lazy"/>
 													</div>
@@ -384,8 +383,6 @@
 													</div>
 													<a class="card__text" href="#">Гриль-мангал с полками и крышкой барбекю Gratar Family Standart BBQ FSB 2000
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -428,6 +425,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-15.png" alt="" loading="lazy"/>
 													</div>
@@ -437,8 +435,6 @@
 													</div>
 													<a class="card__text" href="#">Уличная кухня с мойкой AL-F VK14 - кухонный гарнитур для дачи и сада
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -481,6 +477,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-16.png" alt="" loading="lazy"/>
 													</div>
@@ -490,8 +487,6 @@
 													</div>
 													<a class="card__text" href="#">Уличная кухня. Кухня с мойкой и столешницей VERANDA 0802, нержавейка, для дачи, для балкона, для дома. 172x58 см, из 2 модулей
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -534,6 +529,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-17.png" alt="" loading="lazy"/>
 													</div>
@@ -543,8 +539,6 @@
 													</div>
 													<a class="card__text" href="#">Кедровая фитобочка полулежачая "Овальная люкс" 115*78*140*4 см
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -587,6 +581,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-18.png" alt="" loading="lazy"/>
 													</div>
@@ -596,8 +591,6 @@
 													</div>
 													<a class="card__text" href="#">Купель из полипропилена круглая
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -640,6 +633,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-19.png" alt="" loading="lazy"/>
 													</div>
@@ -649,8 +643,6 @@
 													</div>
 													<a class="card__text" href="#">Банный чан елисей силович 4 человека на опоре с печью
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -693,6 +685,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-20.png" alt="" loading="lazy"/>
 													</div>
@@ -702,8 +695,6 @@
 													</div>
 													<a class="card__text" href="#">КУРрорт Курятник (Макси модель) Коричневый Правосторонний
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -746,6 +737,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-21.png" alt="" loading="lazy"/>
 													</div>
@@ -755,8 +747,6 @@
 													</div>
 													<a class="card__text" href="#">Теплица Рязаночка3х6 (каркас)
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -799,6 +789,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-22.png" alt="" loading="lazy"/>
 													</div>
@@ -808,8 +799,6 @@
 													</div>
 													<a class="card__text" href="#">Будка для собак Ferplast Argo 100 114.5х73х81 см коричневый
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -852,6 +841,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-23.png" alt="" loading="lazy"/>
 													</div>
@@ -861,8 +851,6 @@
 													</div>
 													<a class="card__text" href="#">Парник каркасный с пленкой ПВХ 270 см * 120см*90см.
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -905,6 +893,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-24.png" alt="" loading="lazy"/>
 													</div>
@@ -914,8 +903,6 @@
 													</div>
 													<a class="card__text" href="#">Каркас теплицы Благо 1,5х1,5х2 м с тентом из армированной пленки
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -958,6 +945,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-25.png" alt="" loading="lazy"/>
 													</div>
@@ -967,8 +955,6 @@
 													</div>
 													<a class="card__text" href="#">Уличная кухня AL-F VK10 островок - кухонный гарнитур для дачи и сада
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -1011,6 +997,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-26.png" alt="" loading="lazy"/>
 													</div>
@@ -1020,8 +1007,6 @@
 													</div>
 													<a class="card__text" href="#">Комплект беседки CubeIT!
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -1064,6 +1049,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-27.png" alt="" loading="lazy"/>
 													</div>
@@ -1073,8 +1059,6 @@
 													</div>
 													<a class="card__text" href="#">Комплект металлических крепежей для возведения террасы из бруса
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -1117,6 +1101,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-28.png" alt="" loading="lazy"/>
 													</div>
@@ -1126,8 +1111,6 @@
 													</div>
 													<a class="card__text" href="#">Комплект крепежей для сборки беседки или перголы CUBE+
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -1170,6 +1153,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img src="img/card-29.png" alt="" loading="lazy"/>
 													</div>
@@ -1179,8 +1163,6 @@
 													</div>
 													<a class="card__text" href="#">Комплект крепежей для сборки беседки или перголы TERRACE+
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -1223,6 +1205,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-30.png" alt="" loading="lazy"/>
 													</div>
@@ -1232,8 +1215,6 @@
 													</div>
 													<a class="card__text" href="#">Каркасная баня под ключ
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -1276,6 +1257,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-31.png" alt="" loading="lazy"/>
 													</div>
@@ -1285,8 +1267,6 @@
 													</div>
 													<a class="card__text" href="#">Комплектдля возведения хозблока
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -1329,6 +1309,7 @@
 										</div>
 										<div class="col-6 col-md-3">
 											<div class="card" data-aos="fade-up" data-aos-duration="400">
+												<div class="badge badge-orange">Скидка -50%</div>
 												<a class="card__img-wrap" href="#">
 													<div class="img-wrap-center"><img class="object-fit-js" src="img/card-32.png" alt="" loading="lazy"/>
 													</div>
@@ -1338,8 +1319,6 @@
 													</div>
 													<a class="card__text" href="#">Комплект парковочного навеса
 													</a>
-													<div class="card__create">Производство Италия
-													</div>
 													<div class="card__review-wrap">
 														<div class="stars" data-rating="4">
 															<svg class="icon icon-rateStar ">
@@ -1483,5 +1462,17 @@
 		<script src="libs/hc-sticky/hc-sticky.js"> </script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="js/JSCCommon.js"></script>
 		<script src="js/common.js"></script>
+		<div class="all-pages-btn">
+			<div class="all-pages-btn__btn all-pages-btn__btn--scrool-up-js">
+				<svg class="icon icon-chevron-up ">
+					<use xlink:href="img/svg/sprite.svg#chevron-up"></use>
+				</svg>
+			</div>
+			<div class="all-pages-btn__btn" data-src="#modal-call" data-fancybox="data-fancybox">
+				<svg class="icon icon-letter ">
+					<use xlink:href="img/svg/sprite.svg#letter"></use>
+				</svg>
+			</div>
+		</div>
 	</body>
 </html>

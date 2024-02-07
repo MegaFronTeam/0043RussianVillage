@@ -1,126 +1,138 @@
 // start .sBanners
 .sBanners {
-	--sPT: #{rem(12)};
-	--sPB: #{rem(20)};
-	// --sTPB: #{rem()};
-	background-color: $gray-200;
-	@include media-breakpoint-up(md) {
-		--sPT: #{rem(47)};
-		--sPB: #{rem(48)};
-	}
-	&__row{
-		--bs-gutter-x: #{rem(8)};
-		// --bs-gutter-y: #{rem()};
-		@include media-breakpoint-up(md) {
-			--bs-gutter-x: #{rem(16)};
-		}
-	}
-	&__item{
-		position: relative;
-		display: flex;
-		flex-direction: column;
-		border-radius: rem(15);
-		padding: rem(24);
-		color: #fff;
-		height: 100%;
-		z-index: 1;
-		overflow: hidden;
-		&:hover {
-			@include media-breakpoint-up(md) {
-				color: $gray-200;
-				img {
-					transform: scale(1.1);
-				}
-			}
-		}
-		&:before {
-			content: '';
-			position: absolute;
-			display: block;
-			width: 100%;
-			height: 100%;
-			left: 0;
-			top: 0;
-			z-index: -1;
-			background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.40) 100%);
-			@include media-breakpoint-up(md) {
-				background-image: linear-gradient(90deg, rgba(33, 33, 33, 0.47) 0%, rgba(29, 29, 29, 0.00) 100%);
-			}
-		}
-		img {
-			@include mt;
-			z-index: -2;
-		}
-		@include media-breakpoint-up(md) {
-			min-height: rem(304);
-			padding: rem(24) rem(28);
-		}
-		h5 {
-			@include media-breakpoint-down(md) {
-				font-size: rem(12);
-			}
-			margin-bottom: rem(12);
-			max-width: rem(258);
-		}
-		p {
-			margin-top: auto;
-			margin-bottom: 0;
-			font-size: rem(11);
-			line-height: 1.6;
-			max-width: rem(190);
-			@include media-breakpoint-up(md) {
-				font-size: rem(13);
-			}
-		}
-	}
-	&--2 {
-		--sPT: #0;
-		--sPB: #{rem(16)};
-		// --sTPB: #{rem()};
-		@include media-breakpoint-up(md) {
-			--sPT: 0;
-			--sPB: #{rem(24)};
-		}
-		.sBanners {
-			&__item {
-				background-color: $link-hover-color;
-				border-radius: rem(9);
-				padding: rem(8);
-				min-height: rem(141);
-				overflow: hidden;
-				@include media-breakpoint-up(md) {
-					padding: rem(24) rem(48a);
-					min-height: rem(196);
-				}
-				&:before {
-					content: unset;
-				}
-				h5 {
-					margin-bottom: 0;
-					line-height: 1.33;
-					max-width: rem(173);
-					@include media-breakpoint-down(md) {
-						font-size: rem(17);
-					}
-					@include media-breakpoint-up(md) {
-						max-width: rem(264);
-					}
-				}
-			}
-		}
-	}
-	&--29 {
-		.sBanners__item h5{
-			@include media-breakpoint-down(md) {
-				max-width: rem(140);
-			}
-		}
-	}
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
-	@include media-breakpoint-up(sm) {}
-	@include media-breakpoint-between(md, xl) {}
-	@include media-breakpoint-only(xl) {}
-	@include media-breakpoint-down(xl) {}
+  --sPT: #{rem(12)};
+  --sPB: #{rem(20)};
+  // --sTPB: #{rem()};
+  background-color: $gray-200;
+  @include media-breakpoint-up(md) {
+    --sPT: #{rem(47)};
+    --sPB: #{rem(48)};
+  }
+  &__row {
+    --bs-gutter-x: #{rem(8)};
+    // --bs-gutter-y: #{rem()};
+    @include media-breakpoint-up(md) {
+      --bs-gutter-x: #{rem(16)};
+    }
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: rem(15);
+    padding: rem(24);
+    color: #fff;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    &:hover {
+      @include media-breakpoint-up(md) {
+        color: $gray-200;
+        img {
+          transform: scale(1.1);
+        }
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
+      @include media-breakpoint-up(md) {
+        background-image: linear-gradient(
+          90deg,
+          rgba(33, 33, 33, 0.47) 0%,
+          rgba(29, 29, 29, 0) 100%
+        );
+      }
+    }
+    img {
+      @include mt;
+      z-index: -2;
+    }
+    @include media-breakpoint-up(md) {
+      min-height: rem(304);
+      padding: rem(24) rem(28);
+    }
+    h5 {
+      @include media-breakpoint-down(md) {
+        font-size: rem(12);
+      }
+      margin-bottom: rem(12);
+      max-width: rem(258);
+    }
+    p {
+      margin-top: auto;
+      margin-bottom: 0;
+      font-size: rem(11);
+      line-height: 1.6;
+      max-width: rem(190);
+      @include media-breakpoint-up(md) {
+        font-size: rem(13);
+      }
+    }
+  }
+  &--2 {
+    --sPT: 0;
+    --sPB: #{rem(16)};
+    // --sTPB: #{rem()};
+    background-color: #fff;
+    @include media-breakpoint-up(md) {
+      --sPT: 0;
+      --sPB: #{rem(24)};
+    }
+    .sBanners {
+      &__item {
+        background-color: $link-hover-color;
+        border-radius: rem(9);
+        padding: rem(8);
+        min-height: rem(141);
+        overflow: hidden;
+        @include media-breakpoint-up(md) {
+          padding: rem(24) rem(48a);
+          min-height: rem(196);
+        }
+        &:before {
+          content: unset;
+        }
+        h5 {
+          margin-bottom: 0;
+          line-height: 1.33;
+          max-width: rem(173);
+          @include media-breakpoint-down(md) {
+            font-size: rem(17);
+          }
+          @include media-breakpoint-up(md) {
+            max-width: rem(264);
+          }
+        }
+      }
+    }
+  }
+  &--29 {
+    .sBanners__item h5 {
+      @include media-breakpoint-down(md) {
+        max-width: rem(140);
+      }
+    }
+  }
+  @include media-breakpoint-up(xl) {
+  }
+  @include media-breakpoint-up(lg) {
+  }
+  @include media-breakpoint-up(md) {
+  }
+  @include media-breakpoint-up(sm) {
+  }
+  @include media-breakpoint-between(md, xl) {
+  }
+  @include media-breakpoint-only(xl) {
+  }
+  @include media-breakpoint-down(xl) {
+  }
 } // end.sBanners

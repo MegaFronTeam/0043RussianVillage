@@ -80,7 +80,7 @@
     border-radius: 0;
     background: #ffe2c2;
     @include media-breakpoint-up(sm) {
-      padding: rem(32) rem(48);
+      padding: rem(32) rem(51);
       border-radius: rem(8);
     }
     @include media-breakpoint-down(sm) {
@@ -88,7 +88,7 @@
       margin-right: calc(var(--bs-gutter-x) / -2);
     }
     h4 {
-      margin-bottom: rem(16);
+      margin-bottom: rem(40);
     }
   }
   &__item {
@@ -98,14 +98,14 @@
     overflow: hidden;
     color: $body-color;
     @include media-breakpoint-up(sm) {
-      --ratio: 294/306;
+      --ratio: 294/309;
     }
     // &:hover {
     //   color: $primary;
     // }
     span {
       font-weight: 600;
-      font-size: rem(16);
+      font-size: rem(19);
       line-height: 1.25;
     }
   }
@@ -116,7 +116,8 @@
     margin-bottom: rem(8);
     @include media-breakpoint-up(md) {
       // margin-bottom: rem(9);
-      max-width: rem(157);
+      max-width: rem(213);
+      --ratio: 200/247;
     }
   }
   &__item-wrap {

@@ -46,6 +46,19 @@ mixin page-head(t, span, customClass='h5', ...items)
 					if span 
 						span!= span
 
+mixin page-head2(t, span, customClass='h5', ...items)
+	+b.page-head(data-aos="fade-up" data-aos-duration="400")&attributes(attributes)
+		- let l = items.length
+		if l > 0
+			+e.breadcrumb
+				.container
+					+breadcrumb('Главная',...items)
+		if t
+			h1(class=customClass)
+				!= t
+				if span 
+					span!= span
+
 mixin parts(elem)
 	script.
 		addBlock(`#{elem}`)
@@ -128,7 +141,7 @@ mixin cardWithoutAnimation(img, price, text, bg='bg', review=false, badge=false,
 						.col-auto
 							+addblock
 
-mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false, order, inCart, isAnimate=true)
+mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, like=false, order, inCart, isAnimate=true, create=true)
 	+b.card(class=(similar ? 'similar': '') data-aos="fade-up" data-aos-duration="400")
 		if badge
 			.badge.badge-orange Скидка -50%
@@ -142,7 +155,8 @@ mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, 
 		+e.content
 			+e.price!= price
 			+e.text(href='#')!=text 
-			+e.create Производство Италия
+			if create
+				+e.create Производство Италия
 			+e.review-wrap
 				+stars
 				if review
@@ -271,16 +285,17 @@ mixin topBtns()
 					li: a(href="#") Помощь
 					li: a(href="#") Задать вопрос
 					li: a(href="#") Выйти
-			+e.btn(href='#').d-none.d-md-flex.order-md-2
+			+e.btn(href='#').d-md-flex.order-2
 				+e.icon
 					+icon('heart')
 					.badge.badge-orange 3
+				span.d-md-none Избранное
 			+e.btn(href='#').order-3
 				+e.icon
 					+iconC('shopping-cart')
 					.badge.badge-orange 2
 				span.d-md-none Корзина
-			+e.btn(href='#').order-2.d-md-none
+			+e.btn(href='#').d-none
 				+icon('search')
 				span.d-md-none Поиск
 			+e.btn(href='#').order-5.d-md-none
@@ -317,3 +332,7 @@ mixin success()
 		| Ваша анкета успешно отправлена, в ближайшее время мы с вами свяжемся
 		+e.close: +icon('close')
 		
+mixin allPagesBtn()
+	+b.all-pages-btn
+		+e.btn--scrool-up-js: +icon('chevron-up')
+		+e.btn(data-src='#modal-call' data-fancybox): +icon('letter')

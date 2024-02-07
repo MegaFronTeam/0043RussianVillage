@@ -32,6 +32,11 @@ mixin sProdCard(data)
 								.badge.badge-orange Скидка -50%
 							+e.slider--js.swiper(data-fancybox='modal-with-slider' data-src="#modal-slider").btn-modal-js
 								.swiper-wrapper
+									if data.video
+										+e.slide.swiper-slide
+											+e.img-wrap
+												.img-wrap-center
+													<iframe src="https://www.youtube.com/embed/J-0cGMDo1mU" title="🔥 Cozy Fireplace 4K (12 HOURS). Fireplace with Crackling Fire Sounds. Soothing Fireplace 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 									-for(let i = 0; i < 9; i++)
 										+e.slide.swiper-slide
 											+e.img-wrap
