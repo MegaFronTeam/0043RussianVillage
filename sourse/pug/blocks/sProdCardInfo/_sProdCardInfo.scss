@@ -1047,6 +1047,11 @@
               }
             }
           }
+          &:first-child {
+            .equipment-slider__price {
+              display: none;
+            }
+          }
         }
         .equipment-slider__item {
           padding: rem(8);

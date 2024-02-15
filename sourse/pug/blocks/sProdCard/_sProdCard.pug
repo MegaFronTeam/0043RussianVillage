@@ -37,7 +37,7 @@ mixin sProdCard(data)
 											+e.img-wrap
 												.img-wrap-center
 													<iframe src="https://www.youtube.com/embed/J-0cGMDo1mU" title="🔥 Cozy Fireplace 4K (12 HOURS). Fireplace with Crackling Fire Sounds. Soothing Fireplace 4K" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-									-for(let i = 0; i < 9; i++)
+									-for(let i = 0; i < (data.thumbSlider == false ? 1 : 9); i++)
 										+e.slide.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
@@ -48,42 +48,47 @@ mixin sProdCard(data)
 							+e.thumb-arrow-wrap.order-md-1
 								+e.thumb-slider--thumb-js.swiper
 									.swiper-wrapper
+										if data.video
+											+e.slide-thumb.swiper-slide
+												+e.img-wrap
+													.img-wrap-center
+														+img('img/videoPreview.jpg', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-1.png')
+													+img('img/sProdCard-img-sm-1.png', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-2.png')
+													+img('img/sProdCard-img-sm-2.png', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-1.png')
+													+img('img/sProdCard-img-sm-1.png', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-1.png')
+													+img('img/sProdCard-img-sm-1.png', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-3.png')
+													+img('img/sProdCard-img-sm-3.png', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-3.png')
+													+img('img/sProdCard-img-sm-3.png', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-1.png')
+													+img('img/sProdCard-img-sm-1.png', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-3.png')
+													+img('img/sProdCard-img-sm-3.png', 'bg')
 										+e.slide-thumb.swiper-slide
 											+e.img-wrap
 												.img-wrap-center
-													+img('img/sProdCard-img-sm-3.png')
+													+img('img/sProdCard-img-sm-3.png', 'bg')
 								.d-none.d-md-block
 									+arrow()
 				.col-md
