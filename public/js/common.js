@@ -350,6 +350,14 @@ function eventHandler() {
 				swiper: sProdCardThumbSwiper,
 			},
 		});
+		sProdCardSwiper2.on('slideChange', () => {
+			document.querySelectorAll('.sProdCard__slide iframe').forEach((item) => {
+				$("iframe").each(function() { 
+					var src= $(this).attr('src');
+					$(this).attr('src',src);  
+				});
+			})
+		})
 	} else {
 		sProdCardSwiper2 = new Swiper('.sProdCard__slider--js', {
 			slidesPerView: 1,
@@ -361,8 +369,15 @@ function eventHandler() {
 			// 	swiper: sProdCardThumbSwiper,
 			// },
 		});
+		sProdCardSwiper2.on('slideChange', () => {
+			document.querySelectorAll('.sProdCard__slide iframe').forEach((item) => {
+				$("iframe").each(function() { 
+					var src= $(this).attr('src');
+					$(this).attr('src',src);  
+				});
+			})
+		})
 	}
-	
 	Fancybox.bind("[data-fancybox='modal-with-slider']", {
 		dragToClose: false,
 		on: {
