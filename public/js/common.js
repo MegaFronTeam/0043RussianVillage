@@ -165,10 +165,7 @@ function eventHandler() {
 		false,
 	);
 
-	$('.catalog-menu__first-level-catalog > ul > li').on('mouseover', function() {
-		$('.catalog-menu__first-level-catalog > ul > li').removeClass('hover');
-	});
-
+	
 	let catalog = document.querySelector(".catalog-menu--js");
 	let mobmnu = document.querySelector(" .menu-mobile--js");
 	
@@ -185,6 +182,9 @@ function eventHandler() {
 		
 		let col = $(".col-top-js");
 		// let targetMobile = event.target.closest(".top-btns__btn");
+		$('.catalog-menu__first-level-catalog > ul > li').on('mouseover', function() {
+			$('.catalog-menu__first-level-catalog > ul > li').removeClass('hover');
+		});
 		if (target) {
 			if (target.classList.contains("top-btns__btn")) {
 				event.preventDefault();
