@@ -7,6 +7,16 @@
 	fill: currentColor;
 }
 
+.icon-PhoneCall {
+	--h: 32;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(32 / var(--h) *1em );
+}
+.icon-arrow-up {
+	--h: 35;
+	font-size:calc( var(--h) / 10 * 1rem);
+	width: calc(35 / var(--h) *1em );
+}
 .icon-basket {
 	--h: 24;
 	font-size:calc( var(--h) / 10 * 1rem);

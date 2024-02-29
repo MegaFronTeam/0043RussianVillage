@@ -173,6 +173,7 @@ function eventHandler() {
 	let mobmnu = document.querySelector(" .menu-mobile--js");
 	
 	document.addEventListener("click", function (event) {
+		catalog = document.querySelector(".catalog-menu--js");
 		let toggleCatalog = document.querySelectorAll(".catalog-toggle-js");
 		
 		let menutoggle = document.querySelector(".toggle-menu-mobile");
