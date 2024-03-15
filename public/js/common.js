@@ -700,6 +700,18 @@ function eventHandler() {
     });
 	}
 
+	let StickyHelp = new hcSticky('.help-menu', {
+		stickTo: '.block-with-aside__col',
+		mobileFirst: true,
+		disable: true,
+		top: 140,
+		responsive: {
+			768: {
+				disable: false,
+			},
+		},
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
