@@ -29,13 +29,13 @@
 		position: relative;
 		// border: 1px solid $gray-300;
 		margin: 0 auto;
-		max-width: rem(486);
+		// max-width: rem(486);
 		width: 100%;
 		// border-radius: rem(8);
-		@include media-breakpoint-up(md) {
-			min-width: rem(549);
-			max-width: rem(549);
-		}
+		// @include media-breakpoint-up(md) {
+		// 	min-width: rem(549);
+		// 	max-width: rem(549);
+		// }
 		// @include media-breakpoint-up(lg) {
 		// 	min-width: rem(549);
 		// 	max-width: rem(549);
@@ -57,12 +57,12 @@
 				font-size: rem(24);
 			}
 		}
-		&.single-slider {
-			@include media-breakpoint-up(md) {
-				min-width: rem(633);
-				max-width: rem(633);
-			}
-		}
+		// &.single-slider {
+		// 	@include media-breakpoint-up(md) {
+		// 		min-width: rem(633);
+		// 		max-width: rem(633);
+		// 	}
+		// }
 	}
 	&__slider {
 		border: 1px solid $gray-300;
@@ -78,11 +78,12 @@
 		}
 	}
 	&__img-wrap {
-		@include block(1, 1);
-		max-width: rem(549);
+		@include block(720, 405);
+		// max-width: rem(549);
 		margin: 0 auto;
 		cursor: pointer;
 		@include media-breakpoint-down(md) {
+			--ratio: 1/1;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -142,8 +143,8 @@
 		overflow: hidden;
 		@include media-breakpoint-up(md) {
 			padding: rem(10) rem(13);
-			display: flex;
-			align-items: center;
+			// display: flex;
+			// align-items: center;
 			border-radius: rem(8);
 		}
 		.sProdCard__swiper-wrap {
@@ -170,24 +171,24 @@
 	}
 	&__thumb-arrow-wrap {
 		position: relative;
-		@include media-breakpoint-up(md) {
-			width: rem(84);
-			height: rem(563.188);
-			min-width: rem(74);
-		}
+		// @include media-breakpoint-up(md) {
+		// 	width: rem(84);
+		// 	height: rem(563.188);
+		// 	min-width: rem(74);
+		// }
 		.swiper-button-hand {
 			--swiperArrowPosition: 5px;
-			--swiperArrowSize: #{rem(25)};
+			--swiperArrowSize: #{rem(32)};
 			--swiperBorderColorDef: #e6e6e6;
 	
 			border-radius: 0;
 			box-shadow: none;
 			border-width: 1px;
 			background-color: $gray-200;
-			padding: rem(1) rem(25);
+			// padding: rem(1) rem(25);
 			border-radius: rem(8);
 			width: auto;
-			height: auto;
+			height: 100%;
 			.icon {
 				flex: 0 0 auto;
 				--h: 24;
@@ -197,17 +198,17 @@
 			}
 			&-prev {
 				bottom: unset;
-				top: rem(12);
-				svg {
-					transform: rotate(90deg);
-				}
+				// top: rem(12);
+				// svg {
+				// 	transform: rotate(90deg);
+				// }
 			}
 			&-next {
 				top: unset;
-				bottom: rem(12);
-				svg {
-					transform: rotate(90deg);
-				}
+				// bottom: rem(12);
+				// svg {
+				// 	transform: rotate(90deg);
+				// }
 			}
 		}
 	}
@@ -216,7 +217,7 @@
 		margin-top: rem(9);
 		overflow: visible;
 		@include media-breakpoint-up(md) {
-			margin-top: rem(45);
+			margin-top: rem(16);
 			overflow: hidden;
 		}
 		.sProdCard {
@@ -227,8 +228,10 @@
 				max-width: rem(79);
 				border-radius: rem(8);
 				@include media-breakpoint-up(md) {
+					--ratio: 100/177;
 					border: 2px solid transparent;
 					border-width: 2px;
+					max-width: rem(177);
 				}
 				img {
 					height: 100%;
@@ -302,13 +305,14 @@
 			left: rem(16);
 			width: calc(100% - rem(32));
 		}
-		.row {
-			align-items: center;
-		}
+		// .row {
+		// 	align-items: center;
+		// }
 	}
 	&__rate-wrap {
 		display: flex;
 		align-items: center;
+		flex-wrap: wrap;
 		span {
 			font-size: rem(15);
 			margin-right: rem(8);
@@ -318,9 +322,11 @@
 		}
 	}
 	&__create-review {
+		width: 100%;
+		max-width: max-content;
 		font-size: rem(15);
 		color: $link-hover-color;
-		margin-left: rem(5);
+		// margin-left: rem(5);
 		&:hover {
 			color: $body-color;
 		}
@@ -475,11 +481,19 @@
 					display: flex;
 					flex-direction: column;
 				}
+				@include media-breakpoint-up(md) {
+
+					display: flex;
+					align-items: center;
+				}
 				.sProdCard__swiper-wrap {
 					@include media-breakpoint-up(md) {
 						margin-left: 0;
 					}
 				}
+			}
+			&__img-wrap {
+				--ratio: 1/1;
 			}
 			&__thumb-arrow-wrap--modal {
 				@include media-breakpoint-down(md) {
@@ -490,13 +504,33 @@
 					min-width: 82px;
 					width: 82px;
 					margin-right: rem(16);
+
+					width: rem(84);
+					height: rem(563.188);
+					min-width: rem(74);
 				}
 				.swiper-button-hand {
+					--swiperArrowPosition: 5px;
+					--swiperArrowSize: #{rem(25)};
+					--swiperBorderColorDef: #e6e6e6;
+
+					padding: rem(1) rem(25);
+					height: auto;
 					&-prev {
 						top: 0;
+						svg {
+							transform: rotate(90deg);
+						}
 					}
 					&-next {
 						bottom: 0;
+						@include media-breakpoint-up(md) {
+							bottom: rem(-55);
+							left: rem(6);
+						}
+						svg {
+							transform: rotate(90deg);
+						}
 					}
 				}
 			}
@@ -509,7 +543,9 @@
 					max-height: calc(var(--vh) * 100 - 87px);
 				}
 				.sProdCard__img-wrap {
+					--ratio: 1/1;
 					max-width: none;
+					max-width: rem(79);
 				}
 			}
 			&__swiper-wrap {
@@ -534,6 +570,11 @@
 						z-index: 2;
 						pointer-events: none;
 					}
+				}
+				@include media-breakpoint-up(md) {
+					min-width: rem(549);
+					// max-width: rem(549);
+					margin: 0 auto;
 				}
 				.swiper-button-hand-next {
 					@include media-breakpoint-up(md) {
@@ -609,7 +650,7 @@
 					}
 				}
 				@include media-breakpoint-up(md) {
-					padding: rem(8);
+					padding: rem(8) rem(6);
 					text-align: center;
 					flex-grow: 1;
 					width: calc(100% / 3);

@@ -25,7 +25,7 @@ mixin sProdCard(data)
 						+e.favorite(href='#'): +icon('heart')
 		.container
 			+e.row.row
-				+e.col.col-md-auto
+				+e.col.col-md-8
 					+e.full-slider-wrap
 						+e.swiper-wrap.order-md-2(class=(data.thumbSlider == false ? 'single-slider' : '') data-aos="fade-up" data-aos-duration="400")
 							if data.discount
@@ -91,7 +91,7 @@ mixin sProdCard(data)
 													+img('img/sProdCard-img-sm-3.png', 'bg')
 								.d-none.d-md-block
 									+arrow()
-				.col-md
+				.col-md-4
 					+e.main-row.row
 						.col-12
 							+e.main-info

@@ -336,8 +336,8 @@ function eventHandler() {
 			},
 			breakpoints: {
 				768: {
-					slidesPerView: 6,
-					direction: 'vertical',
+					slidesPerView: 4,
+					// direction: 'vertical',
 				}
 			}
 		});
