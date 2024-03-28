@@ -193,6 +193,9 @@
   }
   &__container {
     position: relative;
+    @include media-breakpoint-up(md) {
+      padding-top: 4rem;
+    }
   }
   .row {
     --bs-gutter-x: #{rem(24)};
