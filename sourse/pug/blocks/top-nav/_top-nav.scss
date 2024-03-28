@@ -163,6 +163,10 @@
     pointer-events: none;
     transform: translateY(-100vh);
     padding-bottom: rem(26);
+    overflow: hidden;
+
+    // Styles from rus.test67.ru
+    top: 2.055556rem !important;
     &.active {
       opacity: 1;
       pointer-events: all;
@@ -376,7 +380,13 @@
     @include media-breakpoint-up(md) {
       opacity: 0;
       pointer-events: none;
-      height: 100%;
+      // height: 100%;
+      height: calc(100% - 2.5rem);
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      // Styles from rus.test67.ru
+      top: 2.5rem;
       .catalog-menu__all-products {
         display: none;
       }
