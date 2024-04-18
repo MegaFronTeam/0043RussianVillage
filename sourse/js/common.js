@@ -29,12 +29,12 @@ function eventHandler() {
 		dropdownParent: $(".resume-select-js").parent(),
 	});	
 	function whenResize() {
-		JSCCommon.setFixedNav();
+		// JSCCommon.setFixedNav();
 		JSCCommon.setFixedCardInfo();
 	}
 
 	window.addEventListener('scroll', () => {
-		JSCCommon.setFixedNav();
+		// JSCCommon.setFixedNav();
 		JSCCommon.setFixedCardInfo();
 
 	}, { passive: true })
@@ -145,26 +145,26 @@ function eventHandler() {
 		$('.text-block__wrap').toggleClass('active');
 	});
 
-	let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	// let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-	window.addEventListener(
-		'scroll',
-		function handleScroll() {
-			const scrollTopPosition =
-				window.pageYOffset || document.documentElement.scrollTop;
+	// window.addEventListener(
+	// 	'scroll',
+	// 	function handleScroll() {
+	// 		const scrollTopPosition =
+	// 			window.pageYOffset || document.documentElement.scrollTop;
 
-			if (scrollTopPosition > lastScrollTop) {
-				$('.top-nav').addClass('scroll-down');
-				$('.top-nav').removeClass('scroll-up');
-			} else if (scrollTopPosition < lastScrollTop) {
-				$('.top-nav').addClass('scroll-up');
-				$('.top-nav').removeClass('scroll-down');
-			}
-			lastScrollTop =
-				scrollTopPosition <= 0 ? 0 : scrollTopPosition;
-		},
-		false,
-	);
+	// 		if (scrollTopPosition > lastScrollTop) {
+	// 			$('.top-nav').addClass('scroll-down');
+	// 			$('.top-nav').removeClass('scroll-up');
+	// 		} else if (scrollTopPosition < lastScrollTop) {
+	// 			$('.top-nav').addClass('scroll-up');
+	// 			$('.top-nav').removeClass('scroll-down');
+	// 		}
+	// 		lastScrollTop =
+	// 			scrollTopPosition <= 0 ? 0 : scrollTopPosition;
+	// 	},
+	// 	false,
+	// );
 
 	
 	let catalog = document.querySelector(".catalog-menu--js");
@@ -607,6 +607,8 @@ function eventHandler() {
 	let sProdCardTabsSwiper = document.querySelector('.equipment-slider__swiper');
 	
 	if(sProdCardTabsSwiper) {
+		const gridRows = Math.ceil(sProdCardTabsSwiper.querySelectorAll('.equipment-slider__slide').length / 4);
+		// console.log(gridRows);
 		const mainSlider = new Swiper(sProdCardTabsSwiper, {
 			slidesPerView: 2,
 			spaceBetween: 8,
@@ -618,7 +620,7 @@ function eventHandler() {
 			},
 			grid: {
 				fill: 'row',
-				rows: 3,
+				rows: gridRows,
 			}
 		});
 		const headSlider = new Swiper('.equipment-slider__head-slider', {

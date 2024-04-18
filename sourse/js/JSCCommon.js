@@ -378,7 +378,7 @@ class JSCCommon {
 		this.makeDDGroup();
 		this.disabledBtn();
 		this.setScreen();
-		this.setFixedNav();
+		// this.setFixedNav();
 		this.setFixedCardInfo();
 		// JSCCommon.toggleShow(".catalog-block__toggle--desctop", '.catalog-block__dropdown');
 		// JSCCommon.animateScroll();

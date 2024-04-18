@@ -19,10 +19,10 @@
 		}
 		&.fixed{
 			// transform: translateY(-100%);
-			transform: translateY(rem(-52));
-			@include media-breakpoint-up(md) {
-				transform: translateY(rem(-33));
-			}
+			// transform: translateY(rem(-52));
+			// @include media-breakpoint-up(md) {
+			// 	transform: translateY(rem(-33));
+			// }
 			.top-nav {
 				background-color: #fff;
 			}
