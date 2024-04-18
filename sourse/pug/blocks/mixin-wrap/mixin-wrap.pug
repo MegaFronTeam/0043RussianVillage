@@ -109,7 +109,9 @@ mixin cardWithoutAnimation(img, price, text, bg='bg', review=false, badge=false,
 		else if similar
 			.badge.badge-gray Нет в наличии
 		if like
-			+e.like(href="#"): +icon('heart')
+			+e.like(href="#")
+				//- +icon('heart')
+
 		+e.img-wrap(href='#')
 			.img-wrap-center
 				+img(`img/${img}`, bg)
@@ -148,7 +150,9 @@ mixin card(img, price, text, bg='bg', review=false, badge=false, similar=false, 
 		else if similar
 			.badge.badge-gray Нет в наличии
 		if like
-			+e.like(href="#"): +icon('heart')
+			+e.like(href="#")
+				//- +icon('heart')
+
 		+e.img-wrap(href='#')
 			.img-wrap-center
 				+img(`img/${img}`, bg)

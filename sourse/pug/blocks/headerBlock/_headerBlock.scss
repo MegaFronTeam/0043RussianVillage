@@ -71,7 +71,7 @@
 	&__swiper {
 		border-radius: 8px;
 		background-image: linear-gradient(89deg, #ECF0C1 0%, #E1EBAC 49.34%, #F1F2D0 99.40%);
-		text-align: center;
+		// text-align: center;
 	}
 	&__slide {
 		padding: rem(16);
@@ -160,6 +160,11 @@
 		.headerBlock {
 			&__wrap {
 				margin-bottom: 0;
+				&--clear {
+					&::before {
+						content: unset;
+					}
+				}
 			}
 			&__content {
 				max-width: rem(461);

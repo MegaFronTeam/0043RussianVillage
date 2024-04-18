@@ -139,11 +139,11 @@ mixin sProdCardInfo(secondVariant, table)
 													.title Конструктивный элемент навеса
 													+e.price 12 890 ₽
 											+e.slide.swiper-slide
-												+e.item--price.current2(data-type='Несущий каркас')
+												+e.item--price(data-type='Несущий каркас')
 													.title Комплектация #[span «Несущий каркас»]
 													+e.price 12 890 ₽
 											+e.slide.swiper-slide
-												+e.item--price.current(data-type='Базовый')
+												+e.item--price.current.current2(data-type='Базовый')
 													.title Комплектация #[span «Базовая»]
 													+e.price 12 890 ₽
 											+e.slide.swiper-slide
@@ -157,9 +157,9 @@ mixin sProdCardInfo(secondVariant, table)
 												.subtitle Стойки навеса
 												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
 										+e.slide.swiper-slide
-											+e.item.current2(data-type='Несущий каркас') Брус сечением 140&times;140&nbsp;мм, из&nbsp;цельного массива дерева (не клееные*) *Допускается возникновение трещин, не&nbsp;влияющих на&nbsp;надежность и&nbsp;функционал конструкции.Во избежание трещин, возможна замена на&nbsp;Клееный брус.
+											+e.item(data-type='Несущий каркас') Брус сечением 140&times;140&nbsp;мм, из&nbsp;цельного массива дерева (не клееные*) *Допускается возникновение трещин, не&nbsp;влияющих на&nbsp;надежность и&nbsp;функционал конструкции.Во избежание трещин, возможна замена на&nbsp;Клееный брус.
 										+e.slide.swiper-slide
-											+e.item.current(data-type='Базовый') Клееный брус 140×140 мм.
+											+e.item.current.current2(data-type='Базовый') Клееный брус 140×140 мм.
 										+e.slide.swiper-slide
 											+e.item(data-type='Премиум') Клееный брус 140×140 мм.
 										+e.slide.swiper-slide
@@ -167,9 +167,9 @@ mixin sProdCardInfo(secondVariant, table)
 												.subtitle Верхняя обвязка
 												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
 										+e.slide.swiper-slide
-											+e.item.current2(data-type='Несущий каркас') Клееный брус 290×140 мм.
+											+e.item(data-type='Несущий каркас') Клееный брус 290×140 мм.
 										+e.slide.swiper-slide
-											+e.item.current(data-type='Базовый') Клееный брус 290×140 мм.
+											+e.item.current.current2(data-type='Базовый') Клееный брус 290×140 мм.
 										+e.slide.swiper-slide
 											+e.item(data-type='Премиум') Клееный брус 290×140 мм.
 										+e.slide.swiper-slide
@@ -177,9 +177,9 @@ mixin sProdCardInfo(secondVariant, table)
 												.subtitle Обрешетка кровли
 												+e.img-wrap: .img-wrap-center: +img('img/equipment-img-1.png')
 										+e.slide.swiper-slide
-											+e.item--cross.current2(data-type='Несущий каркас'): +icon('close')
+											+e.item--cross(data-type='Несущий каркас'): +icon('close')
 										+e.slide.swiper-slide
-											+e.item.current(data-type='Базовый') Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
+											+e.item.current.current2(data-type='Базовый') Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
 										+e.slide.swiper-slide
 											+e.item(data-type='Премиум') Имитация бруса 135&times;21мм. (профилированная сухая строганная доска, с&nbsp;замковым соединением типа шип-паз. Такое крепление помогает избежать образования зазоров).
 						else
@@ -192,6 +192,7 @@ mixin sProdCardInfo(secondVariant, table)
 										li Материал — массив сухой строганный камерной сушки.
 								li
 									.h6 Крепеж
+									p Стоимость доставки рассчитывается при оформлении заказа на сайте или сотрудником компании «Русская Деревня». Стоимость зависит от зоны доставки, дополнительных услуг, веса и объема товаров в заказе.
 									ul
 										li В крепеже не используем черных саморезов, только желтопассированные.
 										li Крепеж не является сборно – разборным.

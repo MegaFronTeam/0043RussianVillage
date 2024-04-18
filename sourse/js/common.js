@@ -92,6 +92,7 @@ function eventHandler() {
 	new Swiper('.headerBlock__swiper-wrap--js .swiper', {
 		slidesPerView: 'auto',
 		loop: true,
+		autoplay: true,
 		pagination: {
 			el: document.querySelector('.headerBlock__swiper-wrap--js .swiper-pagination'),
 			type: 'bullets',

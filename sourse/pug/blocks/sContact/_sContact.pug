@@ -13,21 +13,22 @@ mixin sContact()
 								a(href="tel:+74950217474").icon-wrap
 									+iconC('PhoneCall')
 									| +7 (495) 021-74-74 
-								a(href="tel:+79953828855").icon-wrap.d-md-none
-									+iconC('whatsapp2')
+								a(href="tel:+79953828855").icon-wrap
+									+iconC('whatsapp')
 									| +7 (995) 382-88-55 
-								a(href="tel:+79953828855").icon-wrap.d-md-none
-									+iconC('tg2')
+								a(href="tel:+79953828855").icon-wrap
+									+iconC('telegram2')
 									| +7 (995) 382-88-55
 							+e.item
 								p Электронная почта для заказа
 								a(href="mailto:rbesedka@gmail.com").icon-wrap
 									+img('img/mail2.png')
 									| rbesedka@gmail.com
-							+e.item--adress.icon-wrap
-								+iconC('MapPin')
-								span Адрес склада: 
-								| г. Москва, Рябиновая ул, 37, стр. 1
+							+e.item.icon-wrap
+								p Адрес склада: 
+								a(href="mailto:rbesedka@gmail.com").icon-wrap
+									+iconC('MapPin')
+									| г. Москва, Рябиновая ул, 37, стр. 1
 							+e.title.d-none.d-md-block Реквизиты ООО «Русская Деревня»
 							ul.d-none.d-md-block
 								li Юридический адрес: 214009, г. Смоленск, Рославльское шоссе 5&nbsp;км. стр.&nbsp;4&nbsp;офис.&nbsp;1

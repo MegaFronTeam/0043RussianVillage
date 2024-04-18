@@ -52,11 +52,11 @@ mixin headerBlock()
 				.swiper-pagination
 	// end headerBlock
 
-mixin headerBlock2(img, title, text, btn, picture)
+mixin headerBlock2(img, title, text, btn, picture, clear)
 	// start headerBlock
 	+b.headerBlock--2.section#headerBlock&attributes(attributes)
 		.container
-			+e.wrap.bg-wrap(data-aos="fade-up" data-aos-duration="400")
+			+e.wrap.bg-wrap(data-aos="fade-up" data-aos-duration="400" class=`${clear ? "headerBlock__wrap--clear" : ""}`)
 				if picture
 					picture
 						source(media="(min-width: 768px)", srcset=`img/${img}`)

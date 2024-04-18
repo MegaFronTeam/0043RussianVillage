@@ -273,6 +273,11 @@
 				margin-top: rem(12);
 			}
 		}
+		&--clear {
+			&::after {
+				content: unset;
+			}
+		}
 	}
 	p {
 		font-size: rem(15);
