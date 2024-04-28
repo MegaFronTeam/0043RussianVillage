@@ -1110,9 +1110,14 @@
     }
   }
   &__slider {
+    --swiperGutter: #{rem(8)};
     margin-bottom: rem(28);
+    .swiper {
+      margin-right: calc(var(--swiperGutter) * -1);
+    }
   }
   &__slide {
+    margin-right: var(--swiperGutter);
     width: auto;
     height: auto;
   }
@@ -1126,6 +1131,24 @@
     background-color: #fff;
     min-width: rem(112);
     height: 100%;
+    position: relative;
+    &::before {
+      @include mt;
+      content: '';
+      position: absolute;
+      display: block;
+      width: calc(100% + rem(2));
+      height: calc(100% + rem(2));
+      top: rem(-1);
+      left: rem(-1);
+      border: rem(2) solid transparent;
+      border-radius: rem(4);
+    }
+    &:hover {
+      &::before {
+        border-color: $primary;
+      }
+    }
     span {
       display: inline-block;
       line-height: 1.2;
