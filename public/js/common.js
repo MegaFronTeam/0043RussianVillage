@@ -646,6 +646,12 @@ function eventHandler() {
 				768: {
 					disable: true,
 				}
+			},
+			onStart() {
+				$('.top-nav').addClass('hidden');
+			},
+			onStop() {
+				$('.top-nav').removeClass('hidden');
 			}
 		});
 

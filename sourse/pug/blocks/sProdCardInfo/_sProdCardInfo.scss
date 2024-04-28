@@ -1036,6 +1036,7 @@
         width: 100vw !important;
         left: 0 !important;
         padding: 0 rem(24);
+        z-index: 501;
         &.scroll-down {
           z-index: 501;
         }

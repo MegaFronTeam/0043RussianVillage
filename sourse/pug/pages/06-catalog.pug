@@ -29,6 +29,25 @@ block pagecontent
 		+page-head('Летние кухни, гриль зоны, барбекю комплексы', '', 'h4', 'Дачные постройки и конструкции', 'Летние кухни, гриль зоны, барбекю комплексы', 'Барбекю комплексы')
 		+b.block-with-aside
 			.container
+				+e.slider--js.default-swiper-js
+					.swiper 
+						.swiper-wrapper
+							+e.slide.swiper-slide
+								+e.link(href="#") 
+									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-1.png')
+									span Летние кухни
+							+e.slide.swiper-slide
+								+e.link(href="#") 
+									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-2.png')
+									span Гриль
+							+e.slide.swiper-slide
+								+e.link(href="#") 
+									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-3.png')
+									span Барбекю комплексы
+							+e.slide.swiper-slide
+								+e.link(href="#") 
+									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-1.png')
+									span Садовые кухни
 				+e.row.row
 					+e.col-auto.col-auto(data-aos="fade-up" data-aos-duration="400")
 						+filter

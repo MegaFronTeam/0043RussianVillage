@@ -37,6 +37,11 @@
       font-size: rem(56);
     }
   }
+  &.hidden {
+    @include media-breakpoint-down(md) {
+      transform: translateY(-100vh);
+    }
+  }
   @include media-breakpoint-up(md) {
   }
 
