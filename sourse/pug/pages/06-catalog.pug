@@ -13,7 +13,8 @@ include ../blocks/sIndividualOrder/_sIndividualOrder.pug
 include ../blocks/sBestsellers/_sBestsellers.pug
 
 block variables
-	- let  mainPage= 'bg-gray' 
+	//- - let  mainPage= 'bg-gray' 
+	- let  mainPage= '' 
 	- let  bg= ''
 
 block title
@@ -34,53 +35,61 @@ block pagecontent
 						.swiper-wrapper
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-1.png')
-									span Летние кухни
+									span Гриль для улицы
+									+img('img/catalog-bg-1.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-2.png')
-									span Гриль
+									span Грили на углях и дровах
+									+img('img/catalog-bg-2.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-3.png')
-									span Барбекю комплексы
+									span Газовые грили
+									+img('img/catalog-bg-3.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-1.png')
-									span Садовые кухни
-							//- 
+									span Смокеры
+									+img('img/catalog-bg-4.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-1.png')
-									span Летние кухни
+									span Гриль-столы
+									+img('img/catalog-bg-5.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-2.png')
-									span Гриль
+									span Мангал стационарный
+									+img('img/catalog-bg-6.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-3.png')
-									span Барбекю комплексы
+									span Мангалы переносные
+									+img('img/catalog-bg-7.png')
+							//- ---
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-1.png')
-									span Садовые кухни
+									span Гриль для улицы
+									+img('img/catalog-bg-1.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-1.png')
-									span Летние кухни
+									span Грили на углях и дровах
+									+img('img/catalog-bg-2.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-2.png')
-									span Гриль
+									span Газовые грили
+									+img('img/catalog-bg-3.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-3.png')
-									span Барбекю комплексы
+									span Смокеры
+									+img('img/catalog-bg-4.png')
 							+e.slide.swiper-slide
 								+e.link(href="#") 
-									+e.img-wrap: .img-wrap-center: +img('img/catalog-img-1.png')
-									span Садовые кухни
+									span Гриль-столы
+									+img('img/catalog-bg-5.png')
+							+e.slide.swiper-slide
+								+e.link(href="#") 
+									span Мангал стационарный
+									+img('img/catalog-bg-6.png')
+							+e.slide.swiper-slide
+								+e.link(href="#") 
+									span Мангалы переносные
+									+img('img/catalog-bg-7.png')
 					+arrow
 				+e.row.row
 					+e.col-auto.col-auto(data-aos="fade-up" data-aos-duration="400")
