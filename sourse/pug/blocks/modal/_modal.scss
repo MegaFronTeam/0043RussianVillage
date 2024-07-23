@@ -449,6 +449,8 @@
     }
   }
   &--add {
+    justify-content: center;
+    align-items: center;
     .modal-win__title {
       font-weight: 600;
       font-size: rem(24);
