@@ -86,3 +86,59 @@ mixin sPopularCategories2(data)
 				+item('Детские домики, игровые комплексы и площадки', 'sPopularCategories-img-7.png', '#FDF8D0')
 				+item('Теплицы и парники', 'sPopularCategories-img-20.png', '#E8FCDD')
 				+item('Постройки и товары для животных и птиц', 'sPopularCategories-img-12.png', '#FDF8D0')
+
+mixin sPopularCategories3(data)
+	// start sPopularCategories
+	+b.SECTION.sPopularCategories--3.section#sPopularCategories&attributes(attributes)
+		.container
+			+e.wrap
+				+b.section-title
+					.row
+						.col
+							h4 Собственное производство
+						.col-auto
+							a.show-more-js(href="#") 
+								| Смотреть все
+								+icon('chevron-right')
+				+e.row.row
+					mixin item(text, img)
+						+e.col.col-md-2
+							+e.item(href='#')
+								+e.item-inner
+									!= text
+									if img
+										img(src=`img/${img}`)
+					+item('Беседки для дачи', 'sPopularCategories-img-21.png')
+					+item('Летние кухни и<br/>гриль зоны', 'sPopularCategories-img-22.png')
+					+item('Навесы для машин', 'sPopularCategories-img-23.png')
+					+item('Гаражи и мастерские', 'sPopularCategories-img-24.png')
+					+item('Пристройки и<br/>веранды к дому', 'sPopularCategories-img-25.png')
+					+item('Хозблоки, бытовки, дровники', 'sPopularCategories-img-26.png')
+					+item('Детские домики', 'sPopularCategories-img-27.png')
+					+item('Вальеры и будки<br/>для собак', 'sPopularCategories-img-28.png')
+					+item('Перголы, шпалеры, арки', 'sPopularCategories-img-29.png')
+					+item('Террасы, настилы, подиумы', 'sPopularCategories-img-30.png')
+					+item('Крыльцо и козырьки над входом', 'sPopularCategories-img-31.png')
+					+item('Декоративные мостики, мельницы, телеги')
+		+e.full-list
+			+e.close: +icon('close')
+			.container
+				+e.row.row
+					+item('Беседки для дачи', 'sPopularCategories-img-21.png')
+					+item('Летние кухни и<br/>гриль зоны', 'sPopularCategories-img-22.png')
+					+item('Навесы для машин', 'sPopularCategories-img-23.png')
+					+item('Гаражи и мастерские', 'sPopularCategories-img-24.png')
+					+item('Пристройки и<br/>веранды к дому', 'sPopularCategories-img-25.png')
+					+item('Хозблоки, бытовки, дровники', 'sPopularCategories-img-26.png')
+					+item('Детские домики', 'sPopularCategories-img-27.png')
+					+item('Вальеры и будки<br/>для собак', 'sPopularCategories-img-28.png')
+					+item('Перголы, шпалеры, арки', 'sPopularCategories-img-29.png')
+					+item('Террасы, настилы, подиумы', 'sPopularCategories-img-30.png')
+					+item('Крыльцо и козырьки над входом', 'sPopularCategories-img-31.png')
+					+item('Декоративные мостики, мельницы, телеги')
+					+item('Вальеры и будки<br/>для собак', 'sPopularCategories-img-28.png')
+					+item('Перголы, шпалеры, арки', 'sPopularCategories-img-29.png')
+					+item('Террасы, настилы, подиумы', 'sPopularCategories-img-30.png')
+					+item('Крыльцо и козырьки над входом', 'sPopularCategories-img-31.png')
+					+item('Декоративные мостики, мельницы, телеги')
+	// end sPopularCategories
