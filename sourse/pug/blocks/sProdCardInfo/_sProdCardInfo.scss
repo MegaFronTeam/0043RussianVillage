@@ -240,7 +240,11 @@
         .addBlock {
           input {
             background-color: transparent;
-            min-width: rem(28);
+            min-width: rem(28) !important;
+          }
+          &__btn {
+            width: 0.8888888889rem !important;
+            height: 1.3333333333rem !important;
           }
         }
       }
@@ -256,6 +260,16 @@
           --bs-btn-disabled-bg: #9d9d9d;
           --bs-btn-disabled-border-color: #9d9d9d;
 
+          @include media-breakpoint-down(md) {
+            --bs-btn-padding-y: #{rem(4.5)};
+
+            display: block;
+            max-width: rem(92);
+            margin-left: auto;
+            font-size: rem(10);
+            line-height: 1.19;
+            letter-spacing: -0.03em;
+          }
           &:disabled,
           &.disabled {
             cursor: pointer;

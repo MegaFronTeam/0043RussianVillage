@@ -359,7 +359,7 @@
   --sliderCount: 1;
 
   position: relative;
-  @media screen and (min-width: 340px) {
+  @media screen and (min-width: 360px) {
     --sliderCount: 2;
   }
   @include media-breakpoint-up(md) {
@@ -541,6 +541,16 @@
     align-items: center;
     position: relative;
     z-index: 2;
+    .addBlock {
+      @include media-breakpoint-down(sm) {
+        button {
+          width: 16px;
+        }
+        input {
+          min-width: 2.144444rem !important;
+        }
+      }
+    }
   }
   &__like {
     width: rem(20);

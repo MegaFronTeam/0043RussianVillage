@@ -404,9 +404,9 @@ mixin sProdCardInfo(secondVariant, table)
 										.title!= title
 										p!=text
 										+e.footer-row.row
-											.col.d-md-none
+											.col-auto.d-md-none
 												.price!= price
-											.col-auto.col-md
+											.col.col-md
 												if active
 													+e.btn.btn.btn-sm.btn-primary(href="#") В корзину
 												else
